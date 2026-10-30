@@ -1,0 +1,224 @@
+{
+  "name": "Kurumsal",
+  "path": "kurumsal",
+  "desc": [],
+  "data": [
+    {
+      "name": {
+        "tr": "Hakkımızda",
+        "en": "About Us",
+        "ar": "من نحن"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "6nhit4",
+          "c684df",
+          "1loxqb"
+        ],
+        "footer": []
+      },
+      "index": 0,
+      "icon": "info",
+      "description": {
+        "tr": "Orvak Makina hakkında ve tarihçe.",
+        "en": "About Orvak Makina and its history.",
+        "ar": "نبذة عن Orvak Makina وتاريخها."
+      }
+    },
+    {
+      "name": {
+        "tr": "Misyon",
+        "en": "Mission",
+        "ar": "المهمة"
+      },
+      "status": "play",
+      "id": "misyon",
+      "path": "misyon",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 1,
+      "icon": "home",
+      "description": {
+        "tr": "Misyonumuz",
+        "en": "Our mission",
+        "ar": "مهمتنا"
+      }
+    },
+    {
+      "name": {
+        "tr": "Vizyon",
+        "en": "Vision",
+        "ar": "الرؤية"
+      },
+      "status": "play",
+      "id": "vizyon",
+      "path": "vizyon",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 2,
+      "icon": "home",
+      "description": {
+        "tr": "Vizyonumuz",
+        "en": "Our vision",
+        "ar": "رؤيتنا"
+      }
+    },
+    {
+      "name": {
+        "tr": "Kalite Politikamız",
+        "en": "Quality Policy",
+        "ar": "سياسة الجودة"
+      },
+      "status": "play",
+      "id": "kalitepolitikamiz",
+      "path": "kalitepolitikamiz",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 3,
+      "icon": "home",
+      "description": {
+        "tr": "Kalite politikamız",
+        "en": "Our quality policy",
+        "ar": "سياسة الجودة لدينا"
+      }
+    },
+    {
+      "name": {
+        "tr": "Gizlilik Politikası",
+        "en": "Privacy Policy",
+        "ar": "سياسة الخصوصية"
+      },
+      "status": "play",
+      "id": "gizlilikpolitikasi",
+      "path": "gizlilikpolitikasi",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 4,
+      "icon": "home",
+      "description": {
+        "tr": "Gizlilik politikası",
+        "en": "Privacy policy",
+        "ar": "سياسة الخصوصية"
+      }
+    },
+    {
+      "name": {
+        "tr": "Kişisel Veriler",
+        "en": "Personal Data",
+        "ar": "البيانات الشخصية"
+      },
+      "status": "play",
+      "id": "kisiselveriler",
+      "path": "kisiselveriler",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 5,
+      "icon": "home",
+      "description": {
+        "tr": "Kişisel verilerin korunması",
+        "en": "Protection of personal data",
+        "ar": "حماية البيانات الشخصية"
+      }
+    },
+    {
+      "name": {
+        "tr": "Kullanıcı Hakları",
+        "en": "User Rights",
+        "ar": "حقوق المستخدم"
+      },
+      "status": "play",
+      "id": "kullanicahaklari",
+      "path": "kullanicahaklari",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 6,
+      "icon": "home",
+      "description": {
+        "tr": "Kullanıcı hakları",
+        "en": "User rights",
+        "ar": "حقوق المستخدم"
+      }
+    },
+    {
+      "name": {
+        "tr": "Yasal Uyarı",
+        "en": "Legal Notice",
+        "ar": "إشعار قانوني"
+      },
+      "status": "play",
+      "id": "yasaluyari",
+      "path": "yasaluyari",
+      "category": "",
+      "desing": {
+        "header": [],
+        "body": [
+          "stfpo8",
+          "t7ca01"
+        ],
+        "footer": []
+      },
+      "index": 7,
+      "icon": "home",
+      "description": {
+        "tr": "Yasal uyarı",
+        "en": "Legal notice",
+        "ar": "إشعار قانوني"
+      }
+    }
+  ],
+  "index": 2,
+  "desing": {
+    "header": [],
+    "body": [
+      "tp5jo4"
+    ],
+    "footer": []
+  }
+}

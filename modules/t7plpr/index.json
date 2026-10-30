@@ -1,0 +1,26 @@
+{
+  "name": "Sayfa Listesi Kare",
+  "desing": {
+    "eyebrow": { "tr": "", "en": "" },
+    "sectionTitle": { "tr": "", "en": "" },
+    "sectionSubtitle": { "tr": "", "en": "" },
+    "ctaLabel": { "tr": "", "en": "" },
+    "page": "page",
+    "size": 4,
+    "category": "",
+    "aspect-ratio": "1 / 1",
+    "showAllProducts": false,
+    "margin": "20px 0px 20px 0px",
+    "bgcolor": "transparent",
+    "cardbg": "#ffffff",
+    "titlecolor": "#111827",
+    "textcolor": "#4b5563",
+    "bordercolor": "rgba(17, 24, 39, 0.1)",
+    "radius": "14px",
+    "accent": "#1e3a5f"
+  },
+  "category": "page-list",
+  "description": "Modern katalog grid liste modülü. Görsel üstte, altında başlık; soft border + hover lift + görsel zoom, opsiyonel eyebrow/başlık/alt başlık ve CTA satırı. Sayfa içeriklerini responsive grid düzeninde (masaüstü desing.size, ≤1024 3, ≤768 2 kolon) gösterir. 8 farklı projede kullanılır: üretim, lojistik, kurumsal, ambalaj, profesyonel hizmet ve inşaat sektörlerinde.",
+  "version": "1.2.0",
+  "icon": "grid_view"
+}

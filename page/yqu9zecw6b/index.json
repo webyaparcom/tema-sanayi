@@ -1,0 +1,41 @@
+{
+  "id": "yqu9zecw6b",
+  "name": {
+    "tr": "Referanslar",
+    "en": "References",
+    "ar": "المراجع"
+  },
+  "description": {
+    "tr": "Üç kıtada teslim edilen makinelerden örnekler (kurgusal müşteriler).",
+    "en": "Examples of machines delivered across three continents (fictional customers).",
+    "ar": "أمثلة من الآلات المسلَّمة في ثلاث قارات (عملاء افتراضيون)."
+  },
+  "keyword": {
+    "tr": "referanslar, ihracat, müşteriler",
+    "en": "references, exports, customers",
+    "ar": "مراجع، تصدير، عملاء"
+  },
+  "path": "referanslar",
+  "icon": "handshake",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "2hwdr9",
+      "2lp30p",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "index": 3,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Referanslar",
+    "en": "References",
+    "ar": "المراجع"
+  },
+  "date": "2026-10-30T18:54:04.570Z",
+  "update": "2026-10-30T19:03:49.286Z"
+}

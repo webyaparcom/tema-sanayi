@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "status": "play",
+  "id": "misyon",
+  "path": "misyon",
+  "category": "",
+  "text": {
+    "tr": "<h2>Misyonumuz</h2>\n<p>Misyonumuz, üreticilerin verimini artıran, güvenli ve CE işaretli makineleri zamanında teslim etmek ve satış sonrasında da yanlarında olmaktır.</p>",
+    "en": "<h2>Our mission</h2>\n<p>Our mission is to deliver safe, CE-marked machines that raise manufacturers’ productivity on time, and to stay with them after the sale.</p>",
+    "ar": "<h2>مهمتنا</h2>\n<p>مهمتنا تسليم آلات آمنة وحاصلة على علامة CE ترفع إنتاجية المصنّعين في موعدها، وأن نبقى بجانبهم بعد البيع.</p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 1,
+  "icon": "home",
+  "title": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "description": {
+    "tr": "Misyonumuz",
+    "en": "Our mission",
+    "ar": "مهمتنا"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.353Z",
+  "date": "2026-05-19"
+}

@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Vizyon",
+    "en": "Vision",
+    "ar": "الرؤية"
+  },
+  "status": "play",
+  "id": "vizyon",
+  "path": "vizyon",
+  "category": "",
+  "text": {
+    "tr": "<h2>Vizyonumuz</h2>\n<p>Bölgenin güvenle anılan makine üreticisi olmak ve ürünlerimizi üç kıtada tercih edilir kılmak.</p>",
+    "en": "<h2>Our vision</h2>\n<p>To be the region’s trusted machine manufacturer and to make our products a preferred choice across three continents.</p>",
+    "ar": "<h2>رؤيتنا</h2>\n<p>أن نكون الشركة المصنّعة للآلات الموثوقة في المنطقة، وأن نجعل منتجاتنا خيارًا مفضّلًا في ثلاث قارات.</p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 2,
+  "icon": "home",
+  "title": {
+    "tr": "Vizyon",
+    "en": "Vision",
+    "ar": "الرؤية"
+  },
+  "description": {
+    "tr": "Vizyonumuz",
+    "en": "Our vision",
+    "ar": "رؤيتنا"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.359Z",
+  "date": "2026-05-19"
+}

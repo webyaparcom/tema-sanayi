@@ -1,0 +1,31 @@
+<div class="modulex-dk" role="contentinfo" aria-label="{{ariaLabel}}">
+  <p class="modulex-dk-text">{{text}} <a class="modulex-dk-cta" href="{{dkHref}}"{{dkHedef}}><span>{{ctaText}}</span>{{dkYeniSekme}}<span class="material-symbols-outlined mx-flip modulex-dk-arrow" aria-hidden="true">arrow_forward</span></a></p>
+</div>
+<style>
+  /* demo-kredi — footer kredi şeridi. Yalnız mantıksal özellikler (RTL'de ayna); renkler site token'ından. */
+  .modulex-dk {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-block: 14px;
+    padding-inline: 16px;
+    background: var(--mx-site-surface-2, #f1f1ee);
+    color: var(--mx-site-text, #1b1b1b);
+    border-block-start: 1px solid color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .modulex-dk-text { margin: 0; max-width: 100%; overflow-wrap: anywhere; }
+  .modulex-dk-brand { font-weight: 700; unicode-bidi: isolate; direction: ltr; display: inline-block; }
+  .modulex-dk-cta {
+    display: inline-flex; align-items: center; gap: 4px;
+    color: var(--mx-site-primary, #2563eb); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+    transition: gap .2s ease, opacity .2s ease;
+  }
+  .modulex-dk-cta:hover { gap: 8px; opacity: .85; }
+  .modulex-dk-cta:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
+  .modulex-dk-arrow { font-size: 16px; }
+  @media (max-width: 480px) { .modulex-dk { font-size: 13px; } }
+  @media (prefers-reduced-motion: reduce) { .modulex-dk-cta { transition: none; } .modulex-dk-cta:hover { gap: 4px; } }
+</style>

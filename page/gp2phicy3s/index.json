@@ -1,0 +1,41 @@
+{
+  "id": "gp2phicy3s",
+  "name": {
+    "tr": "Katalog",
+    "en": "Catalogue",
+    "ar": "الكتالوج"
+  },
+  "description": {
+    "tr": "Genel katalog ve teknik föylerin demo PDF dosyaları.",
+    "en": "Demo PDF files of the general catalogue and data sheets.",
+    "ar": "ملفات PDF تجريبية للكتالوج العام وأوراق البيانات."
+  },
+  "keyword": {
+    "tr": "katalog, teknik föy, PDF",
+    "en": "catalogue, data sheet, PDF",
+    "ar": "كتالوج، ورقة بيانات، PDF"
+  },
+  "path": "katalog",
+  "icon": "menu_book",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "tv3b6o",
+      "7radg7",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "index": 4,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Katalog",
+    "en": "Catalogue",
+    "ar": "الكتالوج"
+  },
+  "date": "2026-10-30T18:54:04.551Z",
+  "update": "2026-10-30T19:03:49.277Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Maps",
+  "desing": {
+    "height": "200",
+    "opacity": "0.5",
+    "backgroundcolor": "#ffffff",
+    "color": "#1e3046",
+    "img": "map.png",
+    "externalUrl": ""
+  },
+  "category": "map",
+  "description": "Google Maps konum gösterim modülü. Firmanın fiziksel konumunu interaktif harita ile sergiler. 20 farklı projede kullanılır: kurumsal şirketler, restoranlar, sağlık kuruluşları, üretim firmaları ve hizmet sektöründe. Yol tarifi ve harita üzerinde zoom özellikleri vardır.",
+  "version": "1.0.0",
+  "icon": "map"
+}

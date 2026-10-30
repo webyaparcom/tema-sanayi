@@ -1,0 +1,56 @@
+{
+  "name": "Teknik Özellik Tablosu (Sanayi)",
+  "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+  "version": "1.0.0",
+  "icon": "table_chart",
+  "category": "page-list",
+  "desing": {
+    "max": "1100px",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "textcolor": "var(--mx-site-text, #1b1b1b)",
+    "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+    "surface": "var(--mx-site-surface, #f6f6f4)",
+    "surface2": "var(--mx-site-surface-2, #ececea)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+    "sortable": false,
+    "stickyFirst": true,
+    "showCopy": true,
+    "showPrint": true,
+    "title": { "tr": "Teknik Özellikler", "en": "Technical Specifications", "ar": "المواصفات الفنية" },
+    "tableLabel": { "tr": "Teknik özellik tablosu — yatay kaydırılabilir", "en": "Technical specification table — scrolls horizontally", "ar": "جدول المواصفات الفنية — قابل للتمرير أفقيًا" },
+    "copyLabel": { "tr": "Tabloyu kopyala", "en": "Copy table", "ar": "انسخ الجدول" },
+    "copiedLabel": { "tr": "Tablo panoya kopyalandı.", "en": "Table copied to clipboard.", "ar": "تم نسخ الجدول إلى الحافظة." },
+    "copyFailLabel": { "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.", "en": "Could not copy; please select and copy the table manually.", "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا." },
+    "printLabel": { "tr": "Yazdır", "en": "Print", "ar": "طباعة" },
+    "sortHint": { "tr": "Sıralamak için sütun başlığına tıklayın.", "en": "Click a column header to sort.", "ar": "انقر على عنوان العمود للترتيب." },
+    "sortedAsc": { "tr": "{col} sütununa göre artan sıralandı.", "en": "Sorted by {col}, ascending.", "ar": "تم الترتيب تصاعديًا حسب العمود {col}." },
+    "sortedDesc": { "tr": "{col} sütununa göre azalan sıralandı.", "en": "Sorted by {col}, descending.", "ar": "تم الترتيب تنازليًا حسب العمود {col}." },
+    "sortBy": { "tr": "Sırala: {col}", "en": "Sort by {col}", "ar": "رتّب حسب {col}" },
+    "downloadsTitle": { "tr": "Belgeler ve indirmeler", "en": "Documents and downloads", "ar": "المستندات والتنزيلات" },
+    "emptyText": { "tr": "Teknik özellik verisi bulunmuyor.", "en": "No technical specification data available.", "ar": "لا تتوفر بيانات للمواصفات الفنية." }
+  },
+  "data": {
+    "columns": [
+      { "key": "model", "label": { "tr": "Model", "en": "Model", "ar": "الطراز" } },
+      { "key": "capacity", "label": { "tr": "Kapasite (ton)", "en": "Capacity (t)", "ar": "السعة (طن)" }, "num": true },
+      { "key": "power", "label": { "tr": "Güç (kW)", "en": "Power (kW)", "ar": "القدرة (كيلوواط)" }, "num": true },
+      { "key": "weight", "label": { "tr": "Ağırlık (kg)", "en": "Weight (kg)", "ar": "الوزن (كغ)" }, "num": true },
+      { "key": "size", "label": { "tr": "Ölçü (mm)", "en": "Dimensions (mm)", "ar": "الأبعاد (مم)" } },
+      { "key": "std", "label": { "tr": "Uygunluk", "en": "Conformity", "ar": "المطابقة" } }
+    ],
+    "rows": [
+      { "model": "HP-100", "capacity": 100, "power": 7.5, "weight": 2400, "size": "1200 x 900 x 2100", "std": { "tr": "CE işaretli", "en": "CE marked", "ar": "حاصل على علامة CE" } },
+      { "model": "HP-160", "capacity": 160, "power": 11, "weight": 3600, "size": "1400 x 1000 x 2300", "std": { "tr": "CE işaretli", "en": "CE marked", "ar": "حاصل على علامة CE" } },
+      { "model": "HP-250", "capacity": 250, "power": 15, "weight": 5200, "size": "1600 x 1200 x 2600", "std": { "tr": "CE işaretli", "en": "CE marked", "ar": "حاصل على علامة CE" } },
+      { "model": "HP-400", "capacity": 400, "power": 22, "weight": 8900, "size": "2000 x 1500 x 3000", "std": { "tr": "CE işaretli", "en": "CE marked", "ar": "حاصل على علامة CE" } }
+    ],
+    "downloads": [
+      { "name": { "tr": "Ürün kataloğu", "en": "Product catalogue", "ar": "كتالوج المنتج" }, "href": "/belgeler/katalog-demo.pdf", "type": "pdf" },
+      { "name": { "tr": "CE uygunluk beyanı", "en": "CE declaration of conformity", "ar": "إعلان المطابقة CE" }, "href": "/belgeler/ce-demo.pdf", "type": "pdf" },
+      { "name": { "tr": "Teknik çizim", "en": "Technical drawing", "ar": "الرسم الفني" }, "href": "/belgeler/cizim-demo.dwg", "type": "dwg" }
+    ]
+  },
+  "tags": ["sanayi", "teknik", "tablo", "industrial", "specifications", "rtl"]
+}

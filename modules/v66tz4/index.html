@@ -1,0 +1,149 @@
+<section class="modulex-tline">
+  <div class="modulex-tline-container">
+    <div class="modulex-tline-header">
+      <div class="modulex-tline-badge">{{badge}}</div>
+      <h2 class="modulex-tline-title">{{title}}</h2>
+      <p class="modulex-tline-desc">{{description}}</p>
+    </div>
+    <div class="modulex-tline-list">
+      {{html}}
+    </div>
+  </div>
+</section>
+
+<style>
+  .modulex-tline {
+    width: 100%;
+    padding: 80px 20px;
+    background: --bgcolor--;
+    box-sizing: border-box;
+  }
+
+  .modulex-tline-container {
+    max-width: --max--;
+    margin: 0 auto;
+  }
+
+  .modulex-tline-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .modulex-tline-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: --accent--;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .modulex-tline-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: --titlecolor--;
+    margin: 0 0 12px;
+  }
+
+  .modulex-tline-desc {
+    font-size: 16px;
+    color: --textcolor--;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .modulex-tline-list {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-left: 34px;
+  }
+
+  .modulex-tline-list::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: --linecolor--;
+  }
+
+  .modulex-tline-item {
+    position: relative;
+    padding: 0 0 32px 18px;
+    animation: tlineIn 0.5s ease both;
+  }
+
+  .modulex-tline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  @keyframes tlineIn {
+    from { opacity: 0; transform: translateX(-14px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .modulex-tline-dot {
+    position: absolute;
+    left: -32px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: --accent--;
+    border: 3px solid --bgcolor--;
+    box-shadow: 0 0 0 2px --accent--;
+  }
+
+  .modulex-tline-year {
+    display: inline-block;
+    padding: 3px 12px;
+    background: --accent--;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .modulex-tline-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: --titlecolor--;
+    margin: 0 0 6px;
+  }
+
+  .modulex-tline-item-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: --textcolor--;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .modulex-tline {
+      padding: 48px 14px;
+    }
+
+    .modulex-tline-title {
+      font-size: 26px;
+    }
+
+    [class*="modulex"] {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [class*="modulex"],
+    [class*="modulex"] * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>

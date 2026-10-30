@@ -1,0 +1,32 @@
+{
+  "name": "Demo Kredi Şeridi",
+  "description": "Demo sitelerin alt bilgisinde duran kredi şeridi: «Bu demo Webyapar tarafından hazırlanmıştır — Bu temayı iste». Marka adı çevrilmez (Latin, dir=ltr izole), bağlantı demo adına göre webyapar.com/temalar#<slug>. Üç dil (TR/EN/AR), mantıksal CSS (RTL), mobilde sarar, reduced-motion'a saygılı.",
+  "version": "1.0.0",
+  "icon": "campaign",
+  "category": "demo",
+  "tags": ["demo", "footer", "kredi", "rtl"],
+  "desing": {
+    "href": "https://webyapar.com/temalar",
+    "brand": "Webyapar",
+    "text": {
+      "tr": "Bu demo {brand} tarafından hazırlanmıştır —",
+      "en": "This demo was prepared by {brand} —",
+      "ar": "تم إعداد هذا العرض التجريبي بواسطة {brand} —"
+    },
+    "ctaText": {
+      "tr": "Bu temayı iste",
+      "en": "Get this theme",
+      "ar": "اطلب هذا القالب"
+    },
+    "newTabText": {
+      "tr": "(yeni sekmede açılır)",
+      "en": "(opens in a new tab)",
+      "ar": "(يفتح في علامة تبويب جديدة)"
+    },
+    "ariaLabel": {
+      "tr": "Demo bilgisi",
+      "en": "Demo credit",
+      "ar": "معلومات العرض التجريبي"
+    }
+  }
+}

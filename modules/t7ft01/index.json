@@ -1,0 +1,15 @@
+{
+  "name": "Footer 1",
+  "desing": {
+    "showlang": true,
+    "bgcolor": "#1e3046",
+    "color": "#fff",
+    "img": "",
+    "imgwidth": "250px"
+  },
+  "category": "footer",
+  "data": [],
+  "description": "Evrensel alt bilgi (footer) bölüm modülü. Firma logosu, telif hakları metni, iletişim bilgileri ve sosyal medya ikonlarını responsive tasarımda sunar. 41 farklı projede kullanılır: tüm sektörlerden kurumsal, e-ticaret, restoran, sağlık, ajans, hizmet firmalarında. Tüm sayfa türlerinde standart footer yapısı sağlar.",
+  "version": "1.0.0",
+  "icon": "web_asset"
+}

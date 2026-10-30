@@ -1,0 +1,127 @@
+{
+  "name": "Proje Kartları (Filtre + Arama)",
+  "description": "Proje/portföy kartları: başlık, yıl, rozetler (m²/konum meta[{k,v}] — k/v çok dilli), durum rozeti (devam/tamam/yakında — renk + ikon + metin), kategori çipleri, durum seçici, metin arama (tr/ar normalleştirme), sıralama (year|title), sonuç sayısı (Arapça 6 çoğul form), boş sonuç durumu ve ?q=&cat=&status=&sort= URL durumu. Projeler data[] içinde {id,title{tr,en,ar},cat,year,status,meta[],img,url}; kategoriler desing.cats[]. url bir site yolu (slug) ise dil önekiyle bağlanır. Üç dil + RTL.",
+  "version": "1.0.0",
+  "icon": "domain",
+  "category": "proje",
+  "tags": ["proje", "portfolyo", "referans", "filtre", "arama", "projects"],
+  "desing": {
+    "max": "1280px",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "textcolor": "var(--mx-site-text, #1b1b1b)",
+    "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+    "surface": "var(--mx-site-surface, #f6f6f4)",
+    "surface2": "var(--mx-site-surface-2, #ececea)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+    "statusDevam": "#b45309",
+    "statusTamam": "#15803d",
+    "statusYakinda": "#1d4ed8",
+    "gap": "20px",
+    "radius": "14px",
+    "columns": { "d": 3, "t": 2, "m": 1 },
+    "ratio": "4:3",
+    "search": true,
+    "sort": "year",
+    "sortSelect": true,
+    "urlPrefix": "",
+    "title": { "tr": "Projelerimiz", "en": "Our Projects", "ar": "مشاريعنا" },
+    "description": {
+      "tr": "Tamamladığımız ve sürdürdüğümüz çalışmalar. Kategori, durum ya da anahtar sözcükle süzün.",
+      "en": "Work we have completed and work still in progress. Filter by category, status or keyword.",
+      "ar": "الأعمال التي أنجزناها وتلك الجارية. صفِّ حسب الفئة أو الحالة أو كلمة مفتاحية."
+    },
+    "searchLabel": { "tr": "Projelerde ara", "en": "Search projects", "ar": "البحث في المشاريع" },
+    "searchPlaceholder": { "tr": "Proje, konum veya yıl ara…", "en": "Search project, place or year…", "ar": "ابحث عن مشروع أو موقع أو سنة…" },
+    "allLabel": { "tr": "Tümü", "en": "All", "ar": "الكل" },
+    "filterLabel": { "tr": "Kategoriye göre filtrele", "en": "Filter by category", "ar": "التصفية حسب الفئة" },
+    "statusFieldLabel": { "tr": "Durum", "en": "Status", "ar": "الحالة" },
+    "allStatusLabel": { "tr": "Tüm durumlar", "en": "All statuses", "ar": "كل الحالات" },
+    "sortFieldLabel": { "tr": "Sıralama", "en": "Sort by", "ar": "الترتيب" },
+    "sortYearLabel": { "tr": "Yıl (yeniden eskiye)", "en": "Year (newest first)", "ar": "السنة (الأحدث أولًا)" },
+    "sortTitleLabel": { "tr": "Ad (A → Z)", "en": "Name (A → Z)", "ar": "الاسم (أبجديًا)" },
+    "detailLabel": { "tr": "Detayı incele", "en": "View details", "ar": "عرض التفاصيل" },
+    "yearLabel": { "tr": "Yıl", "en": "Year", "ar": "السنة" },
+    "clearLabel": { "tr": "Filtreleri temizle", "en": "Clear filters", "ar": "مسح عوامل التصفية" },
+    "emptyText": {
+      "tr": "Aramanıza uyan proje bulunamadı. Filtreleri değiştirmeyi deneyin.",
+      "en": "No projects match your search. Try changing the filters.",
+      "ar": "لم نعثر على مشاريع مطابقة لبحثك. جرّب تغيير عوامل التصفية."
+    },
+    "countText": {
+      "zero": { "ar": "لا توجد مشاريع" },
+      "one": { "tr": "{n} proje", "en": "{n} project", "ar": "مشروع واحد" },
+      "two": { "ar": "مشروعان" },
+      "few": { "ar": "{n} مشاريع" },
+      "many": { "ar": "{n} مشروعًا" },
+      "other": { "tr": "{n} proje", "en": "{n} projects", "ar": "{n} مشروع" }
+    },
+    "statusLabels": {
+      "devam": { "tr": "Devam ediyor", "en": "In progress", "ar": "قيد التنفيذ" },
+      "tamam": { "tr": "Tamamlandı", "en": "Completed", "ar": "مكتمل" },
+      "yakinda": { "tr": "Yakında", "en": "Coming soon", "ar": "قريبًا" }
+    },
+    "cats": [
+      { "id": "konut", "name": { "tr": "Konut", "en": "Residential", "ar": "سكني" } },
+      { "id": "ticari", "name": { "tr": "Ticari", "en": "Commercial", "ar": "تجاري" } },
+      { "id": "endustri", "name": { "tr": "Endüstriyel", "en": "Industrial", "ar": "صناعي" } }
+    ]
+  },
+  "data": [
+    {
+      "id": "vadi-konutlari",
+      "title": { "tr": "Vadi Konutları", "en": "Valley Residences", "ar": "مساكن الوادي" },
+      "cat": "konut", "year": 2026, "status": "devam", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "12.400 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Şehit Kamil", "en": "Sehitkamil", "ar": "شهيد كامل" } }
+      ]
+    },
+    {
+      "id": "carsi-is-merkezi",
+      "title": { "tr": "Çarşı İş Merkezi", "en": "Bazaar Business Center", "ar": "مركز السوق للأعمال" },
+      "cat": "ticari", "year": 2024, "status": "tamam", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "8.750 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Şahinbey", "en": "Sahinbey", "ar": "شاهين بك" } }
+      ]
+    },
+    {
+      "id": "organize-depo",
+      "title": { "tr": "Organize Lojistik Deposu", "en": "Industrial Logistics Warehouse", "ar": "مستودع لوجستي صناعي" },
+      "cat": "endustri", "year": 2025, "status": "tamam", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "22.000 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Organize Sanayi", "en": "Industrial Zone", "ar": "المنطقة الصناعية" } }
+      ]
+    },
+    {
+      "id": "park-evleri",
+      "title": { "tr": "Park Evleri", "en": "Park Homes", "ar": "منازل الحديقة" },
+      "cat": "konut", "year": 2023, "status": "tamam", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "6.900 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Nizip", "en": "Nizip", "ar": "نزيب" } }
+      ]
+    },
+    {
+      "id": "kule-plaza",
+      "title": { "tr": "Kule Plaza", "en": "Tower Plaza", "ar": "برج بلازا" },
+      "cat": "ticari", "year": 2027, "status": "yakinda", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "15.300 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Şehir merkezi", "en": "City center", "ar": "وسط المدينة" } }
+      ]
+    },
+    {
+      "id": "uretim-tesisi",
+      "title": { "tr": "Üretim Tesisi Genişletme", "en": "Production Plant Expansion", "ar": "توسعة منشأة الإنتاج" },
+      "cat": "endustri", "year": 2026, "status": "devam", "img": "", "url": "",
+      "meta": [
+        { "k": { "tr": "Alan", "en": "Area", "ar": "المساحة" }, "v": "9.600 m²" },
+        { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Organize Sanayi", "en": "Industrial Zone", "ar": "المنطقة الصناعية" } }
+      ]
+    }
+  ]
+}

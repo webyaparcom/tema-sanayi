@@ -1,0 +1,63 @@
+{
+  "name": "Page Desing 5",
+  "desing": {
+    "height": "200",
+    "opacity": "0.5",
+    "font-size": "32",
+    "backgroundcolor": "#000",
+    "menu-active": "#000",
+    "textcolor": "#fff",
+    "bgcolor": "#ffffff",
+    "border_radius": "8px",
+    "card_shadow": "0 10px 28px rgba(0, 0, 0, 0.08)",
+    "color": "#111111",
+    "colortitle": "#111111",
+    "coloractive": "#000000",
+    "ui": {
+      "tr": {
+        "home": "Anasayfa",
+        "products": "Ürünler",
+        "dimensions": "Ölçüler",
+        "dimNote": "Standart üretim referansıdır; proje bazında özelleştirilebilir.",
+        "quote": "Teklif Al",
+        "whatsapp": "WhatsApp",
+        "prev": "Önceki",
+        "next": "Sonraki"
+      },
+      "en": {
+        "home": "Home",
+        "products": "Products",
+        "dimensions": "Dimensions",
+        "dimNote": "Standard production reference; customizable per project.",
+        "quote": "Get Quote",
+        "whatsapp": "WhatsApp",
+        "prev": "Previous",
+        "next": "Next"
+      },
+      "ar": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "dimensions": "الأبعاد",
+        "dimNote": "مرجع إنتاج قياسي؛ قابل للتخصيص حسب المشروع.",
+        "quote": "عرض سعر",
+        "whatsapp": "واتساب",
+        "prev": "السابق",
+        "next": "التالي"
+      }
+    },
+    "noTitle": {
+      "tr": "Başlık Yok",
+      "en": "No title",
+      "ar": "بدون عنوان"
+    },
+    "productNavAria": {
+      "tr": "Ürün navigasyonu",
+      "en": "Product navigation",
+      "ar": "تنقل المنتج"
+    }
+  },
+  "category": "page",
+  "description": "Sayfa basligi, yan menu ve icerik alani. Urun detayinda breadcrumb, olcu kartlari, teklif/WhatsApp CTA, onceki/sonraki urun navigasyonu. Kategori menusu ve responsive slide-in menu.",
+  "version": "1.3.1",
+  "icon": "web"
+}

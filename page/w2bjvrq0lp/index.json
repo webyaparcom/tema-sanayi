@@ -1,0 +1,40 @@
+{
+  "id": "w2bjvrq0lp",
+  "name": {
+    "tr": "Teklif Al",
+    "en": "Get a Quote",
+    "ar": "اطلب عرض سعر"
+  },
+  "description": {
+    "tr": "Teklif ve teknik görüşme talep formu (demo).",
+    "en": "Quote and technical meeting request form (demo).",
+    "ar": "نموذج طلب عرض سعر واجتماع فني (تجريبي)."
+  },
+  "keyword": {
+    "tr": "teklif, teknik görüşme, fabrika ziyareti",
+    "en": "quote, technical meeting, factory visit",
+    "ar": "عرض سعر، اجتماع فني، زيارة المصنع"
+  },
+  "path": "teklif-al",
+  "icon": "request_quote",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "dd0fdb",
+      "wugxdk"
+    ],
+    "footer": []
+  },
+  "index": 7,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Teklif Al",
+    "en": "Get a Quote",
+    "ar": "اطلب عرض سعر"
+  },
+  "date": "2026-10-30T18:54:04.547Z",
+  "update": "2026-10-30T19:03:49.268Z"
+}

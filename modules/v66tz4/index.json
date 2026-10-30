@@ -1,0 +1,47 @@
+{
+  "name": "Zaman Çizelgesi 1",
+  "desing": {
+    "max": "1200px",
+    "bgcolor": "#ffffff",
+    "titlecolor": "#1e293b",
+    "textcolor": "#475569",
+    "accent": "#DE6D26",
+    "linecolor": "#e2e8f0",
+    "badge": { "tr": "Tarihçe", "en": "Timeline" },
+    "title": { "tr": "Yolculuğumuz", "en": "Our Journey" },
+    "description": {
+      "tr": "Kuruluşumuzdan bugüne önemli dönüm noktalarımız.",
+      "en": "Key milestones from our founding to today."
+    }
+  },
+  "data": [
+    {
+      "year": "2015",
+      "title": { "tr": "Kuruluş", "en": "Founded" },
+      "text": {
+        "tr": "Küçük bir ekiple ilk ofisimizde yola çıktık.",
+        "en": "We started in our first office with a small team."
+      }
+    },
+    {
+      "year": "2019",
+      "title": { "tr": "Büyüme", "en": "Growth" },
+      "text": {
+        "tr": "Ekibimizi büyütüp yeni hizmet alanlarına açıldık.",
+        "en": "We grew the team and expanded into new service areas."
+      }
+    },
+    {
+      "year": "2024",
+      "title": { "tr": "Bugün", "en": "Today" },
+      "text": {
+        "tr": "Yüzlerce tamamlanan projeyle sektörde güvenilir bir çözüm ortağıyız.",
+        "en": "With hundreds of completed projects, we are a trusted solution partner."
+      }
+    }
+  ],
+  "category": "timeline",
+  "description": "Zaman çizelgesi modülü. Kurumsal tarihçe, süreç adımları veya yol haritasını dikey çizgi + yıl rozetiyle listeler. Çok dilli başlık/metin ve animasyonlu giriş içerir.",
+  "version": "1.0.0",
+  "icon": "timeline"
+}

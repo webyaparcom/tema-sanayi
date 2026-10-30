@@ -1,0 +1,40 @@
+{
+  "id": "ogb21abzny",
+  "name": {
+    "tr": "Haberler",
+    "en": "News",
+    "ar": "الأخبار"
+  },
+  "description": {
+    "tr": "Ürün, tesis ve sertifikasyon haberleri (kurgusal).",
+    "en": "Product, plant and certification news (fictional).",
+    "ar": "أخبار المنتجات والمنشأة والشهادات (افتراضية)."
+  },
+  "keyword": {
+    "tr": "haberler, duyurular, fuar",
+    "en": "news, announcements, trade fair",
+    "ar": "أخبار، إعلانات، معرض"
+  },
+  "path": "haberler",
+  "icon": "newspaper",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ho4qw2",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "index": 5,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Haberler",
+    "en": "News",
+    "ar": "الأخبار"
+  },
+  "date": "2026-10-30T18:54:04.602Z",
+  "update": "2026-10-30T19:03:49.296Z"
+}

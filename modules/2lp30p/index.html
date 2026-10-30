@@ -1,0 +1,257 @@
+<section class="modulex-pk" id="pk-{{id}}" style="{{pkvars}}">
+  <div class="modulex-pk-wrap">
+    {{pkhead}}
+    {{pktools}}
+    {{pkchips}}
+    <div class="modulex-pk-bar">
+      <p class="modulex-pk-count" role="status" aria-live="polite" aria-atomic="true">{{pkcount}}</p>
+      <button type="button" class="modulex-pk-clear" data-pk-clear hidden>{{pkclear}}</button>
+    </div>
+    <ul class="modulex-pk-grid">{{pkitems}}</ul>
+    {{pkempty}}
+  </div>
+  <script type="application/json" id="pk-{{id}}-veri">{{pkveri}}</script>
+</section>
+
+<style>
+  .modulex-pk {
+    box-sizing: border-box;
+    width: 100%;
+    padding-block: clamp(40px, 7vw, 80px);
+    padding-inline: clamp(16px, 4vw, 32px);
+    background: --bgcolor--;
+    color: --textcolor--;
+    --pk-c: var(--pk-cd);
+  }
+  .modulex-pk *,
+  .modulex-pk *::before,
+  .modulex-pk *::after { box-sizing: border-box; }
+
+  .modulex-pk-wrap { max-width: --max--; margin-inline: auto; }
+  .modulex-pk-head { margin-block-end: 28px; text-align: start; }
+  .modulex-pk-title { margin: 0 0 8px; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); line-height: 1.2; color: --textcolor--; }
+  .modulex-pk-desc { margin: 0; max-width: 64ch; color: --mutedcolor--; font-size: 1rem; line-height: 1.7; }
+  .modulex-pk-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+  /* Arac cubugu */
+  .modulex-pk-tools { display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 12px; margin-block-end: 16px; }
+  .modulex-pk-tools[hidden], .modulex-pk-chips[hidden], .modulex-pk-clear[hidden], .modulex-pk-empty[hidden], .modulex-pk-card[hidden] { display: none; }
+  .modulex-pk-field { position: relative; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .modulex-pk-lbl { font-size: 0.8rem; font-weight: 500; color: --mutedcolor--; }
+  .modulex-pk-search { justify-content: flex-end; }
+  .modulex-pk-search-ic { position: absolute; inset-inline-start: 12px; inset-block-end: 11px; font-size: 22px; color: --mutedcolor--; pointer-events: none; }
+  .modulex-pk-input, .modulex-pk-select {
+    width: 100%; min-height: 44px; padding-inline: 14px; border: 1px solid --bordercolor--; border-radius: 10px;
+    background: --surface--; color: --textcolor--; font: inherit; font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  .modulex-pk-input { padding-inline-start: 44px; }
+  .modulex-pk-select { cursor: pointer; }
+  .modulex-pk-input:hover, .modulex-pk-select:hover { border-color: --accent--; }
+  .modulex-pk-input:focus-visible, .modulex-pk-select:focus-visible { outline: 3px solid --accent--; outline-offset: 2px; }
+
+  .modulex-pk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-block-end: 16px; }
+  .modulex-pk-chip {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 44px; min-width: 64px; padding-inline: 18px;
+    border: 1px solid --bordercolor--; border-radius: 999px; background: --surface--; color: --textcolor--;
+    font: inherit; font-size: 0.95rem; font-weight: 500; cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .modulex-pk-chip:hover { background: --surface2--; }
+  .modulex-pk-chip:active { transform: scale(0.97); }
+  .modulex-pk-chip[aria-pressed="true"] { background: --accent--; border-color: --accent--; color: --accentText--; }
+  .modulex-pk-chip-n { font-size: 0.8rem; opacity: 0.8; font-variant-numeric: tabular-nums; }
+  .modulex-pk-chip:focus-visible, .modulex-pk-clear:focus-visible { outline: 3px solid --accent--; outline-offset: 2px; }
+
+  .modulex-pk-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin-block-end: 12px; }
+  .modulex-pk-count { margin: 0; font-size: 0.9rem; color: --mutedcolor--; }
+  .modulex-pk-clear {
+    min-height: 44px; padding-inline: 16px; border: 1px solid --bordercolor--; border-radius: 10px;
+    background: transparent; color: --textcolor--; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .modulex-pk-clear:hover { background: --surface2--; border-color: --accent--; }
+
+  /* Kartlar */
+  .modulex-pk-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--pk-c), minmax(0, 1fr)); gap: --gap--; }
+  .modulex-pk-card { margin: 0; animation: modulexPkIn 0.45s ease both; }
+  .modulex-pk-article {
+    position: relative; display: flex; flex-direction: column; height: 100%; overflow: hidden;
+    background: --surface--; border: 1px solid --bordercolor--; border-radius: --radius--;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .modulex-pk-article:hover { transform: translateY(-4px); border-color: --accent--; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12); }
+  .modulex-pk-media { position: relative; aspect-ratio: var(--pk-ar); overflow: hidden; background: --surface2--; }
+  .modulex-pk-img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+  .modulex-pk-article:hover .modulex-pk-img { transform: scale(1.05); }
+  .modulex-pk-ph {
+    display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;
+    background: linear-gradient(135deg, --surface2--, color-mix(in srgb, --surface2-- 78%, --textcolor--));
+  }
+  .modulex-pk-ph .material-symbols-outlined { font-size: 56px; color: --textcolor--; opacity: 0.4; }
+
+  /* Durum rozeti: renk + ikon + metin; zemin opak (kontrast) */
+  .modulex-pk-status {
+    position: absolute; inset-block-start: 12px; inset-inline-start: 12px;
+    display: inline-flex; align-items: center; gap: 6px; padding-block: 6px; padding-inline: 10px 12px;
+    background: --bgcolor--; color: --textcolor--; border: 1.5px solid var(--pk-st); border-radius: 999px;
+    font-size: 0.8rem; font-weight: 600; line-height: 1.2; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  .modulex-pk-status .material-symbols-outlined { font-size: 18px; color: color-mix(in srgb, var(--pk-st) 55%, --textcolor--); }
+  .modulex-pk-st-devam { --pk-st: --statusDevam--; }
+  .modulex-pk-st-tamam { --pk-st: --statusTamam--; }
+  .modulex-pk-st-yakinda { --pk-st: --statusYakinda--; }
+
+  .modulex-pk-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 18px 18px 20px; text-align: start; }
+  .modulex-pk-eyebrow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; font-size: 0.8rem; color: --mutedcolor--; }
+  .modulex-pk-cat { font-weight: 600; letter-spacing: 0.02em; }
+  .modulex-pk-year { font-variant-numeric: tabular-nums; }
+  .modulex-pk-name { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+  .modulex-pk-name { font-weight: 600; }
+  /* css.css a:link ozgullugunu (0,1,1) yenmek icin a.sinif:link */
+  a.modulex-pk-link:link, a.modulex-pk-link:visited { color: --textcolor--; text-decoration: none; }
+  .modulex-pk-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: --radius--; cursor: pointer; }
+  .modulex-pk-link:focus-visible { outline: none; }
+  .modulex-pk-link:focus-visible::after { outline: 3px solid --accent--; outline-offset: 2px; }
+  .modulex-pk-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .modulex-pk-meta-i { display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 10px; border-radius: 8px; background: --surface2--; font-size: 0.85rem; }
+  .modulex-pk-meta-k { color: --mutedcolor--; }
+  .modulex-pk-meta-v { font-weight: 600; }
+  .modulex-pk-more { display: inline-flex; align-items: center; gap: 6px; margin-block-start: auto; padding-block-start: 4px; font-size: 0.9rem; font-weight: 600; color: --accent--; }
+  .modulex-pk-more .material-symbols-outlined { font-size: 20px; transition: transform 0.25s ease; }
+  .modulex-pk-article:hover .modulex-pk-more .material-symbols-outlined { transform: translateX(4px); }
+  [dir="rtl"] .modulex-pk-article:hover .modulex-pk-more .material-symbols-outlined { transform: scaleX(-1) translateX(4px); }
+
+  .modulex-pk-empty {
+    display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 48px 16px; text-align: center;
+    background: --surface--; border: 1px dashed --bordercolor--; border-radius: --radius--; color: --mutedcolor--;
+  }
+  .modulex-pk-empty p { margin: 0; max-width: 46ch; line-height: 1.6; }
+  .modulex-pk-empty .material-symbols-outlined { font-size: 44px; opacity: 0.6; }
+  .modulex-pk-empty .modulex-pk-clear { color: --textcolor--; }
+
+  @keyframes modulexPkIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 1024px) {
+    .modulex-pk { --pk-c: var(--pk-ct); }
+    .modulex-pk-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .modulex-pk-search { grid-column: 1 / -1; }
+  }
+  @media (max-width: 768px) {
+    .modulex-pk { --pk-c: var(--pk-cm); }
+    .modulex-pk-tools { grid-template-columns: minmax(0, 1fr); }
+    .modulex-pk-chips { flex-wrap: nowrap; overflow-x: auto; padding-block-end: 4px; scrollbar-width: thin; }
+    .modulex-pk-chip { flex: 0 0 auto; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-pk-card { animation: none; }
+    .modulex-pk-article, .modulex-pk-img, .modulex-pk-chip, .modulex-pk-input, .modulex-pk-select, .modulex-pk-clear, .modulex-pk-more .material-symbols-outlined { transition: none; }
+    .modulex-pk-article:hover { transform: none; }
+    .modulex-pk-article:hover .modulex-pk-img, .modulex-pk-article:hover .modulex-pk-more .material-symbols-outlined { transform: none; }
+    [dir="rtl"] .modulex-pk-article:hover .modulex-pk-more .material-symbols-outlined { transform: scaleX(-1); }
+  }
+</style>
+
+<script>
+  (function () {
+    var kok = document.getElementById("pk-{{id}}");
+    if (!kok || kok.getAttribute("data-pk-hazir") === "1") { return; }
+    kok.setAttribute("data-pk-hazir", "1");
+    var veri = {};
+    try { veri = JSON.parse(document.getElementById("pk-{{id}}-veri").textContent); } catch (e) { veri = {}; }
+
+    function hazir(fn) {
+      if (window.mxLoad) { fn(); }
+      else if (document.readyState === "complete") { setTimeout(fn, 50); }
+      else { window.addEventListener("load", fn); }
+    }
+
+    function kur() {
+      var Motor = window.MxFiltre;
+      var liste = kok.querySelector(".modulex-pk-grid");
+      var kartlar = kok.querySelectorAll(".modulex-pk-card");
+      var araclar = kok.querySelector(".modulex-pk-tools");
+      var cipKap = kok.querySelector(".modulex-pk-chips");
+      var chips = kok.querySelectorAll(".modulex-pk-chip");
+      var girdi = kok.querySelector("[data-pk-q]");
+      var durumSec = kok.querySelector("[data-pk-status]");
+      var siraSec = kok.querySelector("[data-pk-sort]");
+      var sayi = kok.querySelector(".modulex-pk-count");
+      var temizleBtn = kok.querySelectorAll("[data-pk-clear]");
+      var bos = kok.querySelector(".modulex-pk-empty");
+      var ogeler = [];
+      var i;
+      for (i = 0; i < veri.items.length; i++) {
+        ogeler.push({ i: i, cat: veri.items[i].cat, status: veri.items[i].status, year: veri.items[i].year, title: veri.items[i].title, q: veri.items[i].q });
+      }
+      var f = Motor.olustur({
+        items: ogeler,
+        arama: { alanlar: ["q"] },
+        facets: { cat: { tip: "tek" }, status: { tip: "tek" } },
+        siralama: { year: { alan: "year", yon: -1 }, title: { alan: "title", yon: 1, tip: "metin" } },
+        varsayilanSiralama: veri.sort || "year",
+        url: true,
+        urlOnek: veri.prefix || "",
+        dil: veri.lang
+      });
+
+      function uygula(s) {
+        var j;
+        var sirali = s.tumu;
+        var gorunen = {};
+        for (j = 0; j < sirali.length; j++) {
+          gorunen[sirali[j].i] = true;
+          kartlar[sirali[j].i].removeAttribute("hidden");
+          liste.appendChild(kartlar[sirali[j].i]);
+        }
+        for (j = 0; j < kartlar.length; j++) {
+          if (!gorunen[j]) { kartlar[j].setAttribute("hidden", ""); }
+        }
+        var d = s.durum;
+        var aktifKat = d.facet.cat || "";
+        for (j = 0; j < chips.length; j++) {
+          chips[j].setAttribute("aria-pressed", (chips[j].getAttribute("data-pk-cat") || "") === aktifKat ? "true" : "false");
+        }
+        if (durumSec) { durumSec.value = d.facet.status || ""; }
+        if (siraSec) { siraSec.value = d.sirala; }
+        if (girdi && document.activeElement !== girdi && girdi.value !== d.q) { girdi.value = d.q; }
+        sayi.textContent = Motor.cogul(s.toplam, veri.count || {}, veri.lang);
+        var filtreli = f.filtreVar();
+        for (j = 0; j < temizleBtn.length; j++) {
+          if (temizleBtn[j].parentNode === bos) { continue; }
+          if (filtreli) { temizleBtn[j].removeAttribute("hidden"); } else { temizleBtn[j].setAttribute("hidden", ""); }
+        }
+        if (s.toplam === 0) { bos.removeAttribute("hidden"); } else { bos.setAttribute("hidden", ""); }
+      }
+
+      for (i = 0; i < chips.length; i++) {
+        chips[i].addEventListener("click", function (ev) {
+          var id = ev.currentTarget.getAttribute("data-pk-cat") || "";
+          f.ayarla({ cat: (f.durum().facet.cat || "") === id ? "" : id });
+        });
+      }
+      if (durumSec) { durumSec.addEventListener("change", function () { f.ayarla({ status: durumSec.value }); }); }
+      if (siraSec) { siraSec.addEventListener("change", function () { f.sirala(siraSec.value); }); }
+      for (i = 0; i < temizleBtn.length; i++) {
+        temizleBtn[i].addEventListener("click", function () {
+          f.sifirla();
+          if (girdi) { girdi.value = ""; }
+        });
+      }
+      if (girdi) { Motor.aramaBagla(girdi, f, 150); }
+      f.abone(uygula);
+      uygula(f.sonuc());
+      if (araclar) { araclar.removeAttribute("hidden"); }
+      if (cipKap) { cipKap.removeAttribute("hidden"); }
+    }
+
+    hazir(function () {
+      if (!veri.items || !veri.items.length) { return; }
+      window.mxLoad("mxfiltre").then(kur);
+    });
+  })();
+</script>

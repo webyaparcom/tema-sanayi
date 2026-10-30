@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Üretim Tesisi",
+    "en": "Production Plant",
+    "ar": "منشأة الإنتاج"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hs54qzyeyo",
+  "url": "",
+  "path": "uretim-tesisi",
+  "index": 1,
+  "icon": "factory",
+  "desing": {
+    "header": [],
+    "body": [
+      "bwun6u",
+      "1loxqb",
+      "14b2dg",
+      "ybu562",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "18.000 m² kapalı alanlı tesis, makine parkı ve test hattı.",
+    "en": "An 18,000 m² covered plant, its machine park and test line.",
+    "ar": "منشأة مساحتها المغطاة 18.000 م² وأسطول ماكيناتها وخط الاختبار."
+  },
+  "spot": {
+    "tr": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Üretim Tesisi",
+    "en": "Production Plant",
+    "ar": "منشأة الإنتاج"
+  },
+  "keyword": {
+    "tr": "üretim tesisi, makine parkı, OSB",
+    "en": "production plant, machine park, industrial zone",
+    "ar": "منشأة إنتاج، أسطول ماكينات، منطقة صناعية"
+  },
+  "text": {},
+  "update": "2026-10-30T19:03:49.262Z",
+  "date": "2026-05-19"
+}

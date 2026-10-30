@@ -1,0 +1,22 @@
+{
+  "name": "Slider",
+  "data": [
+    {
+      "img": "1.jpg"
+    },
+    {
+      "img": "2.jpg"
+    },
+    {
+      "img": "3.jpg"
+    }
+  ],
+  "desing": {
+    "delay": 5000,
+    "margin": "0px 0 0 0"
+  },
+  "category": "slider",
+  "description": "Ana sayfa hero slider modülü. Otomatik geçiş animasyonlu görsel slider sunar. 31 farklı projede kullanılır: kurumsal şirketler, e-ticaret siteleri, restoranlar, sağlık kuruluşları, üretim firmaları ve ajanslar. Swiper.js ile touch gesture desteği ve özelleştirilebilir geçiş süresi içerir.",
+  "version": "1.0.0",
+  "icon": "view_carousel"
+}

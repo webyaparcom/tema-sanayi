@@ -1,0 +1,984 @@
+<div class="modulex-title f36">
+  <h1>{{name}}</h1>
+</div>
+<div class="modulex">
+  <button
+    type="button"
+    class="modulex-menu-btn"
+    aria-expanded="false"
+    aria-controls="modulex-menu"
+  >
+    <span class="modulex-menu-btn-label">@menu@</span>
+    <span class="material-symbols-outlined modulex-icon" aria-hidden="true">menu</span>
+  </button>
+  <div class="modulex-menu-overlay" id="modulex-menu-overlay" aria-hidden="true"></div>
+  <nav class="modulex-menu" id="modulex-menu" aria-label="@menu@">
+    <button class="modulex-menu-close" type="button" aria-label="@menu-close@" aria-controls="modulex-menu">
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+    {{pagelist}}
+  </nav>
+  <div class="modulex-main">
+    {{breadcrumb}}
+    {{productPanel}}
+    <div class="modulex-body">{{text}}</div>
+    {{productNav}}
+  </div>
+</div>
+<style>
+  #content {
+    justify-content: start;
+  }
+
+  .modulex {
+    width: 100%;
+    max-width: var(--max);
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .modulex * {
+    box-sizing: border-box;
+  }
+
+  .modulex-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .modulex-menu-btn {
+    display: none;
+    width: 100%;
+    background-color: --backgroundcolor--;
+    padding: 12px 16px;
+    border-radius: --border_radius--;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: --textcolor--;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .modulex-menu-btn .modulex-icon {
+    font-size: 22px;
+  }
+
+  .modulex-menu {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: --bgcolor--;
+    border-radius: --border_radius--;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: --card_shadow--;
+  }
+
+  .modulex-menu-parent {
+    font-weight: 600;
+    background-color: rgba(30, 48, 70, 0.06) !important;
+    border-color: rgba(30, 48, 70, 0.12) !important;
+  }
+
+  .modulex-menu-parent-label,
+  .modulex-menu-link-text {
+    display: block;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .modulex-menu-link,
+  .modulex-top {
+    background-color: #fff;
+    padding: 10px 12px;
+    border-radius: --border_radius--;
+    border: 1px solid rgba(30, 48, 70, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .modulex-menu-link.active,
+  .modulex-menu-link:hover,
+  .modulex-top.active,
+  .modulex-top:hover {
+    background-color: --menu-active--;
+    color: #fff;
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(222, 109, 38, 0.2);
+  }
+
+  .modulex-menu-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .modulex-top {
+    width: 100%;
+    border: none;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .modulex-top .modulex-icon {
+    font-size: 14px;
+    transition: transform 0.22s ease;
+  }
+
+  .modulex-menu-group.open .modulex-top .modulex-icon {
+    transform: rotate(180deg);
+  }
+
+  .modulex-sub {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 8px;
+  }
+
+  .modulex-sub.show {
+    display: flex;
+  }
+
+  .modulex-sub-link {
+    background-color: #fff;
+    padding: 8px 10px;
+    border-radius: --border_radius--;
+    font-size: 14px;
+    border: 1px solid rgba(30, 48, 70, 0.06);
+    transition: background-color 0.22s ease, color 0.22s ease;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .modulex-sub-link.active,
+  .modulex-sub-link:hover {
+    background-color: rgba(222, 109, 38, 0.12);
+    color: --colortitle--;
+  }
+
+  .modulex-title {
+    width: 100%;
+    height: --height--px;
+    min-height: 120px;
+    background-color: --backgroundcolor--;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: --textcolor--;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  .modulex-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: none; /* modulex-title-bg-dyn */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: --opacity--;
+    z-index: 1;
+  }
+
+  .modulex-title h1 {
+    position: relative;
+    z-index: 2;
+    font-size: --font-size--px;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    color: --textcolor-- !important;
+    animation: modulexPd5TitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes modulexPd5TitleIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .modulex-pd5-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: --color--;
+    animation: modulexPd5FadeUp 0.45s ease both;
+  }
+
+  .modulex-pd5-breadcrumb a {
+    color: --colortitle--;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .modulex-pd5-breadcrumb a:hover {
+    color: --menu-active--;
+  }
+
+  .modulex-pd5-breadcrumb-sep {
+    opacity: 0.45;
+  }
+
+  .modulex-pd5-breadcrumb-current {
+    color: --menu-active--;
+    font-weight: 700;
+  }
+
+  .modulex-pd5-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: --border_radius--;
+    border: 1px solid rgba(30, 48, 70, 0.08);
+    box-shadow: --card_shadow--;
+    animation: modulexPd5FadeUp 0.5s ease 0.08s both;
+  }
+
+  @keyframes modulexPd5FadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .modulex-pd5-media {
+    flex: 0 0 44%;
+    max-width: 480px;
+    min-width: 0;
+  }
+
+  .modulex-pd5-img-wrap {
+    border-radius: --border_radius--;
+    overflow: hidden;
+    background: --bgcolor--;
+    border: 1px solid rgba(30, 48, 70, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 420px;
+    box-sizing: border-box;
+  }
+
+  .modulex-pd5-img-wrap:hover {
+    transform: scale(1.015);
+    box-shadow: 0 14px 36px rgba(30, 48, 70, 0.12);
+  }
+
+  .modulex-pd5-img-wrap img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 420px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .modulex-pd5-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .modulex-pd5-cat-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(222, 109, 38, 0.12);
+    color: --menu-active--;
+  }
+
+  .modulex-pd5-lead {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: --color--;
+  }
+
+  .modulex-pd5-specs {
+    background: --bgcolor--;
+    border-radius: --border_radius--;
+    padding: 14px 16px;
+    border: 1px solid rgba(30, 48, 70, 0.06);
+  }
+
+  .modulex-pd5-specs-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .modulex-pd5-specs-icon {
+    color: --menu-active--;
+    font-size: 22px;
+  }
+
+  .modulex-pd5-specs-title {
+    margin: 0;
+    font-size: 16px;
+    color: --colortitle--;
+  }
+
+  .modulex-pd5-specs-summary {
+    margin: 4px 0 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: --colortitle--;
+  }
+
+  .modulex-pd5-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .modulex-pd5-spec-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(30, 48, 70, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .modulex-pd5-spec-item:hover {
+    border-color: rgba(222, 109, 38, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .modulex-pd5-spec-wide {
+    grid-column: 1 / -1;
+  }
+
+  .modulex-pd5-spec-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(30, 48, 70, 0.55);
+  }
+
+  .modulex-pd5-spec-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: --colortitle--;
+  }
+
+  .modulex-pd5-spec-note {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: rgba(30, 48, 70, 0.55);
+  }
+
+  .modulex-pd5-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .modulex-pd5-cta-primary,
+  .modulex-pd5-cta-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: --border_radius--;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  }
+
+  .modulex-pd5-cta-primary {
+    background: --menu-active--;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(222, 109, 38, 0.32);
+  }
+
+  .modulex-pd5-cta-wa {
+    background: #fff;
+    color: --colortitle--;
+    border: 1px solid rgba(30, 48, 70, 0.12);
+  }
+
+  .modulex-pd5-cta-primary:hover,
+  .modulex-pd5-cta-wa:hover {
+    transform: translateY(-2px);
+  }
+
+  .modulex-pd5-cta-primary:hover {
+    background: --coloractive--;
+  }
+
+  .modulex-pd5-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    animation: modulexPd5FadeUp 0.5s ease 0.15s both;
+  }
+
+  .modulex-pd5-nav-link {
+    flex: 1;
+    max-width: calc(50% - 6px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid rgba(30, 48, 70, 0.08);
+    border-radius: --border_radius--;
+    text-decoration: none;
+    color: --colortitle--;
+    cursor: pointer;
+    transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .modulex-pd5-nav-link:hover {
+    border-color: --menu-active--;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30, 48, 70, 0.08);
+  }
+
+  .modulex-pd5-nav-next {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .modulex-pd5-nav-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .modulex-pd5-nav-dir {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(30, 48, 70, 0.5);
+  }
+
+  .modulex-pd5-nav-name {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modulex-pd5-nav-spacer {
+    flex: 1;
+  }
+
+  .modulex-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    color: --color--;
+    animation: modulexPd5FadeUp 0.5s ease 0.12s both;
+  }
+
+  .modulex-body a {
+    color: --menu-active--;
+    font-weight: 600;
+    cursor: pointer;
+  }.modulex-pd5-article,
+  .modulex-body > article,
+  .modulex-body .corp-article {
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.72;
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }.modulex-pd5-article > *:first-child,
+  .modulex-body > article > *:first-child,
+  .modulex-body .corp-article > *:first-child {
+    margin-top: 0;
+  }.modulex-pd5-article h2,
+  .modulex-body > article h2,
+  .modulex-body .corp-article h2 {
+    margin: 1.75rem 0 0.85rem;
+    font-size: clamp(1.25rem, 4.2vw, 1.65rem);
+    line-height: 1.35;
+    color: --colortitle--;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }.modulex-pd5-article h3,
+  .modulex-body > article h3,
+  .modulex-body .corp-article h3 {
+    margin: 1.25rem 0 0.55rem;
+    font-size: clamp(1.05rem, 3.2vw, 1.2rem);
+    line-height: 1.4;
+    color: --colortitle--;
+    font-weight: 700;
+  }.modulex-pd5-article p,
+  .modulex-body > article p,
+  .modulex-body .corp-article p {
+    margin: 0 0 1rem;
+    color: --color--;
+  }
+
+  .modulex-pd5-lead {
+    font-size: clamp(1rem, 2.8vw, 1.12rem);
+    line-height: 1.75;
+    color: --colortitle--;
+    font-weight: 500;
+    padding: 14px 16px;
+    background: rgba(222, 109, 38, 0.08);
+    border-left: 4px solid --menu-active--;
+    border-radius: 0 --border_radius-- --border_radius-- 0;
+  }
+
+  .modulex-pd5-features {
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modulex-pd5-features li {
+    position: relative;
+    padding: 12px 14px 12px 40px;
+    background: #fff;
+    border: 1px solid rgba(30, 48, 70, 0.08);
+    border-radius: --border_radius--;
+    box-shadow: 0 2px 8px rgba(30, 48, 70, 0.04);
+    line-height: 1.55;
+  }
+
+  .modulex-pd5-features li::before {
+    content: "check_circle";
+    font-family: "Material Symbols Outlined";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 20px;
+    color: --menu-active--;
+    line-height: 1;
+  }
+
+  .modulex-pd5-faq {
+    margin: 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modulex-pd5-faq > h2 {
+    margin-top: 0;
+  }
+
+  .modulex-pd5-faq-item {
+    border: 1px solid rgba(30, 48, 70, 0.1);
+    border-radius: --border_radius--;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(30, 48, 70, 0.05);
+  }
+
+  .modulex-pd5-faq-item summary {
+    padding: 14px 44px 14px 16px;
+    font-weight: 700;
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+    color: --colortitle--;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    line-height: 1.45;
+  }
+
+  .modulex-pd5-faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .modulex-pd5-faq-item summary::after {
+    content: "expand_more";
+    font-family: "Material Symbols Outlined";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: --menu-active--;
+    transition: transform 0.22s ease;
+  }
+
+  .modulex-pd5-faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .modulex-pd5-faq-item p {
+    margin: 0;
+    padding: 0 16px 16px;
+    border-top: 1px solid rgba(30, 48, 70, 0.06);
+    padding-top: 12px;
+  }
+
+  .modulex-pd5-faq-item h3 {
+    display: none;
+  }.modulex-pd5-article ul:not(.modulex-pd5-features),
+  .modulex-body > article ul:not(.modulex-pd5-features),
+  .modulex-body .corp-article ul:not(.modulex-pd5-features) {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }.modulex-pd5-article ol,
+  .modulex-body > article ol,
+  .modulex-body .corp-article ol {
+    margin: 0 0 1rem;
+    padding-left: 1.35rem;
+  }.modulex-pd5-article img,
+  .modulex-body > article img,
+  .modulex-body .corp-article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: --border_radius--;
+    display: block;
+    margin: 1rem 0;
+  }.modulex-pd5-article table,
+  .modulex-body > article table,
+  .modulex-body .corp-article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }.modulex-pd5-article blockquote,
+  .modulex-body > article blockquote,
+  .modulex-body .corp-article blockquote {
+    margin: 1rem 0;
+    padding: 12px 16px;
+    border-left: 4px solid --menu-active--;
+    background: rgba(30, 48, 70, 0.04);
+    border-radius: 0 --border_radius-- --border_radius-- 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    .modulex-pd5-lead {
+      padding: 12px 14px;
+    }
+
+    .modulex-pd5-features li {
+      padding: 11px 12px 11px 36px;
+    }
+
+    .modulex-pd5-faq-item summary {
+      padding: 12px 40px 12px 14px;
+    }
+  }
+
+  .modulex-desc-body {
+    width: 100%;
+    border-radius: --border_radius--;
+    overflow: hidden;
+    box-shadow: --card_shadow--;
+  }
+
+  .modulex-desc-body img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: min(42vh, 360px);
+    display: block;
+    object-fit: contain;
+    margin-inline: auto;
+  }
+
+  @media screen and (min-width: 1025px) {
+    .modulex-menu-overlay {
+      display: none !important;
+    }
+
+    .modulex-menu-close {
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .modulex-menu-btn {
+      display: flex;
+    }
+
+    .modulex-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .modulex-menu-overlay.active {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modulex {
+      flex-direction: column;
+      padding: 5px;
+      gap: 10px;
+      margin-top: 0;
+    }
+
+    .modulex-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 82%;
+      max-width: 320px;
+      height: 100%;
+      z-index: 9999;
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+      visibility: hidden;
+      border-radius: 0;
+    }
+
+    .modulex-menu.active {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+    .modulex-menu-close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 15px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .modulex-pd5-panel {
+      flex-direction: column;
+      padding: 14px;
+    }
+
+    .modulex-pd5-media {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .modulex-pd5-img-wrap {
+      max-height: min(38vh, 280px);
+    }
+
+    .modulex-pd5-img-wrap img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: min(38vh, 280px);
+      object-fit: contain;
+    }
+
+    .modulex-desc-body img {
+      max-height: min(38vh, 280px);
+    }
+
+    .modulex-pd5-spec-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .modulex-pd5-nav {
+      flex-direction: column;
+    }
+
+    .modulex-pd5-nav-link {
+      max-width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-title h1,
+    .modulex-pd5-breadcrumb,
+    .modulex-pd5-panel,
+    .modulex-body,
+    .modulex-pd5-nav {
+      animation: none !important;
+    }
+
+    /* gecisler de kapali: cekmece menu, hover kaymalari */
+    [class*="modulex"],
+    [class*="modulex"] * {
+      transition: none !important;
+    }
+  }
+</style>
+<script>
+  setTimeout(function() {
+    var menuToggleBtn = document.querySelector(".modulex-menu-btn");
+    var menu = document.querySelector(".modulex-menu");
+    var overlay = document.querySelector(".modulex-menu-overlay");
+    var closeButton = document.querySelector(".modulex-menu-close");
+
+    if (!menuToggleBtn || !menu) {
+      return;
+    }
+
+    var mql = window.matchMedia("(max-width: 1024px)");
+
+    function openMenu() {
+      menu.classList.add("active");
+      if (overlay) {
+        overlay.classList.add("active");
+        overlay.setAttribute("aria-hidden", "false");
+      }
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      menu.classList.remove("active");
+      if (overlay) {
+        overlay.classList.remove("active");
+        overlay.setAttribute("aria-hidden", "true");
+      }
+      document.body.style.overflow = "";
+      if (menuToggleBtn) {
+        menuToggleBtn.focus();
+      }
+    }
+
+    menuToggleBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (menu.classList.contains("active")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    if (closeButton) {
+      closeButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenu();
+      });
+    }
+
+    if (overlay) {
+      overlay.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenu();
+      });
+    }
+
+    menu.addEventListener("click", function(event) {
+      var link = event.target.closest("a");
+      var closeBtn = event.target.closest(".modulex-menu-close");
+      if (link && !closeBtn) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && menu.classList.contains("active")) {
+        closeMenu();
+      }
+    });
+
+    menuToggleBtn.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        if (menu.classList.contains("active")) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+    });
+
+    function handleBreakpoint() {
+      if (!mql.matches) {
+        menu.classList.remove("active");
+        if (overlay) {
+          overlay.classList.remove("active");
+          overlay.setAttribute("aria-hidden", "true");
+        }
+        document.body.style.overflow = "";
+      }
+    }
+
+    if (typeof mql.addEventListener === "function") {
+      mql.addEventListener("change", handleBreakpoint);
+    } else if (typeof mql.addListener === "function") {
+      mql.addListener(handleBreakpoint);
+    }
+    handleBreakpoint();
+
+    var topButtons = document.querySelectorAll(".modulex-top");
+    var bi;
+    for (bi = 0; bi < topButtons.length; bi++) {
+      topButtons[bi].addEventListener("click", function(e) {
+        e.stopPropagation();
+        var group = this.closest(".modulex-menu-group");
+        if (!group) {
+          return;
+        }
+        var sub = group.querySelector(".modulex-sub");
+        var isOpen = group.classList.toggle("open");
+        this.classList.toggle("active", isOpen);
+        var icon = this.querySelector(".modulex-icon");
+        if (icon) {
+          icon.textContent = isOpen ? "expand_less" : "expand_more";
+        }
+        if (sub) {
+          sub.classList.toggle("show", isOpen);
+        }
+      });
+    }
+  }, 100);
+</script>

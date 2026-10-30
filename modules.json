@@ -1,0 +1,5124 @@
+{
+  "data": [
+    {
+      "index": 0,
+      "name": "Menü 4",
+      "path": "menu-4",
+      "local": "header",
+      "category": "menu",
+      "id": "t7mn01",
+      "desing": {
+        "logo": "logo.png",
+        "color": "#ffffff",
+        "height": "100px",
+        "background-color": "#09579A"
+      },
+      "version": "1.0.0",
+      "icon": "menu"
+    },
+    {
+      "name": "Slider",
+      "path": "slider",
+      "local": "header",
+      "category": "slider",
+      "id": "t7sl01",
+      "data": [
+        {
+          "img": "1.jpg"
+        },
+        {
+          "img": "2.jpg"
+        },
+        {
+          "img": "3.jpg"
+        }
+      ],
+      "desing": {
+        "delay": 3000,
+        "margin": "0px 0 0 0"
+      },
+      "version": "1.0.0",
+      "icon": "view_carousel",
+      "index": 1
+    },
+    {
+      "name": "İletişim",
+      "path": "contact-3",
+      "local": "body",
+      "category": "contact",
+      "id": "t7ct01",
+      "desing": {
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "name": {
+          "tr": "Bize ulaşın",
+          "en": "Contact us",
+          "ar": "تواصل معنا"
+        },
+        "margin": "30px 0px 30px 0px",
+        "linkcolor": "var(--mx-site-primary, #2563eb)"
+      },
+      "data": [
+        {
+          "icon": "phone",
+          "text": "+90 342 000 00 00",
+          "url": ""
+        },
+        {
+          "icon": "email",
+          "text": "satis@orvakmakina.example"
+        },
+        {
+          "icon": "map",
+          "text": {
+            "tr": "Organize Sanayi Bölgesi 3. Cadde No: 18, Şehitkamil, Gaziantep (kurgusal adres)",
+            "en": "18 Third Avenue, Organized Industrial Zone, Sehitkamil, Gaziantep (fictional address)",
+            "ar": "المنطقة الصناعية المنظمة، الشارع الثالث رقم 18، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+          }
+        },
+        {
+          "icon": "schedule",
+          "text": {
+            "tr": "Pzt – Cum 08:30 – 18:00 · Cumartesi 09:00 – 13:00",
+            "en": "Mon – Fri 08:30 – 18:00 · Saturday 09:00 – 13:00",
+            "ar": "الاثنين – الجمعة 08:30 – 18:00 · السبت 09:00 – 13:00"
+          },
+          "url": ""
+        }
+      ],
+      "version": "1.0.0",
+      "icon": "contact_mail",
+      "index": 2
+    },
+    {
+      "name": "Maps",
+      "path": "map",
+      "local": "body",
+      "category": "map",
+      "id": "t7mp01",
+      "desing": {
+        "height": "200",
+        "opacity": "0.5",
+        "backgroundcolor": "#ffffff",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "img": "map.png",
+        "externalUrl": ""
+      },
+      "version": "1.0.0",
+      "icon": "map",
+      "index": 3
+    },
+    {
+      "index": 4,
+      "name": "Page Desing",
+      "path": "page-desing-3",
+      "local": "body",
+      "category": "page",
+      "id": "t7pd01",
+      "desing": {
+        "height": "200",
+        "opacity": "0.5",
+        "font-size": "32",
+        "backgroundcolor": "#000",
+        "menu-active": "#09579A",
+        "category": "page",
+        "ui": {
+          "ar": {
+            "home": "الرئيسية",
+            "products": "المنتجات",
+            "dimensions": "الأبعاد",
+            "dimNote": "",
+            "quote": "اطلب عرض سعر",
+            "whatsapp": "واتساب",
+            "prev": "السابق",
+            "next": "التالي"
+          }
+        }
+      },
+      "version": "1.0.0",
+      "icon": "web"
+    },
+    {
+      "name": "Footer 1",
+      "path": "footer-1",
+      "local": "footer",
+      "category": "footer",
+      "id": "t7ft01",
+      "desing": {
+        "bgcolor": "#09579A",
+        "color": "#fff",
+        "img": "",
+        "imgwidth": "250px",
+        "showlang": true
+      },
+      "data": [],
+      "version": "1.0.0",
+      "icon": "web_asset",
+      "index": 5
+    },
+    {
+      "id": "t7ls01",
+      "name": "Ana Sayfa Liste",
+      "path": "page-list",
+      "local": "body",
+      "category": "page-list",
+      "version": "1.0.0",
+      "icon": "grid_view",
+      "desing": {
+        "page": "page",
+        "size": 4,
+        "category": "",
+        "aspect-ratio": "1 / 1",
+        "eyebrow": {
+          "tr": "",
+          "en": ""
+        },
+        "sectionTitle": {
+          "tr": "",
+          "en": ""
+        },
+        "sectionSubtitle": {
+          "tr": "",
+          "en": ""
+        },
+        "ctaLabel": {
+          "tr": "",
+          "en": ""
+        },
+        "showAllProducts": false,
+        "margin": "20px 0px 20px 0px",
+        "bgcolor": "transparent",
+        "cardbg": "#ffffff",
+        "titlecolor": "#111827",
+        "textcolor": "#4b5563",
+        "bordercolor": "rgba(17, 24, 39, 0.1)",
+        "radius": "14px",
+        "accent": "#1e3a5f"
+      },
+      "index": 6
+    },
+    {
+      "id": "t7in01",
+      "name": "Tanitim",
+      "path": "module-1",
+      "local": "body",
+      "category": "module",
+      "version": "1.1.0",
+      "icon": "business",
+      "desing": {
+        "name": {
+          "tr": "Tasarımdan teslime tek çatı",
+          "en": "Design to delivery under one roof",
+          "ar": "من التصميم إلى التسليم تحت سقف واحد"
+        },
+        "description": {
+          "tr": "Orvak Makina; makineleri kendi tesisinde tasarlar, üretir, test eder ve devreye alır. Sipariş geldiğinde süreç açık ilerler: yazılı teklif, onaylı çizim, ölçüm raporu ve yük altı test sonucu müşteriyle paylaşılır.",
+          "en": "Orvak Makina designs, builds, tests and commissions its machines in its own plant. Once an order arrives the process stays open: a written quote, an approved drawing, a measurement report and the load-test result are shared with the customer.",
+          "ar": "تصمّم Orvak Makina آلاتها وتصنّعها وتختبرها وتشغّلها تجريبيًا في منشأتها. وحين يصل الطلب تبقى العملية مفتوحة: يُشارَك مع العميل عرض سعر مكتوب ورسم معتمد وتقرير قياس ونتيجة اختبار الحمل."
+        },
+        "name2": {
+          "tr": "CE işaretli",
+          "en": "CE marked",
+          "ar": "علامة CE"
+        },
+        "spot2": {
+          "tr": "Tüm seriler uygunluk beyanıyla teslim edilir.",
+          "en": "All series are delivered with a declaration of conformity.",
+          "ar": "تُسلَّم جميع السلاسل مع إعلان المطابقة."
+        },
+        "icon2": "verified",
+        "name3": {
+          "tr": "Yük altı test",
+          "en": "Load testing",
+          "ar": "اختبار تحت الحمل"
+        },
+        "spot3": {
+          "tr": "Sevkiyat öncesi her makine tam yükte denenir.",
+          "en": "Every machine is tried at full load before shipping.",
+          "ar": "تُجرَّب كل آلة بكامل الحمل قبل الشحن."
+        },
+        "icon3": "speed",
+        "img": "sanayi-uretim-hatti.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Orvak Makina",
+          "en": "Orvak Makina",
+          "ar": "Orvak Makina"
+        }
+      },
+      "index": 7
+    },
+    {
+      "id": "t7fq01",
+      "name": "SSS",
+      "path": "faq-1",
+      "local": "body",
+      "category": "faq",
+      "version": "1.0.0",
+      "icon": "help",
+      "desing": {
+        "max": "900px",
+        "bgcolor": "#ffffff",
+        "cardbg": "#f8fafc",
+        "bordercolor": "#e2e8f0",
+        "titlecolor": "#1e293b",
+        "textcolor": "#475569",
+        "accent": "#09579A",
+        "badge": {
+          "tr": "SSS",
+          "en": "FAQ"
+        },
+        "title": {
+          "tr": "Sıkça Sorulan Sorular",
+          "en": "FAQ"
+        },
+        "description": {
+          "tr": "Merak ettiğiniz soruların cevaplari.",
+          "en": "Answers to common questions."
+        }
+      },
+      "data": [
+        {
+          "question": {
+            "tr": "Hizmetleriniz hangi bölgeleri kapsiyor?",
+            "en": "Which regions do you cover?"
+          },
+          "answer": {
+            "tr": "Türkiye genelinde hizmet veriyoruz.",
+            "en": "We serve nationwide."
+          }
+        },
+        {
+          "question": {
+            "tr": "Proje süreci nasıl ilerler?",
+            "en": "How does the project process work?"
+          },
+          "answer": {
+            "tr": "Keşif, teklif, uygulama ve teslim adımlarıyla ilerleriz.",
+            "en": "Discovery, proposal, delivery."
+          }
+        },
+        {
+          "question": {
+            "tr": "Destek sunuyor musunuz?",
+            "en": "Do you offer support?"
+          },
+          "answer": {
+            "tr": "Evet, proje sonrası destek sağlıyoruz.",
+            "en": "Yes, post-project support is available."
+          }
+        }
+      ],
+      "index": 8
+    },
+    {
+      "id": "t7ca01",
+      "name": "CTA",
+      "path": "cta-1",
+      "local": "body",
+      "category": "cta",
+      "version": "1.1.0",
+      "icon": "campaign",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "btnbg": "#ffffff",
+        "btncolor": "#10203A",
+        "title": {
+          "tr": "Makinenizi birlikte yapılandıralım",
+          "en": "Let’s configure your machine together",
+          "ar": "لنهيّئ آلتك معًا"
+        },
+        "description": {
+          "tr": "Üretim ihtiyacınızı anlatın; uygun modeli seçelim ve iki iş günü içinde yazılı teklif sunalım.",
+          "en": "Tell us about your production needs; we will pick the right model and send a written quote within two working days.",
+          "ar": "أخبرنا باحتياجات إنتاجك لنختار الطراز المناسب ونرسل عرض سعر مكتوبًا خلال يومي عمل."
+        },
+        "btn1Text": {
+          "tr": "Teklif al",
+          "en": "Get a quote",
+          "ar": "اطلب عرض سعر"
+        },
+        "btn1Url": "teklif-al",
+        "btn2Text": {
+          "tr": "Ürünler",
+          "en": "Products",
+          "ar": "المنتجات"
+        },
+        "btn2Url": "urunlerimiz"
+      },
+      "index": 9
+    },
+    {
+      "id": "t7plpr",
+      "name": "Ürünler Liste",
+      "path": "page-list",
+      "local": "body",
+      "category": "page-list",
+      "version": "1.0.0",
+      "icon": "grid_view",
+      "desing": {
+        "page": "products",
+        "size": 4,
+        "category": "",
+        "aspect-ratio": "1 / 1",
+        "eyebrow": {
+          "tr": "",
+          "en": ""
+        },
+        "sectionTitle": {
+          "tr": "",
+          "en": ""
+        },
+        "sectionSubtitle": {
+          "tr": "",
+          "en": ""
+        },
+        "ctaLabel": {
+          "tr": "",
+          "en": ""
+        },
+        "showAllProducts": false,
+        "margin": "20px 0px 20px 0px",
+        "bgcolor": "transparent",
+        "cardbg": "#ffffff",
+        "titlecolor": "#111827",
+        "textcolor": "#4b5563",
+        "bordercolor": "rgba(17, 24, 39, 0.1)",
+        "radius": "14px",
+        "accent": "#1e3a5f"
+      },
+      "index": 10
+    },
+    {
+      "name": "Demo Bandı",
+      "description": "Demo sitelerin her sayfasının üstünde duran, kapatılamaz bilgi şeridi: «Bu bir demo sitedir» uyarısı ve «Bu temayı iste» bağlantısı. Sayfanın en üstüne yapışır (position:sticky), sabit menüleri bant yüksekliği kadar aşağı iter (--mx-demo-bandi-h). Üç dil (TR/EN/AR), Arapçada RTL, mobilde iki satıra sarar.",
+      "version": "1.0.0",
+      "icon": "info",
+      "category": "demo",
+      "tags": [
+        "demo",
+        "bant",
+        "uyarı",
+        "banner",
+        "rtl"
+      ],
+      "desing": {
+        "tone": "info",
+        "bandBg": "",
+        "bandFg": "",
+        "ctaHref": "https://webyapar.com/temalar",
+        "ariaLabel": {
+          "tr": "Demo site uyarısı",
+          "en": "Demo site notice",
+          "ar": "تنبيه الموقع التجريبي"
+        },
+        "text": {
+          "tr": "Bu bir demo sitedir — içerik kurgusaldır, ödeme alınmaz",
+          "en": "This is a demo site — the content is fictional and no payment is taken",
+          "ar": "هذا موقع تجريبي — المحتوى افتراضي ولا يتم تحصيل أي مدفوعات"
+        },
+        "ctaText": {
+          "tr": "Bu temayı iste",
+          "en": "Get this theme",
+          "ar": "اطلب هذا القالب"
+        },
+        "newTabText": {
+          "tr": "(yeni sekmede açılır)",
+          "en": "(opens in a new tab)",
+          "ar": "(يفتح في علامة تبويب جديدة)"
+        }
+      },
+      "id": "ammbka",
+      "path": "demo-bandi",
+      "local": "header",
+      "data": [],
+      "index": 11
+    },
+    {
+      "name": "Menü 4",
+      "desing": {
+        "logo": "logo.png",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "height": "84px",
+        "background-color": "var(--mx-site-bg, #ffffff)"
+      },
+      "category": "menu",
+      "description": "Light gri background navigasyon menüsü. Logo, sayfa linkleri ve 100px yükseklikte modern header tasarımı sunar. 6 farklı projede kullanılır: mobil ajans, üretim, sağlık, medya, inşaat ve profesyonel hizmet firmalarında. Sticky header, hover efektleri ve responsive mobil menü geçişi içerir.",
+      "version": "1.0.0",
+      "icon": "menu",
+      "id": "97pb6z",
+      "path": "menu-4",
+      "local": "header",
+      "data": [],
+      "index": 12
+    },
+    {
+      "name": "Footer 3",
+      "desing": {
+        "showlang": true,
+        "bgcolor": "var(--mx-site-surface-2, #f1f1ee)",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "minimal_design": true,
+        "social_media": false
+      },
+      "category": "footer",
+      "data": [],
+      "description": "Web sitesi alt bilgi (footer) bölümü. Logo, telif hakları, iletişim bilgileri ve sosyal medya linklerini içerir. Tüm sayfa türlerinde kullanılabilir evrensel modüldür.",
+      "id": "k4zd5r",
+      "path": "footer-3",
+      "local": "footer",
+      "index": 13
+    },
+    {
+      "name": "Demo Kredi Şeridi",
+      "description": "Demo sitelerin alt bilgisinde duran kredi şeridi: «Bu demo Webyapar tarafından hazırlanmıştır — Bu temayı iste». Marka adı çevrilmez (Latin, dir=ltr izole), bağlantı demo adına göre webyapar.com/temalar#<slug>. Üç dil (TR/EN/AR), mantıksal CSS (RTL), mobilde sarar, reduced-motion'a saygılı.",
+      "version": "1.0.0",
+      "icon": "campaign",
+      "category": "demo",
+      "tags": [
+        "demo",
+        "footer",
+        "kredi",
+        "rtl"
+      ],
+      "desing": {
+        "href": "https://webyapar.com/temalar#sanayi",
+        "brand": "Webyapar",
+        "text": {
+          "tr": "Bu demo {brand} tarafından hazırlanmıştır —",
+          "en": "This demo was prepared by {brand} —",
+          "ar": "تم إعداد هذا العرض التجريبي بواسطة {brand} —"
+        },
+        "ctaText": {
+          "tr": "Bu temayı iste",
+          "en": "Get this theme",
+          "ar": "اطلب هذا القالب"
+        },
+        "newTabText": {
+          "tr": "(yeni sekmede açılır)",
+          "en": "(opens in a new tab)",
+          "ar": "(يفتح في علامة تبويب جديدة)"
+        },
+        "ariaLabel": {
+          "tr": "Demo bilgisi",
+          "en": "Demo credit",
+          "ar": "معلومات العرض التجريبي"
+        }
+      },
+      "id": "otodt0",
+      "path": "demo-kredi",
+      "local": "footer",
+      "data": [],
+      "index": 14
+    },
+    {
+      "name": "Hero 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "overlay": "linear-gradient(135deg, rgba(0,0,0,.55), rgba(0,0,0,.35))",
+        "title_accent": "linear-gradient(135deg, #ffffff, #ffffff)",
+        "btn_primary_bg": "var(--mx-site-primary, #2563eb)",
+        "btn_primary_color": "var(--mx-site-primary-contrast, #ffffff)",
+        "stat_accent": "#ffffff",
+        "shape1": "linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.04))",
+        "shape2": "linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.03))",
+        "shape3": "linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,.02))",
+        "title": {
+          "tr": "Üretiminizi hızlandıran CE işaretli makineler",
+          "en": "CE-marked machines that speed up your production",
+          "ar": "آلات حاصلة على علامة CE تسرّع إنتاجك"
+        },
+        "description": {
+          "tr": "Orvak Makina; işleme merkezleri, paketleme makineleri ve robotik kaynak hücreleri üretir. Her makine yük altında test edilir, teknik belgeleriyle teslim edilir.",
+          "en": "Orvak Makina builds machining centres, packaging machines and robotic welding cells. Every machine is load-tested and delivered with its technical documents.",
+          "ar": "تنتج Orvak Makina مراكز تشغيل وآلات تعبئة وخلايا لحام روبوتية. تُختبر كل آلة تحت الحمل وتُسلَّم مع وثائقها الفنية."
+        },
+        "badge": {
+          "tr": "Makine imalatı · Gaziantep",
+          "en": "Machine manufacturing · Gaziantep",
+          "ar": "تصنيع الآلات · غازي عنتاب"
+        },
+        "image": "/img/sanayi-hero-tesis.webp",
+        "alt": {
+          "tr": "Tavan aydınlatmalı geniş fabrika holünde sıralı makineler",
+          "en": "Machines in a row inside a wide factory hall with ceiling lights",
+          "ar": "آلات متراصة داخل صالة مصنع واسعة بإضاءة سقفية"
+        },
+        "btn1": {
+          "tr": "Teklif al",
+          "en": "Get a quote",
+          "ar": "اطلب عرض سعر"
+        },
+        "btn1_url": "teklif-al",
+        "btn2": {
+          "tr": "Ürünlerimiz",
+          "en": "Our products",
+          "ar": "منتجاتنا"
+        },
+        "btn2_url": "urunlerimiz",
+        "stats": {
+          "tr": "28|Yıllık deneyim|38|İhracat ülkesi|1.200+|Teslim edilen makine",
+          "en": "28|Years of experience|38|Export countries|1,200+|Machines delivered",
+          "ar": "28|سنة من الخبرة|38|بلدًا مصدَّرًا إليه|1.200|آلة مسلَّمة وأكثر"
+        }
+      },
+      "category": "hero",
+      "description": "Gradient hero: istatistikler, CTA, görsel alanı. Metinler cok dilli (tr/en); renkler --gradient--, --btn_primary_bg-- ile markaya uyumlanır. Buton URL pathnext (urunler, iletisim).",
+      "version": "1.1.0",
+      "icon": "hero",
+      "id": "dedlji",
+      "path": "hero-1",
+      "local": "body",
+      "data": [],
+      "index": 15
+    },
+    {
+      "name": "Kurumsal Değerler 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "badge": "",
+        "title": {
+          "tr": "Üç alanda dört ürün ailesi",
+          "en": "Four product families in three fields",
+          "ar": "أربع عائلات منتجات في ثلاثة مجالات"
+        },
+        "description": {
+          "tr": "İşleme, paketleme ve kaynak: ihtiyacınıza uygun seriyi seçin; teknik değerler ürünler sayfasında.",
+          "en": "Machining, packaging and welding: choose the series that fits your needs; technical values are on the products page.",
+          "ar": "التشغيل والتعبئة واللحام: اختر السلسلة المناسبة لاحتياجك، وتجد القيم الفنية في صفحة المنتجات."
+        }
+      },
+      "data": [
+        {
+          "icon": "precision_manufacturing",
+          "name": {
+            "tr": "OX-CNC işleme merkezleri",
+            "en": "OX-CNC machining centres",
+            "ar": "مراكز التشغيل OX-CNC"
+          },
+          "description": {
+            "tr": "650 – 1270 mm tezgâh yolu, 10.000 dev/dk’ya kadar iş mili.",
+            "en": "650 – 1270 mm travel with spindles up to 10,000 rpm.",
+            "ar": "شوط حركة من 650 إلى 1270 مم وعمود دوران حتى 10.000 دورة/د."
+          }
+        },
+        {
+          "icon": "settings",
+          "name": {
+            "tr": "OT-Turn CNC tornalar",
+            "en": "OT-Turn CNC lathes",
+            "ar": "مخارط OT-Turn CNC"
+          },
+          "description": {
+            "tr": "Mil ve şaft üretimi için rijit gövdeli CNC torna hatları.",
+            "en": "Rigid-bodied CNC lathe lines for shaft and spindle production.",
+            "ar": "خطوط مخارط CNC بهيكل متين لإنتاج الأعمدة والمغازل."
+          }
+        },
+        {
+          "icon": "inventory_2",
+          "name": {
+            "tr": "OP-Pack paketleme makineleri",
+            "en": "OP-Pack packaging machines",
+            "ar": "آلات التعبئة OP-Pack"
+          },
+          "description": {
+            "tr": "Dakikada 60 – 120 paket, paslanmaz gövde, hızlı format değişimi.",
+            "en": "60 – 120 packs per minute, stainless body, quick format change.",
+            "ar": "من 60 إلى 120 عبوة في الدقيقة وهيكل من الفولاذ المقاوم للصدأ وتغيير سريع للقياس."
+          }
+        },
+        {
+          "icon": "construction",
+          "name": {
+            "tr": "OR-Weld robotik kaynak",
+            "en": "OR-Weld robotic welding",
+            "ar": "اللحام الروبوتي OR-Weld"
+          },
+          "description": {
+            "tr": "Güvenlik perdeli hücre, 6–7 eksenli robot, tekrarlanabilir kaynak.",
+            "en": "A guarded cell with a 6–7 axis robot and repeatable welds.",
+            "ar": "خلية محمية بستائر أمان وروبوت بـ 6–7 محاور ولحام قابل للتكرار."
+          }
+        }
+      ],
+      "category": "values",
+      "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
+      "version": "1.0.0",
+      "icon": "diamond",
+      "id": "xzvd5s",
+      "path": "values-1",
+      "local": "body",
+      "index": 16
+    },
+    {
+      "name": "İstatistik Bandı 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "numbercolor": "#ffffff",
+        "labelcolor": "rgba(255,255,255,.88)",
+        "iconsize": "56px",
+        "iconbox": "88px"
+      },
+      "data": [
+        {
+          "number": 28,
+          "suffix": "",
+          "label": {
+            "tr": "Yıllık deneyim",
+            "en": "Years of experience",
+            "ar": "سنة من الخبرة"
+          },
+          "icon": "workspace_premium"
+        },
+        {
+          "number": 38,
+          "suffix": "",
+          "label": {
+            "tr": "İhracat ülkesi",
+            "en": "Export countries",
+            "ar": "بلدًا مصدَّرًا إليه"
+          },
+          "icon": "public"
+        },
+        {
+          "number": 1200,
+          "suffix": "+",
+          "label": {
+            "tr": "Teslim edilen makine",
+            "en": "Machines delivered",
+            "ar": "آلة مسلَّمة"
+          },
+          "icon": "precision_manufacturing"
+        },
+        {
+          "number": 18000,
+          "suffix": "",
+          "label": {
+            "tr": "Kapalı üretim alanı (m²)",
+            "en": "Covered production area (m²)",
+            "ar": "مساحة الإنتاج المغطاة (م²)"
+          },
+          "icon": "warehouse"
+        }
+      ],
+      "category": "stats",
+      "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler.",
+      "version": "1.0.0",
+      "icon": "monitoring",
+      "id": "pfbyj7",
+      "path": "stats-1",
+      "local": "body",
+      "index": 17
+    },
+    {
+      "name": "Zaman Çizelgesi 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "badge": {
+          "tr": "Süreç",
+          "en": "Process",
+          "ar": "الإجراءات"
+        },
+        "title": {
+          "tr": "Teklifden sevkiyata",
+          "en": "From quote to shipment",
+          "ar": "من العرض إلى الشحن"
+        },
+        "description": {
+          "tr": "Dört adımda şeffaf bir üretim süreci.",
+          "en": "A transparent production process in four steps.",
+          "ar": "عملية إنتاج شفافة في أربع خطوات."
+        },
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+      },
+      "data": [
+        {
+          "year": "01",
+          "title": {
+            "tr": "Teklif",
+            "en": "Quote",
+            "ar": "عرض السعر"
+          },
+          "text": {
+            "tr": "İhtiyacınız dinlenir, yapılandırma ve yazılı teklif hazırlanır.",
+            "en": "We listen to your needs and prepare a configuration and a written quote.",
+            "ar": "نستمع إلى احتياجك ونعدّ التهيئة وعرض السعر المكتوب."
+          }
+        },
+        {
+          "year": "02",
+          "title": {
+            "tr": "Tasarım ve onay",
+            "en": "Design and approval",
+            "ar": "التصميم والموافقة"
+          },
+          "text": {
+            "tr": "3B model ve yerleşim planı onayınıza sunulur.",
+            "en": "A 3D model and a layout plan are submitted for your approval.",
+            "ar": "يُعرض نموذج ثلاثي الأبعاد ومخطط التركيب للموافقة عليهما."
+          }
+        },
+        {
+          "year": "03",
+          "title": {
+            "tr": "Üretim ve test",
+            "en": "Production and testing",
+            "ar": "الإنتاج والاختبار"
+          },
+          "text": {
+            "tr": "Makine üretilir; ölçüm raporu ve yük altı testi yapılır.",
+            "en": "The machine is built, then dimensional reports and a load test are completed.",
+            "ar": "تُصنع الآلة ثم تُنجز تقارير القياس واختبار الحمل."
+          }
+        },
+        {
+          "year": "04",
+          "title": {
+            "tr": "Sevkiyat ve devreye alma",
+            "en": "Shipping and commissioning",
+            "ar": "الشحن والتشغيل التجريبي"
+          },
+          "text": {
+            "tr": "Sevkiyat, kurulum ve operatör eğitimi yapılır.",
+            "en": "Shipping, installation and operator training take place.",
+            "ar": "يجري الشحن والتركيب وتدريب المشغلين."
+          }
+        }
+      ],
+      "category": "timeline",
+      "description": "Zaman çizelgesi modülü. Kurumsal tarihçe, süreç adımları veya yol haritasını dikey çizgi + yıl rozetiyle listeler. Çok dilli başlık/metin ve animasyonlu giriş içerir.",
+      "version": "1.0.0",
+      "icon": "timeline",
+      "id": "v66tz4",
+      "path": "timeline-1",
+      "local": "body",
+      "index": 18
+    },
+    {
+      "name": "CTA Şerit 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "btnbg": "#ffffff",
+        "btncolor": "#10203A",
+        "title": {
+          "tr": "Makinenizi birlikte yapılandıralım",
+          "en": "Let’s configure your machine together",
+          "ar": "لنهيّئ آلتك معًا"
+        },
+        "description": {
+          "tr": "Üretim ihtiyacınızı anlatın; uygun modeli seçelim ve iki iş günü içinde yazılı teklif sunalım.",
+          "en": "Tell us about your production needs; we will pick the right model and send a written quote within two working days.",
+          "ar": "أخبرنا باحتياجات إنتاجك لنختار الطراز المناسب ونرسل عرض سعر مكتوبًا خلال يومي عمل."
+        },
+        "btn1Text": {
+          "tr": "Teklif al",
+          "en": "Get a quote",
+          "ar": "اطلب عرض سعر"
+        },
+        "btn1Url": "teklif-al",
+        "btn2Text": {
+          "tr": "Ürünler",
+          "en": "Products",
+          "ar": "المنتجات"
+        },
+        "btn2Url": "urunlerimiz"
+      },
+      "category": "cta",
+      "description": "Harekete geçirici çağrı (CTA) şerit modülü. Gradient arka plan üzerinde başlık, açıklama ve iki buton gösterir. Buton URL'leri dil öneki olmadan pathnext (iletisim, urunler) — site routing ekler. Çok dilli metin ve animasyonlu giriş içerir.",
+      "version": "1.1.0",
+      "icon": "campaign",
+      "id": "8onjfn",
+      "path": "cta-1",
+      "local": "body",
+      "data": [],
+      "index": 19
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "Dört seri, tek kalite anlayışı",
+          "en": "Four series, one quality approach",
+          "ar": "أربع سلاسل ونهج جودة واحد"
+        },
+        "description": {
+          "tr": "Tüm seriler kendi tesisimizde tasarlanır, üretilir ve sevkiyat öncesi yük altında test edilir. Aşağıdan görselleri kategoriye göre süzün, ardından teknik tabloları inceleyin; sütun başlığına tıklayarak sıralayabilirsiniz.",
+          "en": "All series are designed, built and load-tested in our own plant before shipping. Filter the images by category below, then review the technical tables; click a column header to sort.",
+          "ar": "تُصمَّم جميع السلاسل وتُصنَّع وتُختبر تحت الحمل في منشأتنا قبل الشحن. صفِّ الصور حسب الفئة أدناه ثم راجع الجداول الفنية، وانقر على عنوان العمود للترتيب."
+        },
+        "name2": {
+          "tr": "CE işaretli",
+          "en": "CE marked",
+          "ar": "علامة CE"
+        },
+        "spot2": {
+          "tr": "Uygunluk beyanı makineyle birlikte verilir (örnek belge — DEMO).",
+          "en": "The declaration of conformity is supplied with the machine (sample document — DEMO).",
+          "ar": "يُسلَّم إعلان المطابقة مع الآلة (وثيقة نموذجية — DEMO)."
+        },
+        "icon2": "verified",
+        "name3": {
+          "tr": "Üç dilli kılavuz",
+          "en": "Trilingual manual",
+          "ar": "دليل بثلاث لغات"
+        },
+        "spot3": {
+          "tr": "Kullanım kılavuzu Türkçe, İngilizce ve Arapça hazırlanır.",
+          "en": "The user manual is prepared in Turkish, English and Arabic.",
+          "ar": "يُعدّ دليل الاستخدام بالتركية والإنجليزية والعربية."
+        },
+        "icon3": "translate",
+        "img": "sanayi-makine-1.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Ürünlerimiz",
+          "en": "Our products",
+          "ar": "منتجاتنا"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "h9niha",
+      "path": "module-1",
+      "data": [],
+      "index": 20
+    },
+    {
+      "name": "Galeri Masonry (Filtre + Lightbox)",
+      "description": "Masonry (sütun) ya da sabit oranlı ızgara galeri: kategori çipleriyle filtre (?cat= URL durumu, aria-pressed), lightbox (klavye, filtrelenmişte yalnız görünenler gezilir), lazy yükleme (width/height ile CLS yok), görselsiz öğede nötr yer tutucu. gap:0 ile kenarsız ızgara, hover başlık. Öğeler data[] içinde {img, thumb?, title{tr,en,ar}, cat, w, h, alt{tr,en,ar}}; kategoriler desing.cats[]. Üç dil + RTL.",
+      "version": "1.0.0",
+      "icon": "photo_library",
+      "category": "galeri",
+      "tags": [
+        "galeri",
+        "masonry",
+        "filtre",
+        "lightbox",
+        "portfolyo",
+        "gallery",
+        "ar"
+      ],
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "gap": "12px",
+        "radius": "8px",
+        "columns": {
+          "d": 4,
+          "t": 2,
+          "m": 1
+        },
+        "ratio": "auto",
+        "captions": "hover",
+        "filter": true,
+        "lightbox": true,
+        "lazy": true,
+        "urlPrefix": "",
+        "title": {
+          "tr": "Ürün serileri",
+          "en": "Product series",
+          "ar": "سلاسل المنتجات"
+        },
+        "description": {
+          "tr": "Kategoriye göre süzün, büyütmek için dokunun. Görseller yapay zekâ ile üretilmiştir.",
+          "en": "Filter by category and tap to enlarge. Images are AI-generated.",
+          "ar": "صفِّ حسب الفئة وانقر على الصورة لتكبيرها. الصور مُنشأة بالذكاء الاصطناعي."
+        },
+        "allLabel": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "filterLabel": {
+          "tr": "Kategoriye göre filtrele",
+          "en": "Filter by category",
+          "ar": "التصفية حسب الفئة"
+        },
+        "countText": {
+          "zero": {
+            "ar": "لا توجد صور"
+          },
+          "one": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photo",
+            "ar": "صورة واحدة"
+          },
+          "two": {
+            "ar": "صورتان"
+          },
+          "few": {
+            "ar": "{n} صور"
+          },
+          "many": {
+            "ar": "{n} صورة"
+          },
+          "other": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photos",
+            "ar": "{n} صورة"
+          }
+        },
+        "emptyText": {
+          "tr": "Henüz gösterilecek görsel yok.",
+          "en": "There are no images to show yet.",
+          "ar": "لا توجد صور لعرضها بعد."
+        },
+        "lightboxLabels": {
+          "dialog": {
+            "tr": "Görsel görüntüleyici",
+            "en": "Image viewer",
+            "ar": "عارض الصور"
+          },
+          "close": {
+            "tr": "Kapat",
+            "en": "Close",
+            "ar": "إغلاق"
+          },
+          "prev": {
+            "tr": "Önceki görsel",
+            "en": "Previous image",
+            "ar": "الصورة السابقة"
+          },
+          "next": {
+            "tr": "Sonraki görsel",
+            "en": "Next image",
+            "ar": "الصورة التالية"
+          },
+          "counter": {
+            "tr": "{i} / {n}",
+            "en": "{i} / {n}",
+            "ar": "{i} من {n}"
+          }
+        },
+        "cats": [
+          {
+            "id": "isleme",
+            "name": {
+              "tr": "İşleme",
+              "en": "Machining",
+              "ar": "التشغيل"
+            }
+          },
+          {
+            "id": "paketleme",
+            "name": {
+              "tr": "Paketleme",
+              "en": "Packaging",
+              "ar": "التعبئة"
+            }
+          },
+          {
+            "id": "kaynak",
+            "name": {
+              "tr": "Kaynak",
+              "en": "Welding",
+              "ar": "اللحام"
+            }
+          }
+        ]
+      },
+      "data": [
+        {
+          "img": "sanayi-makine-1.webp",
+          "cat": "isleme",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "OX-CNC işleme merkezi",
+            "en": "OX-CNC machining centre",
+            "ar": "مركز التشغيل OX-CNC"
+          },
+          "alt": {
+            "tr": "Soğutma sıvısı altında metal parça işleyen dikey işleme merkezi",
+            "en": "A vertical machining centre cutting a metal part under coolant",
+            "ar": "مركز تشغيل عمودي يقطع قطعة معدنية تحت سائل التبريد"
+          }
+        },
+        {
+          "img": "sanayi-makine-4.webp",
+          "cat": "isleme",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "OT-Turn CNC torna hattı",
+            "en": "OT-Turn CNC lathe line",
+            "ar": "خط مخارط OT-Turn CNC"
+          },
+          "alt": {
+            "tr": "Temiz atölyede yan yana sıralanmış CNC torna tezgâhları",
+            "en": "A row of CNC lathes side by side in a clean workshop",
+            "ar": "صف من مخارط CNC جنبًا إلى جنب في ورشة نظيفة"
+          }
+        },
+        {
+          "img": "sanayi-makine-2.webp",
+          "cat": "paketleme",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "OP-Pack paketleme makinesi",
+            "en": "OP-Pack packaging machine",
+            "ar": "آلة التعبئة OP-Pack"
+          },
+          "alt": {
+            "tr": "Paslanmaz gövdeli sanayi tipi paketleme makinesi",
+            "en": "An industrial packaging machine with a stainless steel body",
+            "ar": "آلة تعبئة صناعية بهيكل من الفولاذ المقاوم للصدأ"
+          }
+        },
+        {
+          "img": "sanayi-makine-3.webp",
+          "cat": "kaynak",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "OR-Weld robotik kaynak hücresi",
+            "en": "OR-Weld robotic welding cell",
+            "ar": "خلية اللحام الروبوتية OR-Weld"
+          },
+          "alt": {
+            "tr": "Metal bir çerçeveyi kaynaklayan iki robot kol",
+            "en": "Two robot arms welding a metal frame",
+            "ar": "ذراعان روبوتيتان تلحمان إطارًا معدنيًا"
+          }
+        }
+      ],
+      "id": "k6akzq",
+      "path": "galeri-masonry",
+      "local": "body",
+      "index": 21
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": true,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "OX-CNC dikey işleme merkezleri",
+          "en": "OX-CNC vertical machining centres",
+          "ar": "مراكز التشغيل العمودية OX-CNC"
+        },
+        "tableLabel": {
+          "tr": "OX-CNC serisi teknik özellikleri",
+          "en": "OX-CNC series technical specifications",
+          "ar": "المواصفات الفنية لسلسلة OX-CNC"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "Belgeler ve indirmeler",
+          "en": "Documents and downloads",
+          "ar": "المستندات والتنزيلات"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "model",
+            "label": {
+              "tr": "Model",
+              "en": "Model",
+              "ar": "الطراز"
+            }
+          },
+          {
+            "key": "yol",
+            "label": {
+              "tr": "Yol X·Y·Z (mm)",
+              "en": "Travel X·Y·Z (mm)",
+              "ar": "الشوط X·Y·Z (مم)"
+            }
+          },
+          {
+            "key": "devir",
+            "label": {
+              "tr": "İş mili (dev/dk)",
+              "en": "Spindle (rpm)",
+              "ar": "عمود الدوران (دورة/د)"
+            },
+            "num": true
+          },
+          {
+            "key": "guc",
+            "label": {
+              "tr": "Güç (kW)",
+              "en": "Power (kW)",
+              "ar": "القدرة (كيلوواط)"
+            },
+            "num": true
+          },
+          {
+            "key": "mag",
+            "label": {
+              "tr": "Magazin (adet)",
+              "en": "Magazine (pcs)",
+              "ar": "المخزن (عدد)"
+            },
+            "num": true
+          },
+          {
+            "key": "agirlik",
+            "label": {
+              "tr": "Ağırlık (kg)",
+              "en": "Weight (kg)",
+              "ar": "الوزن (كغ)"
+            },
+            "num": true
+          },
+          {
+            "key": "std",
+            "label": {
+              "tr": "Uygunluk",
+              "en": "Conformity",
+              "ar": "المطابقة"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "model": "OX-650",
+            "yol": "650 x 400 x 500",
+            "devir": 10000,
+            "guc": 11,
+            "mag": 24,
+            "agirlik": 4200,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OX-850",
+            "yol": "850 x 500 x 550",
+            "devir": 10000,
+            "guc": 15,
+            "mag": 24,
+            "agirlik": 5600,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OX-1050",
+            "yol": "1050 x 560 x 600",
+            "devir": 8000,
+            "guc": 18.5,
+            "mag": 30,
+            "agirlik": 7400,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OX-1270",
+            "yol": "1270 x 610 x 650",
+            "devir": 8000,
+            "guc": 22,
+            "mag": 30,
+            "agirlik": 9300,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          }
+        ],
+        "downloads": [
+          {
+            "name": {
+              "tr": "OX-CNC teknik föy (DEMO)",
+              "en": "OX-CNC data sheet (DEMO)",
+              "ar": "ورقة بيانات OX-CNC (DEMO)"
+            },
+            "href": "/img/belgeler/ox-cnc-teknik-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "CE uygunluk beyanı (DEMO)",
+              "en": "CE declaration of conformity (DEMO)",
+              "ar": "إعلان المطابقة CE (DEMO)"
+            },
+            "href": "/img/belgeler/ce-uygunluk-demo.pdf",
+            "type": "pdf"
+          }
+        ]
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "g25eft",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 22
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": true,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "OP-Pack paketleme makineleri",
+          "en": "OP-Pack packaging machines",
+          "ar": "آلات التعبئة OP-Pack"
+        },
+        "tableLabel": {
+          "tr": "OP-Pack serisi teknik özellikleri",
+          "en": "OP-Pack series technical specifications",
+          "ar": "المواصفات الفنية لسلسلة OP-Pack"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "Belgeler ve indirmeler",
+          "en": "Documents and downloads",
+          "ar": "المستندات والتنزيلات"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "model",
+            "label": {
+              "tr": "Model",
+              "en": "Model",
+              "ar": "الطراز"
+            }
+          },
+          {
+            "key": "hiz",
+            "label": {
+              "tr": "Hız (paket/dk)",
+              "en": "Speed (packs/min)",
+              "ar": "السرعة (عبوة/د)"
+            },
+            "num": true
+          },
+          {
+            "key": "film",
+            "label": {
+              "tr": "Film genişliği (mm)",
+              "en": "Film width (mm)",
+              "ar": "عرض الفيلم (مم)"
+            },
+            "num": true
+          },
+          {
+            "key": "guc",
+            "label": {
+              "tr": "Güç (kW)",
+              "en": "Power (kW)",
+              "ar": "القدرة (كيلوواط)"
+            },
+            "num": true
+          },
+          {
+            "key": "hava",
+            "label": {
+              "tr": "Hava (L/dk)",
+              "en": "Air (L/min)",
+              "ar": "الهواء (لتر/د)"
+            },
+            "num": true
+          },
+          {
+            "key": "agirlik",
+            "label": {
+              "tr": "Ağırlık (kg)",
+              "en": "Weight (kg)",
+              "ar": "الوزن (كغ)"
+            },
+            "num": true
+          },
+          {
+            "key": "std",
+            "label": {
+              "tr": "Uygunluk",
+              "en": "Conformity",
+              "ar": "المطابقة"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "model": "OP-120",
+            "hiz": 60,
+            "film": 320,
+            "guc": 3.2,
+            "hava": 220,
+            "agirlik": 780,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OP-200",
+            "hiz": 80,
+            "film": 420,
+            "guc": 4.5,
+            "hava": 300,
+            "agirlik": 1040,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OP-320",
+            "hiz": 100,
+            "film": 560,
+            "guc": 6.8,
+            "hava": 420,
+            "agirlik": 1480,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OP-450",
+            "hiz": 120,
+            "film": 720,
+            "guc": 9.5,
+            "hava": 560,
+            "agirlik": 2150,
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          }
+        ],
+        "downloads": [
+          {
+            "name": {
+              "tr": "OP-Pack teknik föy (DEMO)",
+              "en": "OP-Pack data sheet (DEMO)",
+              "ar": "ورقة بيانات OP-Pack (DEMO)"
+            },
+            "href": "/img/belgeler/op-pack-teknik-demo.pdf",
+            "type": "pdf"
+          }
+        ]
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "5cho75",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 23
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": true,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "OR-Weld robotik kaynak hücreleri",
+          "en": "OR-Weld robotic welding cells",
+          "ar": "خلايا اللحام الروبوتية OR-Weld"
+        },
+        "tableLabel": {
+          "tr": "OR-Weld serisi teknik özellikleri",
+          "en": "OR-Weld series technical specifications",
+          "ar": "المواصفات الفنية لسلسلة OR-Weld"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "Belgeler ve indirmeler",
+          "en": "Documents and downloads",
+          "ar": "المستندات والتنزيلات"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "model",
+            "label": {
+              "tr": "Model",
+              "en": "Model",
+              "ar": "الطراز"
+            }
+          },
+          {
+            "key": "yuk",
+            "label": {
+              "tr": "Yük (kg)",
+              "en": "Payload (kg)",
+              "ar": "الحمولة (كغ)"
+            },
+            "num": true
+          },
+          {
+            "key": "erisim",
+            "label": {
+              "tr": "Erişim (mm)",
+              "en": "Reach (mm)",
+              "ar": "المدى (مم)"
+            },
+            "num": true
+          },
+          {
+            "key": "eksen",
+            "label": {
+              "tr": "Eksen",
+              "en": "Axes",
+              "ar": "المحاور"
+            },
+            "num": true
+          },
+          {
+            "key": "guc",
+            "label": {
+              "tr": "Akım (A)",
+              "en": "Current (A)",
+              "ar": "التيار (أمبير)"
+            },
+            "num": true
+          },
+          {
+            "key": "hucre",
+            "label": {
+              "tr": "Hücre (mm)",
+              "en": "Cell (mm)",
+              "ar": "الخلية (مم)"
+            }
+          },
+          {
+            "key": "std",
+            "label": {
+              "tr": "Uygunluk",
+              "en": "Conformity",
+              "ar": "المطابقة"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "model": "OR-100",
+            "yuk": 8,
+            "erisim": 1440,
+            "eksen": 6,
+            "guc": 350,
+            "hucre": "3200 x 2400 x 2300",
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OR-200",
+            "yuk": 12,
+            "erisim": 1850,
+            "eksen": 6,
+            "guc": 450,
+            "hucre": "4000 x 3000 x 2400",
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          },
+          {
+            "model": "OR-300",
+            "yuk": 20,
+            "erisim": 2200,
+            "eksen": 7,
+            "guc": 500,
+            "hucre": "5200 x 3600 x 2600",
+            "std": {
+              "tr": "CE",
+              "en": "CE",
+              "ar": "CE"
+            }
+          }
+        ],
+        "downloads": [
+          {
+            "name": {
+              "tr": "OR-Weld teknik föy (DEMO)",
+              "en": "OR-Weld data sheet (DEMO)",
+              "ar": "ورقة بيانات OR-Weld (DEMO)"
+            },
+            "href": "/img/belgeler/or-weld-teknik-demo.pdf",
+            "type": "pdf"
+          }
+        ]
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "jnl985",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 24
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "Tasarımdan teste tek çatı",
+          "en": "From design to test under one roof",
+          "ar": "من التصميم إلى الاختبار تحت سقف واحد"
+        },
+        "description": {
+          "tr": "Gaziantep Organize Sanayi Bölgesi’ndeki 18.000 m² kapalı alanlı tesisimizde talaşlı imalat, sac işleme, kaynak, montaj ve test hatları bir arada çalışır. Yedek parça deposu aynı yerleşkede olduğundan servis talepleri hızlı karşılanır.",
+          "en": "In our 18,000 m² covered plant in the Gaziantep Organized Industrial Zone, machining, sheet metal, welding, assembly and test lines work side by side. The spare-parts warehouse is on the same campus, so service requests are met quickly.",
+          "ar": "في منشأتنا المغطاة البالغة مساحتها 18.000 م² بالمنطقة الصناعية المنظمة في غازي عنتاب تعمل خطوط التشغيل بالقطع وتشغيل الصفائح واللحام والتجميع والاختبار معًا. ولأن مستودع قطع الغيار في الموقع نفسه تُلبّى طلبات الخدمة بسرعة."
+        },
+        "name2": {
+          "tr": "Çatı güneş enerjisi",
+          "en": "Rooftop solar power",
+          "ar": "طاقة شمسية على السطح"
+        },
+        "spot2": {
+          "tr": "2 MW’lık çatı sistemi elektrik ihtiyacının önemli bölümünü karşılar.",
+          "en": "A 2 MW rooftop system covers a large share of electricity demand.",
+          "ar": "يغطي نظام السطح بقدرة 2 ميغاواط جزءًا كبيرًا من احتياج الكهرباء."
+        },
+        "icon2": "solar_power",
+        "name3": {
+          "tr": "Yük altı test",
+          "en": "Load testing",
+          "ar": "اختبار تحت الحمل"
+        },
+        "spot3": {
+          "tr": "Her makine sevkiyat öncesi tam yükte çalıştırılarak denenir.",
+          "en": "Every machine is run at full load before shipping.",
+          "ar": "تُشغَّل كل آلة بكامل الحمل قبل الشحن."
+        },
+        "icon3": "speed",
+        "img": "sanayi-uretim-hatti.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Üretim tesisi",
+          "en": "Production plant",
+          "ar": "منشأة الإنتاج"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "bwun6u",
+      "path": "module-1",
+      "data": [],
+      "index": 25
+    },
+    {
+      "name": "İstatistik Bandı 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "numbercolor": "#ffffff",
+        "labelcolor": "rgba(255,255,255,.88)",
+        "iconsize": "56px",
+        "iconbox": "88px"
+      },
+      "data": [
+        {
+          "number": 18000,
+          "suffix": "",
+          "label": {
+            "tr": "Kapalı alan (m²)",
+            "en": "Covered area (m²)",
+            "ar": "المساحة المغطاة (م²)"
+          },
+          "icon": "warehouse"
+        },
+        {
+          "number": 51,
+          "suffix": "",
+          "label": {
+            "tr": "CNC ve robot ünitesi",
+            "en": "CNC and robot units",
+            "ar": "وحدة CNC وروبوت"
+          },
+          "icon": "precision_manufacturing"
+        },
+        {
+          "number": 140,
+          "suffix": "",
+          "label": {
+            "tr": "Çalışan",
+            "en": "Employees",
+            "ar": "موظفًا"
+          },
+          "icon": "groups"
+        },
+        {
+          "number": 2,
+          "suffix": " MW",
+          "label": {
+            "tr": "Çatı güneş enerjisi",
+            "en": "Rooftop solar",
+            "ar": "طاقة شمسية على السطح"
+          },
+          "icon": "solar_power"
+        }
+      ],
+      "category": "stats",
+      "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler.",
+      "version": "1.0.0",
+      "icon": "monitoring",
+      "id": "1loxqb",
+      "path": "stats-1",
+      "local": "body",
+      "index": 26
+    },
+    {
+      "name": "Galeri Masonry (Filtre + Lightbox)",
+      "description": "Masonry (sütun) ya da sabit oranlı ızgara galeri: kategori çipleriyle filtre (?cat= URL durumu, aria-pressed), lightbox (klavye, filtrelenmişte yalnız görünenler gezilir), lazy yükleme (width/height ile CLS yok), görselsiz öğede nötr yer tutucu. gap:0 ile kenarsız ızgara, hover başlık. Öğeler data[] içinde {img, thumb?, title{tr,en,ar}, cat, w, h, alt{tr,en,ar}}; kategoriler desing.cats[]. Üç dil + RTL.",
+      "version": "1.0.0",
+      "icon": "photo_library",
+      "category": "galeri",
+      "tags": [
+        "galeri",
+        "masonry",
+        "filtre",
+        "lightbox",
+        "portfolyo",
+        "gallery",
+        "ar"
+      ],
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "gap": "12px",
+        "radius": "8px",
+        "columns": {
+          "d": 3,
+          "t": 2,
+          "m": 1
+        },
+        "ratio": "auto",
+        "captions": "hover",
+        "filter": true,
+        "lightbox": true,
+        "lazy": true,
+        "urlPrefix": "",
+        "title": {
+          "tr": "Tesisten kareler",
+          "en": "Frames from the plant",
+          "ar": "لقطات من المنشأة"
+        },
+        "description": {
+          "tr": "Üretim, depo, kalite ve saha ekibinden görüntüler. Görseller yapay zekâ ile üretilmiştir.",
+          "en": "Views of production, storage, quality and the shop-floor team. Images are AI-generated.",
+          "ar": "صور من الإنتاج والتخزين والجودة وفريق الورشة. الصور مُنشأة بالذكاء الاصطناعي."
+        },
+        "allLabel": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "filterLabel": {
+          "tr": "Kategoriye göre filtrele",
+          "en": "Filter by category",
+          "ar": "التصفية حسب الفئة"
+        },
+        "countText": {
+          "zero": {
+            "ar": "لا توجد صور"
+          },
+          "one": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photo",
+            "ar": "صورة واحدة"
+          },
+          "two": {
+            "ar": "صورتان"
+          },
+          "few": {
+            "ar": "{n} صور"
+          },
+          "many": {
+            "ar": "{n} صورة"
+          },
+          "other": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photos",
+            "ar": "{n} صورة"
+          }
+        },
+        "emptyText": {
+          "tr": "Henüz gösterilecek görsel yok.",
+          "en": "There are no images to show yet.",
+          "ar": "لا توجد صور لعرضها بعد."
+        },
+        "lightboxLabels": {
+          "dialog": {
+            "tr": "Görsel görüntüleyici",
+            "en": "Image viewer",
+            "ar": "عارض الصور"
+          },
+          "close": {
+            "tr": "Kapat",
+            "en": "Close",
+            "ar": "إغلاق"
+          },
+          "prev": {
+            "tr": "Önceki görsel",
+            "en": "Previous image",
+            "ar": "الصورة السابقة"
+          },
+          "next": {
+            "tr": "Sonraki görsel",
+            "en": "Next image",
+            "ar": "الصورة التالية"
+          },
+          "counter": {
+            "tr": "{i} / {n}",
+            "en": "{i} / {n}",
+            "ar": "{i} من {n}"
+          }
+        },
+        "cats": [
+          {
+            "id": "uretim",
+            "name": {
+              "tr": "Üretim",
+              "en": "Production",
+              "ar": "الإنتاج"
+            }
+          },
+          {
+            "id": "depo",
+            "name": {
+              "tr": "Depo",
+              "en": "Warehouse",
+              "ar": "المستودع"
+            }
+          },
+          {
+            "id": "kalite",
+            "name": {
+              "tr": "Kalite",
+              "en": "Quality",
+              "ar": "الجودة"
+            }
+          },
+          {
+            "id": "ekip",
+            "name": {
+              "tr": "Ekip",
+              "en": "Team",
+              "ar": "الفريق"
+            }
+          }
+        ]
+      },
+      "data": [
+        {
+          "img": "sanayi-hero-tesis.webp",
+          "cat": "uretim",
+          "w": 1280,
+          "h": 720,
+          "title": {
+            "tr": "Üretim holü",
+            "en": "Production hall",
+            "ar": "صالة الإنتاج"
+          },
+          "alt": {
+            "tr": "Tavan aydınlatmalı geniş fabrika holünde sıralı makineler",
+            "en": "Machines in a row inside a wide factory hall with ceiling lights",
+            "ar": "آلات متراصة داخل صالة مصنع واسعة بإضاءة سقفية"
+          }
+        },
+        {
+          "img": "sanayi-uretim-hatti.webp",
+          "cat": "uretim",
+          "w": 1280,
+          "h": 720,
+          "title": {
+            "tr": "Paketleme hattı",
+            "en": "Packaging line",
+            "ar": "خط التعبئة"
+          },
+          "alt": {
+            "tr": "Bant üzerinde ilerleyen paketlenmiş ürünler",
+            "en": "Packaged goods moving along a conveyor belt",
+            "ar": "منتجات معبأة تتحرك على السير الناقل"
+          }
+        },
+        {
+          "img": "sanayi-makine-3.webp",
+          "cat": "uretim",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "Robotik kaynak",
+            "en": "Robotic welding",
+            "ar": "اللحام الروبوتي"
+          },
+          "alt": {
+            "tr": "Robot kolların kaynak kıvılcımları arasında çalışması",
+            "en": "Robot arms working amid welding sparks",
+            "ar": "ذراعان روبوتيتان تعملان وسط شرارات اللحام"
+          }
+        },
+        {
+          "img": "sanayi-depo.webp",
+          "cat": "depo",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "Yedek parça deposu",
+            "en": "Spare-parts warehouse",
+            "ar": "مستودع قطع الغيار"
+          },
+          "alt": {
+            "tr": "Yüksek raflı depoda palet ve forklift",
+            "en": "Pallets and a forklift in a high-rack warehouse",
+            "ar": "منصات نقالة ورافعة شوكية في مستودع ذي رفوف عالية"
+          }
+        },
+        {
+          "img": "sanayi-kalite-lab.webp",
+          "cat": "kalite",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "Kalite laboratuvarı",
+            "en": "Quality laboratory",
+            "ar": "مختبر الجودة"
+          },
+          "alt": {
+            "tr": "Kumpas ve manometreli ölçüm tezgâhı",
+            "en": "A measuring bench with a caliper and pressure gauges",
+            "ar": "طاولة قياس عليها فرجار ومقاييس ضغط"
+          }
+        },
+        {
+          "img": "sanayi-ekip-saha.webp",
+          "cat": "ekip",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "Saha ekibi",
+            "en": "Shop-floor team",
+            "ar": "فريق الورشة"
+          },
+          "alt": {
+            "tr": "Baret ve yelek giyen üç çalışan makine başında konuşuyor",
+            "en": "Three workers in helmets and vests talking beside a machine",
+            "ar": "ثلاثة عمال بخوذات وسترات يتحدثون بجانب آلة"
+          }
+        }
+      ],
+      "id": "14b2dg",
+      "path": "galeri-masonry",
+      "local": "body",
+      "index": 27
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": true,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "Makine parkı",
+          "en": "Machine park",
+          "ar": "أسطول الماكينات"
+        },
+        "tableLabel": {
+          "tr": "Üretim tesisindeki makine parkı",
+          "en": "Machine park of the production plant",
+          "ar": "أسطول الماكينات في منشأة الإنتاج"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "Belgeler ve indirmeler",
+          "en": "Documents and downloads",
+          "ar": "المستندات والتنزيلات"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "tur",
+            "label": {
+              "tr": "Ekipman",
+              "en": "Equipment",
+              "ar": "المعدات"
+            }
+          },
+          {
+            "key": "adet",
+            "label": {
+              "tr": "Adet",
+              "en": "Units",
+              "ar": "العدد"
+            },
+            "num": true
+          },
+          {
+            "key": "kap",
+            "label": {
+              "tr": "Aylık kapasite",
+              "en": "Monthly capacity",
+              "ar": "الطاقة الشهرية"
+            }
+          },
+          {
+            "key": "alan",
+            "label": {
+              "tr": "Hat / alan",
+              "en": "Line / area",
+              "ar": "الخط / المنطقة"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "tur": {
+              "tr": "CNC dikey işleme merkezi",
+              "en": "CNC vertical machining centre",
+              "ar": "مركز تشغيل عمودي CNC"
+            },
+            "adet": 22,
+            "kap": {
+              "tr": "900 gövde parça",
+              "en": "900 housing parts",
+              "ar": "900 قطعة هيكلية"
+            },
+            "alan": {
+              "tr": "Talaşlı imalat",
+              "en": "Machining",
+              "ar": "التشغيل بالقطع"
+            }
+          },
+          {
+            "tur": {
+              "tr": "CNC torna",
+              "en": "CNC lathe",
+              "ar": "مخرطة CNC"
+            },
+            "adet": 14,
+            "kap": {
+              "tr": "4.000 mil / şaft",
+              "en": "4,000 spindles / shafts",
+              "ar": "4.000 عمود"
+            },
+            "alan": {
+              "tr": "Talaşlı imalat",
+              "en": "Machining",
+              "ar": "التشغيل بالقطع"
+            }
+          },
+          {
+            "tur": {
+              "tr": "Robotik kaynak hücresi",
+              "en": "Robotic welding cell",
+              "ar": "خلية لحام روبوتية"
+            },
+            "adet": 8,
+            "kap": {
+              "tr": "600 şasi",
+              "en": "600 frames",
+              "ar": "600 هيكل"
+            },
+            "alan": {
+              "tr": "Kaynak",
+              "en": "Welding",
+              "ar": "اللحام"
+            }
+          },
+          {
+            "tur": {
+              "tr": "Sac lazer kesim",
+              "en": "Sheet laser cutting",
+              "ar": "قص الصفائح بالليزر"
+            },
+            "adet": 3,
+            "kap": {
+              "tr": "120 ton sac",
+              "en": "120 t of sheet",
+              "ar": "120 طنًا من الصفائح"
+            },
+            "alan": {
+              "tr": "Sac işleme",
+              "en": "Sheet metal",
+              "ar": "تشغيل الصفائح"
+            }
+          },
+          {
+            "tur": {
+              "tr": "Montaj ve test hattı",
+              "en": "Assembly and test line",
+              "ar": "خط التجميع والاختبار"
+            },
+            "adet": 4,
+            "kap": {
+              "tr": "45 makine",
+              "en": "45 machines",
+              "ar": "45 آلة"
+            },
+            "alan": {
+              "tr": "Montaj",
+              "en": "Assembly",
+              "ar": "التجميع"
+            }
+          }
+        ],
+        "downloads": []
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "ybu562",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 28
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "CE işareti ve ISO sistemleri",
+          "en": "CE marking and ISO systems",
+          "ar": "علامة CE وأنظمة ISO"
+        },
+        "description": {
+          "tr": "Makinelerimiz Makine Emniyeti Yönetmeliği (2006/42/AT) kapsamında CE işaretli teslim edilir; kalite, çevre ve iş güvenliği süreçlerimiz ISO 9001, ISO 14001 ve ISO 45001 ile yönetilir. Bu sayfadaki belge numaraları ve görseller örnektir — DEMO.",
+          "en": "Our machines are delivered CE marked under the Machinery Directive (2006/42/EC); our quality, environmental and safety processes are managed under ISO 9001, ISO 14001 and ISO 45001. Reference numbers and images on this page are samples — DEMO.",
+          "ar": "تُسلَّم آلاتنا حاملةً علامة CE بموجب توجيه الآلات (2006/42/EC)، وتُدار عمليات الجودة والبيئة والسلامة لدينا وفق ISO 9001 وISO 14001 وISO 45001. الأرقام المرجعية والصور في هذه الصفحة نموذجية — DEMO."
+        },
+        "name2": {
+          "tr": "Her makine için beyan",
+          "en": "A declaration for every machine",
+          "ar": "إعلان لكل آلة"
+        },
+        "spot2": {
+          "tr": "Seri numarası ve uygunluk beyanı makineyle birlikte verilir.",
+          "en": "The serial number and declaration of conformity come with the machine.",
+          "ar": "يُسلَّم الرقم التسلسلي وإعلان المطابقة مع الآلة."
+        },
+        "icon2": "fact_check",
+        "name3": {
+          "tr": "Yıllık gözetim",
+          "en": "Annual surveillance",
+          "ar": "مراقبة سنوية"
+        },
+        "spot3": {
+          "tr": "ISO sistemleri her yıl bağımsız kuruluşça gözetim denetiminden geçer.",
+          "en": "ISO systems are audited every year by an independent body.",
+          "ar": "تخضع أنظمة ISO كل عام لتدقيق مراقبة من جهة مستقلة."
+        },
+        "icon3": "event_repeat",
+        "img": "sanayi-belge-1.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Kalite ve belgeler",
+          "en": "Quality and certificates",
+          "ar": "الجودة والشهادات"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "n6r2xx",
+      "path": "module-1",
+      "data": [],
+      "index": 29
+    },
+    {
+      "name": "Kurumsal Değerler 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "badge": "",
+        "title": {
+          "tr": "CE ve ISO belgelerimiz",
+          "en": "Our CE and ISO certificates",
+          "ar": "شهادات CE وISO لدينا"
+        },
+        "description": {
+          "tr": "Tüm belgeler örnektir (DEMO); gerçek bir kuruluş tarafından verilmemiştir.",
+          "en": "All documents are samples (DEMO) and were not issued by a real body.",
+          "ar": "جميع الوثائق نموذجية (DEMO) ولم تصدرها جهة حقيقية."
+        }
+      },
+      "data": [
+        {
+          "icon": "verified",
+          "name": {
+            "tr": "CE işareti — 2006/42/AT",
+            "en": "CE marking — 2006/42/EC",
+            "ar": "علامة CE — 2006/42/EC"
+          },
+          "description": {
+            "tr": "Makine Emniyeti Yönetmeliği uygunluk beyanı. Belge no: DEMO-CE-0001.",
+            "en": "Machinery Directive declaration of conformity. Reference: DEMO-CE-0001.",
+            "ar": "إعلان المطابقة لتوجيه الآلات. الرقم المرجعي: DEMO-CE-0001."
+          }
+        },
+        {
+          "icon": "workspace_premium",
+          "name": {
+            "tr": "ISO 9001 Kalite Yönetimi",
+            "en": "ISO 9001 Quality Management",
+            "ar": "إدارة الجودة ISO 9001"
+          },
+          "description": {
+            "tr": "Tasarım, üretim ve satış sonrası süreçler. Belge no: DEMO-9001.",
+            "en": "Design, production and after-sales processes. Reference: DEMO-9001.",
+            "ar": "عمليات التصميم والإنتاج وما بعد البيع. الرقم المرجعي: DEMO-9001."
+          }
+        },
+        {
+          "icon": "eco",
+          "name": {
+            "tr": "ISO 14001 Çevre Yönetimi",
+            "en": "ISO 14001 Environmental Management",
+            "ar": "الإدارة البيئية ISO 14001"
+          },
+          "description": {
+            "tr": "Atık, enerji ve soğutma sıvısı yönetimi. Belge no: DEMO-14001.",
+            "en": "Waste, energy and coolant management. Reference: DEMO-14001.",
+            "ar": "إدارة النفايات والطاقة وسائل التبريد. الرقم المرجعي: DEMO-14001."
+          }
+        },
+        {
+          "icon": "health_and_safety",
+          "name": {
+            "tr": "ISO 45001 İş Sağlığı ve Güvenliği",
+            "en": "ISO 45001 Occupational Health and Safety",
+            "ar": "الصحة والسلامة المهنية ISO 45001"
+          },
+          "description": {
+            "tr": "Risk değerlendirme, eğitim ve olay takibi. Belge no: DEMO-45001.",
+            "en": "Risk assessment, training and incident follow-up. Reference: DEMO-45001.",
+            "ar": "تقييم المخاطر والتدريب ومتابعة الحوادث. الرقم المرجعي: DEMO-45001."
+          }
+        }
+      ],
+      "category": "values",
+      "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
+      "version": "1.0.0",
+      "icon": "diamond",
+      "id": "9g7333",
+      "path": "values-1",
+      "local": "body",
+      "index": 30
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": false,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "Belge listesi (örnek)",
+          "en": "Certificate list (sample)",
+          "ar": "قائمة الشهادات (نموذجية)"
+        },
+        "tableLabel": {
+          "tr": "Örnek CE ve ISO belgeleri listesi",
+          "en": "List of sample CE and ISO certificates",
+          "ar": "قائمة شهادات CE وISO النموذجية"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "Örnek belgeleri indirin (DEMO)",
+          "en": "Download sample documents (DEMO)",
+          "ar": "نزّل الوثائق النموذجية (DEMO)"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "belge",
+            "label": {
+              "tr": "Belge",
+              "en": "Document",
+              "ar": "الوثيقة"
+            }
+          },
+          {
+            "key": "kapsam",
+            "label": {
+              "tr": "Kapsam",
+              "en": "Scope",
+              "ar": "النطاق"
+            }
+          },
+          {
+            "key": "no",
+            "label": {
+              "tr": "Belge no",
+              "en": "Reference",
+              "ar": "الرقم المرجعي"
+            }
+          },
+          {
+            "key": "gecerlilik",
+            "label": {
+              "tr": "Geçerlilik",
+              "en": "Valid until",
+              "ar": "صالحة حتى"
+            }
+          },
+          {
+            "key": "durum",
+            "label": {
+              "tr": "Durum",
+              "en": "Status",
+              "ar": "الحالة"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "belge": {
+              "tr": "CE uygunluk beyanı",
+              "en": "CE declaration of conformity",
+              "ar": "إعلان المطابقة CE"
+            },
+            "kapsam": {
+              "tr": "Makine Emniyeti Yönetmeliği 2006/42/AT",
+              "en": "Machinery Directive 2006/42/EC",
+              "ar": "توجيه الآلات 2006/42/EC"
+            },
+            "no": "DEMO-CE-0001",
+            "gecerlilik": "2029-12",
+            "durum": {
+              "tr": "Örnek / DEMO",
+              "en": "Sample / DEMO",
+              "ar": "نموذجي / DEMO"
+            }
+          },
+          {
+            "belge": "ISO 9001",
+            "kapsam": {
+              "tr": "Kalite yönetim sistemi",
+              "en": "Quality management system",
+              "ar": "نظام إدارة الجودة"
+            },
+            "no": "DEMO-9001",
+            "gecerlilik": "2028-06",
+            "durum": {
+              "tr": "Örnek / DEMO",
+              "en": "Sample / DEMO",
+              "ar": "نموذجي / DEMO"
+            }
+          },
+          {
+            "belge": "ISO 14001",
+            "kapsam": {
+              "tr": "Çevre yönetim sistemi",
+              "en": "Environmental management system",
+              "ar": "نظام الإدارة البيئية"
+            },
+            "no": "DEMO-14001",
+            "gecerlilik": "2028-06",
+            "durum": {
+              "tr": "Örnek / DEMO",
+              "en": "Sample / DEMO",
+              "ar": "نموذجي / DEMO"
+            }
+          },
+          {
+            "belge": "ISO 45001",
+            "kapsam": {
+              "tr": "İş sağlığı ve güvenliği",
+              "en": "Occupational health and safety",
+              "ar": "الصحة والسلامة المهنية"
+            },
+            "no": "DEMO-45001",
+            "gecerlilik": "2028-06",
+            "durum": {
+              "tr": "Örnek / DEMO",
+              "en": "Sample / DEMO",
+              "ar": "نموذجي / DEMO"
+            }
+          }
+        ],
+        "downloads": [
+          {
+            "name": {
+              "tr": "CE uygunluk beyanı (DEMO)",
+              "en": "CE declaration of conformity (DEMO)",
+              "ar": "إعلان المطابقة CE (DEMO)"
+            },
+            "href": "/img/belgeler/ce-uygunluk-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "ISO 9001 (DEMO)",
+              "en": "ISO 9001 (DEMO)",
+              "ar": "ISO 9001 (DEMO)"
+            },
+            "href": "/img/belgeler/iso-9001-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "ISO 14001 (DEMO)",
+              "en": "ISO 14001 (DEMO)",
+              "ar": "ISO 14001 (DEMO)"
+            },
+            "href": "/img/belgeler/iso-14001-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "ISO 45001 (DEMO)",
+              "en": "ISO 45001 (DEMO)",
+              "ar": "ISO 45001 (DEMO)"
+            },
+            "href": "/img/belgeler/iso-45001-demo.pdf",
+            "type": "pdf"
+          }
+        ]
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "m1pmht",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 31
+    },
+    {
+      "name": "Galeri Masonry (Filtre + Lightbox)",
+      "description": "Masonry (sütun) ya da sabit oranlı ızgara galeri: kategori çipleriyle filtre (?cat= URL durumu, aria-pressed), lightbox (klavye, filtrelenmişte yalnız görünenler gezilir), lazy yükleme (width/height ile CLS yok), görselsiz öğede nötr yer tutucu. gap:0 ile kenarsız ızgara, hover başlık. Öğeler data[] içinde {img, thumb?, title{tr,en,ar}, cat, w, h, alt{tr,en,ar}}; kategoriler desing.cats[]. Üç dil + RTL.",
+      "version": "1.0.0",
+      "icon": "photo_library",
+      "category": "galeri",
+      "tags": [
+        "galeri",
+        "masonry",
+        "filtre",
+        "lightbox",
+        "portfolyo",
+        "gallery",
+        "ar"
+      ],
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "gap": "12px",
+        "radius": "8px",
+        "columns": {
+          "d": 3,
+          "t": 2,
+          "m": 1
+        },
+        "ratio": "auto",
+        "captions": "hover",
+        "filter": true,
+        "lightbox": true,
+        "lazy": true,
+        "urlPrefix": "",
+        "title": {
+          "tr": "Belge ve laboratuvar",
+          "en": "Documents and laboratory",
+          "ar": "الوثائق والمختبر"
+        },
+        "description": {
+          "tr": "Örnek belge — DEMO; gerçek bir belge değildir.",
+          "en": "Sample document — DEMO; not a real certificate.",
+          "ar": "وثيقة نموذجية — DEMO؛ وليست شهادة حقيقية."
+        },
+        "allLabel": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "filterLabel": {
+          "tr": "Kategoriye göre filtrele",
+          "en": "Filter by category",
+          "ar": "التصفية حسب الفئة"
+        },
+        "countText": {
+          "zero": {
+            "ar": "لا توجد صور"
+          },
+          "one": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photo",
+            "ar": "صورة واحدة"
+          },
+          "two": {
+            "ar": "صورتان"
+          },
+          "few": {
+            "ar": "{n} صور"
+          },
+          "many": {
+            "ar": "{n} صورة"
+          },
+          "other": {
+            "tr": "{n} fotoğraf",
+            "en": "{n} photos",
+            "ar": "{n} صورة"
+          }
+        },
+        "emptyText": {
+          "tr": "Henüz gösterilecek görsel yok.",
+          "en": "There are no images to show yet.",
+          "ar": "لا توجد صور لعرضها بعد."
+        },
+        "lightboxLabels": {
+          "dialog": {
+            "tr": "Görsel görüntüleyici",
+            "en": "Image viewer",
+            "ar": "عارض الصور"
+          },
+          "close": {
+            "tr": "Kapat",
+            "en": "Close",
+            "ar": "إغلاق"
+          },
+          "prev": {
+            "tr": "Önceki görsel",
+            "en": "Previous image",
+            "ar": "الصورة السابقة"
+          },
+          "next": {
+            "tr": "Sonraki görsel",
+            "en": "Next image",
+            "ar": "الصورة التالية"
+          },
+          "counter": {
+            "tr": "{i} / {n}",
+            "en": "{i} / {n}",
+            "ar": "{i} من {n}"
+          }
+        },
+        "cats": [
+          {
+            "id": "belge",
+            "name": {
+              "tr": "Belge",
+              "en": "Document",
+              "ar": "وثيقة"
+            }
+          },
+          {
+            "id": "lab",
+            "name": {
+              "tr": "Laboratuvar",
+              "en": "Laboratory",
+              "ar": "المختبر"
+            }
+          }
+        ]
+      },
+      "data": [
+        {
+          "img": "sanayi-belge-1.webp",
+          "cat": "belge",
+          "w": 600,
+          "h": 800,
+          "title": {
+            "tr": "Örnek belge çerçevesi",
+            "en": "Sample certificate frame",
+            "ar": "إطار شهادة نموذجي"
+          },
+          "alt": {
+            "tr": "Gri duvarda siyah çerçeve içinde boş belge (DEMO)",
+            "en": "A blank document in a black frame on a grey wall (DEMO)",
+            "ar": "وثيقة فارغة داخل إطار أسود على جدار رمادي (DEMO)"
+          }
+        },
+        {
+          "img": "sanayi-belge-2.webp",
+          "cat": "belge",
+          "w": 600,
+          "h": 800,
+          "title": {
+            "tr": "Örnek belge — kalite",
+            "en": "Sample document — quality",
+            "ar": "وثيقة نموذجية — الجودة"
+          },
+          "alt": {
+            "tr": "Bitkinin yanındaki duvarda boş belge çerçevesi (DEMO)",
+            "en": "A blank document frame on a wall next to a plant (DEMO)",
+            "ar": "إطار وثيقة فارغ على جدار بجانب نبتة (DEMO)"
+          }
+        },
+        {
+          "img": "sanayi-kalite-lab.webp",
+          "cat": "lab",
+          "w": 800,
+          "h": 600,
+          "title": {
+            "tr": "Ölçüm laboratuvarı",
+            "en": "Measurement laboratory",
+            "ar": "مختبر القياس"
+          },
+          "alt": {
+            "tr": "Ölçüm aletleri ve kumpas",
+            "en": "Measuring instruments and a caliper",
+            "ar": "أدوات قياس وفرجار"
+          }
+        }
+      ],
+      "id": "k9if04",
+      "path": "galeri-masonry",
+      "local": "body",
+      "index": 32
+    },
+    {
+      "name": "Randevu / Rezervasyon Formu",
+      "description": "Statik randevu ve rezervasyon sihirbazı (30 Eki 2026): hizmet → uzman → tarih → saat → bilgi → onay; masa kipi (kişi sayısı + bölüm) ve gösterim kipi. Sunucusuz: gönderim WhatsApp hazır mesaj, mailto veya .ics dosyası. Kendi takvimi (Pazartesi/Cumartesi hafta başı, kapalı günler, mola, bekleme günü), üç dil (tr/en/ar, RTL), KVKK onayı, demo kipinde tarayıcıda 'randevularım' listesi.",
+      "version": "1.0.0",
+      "icon": "event_available",
+      "category": "randevu",
+      "tags": [
+        "randevu",
+        "rezervasyon",
+        "takvim",
+        "form",
+        "whatsapp",
+        "ics"
+      ],
+      "desing": {
+        "max": "960px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "errcolor": "color-mix(in srgb, #c81e1e 72%, var(--mx-site-text, #1b1b1b))",
+        "mode": "randevu",
+        "submit": "ics",
+        "demo": true,
+        "weekStart": "auto",
+        "leadDays": 2,
+        "maxDays": 45,
+        "maxPartySize": 8,
+        "masaDuration": 90,
+        "requireEmail": false,
+        "phone": "+90 342 000 00 00",
+        "email": "satis@orvakmakina.example",
+        "location": {
+          "tr": "Organize Sanayi Bölgesi 3. Cadde No: 18, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "18 Third Avenue, Organized Industrial Zone, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "المنطقة الصناعية المنظمة، الشارع الثالث رقم 18، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "badge": {
+          "tr": "Teklif al",
+          "en": "Get a quote",
+          "ar": "اطلب عرض سعر"
+        },
+        "title": {
+          "tr": "Teklif ve teknik görüşme talebi",
+          "en": "Quote and technical meeting request",
+          "ar": "طلب عرض سعر واجتماع فني"
+        },
+        "description": {
+          "tr": "İhtiyacınıza uygun görüşme türünü, gün ve saati seçin; talebiniz satış mühendisliği takvimine göre onaylanır. Bu form demodur: bilgiler sunucuya gönderilmez, görüşme takvim dosyası (.ics) olarak indirilir.",
+          "en": "Choose the meeting type, day and time that suit you; your request is confirmed according to the sales engineering calendar. This form is a demo: no data is sent to a server and the meeting is downloaded as a calendar file (.ics).",
+          "ar": "اختر نوع الاجتماع واليوم والوقت المناسبين، ويُؤكَّد طلبك وفق تقويم هندسة المبيعات. هذا النموذج تجريبي: لا تُرسَل أي بيانات إلى خادم، وينزَّل الاجتماع كملف تقويم (.ics)."
+        },
+        "noscript": {
+          "tr": "Randevu formunu kullanmak için tarayıcınızda JavaScript açık olmalıdır. Bunun yerine bizi arayabilirsiniz.",
+          "en": "JavaScript must be enabled in your browser to use the booking form. You can call us instead.",
+          "ar": "يجب تفعيل JavaScript في المتصفح لاستخدام نموذج الحجز. يمكنك الاتصال بنا بدلًا من ذلك."
+        },
+        "services": [
+          {
+            "id": "s1",
+            "name": {
+              "tr": "Teklif görüşmesi",
+              "en": "Quotation meeting",
+              "ar": "اجتماع عرض السعر"
+            },
+            "duration": 30
+          },
+          {
+            "id": "s2",
+            "name": {
+              "tr": "Teknik görüşme",
+              "en": "Technical meeting",
+              "ar": "اجتماع فني"
+            },
+            "duration": 60
+          },
+          {
+            "id": "s3",
+            "name": {
+              "tr": "Fabrika ziyareti",
+              "en": "Factory visit",
+              "ar": "زيارة المصنع"
+            },
+            "duration": 90
+          }
+        ],
+        "staff": [
+          {
+            "id": "p1",
+            "name": {
+              "tr": "Satış mühendisliği",
+              "en": "Sales engineering",
+              "ar": "هندسة المبيعات"
+            },
+            "role": {
+              "tr": "Teklif ve yapılandırma",
+              "en": "Quotes and configuration",
+              "ar": "العروض والتهيئة"
+            },
+            "services": [
+              "s1",
+              "s2"
+            ]
+          },
+          {
+            "id": "p2",
+            "name": {
+              "tr": "Üretim planlama",
+              "en": "Production planning",
+              "ar": "تخطيط الإنتاج"
+            },
+            "role": {
+              "tr": "Tesis ve test turu",
+              "en": "Plant and test tour",
+              "ar": "جولة المصنع والاختبار"
+            },
+            "services": [
+              "s3",
+              "s2"
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "id": "ic",
+            "name": {
+              "tr": "İç salon",
+              "en": "Indoor",
+              "ar": "الصالة الداخلية"
+            }
+          },
+          {
+            "id": "bahce",
+            "name": {
+              "tr": "Bahçe",
+              "en": "Garden",
+              "ar": "الحديقة"
+            }
+          }
+        ],
+        "hours": {
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "start": "09:00",
+          "end": "17:30",
+          "slot": 30,
+          "breaks": [
+            {
+              "start": "12:30",
+              "end": "13:30"
+            }
+          ]
+        },
+        "closed": [
+          "2026-12-31",
+          "2027-01-01"
+        ],
+        "kvkk": {
+          "text": {
+            "tr": "Kişisel verilerimin bu talebin oluşturulması amacıyla işlenmesine ilişkin aydınlatma metnini okudum, anladım.",
+            "en": "I have read and understood the privacy notice on how my personal data is processed to create this request.",
+            "ar": "لقد قرأت إشعار الخصوصية المتعلق بمعالجة بياناتي الشخصية لإنشاء هذا الطلب وفهمته."
+          },
+          "href": "kisiselveriler"
+        },
+        "successText": {
+          "tr": "Talebiniz alındı. Görüşme, satış mühendisliği takviminin onayından sonra kesinleşir.",
+          "en": "Your request has been received. The meeting is confirmed once the sales engineering calendar is checked.",
+          "ar": "تم استلام طلبك، ويصبح الاجتماع مؤكدًا بعد مراجعة تقويم هندسة المبيعات."
+        },
+        "ui": {
+          "stepsLabel": {
+            "tr": "Adımlar",
+            "en": "Steps",
+            "ar": "الخطوات"
+          },
+          "stepOf": {
+            "tr": "Adım {n} / {m}",
+            "en": "Step {n} of {m}",
+            "ar": "الخطوة {n} من {m}"
+          },
+          "s_service": {
+            "tr": "Hizmet",
+            "en": "Service",
+            "ar": "الخدمة"
+          },
+          "s_staff": {
+            "tr": "Uzman",
+            "en": "Specialist",
+            "ar": "المختص"
+          },
+          "s_party": {
+            "tr": "Kişi",
+            "en": "Guests",
+            "ar": "الضيوف"
+          },
+          "s_date": {
+            "tr": "Tarih",
+            "en": "Date",
+            "ar": "التاريخ"
+          },
+          "s_time": {
+            "tr": "Saat",
+            "en": "Time",
+            "ar": "الوقت"
+          },
+          "s_info": {
+            "tr": "Bilgiler",
+            "en": "Details",
+            "ar": "البيانات"
+          },
+          "s_confirm": {
+            "tr": "Onay",
+            "en": "Confirm",
+            "ar": "التأكيد"
+          },
+          "back": {
+            "tr": "Geri",
+            "en": "Back",
+            "ar": "رجوع"
+          },
+          "next": {
+            "tr": "Devam",
+            "en": "Continue",
+            "ar": "متابعة"
+          },
+          "reqNote": {
+            "tr": "* ile işaretli alanlar zorunludur.",
+            "en": "Fields marked * are required.",
+            "ar": "الحقول المميزة بعلامة * إلزامية."
+          },
+          "t_service": {
+            "tr": "Hizmet seçin",
+            "en": "Choose a service",
+            "ar": "اختر الخدمة"
+          },
+          "minUnit": {
+            "tr": "{n} dk",
+            "en": "{n} min",
+            "ar": "{n} دقيقة"
+          },
+          "t_staff": {
+            "tr": "Uzman seçin",
+            "en": "Choose a specialist",
+            "ar": "اختر المختص"
+          },
+          "anyStaff": {
+            "tr": "Fark etmez",
+            "en": "No preference",
+            "ar": "لا تفضيل"
+          },
+          "anyStaffHint": {
+            "tr": "Uygun olan uzman atanır.",
+            "en": "The first available specialist is assigned.",
+            "ar": "يُسنَد الموعد إلى أول مختص متاح."
+          },
+          "t_party": {
+            "tr": "Kaç kişisiniz?",
+            "en": "How many guests?",
+            "ar": "كم عدد الضيوف؟"
+          },
+          "partyMinus": {
+            "tr": "Kişi sayısını azalt",
+            "en": "Decrease guests",
+            "ar": "تقليل عدد الضيوف"
+          },
+          "partyPlus": {
+            "tr": "Kişi sayısını artır",
+            "en": "Increase guests",
+            "ar": "زيادة عدد الضيوف"
+          },
+          "partyCount": {
+            "tr": {
+              "one": "{n} kişi",
+              "other": "{n} kişi"
+            },
+            "en": {
+              "one": "{n} guest",
+              "other": "{n} guests"
+            },
+            "ar": {
+              "zero": "{n} ضيف",
+              "one": "ضيف واحد",
+              "two": "ضيفان",
+              "few": "{n} ضيوف",
+              "many": "{n} ضيفًا",
+              "other": "{n} ضيف"
+            }
+          },
+          "groupHint": {
+            "tr": "{n} kişiden büyük gruplar için lütfen bizi arayın.",
+            "en": "For groups larger than {n}, please call us.",
+            "ar": "للمجموعات التي يزيد عددها عن {n}، يُرجى الاتصال بنا."
+          },
+          "t_section": {
+            "tr": "Bölüm tercihi",
+            "en": "Seating preference",
+            "ar": "تفضيل الجلسة"
+          },
+          "anySection": {
+            "tr": "Fark etmez",
+            "en": "No preference",
+            "ar": "لا تفضيل"
+          },
+          "t_date": {
+            "tr": "Tarih seçin",
+            "en": "Choose a date",
+            "ar": "اختر التاريخ"
+          },
+          "prevMonth": {
+            "tr": "Önceki ay",
+            "en": "Previous month",
+            "ar": "الشهر السابق"
+          },
+          "nextMonth": {
+            "tr": "Sonraki ay",
+            "en": "Next month",
+            "ar": "الشهر التالي"
+          },
+          "calHint": {
+            "tr": "Gezinmek için ok tuşlarını, seçmek için Enter tuşunu kullanın. Kapalı günler seçilemez.",
+            "en": "Use the arrow keys to move and Enter to select. Unavailable days cannot be chosen.",
+            "ar": "استخدم مفاتيح الأسهم للتنقل ومفتاح Enter للاختيار. لا يمكن اختيار الأيام غير المتاحة."
+          },
+          "dayUnavailable": {
+            "tr": "uygun değil",
+            "en": "unavailable",
+            "ar": "غير متاح"
+          },
+          "selectedDate": {
+            "tr": "Seçilen tarih: {d}",
+            "en": "Selected date: {d}",
+            "ar": "التاريخ المختار: {d}"
+          },
+          "t_time": {
+            "tr": "Saat seçin",
+            "en": "Choose a time",
+            "ar": "اختر الوقت"
+          },
+          "timesFor": {
+            "tr": "{d} için uygun saatler",
+            "en": "Available times for {d}",
+            "ar": "الأوقات المتاحة ليوم {d}"
+          },
+          "p_morning": {
+            "tr": "Sabah",
+            "en": "Morning",
+            "ar": "الصباح"
+          },
+          "p_afternoon": {
+            "tr": "Öğleden sonra",
+            "en": "Afternoon",
+            "ar": "بعد الظهر"
+          },
+          "p_evening": {
+            "tr": "Akşam",
+            "en": "Evening",
+            "ar": "المساء"
+          },
+          "slotTaken": {
+            "tr": "dolu",
+            "en": "booked",
+            "ar": "محجوز"
+          },
+          "noSlots": {
+            "tr": "Bu tarihte uygun saat kalmadı. Lütfen başka bir gün seçin.",
+            "en": "No times are left on this date. Please choose another day.",
+            "ar": "لا توجد أوقات متاحة في هذا اليوم. يُرجى اختيار يوم آخر."
+          },
+          "t_info": {
+            "tr": "İletişim bilgileriniz",
+            "en": "Your contact details",
+            "ar": "بيانات التواصل"
+          },
+          "fName": {
+            "tr": "Ad soyad",
+            "en": "Full name",
+            "ar": "الاسم الكامل"
+          },
+          "fPhone": {
+            "tr": "Telefon",
+            "en": "Phone",
+            "ar": "رقم الهاتف"
+          },
+          "fEmail": {
+            "tr": "E-posta",
+            "en": "E-mail",
+            "ar": "البريد الإلكتروني"
+          },
+          "fEmailOpt": {
+            "tr": "E-posta (isteğe bağlı)",
+            "en": "E-mail (optional)",
+            "ar": "البريد الإلكتروني (اختياري)"
+          },
+          "fNote": {
+            "tr": "Not (isteğe bağlı)",
+            "en": "Note (optional)",
+            "ar": "ملاحظة (اختياري)"
+          },
+          "eService": {
+            "tr": "Lütfen bir hizmet seçin.",
+            "en": "Please choose a service.",
+            "ar": "يُرجى اختيار خدمة."
+          },
+          "eDate": {
+            "tr": "Lütfen uygun bir tarih seçin.",
+            "en": "Please choose an available date.",
+            "ar": "يُرجى اختيار تاريخ متاح."
+          },
+          "eTime": {
+            "tr": "Lütfen bir saat seçin.",
+            "en": "Please choose a time.",
+            "ar": "يُرجى اختيار وقت."
+          },
+          "eName": {
+            "tr": "Lütfen adınızı ve soyadınızı yazın.",
+            "en": "Please enter your full name.",
+            "ar": "يُرجى كتابة اسمك الكامل."
+          },
+          "ePhone": {
+            "tr": "Geçerli bir telefon numarası yazın.",
+            "en": "Please enter a valid phone number.",
+            "ar": "يُرجى كتابة رقم هاتف صحيح."
+          },
+          "eEmail": {
+            "tr": "Geçerli bir e-posta adresi yazın.",
+            "en": "Please enter a valid e-mail address.",
+            "ar": "يُرجى كتابة بريد إلكتروني صحيح."
+          },
+          "eKvkk": {
+            "tr": "Devam etmek için aydınlatma metnini onaylamanız gerekir.",
+            "en": "You need to accept the privacy notice to continue.",
+            "ar": "يجب الموافقة على إشعار الخصوصية للمتابعة."
+          },
+          "t_confirm": {
+            "tr": "Özet ve onay",
+            "en": "Review and confirm",
+            "ar": "المراجعة والتأكيد"
+          },
+          "sum_service": {
+            "tr": "Hizmet",
+            "en": "Service",
+            "ar": "الخدمة"
+          },
+          "sum_staff": {
+            "tr": "Uzman",
+            "en": "Specialist",
+            "ar": "المختص"
+          },
+          "sum_party": {
+            "tr": "Kişi sayısı",
+            "en": "Guests",
+            "ar": "عدد الضيوف"
+          },
+          "sum_section": {
+            "tr": "Bölüm",
+            "en": "Seating",
+            "ar": "الجلسة"
+          },
+          "sum_date": {
+            "tr": "Tarih",
+            "en": "Date",
+            "ar": "التاريخ"
+          },
+          "sum_time": {
+            "tr": "Saat",
+            "en": "Time",
+            "ar": "الوقت"
+          },
+          "sum_name": {
+            "tr": "Ad soyad",
+            "en": "Name",
+            "ar": "الاسم"
+          },
+          "sum_phone": {
+            "tr": "Telefon",
+            "en": "Phone",
+            "ar": "الهاتف"
+          },
+          "sum_email": {
+            "tr": "E-posta",
+            "en": "E-mail",
+            "ar": "البريد الإلكتروني"
+          },
+          "sum_note": {
+            "tr": "Not",
+            "en": "Note",
+            "ar": "ملاحظة"
+          },
+          "kvkkLink": {
+            "tr": "Aydınlatma metni",
+            "en": "Privacy notice",
+            "ar": "إشعار الخصوصية"
+          },
+          "submit_whatsapp": {
+            "tr": "WhatsApp ile gönder",
+            "en": "Send via WhatsApp",
+            "ar": "إرسال عبر واتساب"
+          },
+          "submit_mailto": {
+            "tr": "E-posta ile gönder",
+            "en": "Send by e-mail",
+            "ar": "إرسال بالبريد الإلكتروني"
+          },
+          "submit_ics": {
+            "tr": "Takvim dosyasını indir",
+            "en": "Download calendar file",
+            "ar": "تنزيل ملف التقويم"
+          },
+          "showcaseNote": {
+            "tr": "Bu bölüm bir gösterimdir: girdiğiniz bilgiler hiçbir yere gönderilmez. Gerçek talep için bizi arayabilirsiniz.",
+            "en": "This is a showcase: nothing you enter is sent anywhere. To make a real request, please call us.",
+            "ar": "هذا القسم للعرض فقط: لا تُرسَل أي بيانات تدخلها. لتقديم طلب فعلي يُرجى الاتصال بنا."
+          },
+          "callUs": {
+            "tr": "Bizi arayın",
+            "en": "Call us",
+            "ar": "اتصل بنا"
+          },
+          "restart": {
+            "tr": "Başa dön",
+            "en": "Start over",
+            "ar": "العودة إلى البداية"
+          },
+          "doneTitle_randevu": {
+            "tr": "Randevu talebiniz hazır",
+            "en": "Your appointment request is ready",
+            "ar": "طلب موعدك جاهز"
+          },
+          "doneTitle_masa": {
+            "tr": "Rezervasyon talebiniz hazır",
+            "en": "Your reservation request is ready",
+            "ar": "طلب حجزك جاهز"
+          },
+          "doneHint_whatsapp": {
+            "tr": "Mesaj WhatsApp'ta hazır olarak açıldı. Talebin bize ulaşması için mesajı göndermeyi unutmayın.",
+            "en": "The message opened in WhatsApp, ready to send. Remember to send it so your request reaches us.",
+            "ar": "فُتحت الرسالة جاهزة في واتساب. لا تنسَ إرسالها كي يصلنا طلبك."
+          },
+          "doneHint_mailto": {
+            "tr": "E-posta uygulamanızda hazır bir taslak açıldı. Göndermeyi unutmayın.",
+            "en": "A draft e-mail opened in your mail app. Remember to send it.",
+            "ar": "فُتحت مسودة رسالة في تطبيق البريد. لا تنسَ إرسالها."
+          },
+          "doneHint_ics": {
+            "tr": "Takvim dosyası indirildi. Kaydı takvim uygulamanıza ekleyebilirsiniz.",
+            "en": "The calendar file was downloaded. You can add the booking to your calendar app.",
+            "ar": "تم تنزيل ملف التقويم. يمكنك إضافة الحجز إلى تطبيق التقويم."
+          },
+          "reopen": {
+            "tr": "Mesajı yeniden aç",
+            "en": "Open the message again",
+            "ar": "فتح الرسالة مرة أخرى"
+          },
+          "reopen_ics": {
+            "tr": "Dosyayı yeniden indir",
+            "en": "Download again",
+            "ar": "إعادة التنزيل"
+          },
+          "addCal": {
+            "tr": "Takvime ekle",
+            "en": "Add to calendar",
+            "ar": "إضافة إلى التقويم"
+          },
+          "newBooking_randevu": {
+            "tr": "Yeni randevu",
+            "en": "New appointment",
+            "ar": "موعد جديد"
+          },
+          "newBooking_masa": {
+            "tr": "Yeni rezervasyon",
+            "en": "New reservation",
+            "ar": "حجز جديد"
+          },
+          "demoNote": {
+            "tr": "Demo: bilgileriniz yalnızca bu tarayıcıda saklanır, hiçbir sunucuya gönderilmez.",
+            "en": "Demo: your details stay in this browser only and are never sent to a server.",
+            "ar": "عرض تجريبي: تبقى بياناتك في هذا المتصفح فقط ولا تُرسَل إلى أي خادم."
+          },
+          "myTitle_randevu": {
+            "tr": "Randevularım",
+            "en": "My appointments",
+            "ar": "مواعيدي"
+          },
+          "myTitle_masa": {
+            "tr": "Rezervasyonlarım",
+            "en": "My reservations",
+            "ar": "حجوزاتي"
+          },
+          "cancel": {
+            "tr": "İptal et",
+            "en": "Cancel",
+            "ar": "إلغاء"
+          },
+          "cancelAria": {
+            "tr": "{d} saat {t} kaydını iptal et",
+            "en": "Cancel the booking on {d} at {t}",
+            "ar": "إلغاء الحجز بتاريخ {d} الساعة {t}"
+          },
+          "cancelled": {
+            "tr": "Kayıt iptal edildi.",
+            "en": "Booking cancelled.",
+            "ar": "تم إلغاء الحجز."
+          },
+          "svcFallback_randevu": {
+            "tr": "Randevu",
+            "en": "Appointment",
+            "ar": "موعد"
+          },
+          "msg_randevu_head": {
+            "tr": "Merhaba, {name} adına {date} saat {time} için {service} randevusu almak istiyorum.",
+            "en": "Hello, I would like to book {service} on {date} at {time} under the name {name}.",
+            "ar": "مرحبًا، أود حجز موعد ({service}) بتاريخ {date} الساعة {time} باسم {name}."
+          },
+          "msg_randevu_head_nosvc": {
+            "tr": "Merhaba, {name} adına {date} saat {time} için randevu almak istiyorum.",
+            "en": "Hello, I would like to book an appointment on {date} at {time} under the name {name}.",
+            "ar": "مرحبًا، أود حجز موعد بتاريخ {date} الساعة {time} باسم {name}."
+          },
+          "msg_masa_head": {
+            "tr": "Merhaba, {name} adına {date} saat {time} için {party} masa rezervasyonu yapmak istiyorum.",
+            "en": "Hello, I would like to reserve a table for {party} on {date} at {time} under the name {name}.",
+            "ar": "مرحبًا، أود حجز طاولة لـ {party} بتاريخ {date} الساعة {time} باسم {name}."
+          },
+          "msg_staff": {
+            "tr": "Tercih edilen uzman: {staff}",
+            "en": "Preferred specialist: {staff}",
+            "ar": "المختص المفضل: {staff}"
+          },
+          "msg_section": {
+            "tr": "Bölüm: {section}",
+            "en": "Seating: {section}",
+            "ar": "الجلسة: {section}"
+          },
+          "msg_phone": {
+            "tr": "Telefon: {phone}",
+            "en": "Phone: {phone}",
+            "ar": "الهاتف: {phone}"
+          },
+          "msg_email": {
+            "tr": "E-posta: {email}",
+            "en": "E-mail: {email}",
+            "ar": "البريد الإلكتروني: {email}"
+          },
+          "msg_note": {
+            "tr": "Not: {note}",
+            "en": "Note: {note}",
+            "ar": "ملاحظة: {note}"
+          },
+          "mailSubject_randevu": {
+            "tr": "Randevu talebi – {name}",
+            "en": "Appointment request – {name}",
+            "ar": "طلب موعد – {name}"
+          },
+          "mailSubject_masa": {
+            "tr": "Rezervasyon talebi – {name}",
+            "en": "Reservation request – {name}",
+            "ar": "طلب حجز – {name}"
+          },
+          "icsSummary_randevu": {
+            "tr": "Randevu: {service}",
+            "en": "Appointment: {service}",
+            "ar": "موعد: {service}"
+          },
+          "icsSummary_masa": {
+            "tr": "Masa rezervasyonu – {party}",
+            "en": "Table reservation – {party}",
+            "ar": "حجز طاولة – {party}"
+          }
+        }
+      },
+      "id": "dd0fdb",
+      "path": "randevu-formu",
+      "local": "body",
+      "data": [],
+      "index": 33
+    },
+    {
+      "name": "SSS Akordeon 1",
+      "desing": {
+        "max": "900px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "badge": {
+          "tr": "SSS",
+          "en": "FAQ",
+          "ar": "الأسئلة الشائعة"
+        },
+        "title": {
+          "tr": "Teklif ve sipariş hakkında",
+          "en": "About quotes and orders",
+          "ar": "حول العروض والطلبات"
+        },
+        "description": {
+          "tr": "Teklif, belge, sevkiyat ve servis süreçleriyle ilgili merak edilenler.",
+          "en": "Common questions about quotes, documents, shipping and service.",
+          "ar": "أسئلة متكررة حول العروض والوثائق والشحن والخدمة."
+        },
+        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+      },
+      "data": [
+        {
+          "question": {
+            "tr": "Teklif ne kadar sürede hazırlanır?",
+            "en": "How long does it take to prepare a quote?",
+            "ar": "كم يستغرق إعداد عرض السعر؟"
+          },
+          "answer": {
+            "tr": "Standart modeller için iki iş günü, özel yapılandırmalar için bir hafta içinde yazılı teklif iletilir.",
+            "en": "A written quote is sent within two working days for standard models and within a week for custom configurations.",
+            "ar": "يُرسل عرض السعر المكتوب خلال يومي عمل للطرازات القياسية وخلال أسبوع للتهيئات الخاصة."
+          }
+        },
+        {
+          "question": {
+            "tr": "Makineler CE işaretli mi?",
+            "en": "Are the machines CE marked?",
+            "ar": "هل الآلات حاصلة على علامة CE؟"
+          },
+          "answer": {
+            "tr": "Evet. Tüm seriler Makine Emniyeti Yönetmeliği (2006/42/AT) kapsamında CE işaretli teslim edilir; uygunluk beyanı makineyle birlikte verilir. Bu sitedeki belgeler örnektir (DEMO).",
+            "en": "Yes. All series are delivered CE marked under the Machinery Directive (2006/42/EC), and the declaration of conformity is supplied with the machine. The documents on this site are samples (DEMO).",
+            "ar": "نعم. تُسلَّم جميع السلاسل حاملةً علامة CE بموجب توجيه الآلات (2006/42/EC)، ويُرفق إعلان المطابقة بالآلة. والوثائق في هذا الموقع نماذج (DEMO)."
+          }
+        },
+        {
+          "question": {
+            "tr": "Yurt dışına sevkiyat yapıyor musunuz?",
+            "en": "Do you ship abroad?",
+            "ar": "هل تشحنون إلى الخارج؟"
+          },
+          "answer": {
+            "tr": "Evet. Teklifte Incoterms teslim şekli, nakliye ve sigorta ayrı kalemler olarak yer alır; kullanım kılavuzu Türkçe, İngilizce ve Arapça hazırlanır.",
+            "en": "Yes. The quote lists the Incoterms delivery term, freight and insurance as separate items; the user manual is prepared in Turkish, English and Arabic.",
+            "ar": "نعم. يتضمن عرض السعر شرط التسليم وفق Incoterms والنقل والتأمين كبنود منفصلة، ويُعدّ دليل الاستخدام بالتركية والإنجليزية والعربية."
+          }
+        },
+        {
+          "question": {
+            "tr": "Kurulum ve eğitim dahil mi?",
+            "en": "Are installation and training included?",
+            "ar": "هل التركيب والتدريب مشمولان؟"
+          },
+          "answer": {
+            "tr": "Devreye alma ve operatör eğitimi teklife dahildir; yerinde kurulum için servis ekibi planlanır.",
+            "en": "Commissioning and operator training are included; a service team is scheduled for on-site installation.",
+            "ar": "يشمل العرض التشغيل التجريبي وتدريب المشغلين، وتُجدوَل فرقة خدمة للتركيب في الموقع."
+          }
+        },
+        {
+          "question": {
+            "tr": "Yedek parça ve garanti nasıl işler?",
+            "en": "How do spare parts and warranty work?",
+            "ar": "كيف تعمل قطع الغيار والضمان؟"
+          },
+          "answer": {
+            "tr": "Makineler iki yıl garantilidir; yedek parçalar on yıl boyunca depomuzdan temin edilir.",
+            "en": "Machines carry a two-year warranty, and spare parts are supplied from our warehouse for ten years.",
+            "ar": "تتمتع الآلات بضمان لمدة عامين، وتُوفَّر قطع الغيار من مستودعنا لمدة عشر سنوات."
+          }
+        }
+      ],
+      "category": "faq",
+      "description": "SSS akordeon modülü. Soru-cevap listesini tek seferde bir açık olacak şekilde akordeon düzende gösterir. Çok dilli veri, animasyonlu açılış, mobil uyum ve erişilebilirlik (aria-expanded) desteği içerir.",
+      "version": "1.0.0",
+      "icon": "quiz",
+      "id": "wugxdk",
+      "path": "faq-1",
+      "local": "body",
+      "index": 34
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "Katalog ve teknik föyler",
+          "en": "Catalogue and data sheets",
+          "ar": "الكتالوج وأوراق البيانات"
+        },
+        "description": {
+          "tr": "Genel ürün kataloğunu ve seri bazlı teknik föyleri PDF olarak indirebilirsiniz. Dosyalar demodur; içerikleri kurgusaldır.",
+          "en": "You can download the general product catalogue and the series data sheets as PDF files. The files are demos and their content is fictional.",
+          "ar": "يمكنك تنزيل كتالوج المنتجات العام وأوراق البيانات الفنية لكل سلسلة بصيغة PDF. الملفات تجريبية ومحتواها افتراضي."
+        },
+        "name2": {
+          "tr": "Üç dil",
+          "en": "Three languages",
+          "ar": "ثلاث لغات"
+        },
+        "spot2": {
+          "tr": "Katalog Türkçe, İngilizce ve Arapça sürümlerle hazırlanır.",
+          "en": "The catalogue is prepared in Turkish, English and Arabic.",
+          "ar": "يُعدّ الكتالوج بنسخ تركية وإنجليزية وعربية."
+        },
+        "icon2": "translate",
+        "name3": {
+          "tr": "Güncel sürüm",
+          "en": "Current version",
+          "ar": "الإصدار الحالي"
+        },
+        "spot3": {
+          "tr": "Değerler her sürümde güncellenir; sürüm numarası tabloda yer alır.",
+          "en": "Values are updated in each version; the version number is listed in the table.",
+          "ar": "تُحدَّث القيم في كل إصدار، ويظهر رقم الإصدار في الجدول."
+        },
+        "icon3": "update",
+        "img": "sanayi-makine-3.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Katalog",
+          "en": "Catalogue",
+          "ar": "الكتالوج"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "tv3b6o",
+      "path": "module-1",
+      "data": [],
+      "index": 35
+    },
+    {
+      "name": "Teknik Özellik Tablosu (Sanayi)",
+      "description": "Sanayi ürün sayfası için teknik özellik tablosu: mobilde yatay kaydırma + yapışkan ilk sütun, TSV olarak panoya kopyalama, yazdırma, isteğe bağlı sütun başlığına tıklayınca sıralama (sortable) ve belge ikonlu indirme bağlantıları (katalog, CE/ISO, çizim). Tablo sunucuda üç dilde çizilir; sayılar tr-TR ayraçlı ve <bdi dir=ltr> içindedir.",
+      "version": "1.0.0",
+      "icon": "table_chart",
+      "category": "page-list",
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "sortable": false,
+        "stickyFirst": true,
+        "showCopy": true,
+        "showPrint": true,
+        "title": {
+          "tr": "Katalog ve dokümanlar",
+          "en": "Catalogue and documents",
+          "ar": "الكتالوج والمستندات"
+        },
+        "tableLabel": {
+          "tr": "İndirilebilir katalog ve doküman listesi",
+          "en": "List of downloadable catalogues and documents",
+          "ar": "قائمة الكتالوجات والمستندات القابلة للتنزيل"
+        },
+        "copyLabel": {
+          "tr": "Tabloyu kopyala",
+          "en": "Copy table",
+          "ar": "انسخ الجدول"
+        },
+        "copiedLabel": {
+          "tr": "Tablo panoya kopyalandı.",
+          "en": "Table copied to clipboard.",
+          "ar": "تم نسخ الجدول إلى الحافظة."
+        },
+        "copyFailLabel": {
+          "tr": "Kopyalanamadı; tabloyu elle seçip kopyalayın.",
+          "en": "Could not copy; please select and copy the table manually.",
+          "ar": "تعذّر النسخ؛ يُرجى تحديد الجدول ونسخه يدويًا."
+        },
+        "printLabel": {
+          "tr": "Yazdır",
+          "en": "Print",
+          "ar": "طباعة"
+        },
+        "sortHint": {
+          "tr": "Sıralamak için sütun başlığına tıklayın.",
+          "en": "Click a column header to sort.",
+          "ar": "انقر على عنوان العمود للترتيب."
+        },
+        "sortedAsc": {
+          "tr": "{col} sütununa göre artan sıralandı.",
+          "en": "Sorted by {col}, ascending.",
+          "ar": "تم الترتيب تصاعديًا حسب العمود {col}."
+        },
+        "sortedDesc": {
+          "tr": "{col} sütununa göre azalan sıralandı.",
+          "en": "Sorted by {col}, descending.",
+          "ar": "تم الترتيب تنازليًا حسب العمود {col}."
+        },
+        "sortBy": {
+          "tr": "Sırala: {col}",
+          "en": "Sort by {col}",
+          "ar": "رتّب حسب {col}"
+        },
+        "downloadsTitle": {
+          "tr": "PDF indirmeleri (DEMO)",
+          "en": "PDF downloads (DEMO)",
+          "ar": "تنزيلات PDF (DEMO)"
+        },
+        "emptyText": {
+          "tr": "Teknik özellik verisi bulunmuyor.",
+          "en": "No technical specification data available.",
+          "ar": "لا تتوفر بيانات للمواصفات الفنية."
+        }
+      },
+      "data": {
+        "columns": [
+          {
+            "key": "dok",
+            "label": {
+              "tr": "Doküman",
+              "en": "Document",
+              "ar": "المستند"
+            }
+          },
+          {
+            "key": "sayfa",
+            "label": {
+              "tr": "Sayfa",
+              "en": "Pages",
+              "ar": "الصفحات"
+            },
+            "num": true
+          },
+          {
+            "key": "dil",
+            "label": {
+              "tr": "Dil",
+              "en": "Language",
+              "ar": "اللغة"
+            }
+          },
+          {
+            "key": "surum",
+            "label": {
+              "tr": "Sürüm",
+              "en": "Version",
+              "ar": "الإصدار"
+            }
+          }
+        ],
+        "rows": [
+          {
+            "dok": {
+              "tr": "Genel ürün kataloğu",
+              "en": "General product catalogue",
+              "ar": "كتالوج المنتجات العام"
+            },
+            "sayfa": 48,
+            "dil": "TR · EN · AR",
+            "surum": "2026.1"
+          },
+          {
+            "dok": {
+              "tr": "OX-CNC teknik föyü",
+              "en": "OX-CNC data sheet",
+              "ar": "ورقة بيانات OX-CNC"
+            },
+            "sayfa": 6,
+            "dil": "TR · EN · AR",
+            "surum": "2026.1"
+          },
+          {
+            "dok": {
+              "tr": "OP-Pack teknik föyü",
+              "en": "OP-Pack data sheet",
+              "ar": "ورقة بيانات OP-Pack"
+            },
+            "sayfa": 6,
+            "dil": "TR · EN · AR",
+            "surum": "2026.1"
+          },
+          {
+            "dok": {
+              "tr": "OR-Weld teknik föyü",
+              "en": "OR-Weld data sheet",
+              "ar": "ورقة بيانات OR-Weld"
+            },
+            "sayfa": 4,
+            "dil": "TR · EN · AR",
+            "surum": "2026.1"
+          }
+        ],
+        "downloads": [
+          {
+            "name": {
+              "tr": "Genel ürün kataloğu (DEMO PDF)",
+              "en": "General product catalogue (DEMO PDF)",
+              "ar": "كتالوج المنتجات العام (DEMO PDF)"
+            },
+            "href": "/img/belgeler/katalog-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "OX-CNC teknik föy (DEMO PDF)",
+              "en": "OX-CNC data sheet (DEMO PDF)",
+              "ar": "ورقة بيانات OX-CNC (DEMO PDF)"
+            },
+            "href": "/img/belgeler/ox-cnc-teknik-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "OP-Pack teknik föy (DEMO PDF)",
+              "en": "OP-Pack data sheet (DEMO PDF)",
+              "ar": "ورقة بيانات OP-Pack (DEMO PDF)"
+            },
+            "href": "/img/belgeler/op-pack-teknik-demo.pdf",
+            "type": "pdf"
+          },
+          {
+            "name": {
+              "tr": "OR-Weld teknik föy (DEMO PDF)",
+              "en": "OR-Weld data sheet (DEMO PDF)",
+              "ar": "ورقة بيانات OR-Weld (DEMO PDF)"
+            },
+            "href": "/img/belgeler/or-weld-teknik-demo.pdf",
+            "type": "pdf"
+          }
+        ]
+      },
+      "tags": [
+        "sanayi",
+        "teknik",
+        "tablo",
+        "industrial",
+        "specifications",
+        "rtl"
+      ],
+      "id": "7radg7",
+      "path": "teknik-tablo",
+      "local": "body",
+      "index": 36
+    },
+    {
+      "name": "Proje Kartları (Filtre + Arama)",
+      "description": "Proje/portföy kartları: başlık, yıl, rozetler (m²/konum meta[{k,v}] — k/v çok dilli), durum rozeti (devam/tamam/yakında — renk + ikon + metin), kategori çipleri, durum seçici, metin arama (tr/ar normalleştirme), sıralama (year|title), sonuç sayısı (Arapça 6 çoğul form), boş sonuç durumu ve ?q=&cat=&status=&sort= URL durumu. Projeler data[] içinde {id,title{tr,en,ar},cat,year,status,meta[],img,url}; kategoriler desing.cats[]. url bir site yolu (slug) ise dil önekiyle bağlanır. Üç dil + RTL.",
+      "version": "1.0.0",
+      "icon": "domain",
+      "category": "proje",
+      "tags": [
+        "proje",
+        "portfolyo",
+        "referans",
+        "filtre",
+        "arama",
+        "projects"
+      ],
+      "desing": {
+        "max": "1280px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #f6f6f4)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "statusDevam": "#b45309",
+        "statusTamam": "#15803d",
+        "statusYakinda": "#1d4ed8",
+        "gap": "20px",
+        "radius": "14px",
+        "columns": {
+          "d": 3,
+          "t": 2,
+          "m": 1
+        },
+        "ratio": "4:3",
+        "search": true,
+        "sort": "year",
+        "sortSelect": true,
+        "urlPrefix": "",
+        "title": {
+          "tr": "Referanslarımız",
+          "en": "Our references",
+          "ar": "مراجعنا"
+        },
+        "description": {
+          "tr": "Üç kıtada teslim ettiğimiz makinelerden örnekler. Kategori, ülke ya da anahtar sözcükle süzün. Müşteri adları kurgusaldır.",
+          "en": "Examples of machines delivered across three continents. Filter by category, country or keyword. Customer names are fictional.",
+          "ar": "أمثلة من الآلات التي سلّمناها في ثلاث قارات. صفِّ حسب الفئة أو البلد أو كلمة مفتاحية. أسماء العملاء افتراضية."
+        },
+        "searchLabel": {
+          "tr": "Projelerde ara",
+          "en": "Search projects",
+          "ar": "البحث في المشاريع"
+        },
+        "searchPlaceholder": {
+          "tr": "Proje, konum veya yıl ara…",
+          "en": "Search project, place or year…",
+          "ar": "ابحث عن مشروع أو موقع أو سنة…"
+        },
+        "allLabel": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "filterLabel": {
+          "tr": "Kategoriye göre filtrele",
+          "en": "Filter by category",
+          "ar": "التصفية حسب الفئة"
+        },
+        "statusFieldLabel": {
+          "tr": "Durum",
+          "en": "Status",
+          "ar": "الحالة"
+        },
+        "allStatusLabel": {
+          "tr": "Tüm durumlar",
+          "en": "All statuses",
+          "ar": "كل الحالات"
+        },
+        "sortFieldLabel": {
+          "tr": "Sıralama",
+          "en": "Sort by",
+          "ar": "الترتيب"
+        },
+        "sortYearLabel": {
+          "tr": "Yıl (yeniden eskiye)",
+          "en": "Year (newest first)",
+          "ar": "السنة (الأحدث أولًا)"
+        },
+        "sortTitleLabel": {
+          "tr": "Ad (A → Z)",
+          "en": "Name (A → Z)",
+          "ar": "الاسم (أبجديًا)"
+        },
+        "detailLabel": {
+          "tr": "Detayı incele",
+          "en": "View details",
+          "ar": "عرض التفاصيل"
+        },
+        "yearLabel": {
+          "tr": "Yıl",
+          "en": "Year",
+          "ar": "السنة"
+        },
+        "clearLabel": {
+          "tr": "Filtreleri temizle",
+          "en": "Clear filters",
+          "ar": "مسح عوامل التصفية"
+        },
+        "emptyText": {
+          "tr": "Aramanıza uyan proje bulunamadı. Filtreleri değiştirmeyi deneyin.",
+          "en": "No projects match your search. Try changing the filters.",
+          "ar": "لم نعثر على مشاريع مطابقة لبحثك. جرّب تغيير عوامل التصفية."
+        },
+        "countText": {
+          "zero": {
+            "ar": "لا توجد مشاريع"
+          },
+          "one": {
+            "tr": "{n} proje",
+            "en": "{n} project",
+            "ar": "مشروع واحد"
+          },
+          "two": {
+            "ar": "مشروعان"
+          },
+          "few": {
+            "ar": "{n} مشاريع"
+          },
+          "many": {
+            "ar": "{n} مشروعًا"
+          },
+          "other": {
+            "tr": "{n} proje",
+            "en": "{n} projects",
+            "ar": "{n} مشروع"
+          }
+        },
+        "statusLabels": {
+          "devam": {
+            "tr": "Devam ediyor",
+            "en": "In progress",
+            "ar": "قيد التنفيذ"
+          },
+          "tamam": {
+            "tr": "Tamamlandı",
+            "en": "Completed",
+            "ar": "مكتمل"
+          },
+          "yakinda": {
+            "tr": "Yakında",
+            "en": "Coming soon",
+            "ar": "قريبًا"
+          }
+        },
+        "cats": [
+          {
+            "id": "isleme",
+            "name": {
+              "tr": "İşleme",
+              "en": "Machining",
+              "ar": "التشغيل"
+            }
+          },
+          {
+            "id": "paketleme",
+            "name": {
+              "tr": "Paketleme",
+              "en": "Packaging",
+              "ar": "التعبئة"
+            }
+          },
+          {
+            "id": "kaynak",
+            "name": {
+              "tr": "Kaynak",
+              "en": "Welding",
+              "ar": "اللحام"
+            }
+          }
+        ]
+      },
+      "data": [
+        {
+          "id": "gida-ambalaj",
+          "title": {
+            "tr": "Gıda ambalaj tesisi",
+            "en": "Food packaging plant",
+            "ar": "مصنع تعبئة أغذية"
+          },
+          "cat": "paketleme",
+          "year": 2026,
+          "status": "tamam",
+          "img": "sanayi-makine-2.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Gıda",
+                "en": "Food",
+                "ar": "الأغذية"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Türkiye",
+                "en": "Turkey",
+                "ar": "تركيا"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OP-Pack 320"
+            }
+          ]
+        },
+        {
+          "id": "otomotiv-yan",
+          "title": {
+            "tr": "Otomotiv yan sanayi atölyesi",
+            "en": "Automotive supplier workshop",
+            "ar": "ورشة مورّد قطاع السيارات"
+          },
+          "cat": "isleme",
+          "year": 2025,
+          "status": "tamam",
+          "img": "sanayi-makine-1.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Otomotiv",
+                "en": "Automotive",
+                "ar": "السيارات"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Almanya",
+                "en": "Germany",
+                "ar": "ألمانيا"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OX-CNC 850"
+            }
+          ]
+        },
+        {
+          "id": "ince-sac",
+          "title": {
+            "tr": "Sac işleme fabrikası",
+            "en": "Sheet metal factory",
+            "ar": "مصنع تشغيل الصفائح"
+          },
+          "cat": "kaynak",
+          "year": 2025,
+          "status": "tamam",
+          "img": "sanayi-makine-3.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Metal işleme",
+                "en": "Metalworking",
+                "ar": "تشغيل المعادن"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Suudi Arabistan",
+                "en": "Saudi Arabia",
+                "ar": "السعودية"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OR-Weld 200"
+            }
+          ]
+        },
+        {
+          "id": "hidrolik-atolye",
+          "title": {
+            "tr": "Hidrolik parça üreticisi",
+            "en": "Hydraulic parts maker",
+            "ar": "منتج قطع هيدروليكية"
+          },
+          "cat": "isleme",
+          "year": 2024,
+          "status": "tamam",
+          "img": "sanayi-makine-4.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Hidrolik",
+                "en": "Hydraulics",
+                "ar": "الهيدروليك"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Polonya",
+                "en": "Poland",
+                "ar": "بولندا"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OT-Turn 200"
+            }
+          ]
+        },
+        {
+          "id": "tekstil-paket",
+          "title": {
+            "tr": "Tekstil paketleme hattı",
+            "en": "Textile packing line",
+            "ar": "خط تغليف المنسوجات"
+          },
+          "cat": "paketleme",
+          "year": 2024,
+          "status": "tamam",
+          "img": "sanayi-uretim-hatti.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Tekstil",
+                "en": "Textile",
+                "ar": "المنسوجات"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Mısır",
+                "en": "Egypt",
+                "ar": "مصر"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OP-Pack 450"
+            }
+          ]
+        },
+        {
+          "id": "celik-yapi",
+          "title": {
+            "tr": "Çelik yapı imalatçısı",
+            "en": "Steel structure fabricator",
+            "ar": "مصنّع هياكل فولاذية"
+          },
+          "cat": "kaynak",
+          "year": 2023,
+          "status": "tamam",
+          "img": "sanayi-makine-3.webp",
+          "meta": [
+            {
+              "k": {
+                "tr": "Sektör",
+                "en": "Sector",
+                "ar": "القطاع"
+              },
+              "v": {
+                "tr": "Çelik yapı",
+                "en": "Steel construction",
+                "ar": "الإنشاءات الفولاذية"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ülke",
+                "en": "Country",
+                "ar": "البلد"
+              },
+              "v": {
+                "tr": "Irak",
+                "en": "Iraq",
+                "ar": "العراق"
+              }
+            },
+            {
+              "k": {
+                "tr": "Ürün",
+                "en": "Product",
+                "ar": "المنتج"
+              },
+              "v": "OR-Weld 300"
+            }
+          ]
+        }
+      ],
+      "id": "2lp30p",
+      "path": "proje-kart-filtre",
+      "local": "body",
+      "index": 37
+    },
+    {
+      "name": "İstatistik Bandı 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "numbercolor": "#ffffff",
+        "labelcolor": "rgba(255,255,255,.88)",
+        "iconsize": "56px",
+        "iconbox": "88px"
+      },
+      "data": [
+        {
+          "number": 38,
+          "suffix": "",
+          "label": {
+            "tr": "İhracat ülkesi",
+            "en": "Export countries",
+            "ar": "بلدًا مصدَّرًا إليه"
+          },
+          "icon": "public"
+        },
+        {
+          "number": 1200,
+          "suffix": "+",
+          "label": {
+            "tr": "Teslim edilen makine",
+            "en": "Machines delivered",
+            "ar": "آلة مسلَّمة"
+          },
+          "icon": "precision_manufacturing"
+        },
+        {
+          "number": 92,
+          "suffix": "%",
+          "label": {
+            "tr": "Tekrar sipariş oranı",
+            "en": "Repeat-order rate",
+            "ar": "نسبة تكرار الطلب"
+          },
+          "icon": "repeat"
+        },
+        {
+          "number": 10,
+          "suffix": "",
+          "label": {
+            "tr": "Yıl yedek parça güvencesi",
+            "en": "Years of spare-parts supply",
+            "ar": "سنوات توفير قطع الغيار"
+          },
+          "icon": "inventory"
+        }
+      ],
+      "category": "stats",
+      "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler.",
+      "version": "1.0.0",
+      "icon": "monitoring",
+      "id": "2hwdr9",
+      "path": "stats-1",
+      "local": "body",
+      "index": 38
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "Orvak Makina ekibine katılın",
+          "en": "Join the Orvak Makina team",
+          "ar": "انضم إلى فريق Orvak Makina"
+        },
+        "description": {
+          "tr": "Üretimi sevenler için güvenli, öğrenmeye açık bir ortam sunuyoruz. Aşağıdaki pozisyonlar örnek amaçlıdır (demo); gerçek bir başvuru kabul edilmez.",
+          "en": "We offer a safe workplace that is open to learning for those who love production. The positions below are samples (demo); no real applications are accepted.",
+          "ar": "نقدّم بيئة عمل آمنة ومنفتحة على التعلّم لمحبي الإنتاج. الوظائف أدناه لأغراض العرض (تجريبية) ولا تُقبل طلبات توظيف فعلية."
+        },
+        "name2": {
+          "tr": "Staj programı",
+          "en": "Internship programme",
+          "ar": "برنامج التدريب"
+        },
+        "spot2": {
+          "tr": "Yaz dönemi stajyerleri gerçek proje üzerinde çalışır.",
+          "en": "Summer interns work on a real project.",
+          "ar": "يعمل متدربو الصيف على مشروع حقيقي."
+        },
+        "icon2": "school",
+        "name3": {
+          "tr": "Eşit fırsat",
+          "en": "Equal opportunity",
+          "ar": "تكافؤ الفرص"
+        },
+        "spot3": {
+          "tr": "Başvurular yalnızca yetkinliğe göre değerlendirilir.",
+          "en": "Applications are assessed on competence alone.",
+          "ar": "تُقيَّم الطلبات على أساس الكفاءة وحدها."
+        },
+        "icon3": "diversity_3",
+        "img": "sanayi-ekip-saha.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Kariyer",
+          "en": "Careers",
+          "ar": "الوظائف"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "rx7304",
+      "path": "module-1",
+      "data": [],
+      "index": 39
+    },
+    {
+      "name": "Kurumsal Değerler 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "badge": "",
+        "title": {
+          "tr": "Aramıza katılın",
+          "en": "Come and join us",
+          "ar": "انضم إلينا"
+        },
+        "description": {
+          "tr": "Örnek ilanlar — demo.",
+          "en": "Sample listings — demo.",
+          "ar": "إعلانات نموذجية — تجريبية."
+        }
+      },
+      "data": [
+        {
+          "icon": "precision_manufacturing",
+          "name": {
+            "tr": "CNC operatörü",
+            "en": "CNC operator",
+            "ar": "مشغّل CNC"
+          },
+          "description": {
+            "tr": "Vardiyalı çalışma · Gaziantep · tam zamanlı. Teknik resim okuma ve tezgâh ayarı deneyimi aranır.",
+            "en": "Shift work · Gaziantep · full time. Experience in reading technical drawings and machine setup is required.",
+            "ar": "عمل بنظام الورديات · غازي عنتاب · دوام كامل. يُشترط خبرة في قراءة الرسومات الفنية وإعداد الماكينات."
+          }
+        },
+        {
+          "icon": "design_services",
+          "name": {
+            "tr": "Makine tasarım mühendisi",
+            "en": "Machine design engineer",
+            "ar": "مهندس تصميم آلات"
+          },
+          "description": {
+            "tr": "3B tasarım, mukavemet analizi ve CE dosyası hazırlığı. Makine veya mekatronik mühendisliği mezunu.",
+            "en": "3D design, strength analysis and CE file preparation. A degree in mechanical or mechatronics engineering.",
+            "ar": "التصميم ثلاثي الأبعاد وتحليل المتانة وإعداد ملف CE. خريج هندسة ميكانيكية أو ميكاترونيكس."
+          }
+        },
+        {
+          "icon": "verified",
+          "name": {
+            "tr": "Kalite kontrol uzmanı",
+            "en": "Quality control specialist",
+            "ar": "أخصائي مراقبة الجودة"
+          },
+          "description": {
+            "tr": "Boyutsal ölçüm, ISO 9001 iç tetkik ve uygunsuzluk takibi. CMM deneyimi tercih sebebidir.",
+            "en": "Dimensional measurement, ISO 9001 internal audits and non-conformity follow-up. CMM experience is a plus.",
+            "ar": "القياس البُعدي والتدقيق الداخلي ISO 9001 ومتابعة حالات عدم المطابقة. خبرة CMM ميزة إضافية."
+          }
+        },
+        {
+          "icon": "school",
+          "name": {
+            "tr": "Stajyer mühendis",
+            "en": "Engineering intern",
+            "ar": "مهندس متدرب"
+          },
+          "description": {
+            "tr": "Üçüncü ve dördüncü sınıf öğrencileri için yaz dönemi staj programı; mentor eşliğinde gerçek proje.",
+            "en": "A summer internship programme for third- and fourth-year students, with a real project and a mentor.",
+            "ar": "برنامج تدريب صيفي لطلاب السنتين الثالثة والرابعة، مع مشروع حقيقي ومرشد."
+          }
+        }
+      ],
+      "category": "values",
+      "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
+      "version": "1.0.0",
+      "icon": "diamond",
+      "id": "j5igic",
+      "path": "values-1",
+      "local": "body",
+      "index": 40
+    },
+    {
+      "name": "Kurumsal Değerler 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "badge": "",
+        "title": {
+          "tr": "Çalışanlarımıza sunduklarımız",
+          "en": "What we offer our employees",
+          "ar": "ما نقدمه لموظفينا"
+        },
+        "description": {
+          "tr": "Güvenlik, gelişim ve günlük konfor.",
+          "en": "Safety, development and everyday comfort.",
+          "ar": "السلامة والتطوير والراحة اليومية."
+        }
+      },
+      "data": [
+        {
+          "icon": "health_and_safety",
+          "name": {
+            "tr": "Güvenli çalışma",
+            "en": "Safe working",
+            "ar": "عمل آمن"
+          },
+          "description": {
+            "tr": "ISO 45001 uyumlu iş güvenliği eğitimi, kişisel koruyucu donanım ve düzenli sağlık taraması.",
+            "en": "ISO 45001-aligned safety training, protective equipment and regular health checks.",
+            "ar": "تدريب على السلامة متوافق مع ISO 45001 ومعدات حماية وفحوص صحية دورية."
+          }
+        },
+        {
+          "icon": "trending_up",
+          "name": {
+            "tr": "Gelişim",
+            "en": "Development",
+            "ar": "التطوير"
+          },
+          "description": {
+            "tr": "Yıllık eğitim bütçesi, üretici eğitimleri ve kıdemli ustalarla birlikte çalışma.",
+            "en": "An annual training budget, manufacturer courses and working alongside senior masters.",
+            "ar": "ميزانية تدريب سنوية ودورات من الشركات المصنّعة والعمل بجانب كبار الفنيين."
+          }
+        },
+        {
+          "icon": "restaurant",
+          "name": {
+            "tr": "Yemek ve ulaşım",
+            "en": "Meals and transport",
+            "ar": "الوجبات والنقل"
+          },
+          "description": {
+            "tr": "Fabrikada günlük sıcak yemek ve şehir merkezinden servis.",
+            "en": "A hot meal every day at the plant and a shuttle from the city centre.",
+            "ar": "وجبة ساخنة يوميًا في المصنع وخدمة نقل من وسط المدينة."
+          }
+        }
+      ],
+      "category": "values",
+      "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
+      "version": "1.0.0",
+      "icon": "diamond",
+      "id": "l6exp6",
+      "path": "values-1",
+      "local": "body",
+      "index": 41
+    },
+    {
+      "name": "CTA Şerit 1",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, #25303c, #121820)",
+        "btnbg": "#ffffff",
+        "btncolor": "#10203A",
+        "title": {
+          "tr": "Özgeçmişinizi gönderin",
+          "en": "Send us your CV",
+          "ar": "أرسل سيرتك الذاتية"
+        },
+        "description": {
+          "tr": "Bu demo sitede başvuru alınmaz. Gerçek bir sitede başvurular kariyer@orvakmakina.example adresine ya da iletişim sayfasındaki forma yapılır.",
+          "en": "No applications are taken on this demo site. On a live site, applications go to kariyer@orvakmakina.example or the contact form.",
+          "ar": "لا تُقبل طلبات توظيف في هذا الموقع التجريبي. وفي الموقع الفعلي تُرسَل الطلبات إلى kariyer@orvakmakina.example أو عبر نموذج صفحة التواصل."
+        },
+        "btn1Text": {
+          "tr": "İletişim",
+          "en": "Contact",
+          "ar": "اتصل بنا"
+        },
+        "btn1Url": "iletisim",
+        "btn2Text": {
+          "tr": "Üretim tesisi",
+          "en": "Production plant",
+          "ar": "منشأة الإنتاج"
+        },
+        "btn2Url": "uretim-tesisi"
+      },
+      "category": "cta",
+      "description": "Harekete geçirici çağrı (CTA) şerit modülü. Gradient arka plan üzerinde başlık, açıklama ve iki buton gösterir. Buton URL'leri dil öneki olmadan pathnext (iletisim, urunler) — site routing ekler. Çok dilli metin ve animasyonlu giriş içerir.",
+      "version": "1.1.0",
+      "icon": "campaign",
+      "id": "a4fgqj",
+      "path": "cta-1",
+      "local": "body",
+      "data": [],
+      "index": 42
+    },
+    {
+      "name": "Zaman Çizelgesi 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "badge": {
+          "tr": "Haberler",
+          "en": "News",
+          "ar": "الأخبار"
+        },
+        "title": {
+          "tr": "Orvak Makina’dan haberler",
+          "en": "News from Orvak Makina",
+          "ar": "أخبار من Orvak Makina"
+        },
+        "description": {
+          "tr": "Ürün, tesis ve sertifikasyon gelişmeleri. Haberler kurgusaldır (demo).",
+          "en": "Product, plant and certification updates. The news items are fictional (demo).",
+          "ar": "مستجدات المنتجات والمنشأة والشهادات. الأخبار افتراضية (تجريبية)."
+        },
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+      },
+      "data": [
+        {
+          "year": "10.2026",
+          "title": {
+            "tr": "OX-1270 işleme merkezi tanıtıldı",
+            "en": "OX-1270 machining centre launched",
+            "ar": "إطلاق مركز التشغيل OX-1270"
+          },
+          "text": {
+            "tr": "Büyük gövde parçaları için 1270 mm X yolu olan yeni model satışa sunuldu; ilk sevkiyatlar yıl sonunda.",
+            "en": "The new model with a 1270 mm X travel for large housing parts is on sale; first shipments are due at year-end.",
+            "ar": "طُرح الطراز الجديد بشوط X يبلغ 1270 مم للقطع الهيكلية الكبيرة للبيع، وتبدأ أولى الشحنات في نهاية العام."
+          }
+        },
+        {
+          "year": "09.2026",
+          "title": {
+            "tr": "ISO 14001 gözetim denetimi tamamlandı",
+            "en": "ISO 14001 surveillance audit completed",
+            "ar": "اكتمال تدقيق المراقبة ISO 14001"
+          },
+          "text": {
+            "tr": "Çevre yönetim sistemimiz yıllık gözetim denetiminden uygunsuzluk çıkmadan geçti (örnek haber — DEMO).",
+            "en": "Our environmental management system passed its annual surveillance audit with no non-conformities (sample news — DEMO).",
+            "ar": "اجتاز نظام الإدارة البيئية لدينا تدقيق المراقبة السنوي دون أي حالة عدم مطابقة (خبر نموذجي — DEMO)."
+          }
+        },
+        {
+          "year": "06.2026",
+          "title": {
+            "tr": "Çatı güneş enerjisi santrali devrede",
+            "en": "Rooftop solar plant in operation",
+            "ar": "محطة الطاقة الشمسية على السطح قيد التشغيل"
+          },
+          "text": {
+            "tr": "Üretim holünün çatısına kurulan 2 MW’lık sistem tesisin elektrik ihtiyacının önemli bölümünü karşılıyor.",
+            "en": "The 2 MW system on the production hall roof covers a large share of the plant’s electricity demand.",
+            "ar": "يغطي النظام بقدرة 2 ميغاواط المركّب على سطح صالة الإنتاج جزءًا كبيرًا من احتياج المصنع من الكهرباء."
+          }
+        },
+        {
+          "year": "03.2026",
+          "title": {
+            "tr": "Uluslararası makine fuarındaydık",
+            "en": "We exhibited at an international machinery fair",
+            "ar": "شاركنا في معرض دولي للآلات"
+          },
+          "text": {
+            "tr": "OP-Pack ve OR-Weld serileriyle katıldığımız fuarda üç kıtadan ziyaretçiyi ağırladık.",
+            "en": "At the fair, where we showed the OP-Pack and OR-Weld series, we hosted visitors from three continents.",
+            "ar": "استقبلنا في المعرض، حيث عرضنا سلسلتي OP-Pack وOR-Weld، زوارًا من ثلاث قارات."
+          }
+        },
+        {
+          "year": "01.2026",
+          "title": {
+            "tr": "Yeni montaj ve test hattı",
+            "en": "New assembly and test line",
+            "ar": "خط تجميع واختبار جديد"
+          },
+          "text": {
+            "tr": "Her makine sevkiyat öncesi yük altında test edilir; yeni hat günlük test kapasitesini ikiye katladı.",
+            "en": "Every machine is load-tested before shipping; the new line doubled daily test capacity.",
+            "ar": "تُختبر كل آلة تحت الحمل قبل الشحن، وقد ضاعف الخط الجديد الطاقة اليومية للاختبار."
+          }
+        }
+      ],
+      "category": "timeline",
+      "description": "Zaman çizelgesi modülü. Kurumsal tarihçe, süreç adımları veya yol haritasını dikey çizgi + yıl rozetiyle listeler. Çok dilli başlık/metin ve animasyonlu giriş içerir.",
+      "version": "1.0.0",
+      "icon": "timeline",
+      "id": "ho4qw2",
+      "path": "timeline-1",
+      "local": "body",
+      "index": 43
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "local": "body",
+      "desing": {
+        "name": {
+          "tr": "Orvak Makina",
+          "en": "Orvak Makina",
+          "ar": "Orvak Makina"
+        },
+        "description": {
+          "tr": "Orvak Makina, Gaziantep merkezli kurgusal bir demo makine üreticisidir. 1998’de küçük bir atölyede başlayan hikâye bugün işleme, paketleme ve kaynak alanlarında üç kıtaya ihracat yapan bir tesise ulaştı.",
+          "en": "Orvak Makina is a fictional demo machine manufacturer based in Gaziantep. A story that began in a small workshop in 1998 has grown into a plant that exports machining, packaging and welding equipment to three continents.",
+          "ar": "Orvak Makina شركة تصنيع آلات تجريبية افتراضية مقرها غازي عنتاب. بدأت قصتها في ورشة صغيرة عام 1998 وبلغت اليوم منشأة تصدّر معدات التشغيل والتعبئة واللحام إلى ثلاث قارات."
+        },
+        "name2": {
+          "tr": "Mühendislik odaklı",
+          "en": "Engineering driven",
+          "ar": "قائمة على الهندسة"
+        },
+        "spot2": {
+          "tr": "Ekibin üçte biri tasarım ve Ar-Ge mühendislerinden oluşur.",
+          "en": "A third of the team are design and R&D engineers.",
+          "ar": "ثلث الفريق من مهندسي التصميم والبحث والتطوير."
+        },
+        "icon2": "engineering",
+        "name3": {
+          "tr": "Satış sonrası destek",
+          "en": "After-sales support",
+          "ar": "دعم ما بعد البيع"
+        },
+        "spot3": {
+          "tr": "Uzaktan bağlantı ve yerinde servis ile yanınızdayız.",
+          "en": "We are with you through remote connection and on-site service.",
+          "ar": "نرافقك عبر الاتصال عن بُعد والخدمة في الموقع."
+        },
+        "icon3": "support_agent",
+        "img": "sanayi-ekip-saha.webp",
+        "bgcolor": "var(--mx-site-surface-2, #ececea)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Hakkımızda",
+          "en": "About us",
+          "ar": "من نحن"
+        }
+      },
+      "category": "module",
+      "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
+      "version": "1.1.0",
+      "icon": "business",
+      "id": "6nhit4",
+      "path": "module-1",
+      "data": [],
+      "index": 44
+    },
+    {
+      "name": "Zaman Çizelgesi 1",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "badge": {
+          "tr": "Tarihçe",
+          "en": "History",
+          "ar": "تاريخنا"
+        },
+        "title": {
+          "tr": "Orvak Makina’nın yolculuğu",
+          "en": "The Orvak Makina journey",
+          "ar": "مسيرة Orvak Makina"
+        },
+        "description": {
+          "tr": "Küçük bir atölyeden üç kıtaya ihracat yapan tesise.",
+          "en": "From a small workshop to a plant exporting to three continents.",
+          "ar": "من ورشة صغيرة إلى منشأة تصدّر إلى ثلاث قارات."
+        },
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+      },
+      "data": [
+        {
+          "year": "1998",
+          "title": {
+            "tr": "Kuruluş",
+            "en": "Founding",
+            "ar": "التأسيس"
+          },
+          "text": {
+            "tr": "Gaziantep’te iki ustayla küçük bir tornacı atölyesi olarak kuruldu.",
+            "en": "Founded in Gaziantep as a small lathe workshop with two masters.",
+            "ar": "تأسست في غازي عنتاب كورشة مخارط صغيرة بحرفيَّين."
+          }
+        },
+        {
+          "year": "2006",
+          "title": {
+            "tr": "İlk CNC hattı",
+            "en": "First CNC line",
+            "ar": "أول خط CNC"
+          },
+          "text": {
+            "tr": "İlk CNC işleme merkezini ve kendi seri üretim hattını kurduk.",
+            "en": "We installed our first CNC machining centre and our own series production line.",
+            "ar": "ركّبنا أول مركز تشغيل CNC وخط إنتاج متسلسل خاصًا بنا."
+          }
+        },
+        {
+          "year": "2013",
+          "title": {
+            "tr": "OSB tesisi",
+            "en": "Industrial-zone plant",
+            "ar": "منشأة المنطقة الصناعية"
+          },
+          "text": {
+            "tr": "Organize Sanayi Bölgesi’ndeki yeni tesise taşındık.",
+            "en": "We moved into the new plant in the Organized Industrial Zone.",
+            "ar": "انتقلنا إلى المنشأة الجديدة في المنطقة الصناعية المنظمة."
+          }
+        },
+        {
+          "year": "2018",
+          "title": {
+            "tr": "Robotik kaynak",
+            "en": "Robotic welding",
+            "ar": "اللحام الروبوتي"
+          },
+          "text": {
+            "tr": "OR-Weld robotik kaynak hücreleri ürün ailemize katıldı.",
+            "en": "OR-Weld robotic welding cells joined our product family.",
+            "ar": "انضمت خلايا اللحام الروبوتية OR-Weld إلى عائلة منتجاتنا."
+          }
+        },
+        {
+          "year": "2022",
+          "title": {
+            "tr": "Güneş enerjisi",
+            "en": "Solar power",
+            "ar": "الطاقة الشمسية"
+          },
+          "text": {
+            "tr": "Çatıya 2 MW’lık güneş enerjisi santrali kurduk.",
+            "en": "We built a 2 MW solar plant on the roof.",
+            "ar": "أنشأنا محطة طاقة شمسية بقدرة 2 ميغاواط على السطح."
+          }
+        },
+        {
+          "year": "2026",
+          "title": {
+            "tr": "Bugün",
+            "en": "Today",
+            "ar": "اليوم"
+          },
+          "text": {
+            "tr": "38 ülkeye ihracatla büyümeyi sürdürüyoruz.",
+            "en": "We keep growing with exports to 38 countries.",
+            "ar": "نواصل النمو بالتصدير إلى 38 دولة."
+          }
+        }
+      ],
+      "category": "timeline",
+      "description": "Zaman çizelgesi modülü. Kurumsal tarihçe, süreç adımları veya yol haritasını dikey çizgi + yıl rozetiyle listeler. Çok dilli başlık/metin ve animasyonlu giriş içerir.",
+      "version": "1.0.0",
+      "icon": "timeline",
+      "id": "c684df",
+      "path": "timeline-1",
+      "local": "body",
+      "index": 45
+    },
+    {
+      "name": "Page Desing 5",
+      "desing": {
+        "height": "200",
+        "opacity": "0.5",
+        "font-size": "32",
+        "backgroundcolor": "#000",
+        "menu-active": "var(--mx-site-primary, #C2410C)",
+        "textcolor": "#fff",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "border_radius": "8px",
+        "card_shadow": "0 10px 28px rgba(0, 0, 0, 0.08)",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "colortitle": "var(--mx-site-text, #1b1b1b)",
+        "coloractive": "var(--mx-site-primary, #2563eb)",
+        "ui": {
+          "tr": {
+            "home": "Anasayfa",
+            "products": "Ürünler",
+            "dimensions": "Ölçüler",
+            "dimNote": "Standart üretim referansıdır; proje bazında özelleştirilebilir.",
+            "quote": "Teklif Al",
+            "whatsapp": "WhatsApp",
+            "prev": "Önceki",
+            "next": "Sonraki"
+          },
+          "en": {
+            "home": "Home",
+            "products": "Products",
+            "dimensions": "Dimensions",
+            "dimNote": "Standard production reference; customizable per project.",
+            "quote": "Get a quote",
+            "whatsapp": "WhatsApp",
+            "prev": "Previous",
+            "next": "Next"
+          },
+          "ar": {
+            "home": "الرئيسية",
+            "products": "المنتجات",
+            "dimensions": "الأبعاد",
+            "dimNote": "مرجع إنتاج قياسي؛ قابل للتخصيص حسب المشروع.",
+            "quote": "اطلب عرض سعر",
+            "whatsapp": "واتساب",
+            "prev": "السابق",
+            "next": "التالي"
+          }
+        },
+        "noTitle": {
+          "tr": "Başlık Yok",
+          "en": "No title",
+          "ar": "بدون عنوان"
+        },
+        "productNavAria": {
+          "tr": "Ürün navigasyonu",
+          "en": "Product navigation",
+          "ar": "تنقل المنتج"
+        }
+      },
+      "category": "page",
+      "description": "Sayfa basligi, yan menu ve icerik alani. Urun detayinda breadcrumb, olcu kartlari, teklif/WhatsApp CTA, onceki/sonraki urun navigasyonu. Kategori menusu ve responsive slide-in menu.",
+      "version": "1.3.1",
+      "icon": "web",
+      "id": "stfpo8",
+      "path": "page-desing-5",
+      "local": "body",
+      "data": [],
+      "index": 46
+    }
+  ]
+}

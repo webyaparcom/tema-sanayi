@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Gizlilik Politikası",
+    "en": "Privacy Policy",
+    "ar": "سياسة الخصوصية"
+  },
+  "status": "play",
+  "id": "gizlilikpolitikasi",
+  "path": "gizlilikpolitikasi",
+  "category": "",
+  "text": {
+    "tr": "<h2>Gizlilik Politikası</h2>\n<p>Orvak Makina demo sitesi, ziyaretçilerinden yalnızca sitenin çalışması için gerekli teknik verileri işler. Bu demo sitede sipariş, ödeme veya üyelik verisi sunucuya gönderilmez; sepet ve form bilgileri yalnızca tarayıcınızda tutulur.</p>\n<p>Analitik ve pazarlama çerezleri varsayılan olarak kapalıdır; tercihlerinizi çerez bandından istediğiniz zaman değiştirebilirsiniz. Üçüncü taraflarla veri paylaşılmaz.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
+    "en": "<h2>Privacy Policy</h2>\n<p>Orvak Makina demo site processes only the technical data required for the site to work. No order, payment or membership data is sent to a server; cart and form details stay in your browser.</p>\n<p>Analytics and marketing cookies are off by default; you can change your choices from the cookie banner at any time. No data is shared with third parties.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
+    "ar": "<h2>سياسة الخصوصية</h2>\n<p>يعالج الموقع التجريبي «Orvak Makina» البيانات التقنية اللازمة لتشغيله فقط. لا تُرسَل بيانات الطلبات أو الدفع أو العضوية إلى أي خادم، وتبقى معلومات السلة والنماذج في متصفحك.</p>\n<p>ملفات تعريف الارتباط التحليلية والتسويقية معطّلة افتراضيًا، ويمكنك تغيير اختياراتك من شريط ملفات تعريف الارتباط في أي وقت. لا تتم مشاركة أي بيانات مع أطراف ثالثة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 4,
+  "icon": "home",
+  "title": {
+    "tr": "Gizlilik Politikası",
+    "en": "Privacy Policy",
+    "ar": "سياسة الخصوصية"
+  },
+  "description": {
+    "tr": "Gizlilik politikası",
+    "en": "Privacy policy",
+    "ar": "سياسة الخصوصية"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.375Z",
+  "date": "2026-05-19"
+}

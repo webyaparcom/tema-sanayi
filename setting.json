@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Orvak Makina: CNC işleme merkezleri, paketleme makineleri ve robotik kaynak hücreleri; CE işaretli, yük altında test edilmiş. (Demo site)",
+    "en": "Orvak Makina: CNC machining centres, packaging machines and robotic welding cells; CE marked and load-tested. (Demo site)",
+    "ar": "Orvak Makina: مراكز تشغيل CNC وآلات تعبئة وخلايا لحام روبوتية، حاصلة على علامة CE ومختبرة تحت الحمل. (موقع تجريبي)"
+  },
+  "keyword": {
+    "tr": "makine imalatı, CNC, paketleme makinesi, robotik kaynak, CE, ISO 9001",
+    "en": "machine manufacturing, CNC, packaging machine, robotic welding, CE, ISO 9001",
+    "ar": "تصنيع الآلات، CNC، آلة تعبئة، لحام روبوتي، CE، ISO 9001"
+  },
+  "category": "Kurumsal",
+  "name": "Orvak Makina",
+  "domain": "sanayi.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "icon": "icon.png",
+  "theme_color": "#C2410C",
+  "publishMode": "static",
+  "font": {
+    "body": "inter",
+    "heading": "barlow-condensed",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "ibm-plex-sans-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "4px",
+    "--mx-radius-md": "6px",
+    "--mx-radius-lg": "8px",
+    "--mx-radius-xl": "12px"
+  }
+}
