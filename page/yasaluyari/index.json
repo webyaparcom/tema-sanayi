@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Yasal Uyarı",
+    "en": "Legal Notice",
+    "ar": "إشعار قانوني"
+  },
+  "status": "play",
+  "id": "yasaluyari",
+  "path": "yasaluyari",
+  "category": "",
+  "text": {
+    "tr": "<h2>Yasal Uyarı</h2>\n<p>Bu site, Webyapar tema setinin bir demosudur. Adlar, adresler, fiyatlar, belge numaraları ve görseller kurgusaldır; görseller yapay zekâ ile üretilmiştir ve gerçek kişi, ürün ya da mekânı temsil etmez.</p>\n<p>Sitede gerçek bir satış, rezervasyon veya hizmet sunulmaz. Bu temayı kendi işletmeniz için istemek üzere sayfa üstündeki bağlantıyı kullanabilirsiniz.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
+    "en": "<h2>Legal Notice</h2>\n<p>This site is a demo of the Webyapar theme set. Names, addresses, prices, document numbers and images are fictional; the images are AI-generated and do not depict real people, products or places.</p>\n<p>No real sale, reservation or service is offered on this site. To request this theme for your own business, use the link at the top of the page.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
+    "ar": "<h2>إشعار قانوني</h2>\n<p>هذا الموقع عرض تجريبي لمجموعة قوالب Webyapar. الأسماء والعناوين والأسعار وأرقام الوثائق والصور كلها افتراضية؛ والصور مُنشأة بالذكاء الاصطناعي ولا تمثل أشخاصًا أو منتجات أو أماكن حقيقية.</p>\n<p>لا يُقدَّم في هذا الموقع أي بيع أو حجز أو خدمة فعلية. لطلب هذا القالب لنشاطك التجاري استخدم الرابط الموجود أعلى الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 7,
+  "icon": "home",
+  "title": {
+    "tr": "Yasal Uyarı",
+    "en": "Legal Notice",
+    "ar": "إشعار قانوني"
+  },
+  "description": {
+    "tr": "Yasal uyarı",
+    "en": "Legal notice",
+    "ar": "إشعار قانوني"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.389Z",
+  "date": "2026-05-19"
+}

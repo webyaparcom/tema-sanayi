@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Kullanıcı Hakları",
+    "en": "User Rights",
+    "ar": "حقوق المستخدم"
+  },
+  "status": "play",
+  "id": "kullanicahaklari",
+  "path": "kullanicahaklari",
+  "category": "",
+  "text": {
+    "tr": "<h2>Kullanıcı Hakları</h2>\n<p>Kullanıcılar, kişisel verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahiptir.</p>\n<p>Bu demo sitede veri kaydedilmediği için bu hakların kullanımı gerektirecek bir işlem yoktur; gerçek sitelerde başvuru kanalı bu sayfada belirtilir.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
+    "en": "<h2>User Rights</h2>\n<p>Users have the right to learn whether their personal data is processed, to request correction or deletion, and to object to processing.</p>\n<p>Because this demo site stores no data, no action requires exercising these rights; on live sites the application channel is stated on this page.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
+    "ar": "<h2>حقوق المستخدم</h2>\n<p>يحق للمستخدمين معرفة ما إذا كانت بياناتهم الشخصية تُعالَج، وطلب تصحيحها أو حذفها، والاعتراض على معالجتها.</p>\n<p>ولأن هذا الموقع التجريبي لا يحفظ أي بيانات، فلا يوجد إجراء يستدعي ممارسة هذه الحقوق؛ وفي المواقع الفعلية تُذكر قناة تقديم الطلبات في هذه الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 6,
+  "icon": "home",
+  "title": {
+    "tr": "Kullanıcı Hakları",
+    "en": "User Rights",
+    "ar": "حقوق المستخدم"
+  },
+  "description": {
+    "tr": "Kullanıcı hakları",
+    "en": "User rights",
+    "ar": "حقوق المستخدم"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.386Z",
+  "date": "2026-05-19"
+}

@@ -1,0 +1,3 @@
+# setting.seo.noindex: site arama motorlarina kapali (demo)
+User-agent: *
+Disallow: /

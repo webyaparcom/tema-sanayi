@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Kişisel Veriler",
+    "en": "Personal Data",
+    "ar": "البيانات الشخصية"
+  },
+  "status": "play",
+  "id": "kisiselveriler",
+  "path": "kisiselveriler",
+  "category": "",
+  "text": {
+    "tr": "<h2>Kişisel Verilerin Korunması</h2>\n<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu, gerçek bir işletme olması hâlinde bu sayfada belirtilir. Bu demo sitede gerçek bir veri sorumlusu bulunmamaktadır; formlara girdiğiniz bilgiler kaydedilmez ve iletilmez.</p>\n<p>Gerçek bir sitede bu sayfada işlenen veri türleri, işleme amaçları, aktarım ve saklama süreleri ile başvuru yolları yer alır.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
+    "en": "<h2>Protection of Personal Data</h2>\n<p>Under Law No. 6698 on the Protection of Personal Data, a real business would name its data controller on this page. This demo site has no real data controller; what you type into forms is neither stored nor transmitted.</p>\n<p>On a live site this page lists the types of data processed, the purposes, transfers, retention periods and how to apply.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
+    "ar": "<h2>حماية البيانات الشخصية</h2>\n<p>بموجب القانون التركي رقم 6698 لحماية البيانات الشخصية، تُذكر في هذه الصفحة جهة التحكم بالبيانات إذا كان الموقع لنشاط تجاري حقيقي. لا توجد في هذا الموقع التجريبي جهة تحكم حقيقية، ولا تُحفظ المعلومات التي تدخلها في النماذج ولا تُرسَل.</p>\n<p>في الموقع الفعلي تتضمن هذه الصفحة أنواع البيانات المعالَجة وأغراض المعالجة والنقل ومدد الحفظ وسبل التقدم بالطلبات.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "stfpo8",
+      "t7ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 5,
+  "icon": "home",
+  "title": {
+    "tr": "Kişisel Veriler",
+    "en": "Personal Data",
+    "ar": "البيانات الشخصية"
+  },
+  "description": {
+    "tr": "Kişisel verilerin korunması",
+    "en": "Protection of personal data",
+    "ar": "حماية البيانات الشخصية"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-30T19:03:49.382Z",
+  "date": "2026-05-19"
+}

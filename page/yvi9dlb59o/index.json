@@ -1,0 +1,49 @@
+{
+  "name": {
+    "tr": "Ürünlerimiz",
+    "en": "Products",
+    "ar": "منتجاتنا"
+  },
+  "status": "play",
+  "category": "",
+  "id": "yvi9dlb59o",
+  "url": "",
+  "path": "urunlerimiz",
+  "index": 0,
+  "desing": {
+    "header": [],
+    "body": [
+      "h9niha",
+      "k6akzq",
+      "g25eft",
+      "5cho75",
+      "jnl985",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "İşleme merkezleri, paketleme makineleri ve robotik kaynak hücreleri; teknik özellik tabloları.",
+    "en": "Machining centres, packaging machines and robotic welding cells, with technical specification tables.",
+    "ar": "مراكز التشغيل وآلات التعبئة وخلايا اللحام الروبوتية مع جداول المواصفات الفنية."
+  },
+  "spot": {
+    "tr": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Ürünlerimiz",
+    "en": "Products",
+    "ar": "منتجاتنا"
+  },
+  "keyword": {
+    "tr": "ürünler, CNC, paketleme, kaynak, teknik tablo",
+    "en": "products, CNC, packaging, welding, specifications",
+    "ar": "منتجات، CNC، تعبئة، لحام، مواصفات"
+  },
+  "text": {},
+  "update": "2026-10-30T19:03:49.259Z",
+  "date": "2026-05-19",
+  "icon": "precision_manufacturing"
+}

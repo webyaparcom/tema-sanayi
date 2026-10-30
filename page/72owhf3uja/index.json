@@ -1,0 +1,43 @@
+{
+  "id": "72owhf3uja",
+  "name": {
+    "tr": "Kalite ve Belgelerimiz",
+    "en": "Quality and Certificates",
+    "ar": "الجودة والشهادات"
+  },
+  "description": {
+    "tr": "CE işareti ile ISO 9001, 14001 ve 45001 örnek belgeleri (DEMO).",
+    "en": "CE marking and sample ISO 9001, 14001 and 45001 certificates (DEMO).",
+    "ar": "علامة CE ونماذج شهادات ISO 9001 و14001 و45001 (DEMO)."
+  },
+  "keyword": {
+    "tr": "CE, ISO 9001, ISO 14001, ISO 45001, belge",
+    "en": "CE, ISO 9001, ISO 14001, ISO 45001, certificates",
+    "ar": "CE، ISO 9001، ISO 14001، ISO 45001، شهادات"
+  },
+  "path": "kalite-belgelerimiz",
+  "icon": "workspace_premium",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "n6r2xx",
+      "9g7333",
+      "m1pmht",
+      "k9if04",
+      "8onjfn"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Kalite ve Belgelerimiz",
+    "en": "Quality and Certificates",
+    "ar": "الجودة والشهادات"
+  },
+  "date": "2026-10-30T18:54:04.539Z",
+  "update": "2026-10-30T19:03:49.266Z"
+}

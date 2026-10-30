@@ -1,0 +1,29 @@
+{
+  "name": "Orvak Makina",
+  "short_name": "Orvak Makina",
+  "description": "Orvak Makina: CNC işleme merkezleri, paketleme makineleri ve robotik kaynak hücreleri; CE işaretli, yük altında test edilmiş. (Demo site)",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C2410C",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

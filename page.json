@@ -1,0 +1,270 @@
+{
+  "data": [
+    {
+      "name": {
+        "tr": "Ürünlerimiz",
+        "en": "Products",
+        "ar": "منتجاتنا"
+      },
+      "status": "play",
+      "category": "",
+      "id": "yvi9dlb59o",
+      "url": "",
+      "path": "urunlerimiz",
+      "index": 0,
+      "desing": {
+        "header": [],
+        "body": [
+          "h9niha",
+          "k6akzq",
+          "g25eft",
+          "5cho75",
+          "jnl985",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "İşleme merkezleri, paketleme makineleri ve robotik kaynak hücreleri; teknik özellik tabloları.",
+        "en": "Machining centres, packaging machines and robotic welding cells, with technical specification tables.",
+        "ar": "مراكز التشغيل وآلات التعبئة وخلايا اللحام الروبوتية مع جداول المواصفات الفنية."
+      },
+      "icon": "precision_manufacturing"
+    },
+    {
+      "name": {
+        "tr": "Üretim Tesisi",
+        "en": "Production Plant",
+        "ar": "منشأة الإنتاج"
+      },
+      "status": "play",
+      "category": "",
+      "id": "hs54qzyeyo",
+      "url": "",
+      "path": "uretim-tesisi",
+      "index": 1,
+      "icon": "factory",
+      "desing": {
+        "header": [],
+        "body": [
+          "bwun6u",
+          "1loxqb",
+          "14b2dg",
+          "ybu562",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "18.000 m² kapalı alanlı tesis, makine parkı ve test hattı.",
+        "en": "An 18,000 m² covered plant, its machine park and test line.",
+        "ar": "منشأة مساحتها المغطاة 18.000 م² وأسطول ماكيناتها وخط الاختبار."
+      }
+    },
+    {
+      "id": "72owhf3uja",
+      "name": {
+        "tr": "Kalite ve Belgelerimiz",
+        "en": "Quality and Certificates",
+        "ar": "الجودة والشهادات"
+      },
+      "description": {
+        "tr": "CE işareti ile ISO 9001, 14001 ve 45001 örnek belgeleri (DEMO).",
+        "en": "CE marking and sample ISO 9001, 14001 and 45001 certificates (DEMO).",
+        "ar": "علامة CE ونماذج شهادات ISO 9001 و14001 و45001 (DEMO)."
+      },
+      "path": "kalite-belgelerimiz",
+      "icon": "workspace_premium",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "n6r2xx",
+          "9g7333",
+          "m1pmht",
+          "k9if04",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "id": "yqu9zecw6b",
+      "name": {
+        "tr": "Referanslar",
+        "en": "References",
+        "ar": "المراجع"
+      },
+      "description": {
+        "tr": "Üç kıtada teslim edilen makinelerden örnekler (kurgusal müşteriler).",
+        "en": "Examples of machines delivered across three continents (fictional customers).",
+        "ar": "أمثلة من الآلات المسلَّمة في ثلاث قارات (عملاء افتراضيون)."
+      },
+      "path": "referanslar",
+      "icon": "handshake",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "2hwdr9",
+          "2lp30p",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "index": 3
+    },
+    {
+      "id": "gp2phicy3s",
+      "name": {
+        "tr": "Katalog",
+        "en": "Catalogue",
+        "ar": "الكتالوج"
+      },
+      "description": {
+        "tr": "Genel katalog ve teknik föylerin demo PDF dosyaları.",
+        "en": "Demo PDF files of the general catalogue and data sheets.",
+        "ar": "ملفات PDF تجريبية للكتالوج العام وأوراق البيانات."
+      },
+      "path": "katalog",
+      "icon": "menu_book",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "tv3b6o",
+          "7radg7",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "index": 4
+    },
+    {
+      "id": "ogb21abzny",
+      "name": {
+        "tr": "Haberler",
+        "en": "News",
+        "ar": "الأخبار"
+      },
+      "description": {
+        "tr": "Ürün, tesis ve sertifikasyon haberleri (kurgusal).",
+        "en": "Product, plant and certification news (fictional).",
+        "ar": "أخبار المنتجات والمنشأة والشهادات (افتراضية)."
+      },
+      "path": "haberler",
+      "icon": "newspaper",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ho4qw2",
+          "8onjfn"
+        ],
+        "footer": []
+      },
+      "index": 5
+    },
+    {
+      "id": "g10jp3cqrx",
+      "name": {
+        "tr": "Kariyer",
+        "en": "Careers",
+        "ar": "الوظائف"
+      },
+      "description": {
+        "tr": "Açık pozisyonlar ve yan haklar (örnek ilanlar).",
+        "en": "Open positions and benefits (sample listings).",
+        "ar": "الوظائف الشاغرة والمزايا (إعلانات نموذجية)."
+      },
+      "path": "kariyer",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "rx7304",
+          "j5igic",
+          "l6exp6",
+          "a4fgqj"
+        ],
+        "footer": []
+      },
+      "index": 6
+    },
+    {
+      "id": "w2bjvrq0lp",
+      "name": {
+        "tr": "Teklif Al",
+        "en": "Get a Quote",
+        "ar": "اطلب عرض سعر"
+      },
+      "description": {
+        "tr": "Teklif ve teknik görüşme talep formu (demo).",
+        "en": "Quote and technical meeting request form (demo).",
+        "ar": "نموذج طلب عرض سعر واجتماع فني (تجريبي)."
+      },
+      "path": "teklif-al",
+      "icon": "request_quote",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "dd0fdb",
+          "wugxdk"
+        ],
+        "footer": []
+      },
+      "index": 7
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "category": "",
+      "id": "xnzu5au0ag",
+      "url": "",
+      "path": "iletisim",
+      "index": 8,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "t7ct01",
+          "t7mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, telefon, e-posta ve çalışma saatleri.",
+        "en": "Address, phone, e-mail and opening hours.",
+        "ar": "العنوان والهاتف والبريد الإلكتروني وساعات العمل."
+      }
+    }
+  ],
+  "desc": [],
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "modulestatus": {
+    "page": true,
+    "bgimg": true,
+    "detail": true,
+    "body": true
+  }
+}
