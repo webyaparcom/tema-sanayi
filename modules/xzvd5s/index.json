@@ -7,6 +7,8 @@
     "titlecolor": "#1B3A6B",
     "textcolor": "#475569",
     "cardbg": "#ffffff",
+    "badgebg": "#2E6BFF",
+    "badgecolor": "#ffffff",
     "badge": {
       "tr": "Değerlerimiz",
       "en": "Our Values"
@@ -69,5 +71,10 @@
   "category": "values",
   "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
   "version": "1.0.0",
-  "icon": "diamond"
+  "icon": "diamond",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

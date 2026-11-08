@@ -7,6 +7,7 @@
       {{html}}
     </ul>
   </div>
+  {{contactline}}
   <div class="footer-bottom">
     {{langbar}}
     <p>&copy; {{web-name}} 2026. @all-rights@.</p>
@@ -29,8 +30,29 @@
     margin: 0 auto;
   }
 
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  /* 31 Eki 2026: logo oranı — HTML height="60" yalnız oran ipucudur, CSS ezer.
+     Eski `max-width:150px` + sabit yükseklik geniş logoyu 150×60'a basıyordu (24 tema + webyapar + aaroots). */
   .footer-logo img {
-    max-width: 150px;
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: --logo_maxh--;
+    max-width: 180px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  /* logo_plate:true → koyu logo koyu zeminde okunur (beyaz plaka; sabit beyaz plaka bilinçli: logo rengi için) */
+  .footer-logo.footer-logo--plate {
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
   }
 
   .menu {
@@ -51,21 +73,58 @@
   }
 
   .modulex-menu_link:hover {
-    color: #2980b9;
+    color: var(--mx-site-primary, #2980b9);
     text-decoration: underline;
   }
 
   .modulex-menu__link {
-    color: #ecf0f1;
+    color: var(--mx-site-text, #ecf0f1);
     text-decoration: none;
     transition: color 0.3s ease;
+  }
+
+  /* contact_line: tel · e-posta (yalnız setting.phone / setting.email varsa back.js basar) */
+  .footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 10px;
+    max-width: 1200px;
+    margin: 16px auto 0;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  .footer-contact a {
+    color: --color--;
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-contact .footer-contact__sep {
+    opacity: 0.6;
   }
 
   .footer-bottom {
     text-align: center;
     margin-top: 20px;
     border-top: 1px solid #7f8c8d;
+    border-top-color: color-mix(in srgb, var(--mx-site-text, #7f8c8d) 35%, transparent);
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* 31 Eki 2026: mobilde dil çubuğu ile telif üst üste biniyordu */
+  }
+
+  .footer-bottom [class*="lang"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
   }
 
   .footer-bottom p {
@@ -85,6 +144,10 @@
 
     .modulex-menu__item {
       margin: 6px 10px;
+    }
+
+    .footer-bottom {
+      gap: 14px;
     }
   }
 

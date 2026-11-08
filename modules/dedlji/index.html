@@ -1,4 +1,4 @@
-<section class="modulex-hero">
+<section class="modulex-hero" data-stil="--stil--">
   <div class="modulex-hero-bg"></div>
   <div class="modulex-hero-overlay"></div>
   
@@ -310,6 +310,240 @@
     [class*="modulex"] * {
       animation: none !important;
       transition: none !important;
+    }
+  }
+
+  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil. "" = klasik (koyu gradient, sabit beyaz yazı — eski, dokunulmadı).
+     Varyantlarda zemin sayfa/yüzey tokenı, yazı var(--mx-site-text); birincil düğme --btn_primary_bg--/--btn_primary_color-- çifti kalır. ---- */
+
+  /* ortak: gradient/desen/örtü kapanır, şekiller gizlenir, metin tokena döner */
+  [data-stil="bolunmus"],
+  [data-stil="alt-kart"] {
+    background: var(--mx-site-bg, #fff);
+    min-height: 0;
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-bg,
+  [data-stil="bolunmus"] .modulex-hero-overlay,
+  [data-stil="alt-kart"] .modulex-hero-bg,
+  [data-stil="alt-kart"] .modulex-hero-overlay,
+  [data-stil="bolunmus"] .modulex-hero-visual-shape,
+  [data-stil="alt-kart"] .modulex-hero-visual-shape {
+    display: none;
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-content,
+  [data-stil="alt-kart"] .modulex-hero-content,
+  [data-stil="bolunmus"] .modulex-hero-title,
+  [data-stil="alt-kart"] .modulex-hero-title {
+    color: var(--mx-site-text, #1b1b1b);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-title span,
+  [data-stil="alt-kart"] .modulex-hero-title span {
+    background: none;
+    -webkit-text-fill-color: var(--mx-site-primary, #2563eb);
+    color: var(--mx-site-primary, #2563eb);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-desc,
+  [data-stil="alt-kart"] .modulex-hero-desc {
+    color: color-mix(in srgb, var(--mx-site-text, #1b1b1b) 80%, transparent);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-badge,
+  [data-stil="alt-kart"] .modulex-hero-badge {
+    backdrop-filter: none;
+    background: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
+    border-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 30%, transparent);
+    color: var(--mx-site-primary, #2563eb);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-btn-secondary,
+  [data-stil="bolunmus"] a.modulex-hero-btn-secondary:link,
+  [data-stil="bolunmus"] a.modulex-hero-btn-secondary:visited,
+  [data-stil="alt-kart"] .modulex-hero-btn-secondary,
+  [data-stil="alt-kart"] a.modulex-hero-btn-secondary:link,
+  [data-stil="alt-kart"] a.modulex-hero-btn-secondary:visited {
+    background: transparent;
+    backdrop-filter: none;
+    color: var(--mx-site-text, #1b1b1b);
+    border: 2px solid color-mix(in srgb, var(--mx-site-text, #1b1b1b) 25%, transparent);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-btn-secondary:hover,
+  [data-stil="bolunmus"] a.modulex-hero-btn-secondary:hover,
+  [data-stil="alt-kart"] .modulex-hero-btn-secondary:hover,
+  [data-stil="alt-kart"] a.modulex-hero-btn-secondary:hover {
+    background: color-mix(in srgb, var(--mx-site-text, #1b1b1b) 6%, transparent);
+    border-color: color-mix(in srgb, var(--mx-site-text, #1b1b1b) 40%, transparent);
+    color: var(--mx-site-text, #1b1b1b);
+  }
+
+  /* birincil düğme: varyantlarda token çifti (btn_primary_bg/btn_primary_color sabit çifti 3,3:1 kalıyordu — sabit beyaz yazı yasağı) */
+  [data-stil="bolunmus"] .modulex-hero-btn-primary,
+  [data-stil="bolunmus"] a.modulex-hero-btn-primary:link,
+  [data-stil="bolunmus"] a.modulex-hero-btn-primary:visited,
+  [data-stil="bolunmus"] a.modulex-hero-btn-primary:hover,
+  [data-stil="bolunmus"] a.modulex-hero-btn-primary:active,
+  [data-stil="alt-kart"] .modulex-hero-btn-primary,
+  [data-stil="alt-kart"] a.modulex-hero-btn-primary:link,
+  [data-stil="alt-kart"] a.modulex-hero-btn-primary:visited,
+  [data-stil="alt-kart"] a.modulex-hero-btn-primary:hover,
+  [data-stil="alt-kart"] a.modulex-hero-btn-primary:active {
+    background: var(--mx-site-primary, #2563eb);
+    color: var(--mx-site-primary-contrast, #fff);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-btn-primary:hover,
+  [data-stil="alt-kart"] .modulex-hero-btn-primary:hover {
+    background: color-mix(in srgb, var(--mx-site-primary, #2563eb) 85%, var(--mx-site-text, #1b1b1b));
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-stat-number,
+  [data-stil="alt-kart"] .modulex-hero-stat-number {
+    color: var(--mx-site-primary, #2563eb);
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-stat-label,
+  [data-stil="alt-kart"] .modulex-hero-stat-label {
+    color: color-mix(in srgb, var(--mx-site-text, #1b1b1b) 70%, transparent);
+  }
+
+  [dir="rtl"] [data-stil="bolunmus"] .modulex-hero-btn-primary .material-symbols-outlined,
+  [dir="rtl"] [data-stil="alt-kart"] .modulex-hero-btn-primary .material-symbols-outlined {
+    transform: scaleX(-1);
+  }
+
+  /* bolunmus — metin sol (RTL'de sağ), görsel yuvarlak köşeli dik kart; arkasında kaymış vurgu plakası */
+  [data-stil="bolunmus"] .modulex-hero-container {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    padding: 72px 20px;
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 28px -24px -28px 24px;
+    border-radius: var(--mx-radius-xl, 28px);
+    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
+    z-index: 0;
+  }
+
+  [dir="rtl"] [data-stil="bolunmus"] .modulex-hero-visual::before {
+    inset: 28px 24px -28px -24px;
+  }
+
+  [data-stil="bolunmus"] .modulex-hero-image {
+    aspect-ratio: 4 / 5;
+    max-height: 560px;
+    object-fit: cover;
+    border-radius: var(--mx-radius-xl, 28px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  /* alt-kart — görsel tam genişlik geniş bant, metin alttan binen ortalı yüzey kartı */
+  [data-stil="alt-kart"] {
+    display: block;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-visual {
+    order: -1;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-content {
+    order: 1;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-visual-inner {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    min-height: 320px;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: var(--mx-radius-xl, 24px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-content {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 780px);
+    margin: -96px auto 0;
+    padding: 40px 44px;
+    text-align: center;
+    border-radius: var(--mx-radius-xl, 20px);
+    border: 1px solid color-mix(in srgb, var(--mx-site-text, #1b1b1b) 8%, transparent);
+    background-color: var(--mx-site-surface, #fff);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-desc {
+    margin-inline: auto;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-actions,
+  [data-stil="alt-kart"] .modulex-hero-stats {
+    justify-content: center;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-actions {
+    margin-bottom: 32px;
+  }
+
+  [data-stil="alt-kart"] .modulex-hero-stat {
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    [data-stil="bolunmus"] .modulex-hero-container {
+      grid-template-columns: 1fr;
+      padding: 48px 20px;
+    }
+
+    [data-stil="bolunmus"] .modulex-hero-image {
+      aspect-ratio: 4 / 3;
+      max-height: 420px;
+    }
+
+    [data-stil="bolunmus"] .modulex-hero-visual::before {
+      inset: 20px -12px -20px 12px;
+    }
+
+    [dir="rtl"] [data-stil="bolunmus"] .modulex-hero-visual::before {
+      inset: 20px 12px -20px -12px;
+    }
+
+    [data-stil="alt-kart"] .modulex-hero-container {
+      padding: 0 12px;
+    }
+
+    [data-stil="alt-kart"] .modulex-hero-content {
+      width: calc(100% - 24px);
+      margin-top: -64px;
+      padding: 28px 22px;
+    }
+
+    [data-stil="alt-kart"] .modulex-hero-image {
+      aspect-ratio: 16 / 9;
+      min-height: 220px;
     }
   }
 </style>

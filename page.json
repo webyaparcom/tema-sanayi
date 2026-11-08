@@ -147,60 +147,6 @@
       "index": 4
     },
     {
-      "id": "ogb21abzny",
-      "name": {
-        "tr": "Haberler",
-        "en": "News",
-        "ar": "الأخبار"
-      },
-      "description": {
-        "tr": "Ürün, tesis ve sertifikasyon haberleri (kurgusal).",
-        "en": "Product, plant and certification news (fictional).",
-        "ar": "أخبار المنتجات والمنشأة والشهادات (افتراضية)."
-      },
-      "path": "haberler",
-      "icon": "newspaper",
-      "category": "",
-      "status": "play",
-      "desing": {
-        "header": [],
-        "body": [
-          "ho4qw2",
-          "8onjfn"
-        ],
-        "footer": []
-      },
-      "index": 5
-    },
-    {
-      "id": "g10jp3cqrx",
-      "name": {
-        "tr": "Kariyer",
-        "en": "Careers",
-        "ar": "الوظائف"
-      },
-      "description": {
-        "tr": "Açık pozisyonlar ve yan haklar (örnek ilanlar).",
-        "en": "Open positions and benefits (sample listings).",
-        "ar": "الوظائف الشاغرة والمزايا (إعلانات نموذجية)."
-      },
-      "path": "kariyer",
-      "icon": "work",
-      "category": "",
-      "status": "play",
-      "desing": {
-        "header": [],
-        "body": [
-          "rx7304",
-          "j5igic",
-          "l6exp6",
-          "a4fgqj"
-        ],
-        "footer": []
-      },
-      "index": 6
-    },
-    {
       "id": "w2bjvrq0lp",
       "name": {
         "tr": "Teklif Al",
@@ -224,7 +170,7 @@
         ],
         "footer": []
       },
-      "index": 7
+      "index": 5
     },
     {
       "name": {
@@ -237,7 +183,7 @@
       "id": "xnzu5au0ag",
       "url": "",
       "path": "iletisim",
-      "index": 8,
+      "index": 6,
       "icon": "call",
       "desing": {
         "header": [],

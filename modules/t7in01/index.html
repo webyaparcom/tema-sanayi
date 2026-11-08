@@ -1,4 +1,4 @@
-<div class="modulex-out">
+<div class="modulex-out" data-stil="--stil--">
   <div class="modulex">
     <div class="modulex-left">
       <img
@@ -13,11 +13,11 @@
         <div class="modulex-right-body-spot">{{description}}</div>
         <div class="modulex-right-body-chile">
           <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{name2}}</div>
+            <div class="modulex-right-body-chile-row-name">{{icon2html}}{{name2}}</div>
             <div class="modulex-right-body-chile-row-spot">{{spot2}}</div>
           </div>
           <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{name3}}</div>
+            <div class="modulex-right-body-chile-row-name">{{icon3html}}{{name3}}</div>
             <div class="modulex-right-body-chile-row-spot">{{spot3}}</div>
           </div>
         </div>
@@ -188,6 +188,206 @@
     [class*="modulex"] {
       animation: none !important;
       transition: none !important;
+    }
+  }
+
+  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil. "" = klasik (yuvarlak görsel, yukarıdaki kurallar aynen).
+     Bant zemini/yazısı --bgcolor--/--fontcolor-- çifti kalır; eklenen renkler yalnız var(--mx-site-*) token ya da currentColor türevi. ---- */
+
+  /* ortak: üç varyantta da beyaz daire çerçevesi yok, görsel bandın dışına/önüne çıkar */
+  [data-stil="yuzen-gorsel"] .modulex-left,
+  [data-stil="cerceve-ofset"] .modulex-left,
+  [data-stil="ikon-liste"] .modulex-left {
+    background-color: transparent;
+    justify-content: center;
+    flex: 2;
+  }
+
+  [data-stil="yuzen-gorsel"] .modulex-right-body,
+  [data-stil="cerceve-ofset"] .modulex-right-body,
+  [data-stil="ikon-liste"] .modulex-right-body {
+    margin-left: 0;
+    margin-inline-start: 40px;
+  }
+
+  [data-stil="yuzen-gorsel"] .modulex-left-img,
+  [data-stil="cerceve-ofset"] .modulex-left-img,
+  [data-stil="ikon-liste"] .modulex-left-img {
+    border: 0;
+    margin-right: 0;
+    object-fit: cover;
+    background-color: var(--mx-site-surface, #fff);
+  }
+
+  /* yuzen-gorsel — dikey kart, bandın üstüne/altına taşar, hafif eğik, hover'da düzelir */
+  [data-stil="yuzen-gorsel"] .modulex {
+    min-height: 360px;
+  }
+
+  [data-stil="yuzen-gorsel"] .modulex-left-img {
+    width: min(340px, 100%);
+    aspect-ratio: 4 / 5;
+    border-radius: var(--mx-radius-xl, 28px);
+    margin: -56px 0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+    transform: rotate(-2.5deg);
+    transition: transform 0.3s ease;
+  }
+
+  [data-stil="yuzen-gorsel"]:hover .modulex-left-img {
+    transform: rotate(0deg);
+  }
+
+  [data-stil="yuzen-gorsel"] .modulex-right-body-chile-row {
+    border-style: solid;
+    border-color: var(--mx-site-accent, var(--mx-site-primary, #DE6D26));
+    border-width: 0 0 0 3px;
+    border-inline-start-width: 3px;
+    border-inline-end-width: 0;
+  }
+
+  /* cerceve-ofset — kare görsel, arkasında kaymış dolu renk çerçeve (offset gölge = çerçeve) */
+  [data-stil="cerceve-ofset"] .modulex-left {
+    padding: 24px 40px 44px 24px;
+    padding-inline: 24px 44px;
+  }
+
+  [data-stil="cerceve-ofset"] .modulex-left-img {
+    width: min(320px, 100%);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--mx-radius-md, 14px);
+    /* çerçeve: primary + contrast karışımı — bant zemini primary'ye yakınsa da (lacivert/lacivert) ayrışır */
+    box-shadow: 20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  [dir="rtl"] [data-stil="cerceve-ofset"] .modulex-left-img {
+    box-shadow: -20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
+  }
+
+  [data-stil="cerceve-ofset"]:hover .modulex-left-img {
+    box-shadow: 12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
+    transform: translate(4px, 4px);
+  }
+
+  [dir="rtl"] [data-stil="cerceve-ofset"]:hover .modulex-left-img {
+    box-shadow: -12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
+    transform: translate(-4px, 4px);
+  }
+
+  [data-stil="cerceve-ofset"] .modulex-right-body-chile-row {
+    border-style: solid;
+    border-color: var(--mx-site-primary, #DE6D26);
+    border-width: 0 0 0 3px;
+    border-inline-start-width: 3px;
+    border-inline-end-width: 0;
+  }
+
+  /* ikon-liste — yatay görsel, vizyon/misyon satırları ikonlu madde listesi (ikon back.js'ten, yalnız bu stilde) */
+  [data-stil="ikon-liste"] .modulex-left-img {
+    width: min(400px, 100%);
+    aspect-ratio: 4 / 3;
+    border-radius: var(--mx-radius-lg, 20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  }
+
+  [data-stil="ikon-liste"] .modulex-right-body-chile {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  [data-stil="ikon-liste"] .modulex-right-body-chile-row {
+    border: 0;
+    padding: 16px 18px;
+    padding-left: 18px;
+    border-radius: var(--mx-radius-md, 12px);
+    background-color: color-mix(in srgb, currentColor 8%, transparent);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+
+  [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
+    background-color: color-mix(in srgb, currentColor 14%, transparent);
+    transform: translateX(4px);
+  }
+
+  [dir="rtl"] [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
+    transform: translateX(-4px);
+  }
+
+  [data-stil="ikon-liste"] .modulex-right-body-chile-row-name {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  [data-stil="ikon-liste"] .modulex-chile-icon {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: var(--mx-site-primary, #DE6D26);
+    color: var(--mx-site-primary-contrast, #fff);
+  }
+
+  [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
+    padding-inline-start: 62px;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 1024px) {
+    [data-stil="yuzen-gorsel"] .modulex-left-img,
+    [data-stil="cerceve-ofset"] .modulex-left-img,
+    [data-stil="ikon-liste"] .modulex-left-img {
+      width: min(320px, calc(100% - 48px));
+      max-width: none;
+    }
+
+    [data-stil="yuzen-gorsel"] .modulex-left-img {
+      margin: -24px 0 12px;
+      transform: none;
+    }
+
+    [data-stil="cerceve-ofset"] .modulex-left {
+      padding: 12px 32px 32px 12px;
+      padding-inline: 12px 32px;
+    }
+
+    [data-stil="yuzen-gorsel"] .modulex-left,
+    [data-stil="cerceve-ofset"] .modulex-left,
+    [data-stil="ikon-liste"] .modulex-left {
+      background-color: transparent;
+    }
+
+    [data-stil="yuzen-gorsel"] .modulex-right-body,
+    [data-stil="cerceve-ofset"] .modulex-right-body,
+    [data-stil="ikon-liste"] .modulex-right-body {
+      margin-inline-start: 0;
+    }
+
+    [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
+      padding-inline-start: 0;
+    }
+  }
+
+  /* dar ekranda vizyon/misyon alt alta (klasikte yan yana sıkışıyor; varyantlarda düzeltildi) */
+  @media screen and (max-width: 768px) {
+    [data-stil="yuzen-gorsel"] .modulex-right-body-chile,
+    [data-stil="cerceve-ofset"] .modulex-right-body-chile,
+    [data-stil="ikon-liste"] .modulex-right-body-chile {
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-stil="yuzen-gorsel"] .modulex-left-img,
+    [data-stil="cerceve-ofset"]:hover .modulex-left-img,
+    [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
+      transform: none !important;
     }
   }
 </style>

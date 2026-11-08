@@ -1,6 +1,7 @@
 {
   "name": "Hero 1",
   "desing": {
+    "stil": "",
     "max": "1200px",
     "gradient": "linear-gradient(135deg, #1e3046 0%, #2a4560 50%, #152a3d 100%)",
     "overlay": "linear-gradient(135deg, rgba(30, 48, 70, 0.88) 0%, rgba(21, 42, 61, 0.82) 100%)",
@@ -13,35 +14,50 @@
     "shape3": "linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04))",
     "title": {
       "tr": "Kurumsal Çözümlerle Yanınızdayız",
-      "en": "We Stand With You Through Corporate Solutions"
+      "en": "We Stand With You Through Corporate Solutions",
+      "ar": "بجانبكم بحلول مؤسسية"
     },
     "description": {
       "tr": "Profesyonel ekibimizle markanıza özel web, dijital ve kurumsal hizmetler sunuyoruz.",
-      "en": "Our professional team delivers web, digital and corporate services tailored to your brand."
+      "en": "Our professional team delivers web, digital and corporate services tailored to your brand.",
+      "ar": "نقدم مع فريقنا المحترف خدمات ويب ورقمية ومؤسسية مصممة لعلامتكم التجارية."
     },
     "badge": {
       "tr": "Güvenilir Kurumsal Partner",
-      "en": "Trusted Corporate Partner"
+      "en": "Trusted Corporate Partner",
+      "ar": "شريك مؤسسي موثوق"
     },
     "image": "",
     "alt": {
       "tr": "Kurumsal tanıtım",
-      "en": "Corporate intro"
+      "en": "Corporate intro",
+      "ar": "تعريف مؤسسي"
     },
     "btn1": {
       "tr": "Keşfet",
-      "en": "Explore"
+      "en": "Explore",
+      "ar": "اكتشف"
     },
     "btn1_url": "urunler",
     "btn2": {
       "tr": "İletişim",
-      "en": "Contact"
+      "en": "Contact",
+      "ar": "اتصل بنا"
     },
     "btn2_url": "iletisim",
-    "stats": "150+|Proje|50+|Müşteri|10+|Yıl Deneyim"
+    "stats": {
+      "tr": "150+|Proje|50+|Müşteri|10+|Yıl Deneyim",
+      "en": "150+|Projects|50+|Clients|10+|Years of Experience",
+      "ar": "150+|مشروع|50+|عميل|10+|سنوات خبرة"
+    }
   },
   "category": "hero",
-  "description": "Gradient hero: istatistikler, CTA, görsel alanı. Metinler cok dilli (tr/en); renkler --gradient--, --btn_primary_bg-- ile markaya uyumlanır. Buton URL pathnext (urunler, iletisim).",
-  "version": "1.1.0",
-  "icon": "hero"
+  "description": "Gradient hero: istatistikler, CTA, görsel alanı. Metinler cok dilli (tr/en/ar); renkler --gradient--, --btn_primary_bg-- ile markaya uyumlanır. Buton URL pathnext (urunler, iletisim). Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (koyu gradient, görsel + şekiller, bugünkü görünüm) · \"bolunmus\" (sayfa zemini, metin sol/RTL sağ, görsel yuvarlak köşeli dik kart, arkasında kaymış primary plaka) · \"alt-kart\" (görsel tam genişlik geniş bant, metin alttan binen ortalı yüzey kartı). Varyantlarda yazı var(--mx-site-text), zemin bg/surface token; birincil düğme btn_primary_bg/btn_primary_color çifti kalır.",
+  "version": "1.2.0",
+  "icon": "hero",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

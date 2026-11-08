@@ -681,5 +681,10 @@
         "ar": "حجز طاولة – {party}"
       }
     }
+  },
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
   }
 }

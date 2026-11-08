@@ -52,5 +52,10 @@
       { "name": { "tr": "Teknik çizim", "en": "Technical drawing", "ar": "الرسم الفني" }, "href": "/belgeler/cizim-demo.dwg", "type": "dwg" }
     ]
   },
-  "tags": ["sanayi", "teknik", "tablo", "industrial", "specifications", "rtl"]
+  "tags": ["sanayi", "teknik", "tablo", "industrial", "specifications", "rtl"],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

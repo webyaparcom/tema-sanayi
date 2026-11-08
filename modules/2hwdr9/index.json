@@ -1,6 +1,7 @@
 {
   "name": "İstatistik Bandı 1",
   "desing": {
+    "stil": "",
     "max": "1200px",
     "gradient": "linear-gradient(135deg, #1e3046 0%, #2a4560 100%)",
     "numbercolor": "#DE6D26",
@@ -14,7 +15,8 @@
       "suffix": "+",
       "label": {
         "tr": "Tamamlanan Proje",
-        "en": "Completed Projects"
+        "en": "Completed Projects",
+        "ar": "مشروع منجز"
       },
       "icon": "task_alt"
     },
@@ -23,7 +25,8 @@
       "suffix": "+",
       "label": {
         "tr": "Mutlu Müşteri",
-        "en": "Happy Customers"
+        "en": "Happy Customers",
+        "ar": "عميل راضٍ"
       },
       "icon": "sentiment_satisfied"
     },
@@ -32,7 +35,8 @@
       "suffix": "+",
       "label": {
         "tr": "Yıllık Deneyim",
-        "en": "Years of Experience"
+        "en": "Years of Experience",
+        "ar": "سنوات خبرة"
       },
       "icon": "workspace_premium"
     },
@@ -41,13 +45,19 @@
       "suffix": "/7",
       "label": {
         "tr": "Destek",
-        "en": "Support"
+        "en": "Support",
+        "ar": "دعم"
       },
       "icon": "support_agent"
     }
   ],
   "category": "stats",
-  "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler.",
-  "version": "1.0.0",
-  "icon": "monitoring"
+  "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (gradient bant, numbercolor/labelcolor, bugünkü görünüm) · \"kartli\" (sayfa zemininde yüzey kartları, üstte primary çizgi, hover'da yükselir) · \"serit-renkli\" (tek renk primary/primary-contrast şeridi, ikon solda rakam+etiket yanında, dikey ayraçlar). Varyant renkleri yalnız var(--mx-site-*) token çiftleri.",
+  "version": "1.1.0",
+  "icon": "monitoring",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

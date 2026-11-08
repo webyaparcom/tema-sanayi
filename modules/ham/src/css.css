@@ -1,9 +1,10 @@
-a:link,
-a:active,
-a:hover,
-a:visited {
+/* 31 Eki 2026 kontrast kuralı: bağlantı rengi sabit #000 değil, bulunduğu yerden miras alır (`inherit`).
+   Eski `a:link…{color:#000}` sözde-sınıf özgüllüğüyle modüllerin `color:inherit`'ini eziyordu → koyu modda ve koyu
+   zeminli modüllerde (page-desing-5 yan menü, footer) siyah yazı: kontrast 1.2:1. Açık modda body yazı rengi zaten koyu. */
+:where(a:link, a:active, a:hover, a:visited) {
+    /* :where() = sıfır özgüllük: `a:link` (0,1,1) tek sınıf seçicisini (0,1,0) yeniyor, modülün `.x-cta` beyaz yazısını bile eziyordu */
     text-decoration: none;
-    color: #000
+    color: inherit
 }
 
 *,

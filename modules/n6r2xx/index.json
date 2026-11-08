@@ -2,30 +2,37 @@
   "name": "Tanıtım Modülü",
   "local": "body",
   "desing": {
+    "stil": "",
     "name": {
       "tr": "Bizi Tanıyın",
-      "en": "About Us"
+      "en": "About Us",
+      "ar": "تعرف علينا"
     },
     "description": {
       "tr": "Yılların deneyimi ve uzman kadromuzla kurumsal çözümler sunuyoruz. Kalite, güven ve sürdürülebilir büyüme odaklı çalışıyoruz.",
-      "en": "With years of experience and an expert team we deliver corporate solutions focused on quality, trust and sustainable growth."
+      "en": "With years of experience and an expert team we deliver corporate solutions focused on quality, trust and sustainable growth.",
+      "ar": "نقدم حلولاً مؤسسية بخبرة سنوات وفريق متخصص. نعمل بتركيز على الجودة والثقة والنمو المستدام."
     },
     "name2": {
       "tr": "Vizyonumuz",
-      "en": "Our Vision"
+      "en": "Our Vision",
+      "ar": "رؤيتنا"
     },
     "spot2": {
       "tr": "Sektörümüzde yenilikçi yaklaşımlarla öncü olmak.",
-      "en": "To lead our industry with innovative approaches."
+      "en": "To lead our industry with innovative approaches.",
+      "ar": "أن نكون روّاداً في قطاعنا بمقاربات مبتكرة."
     },
     "icon2": "visibility",
     "name3": {
       "tr": "Misyonumuz",
-      "en": "Our Mission"
+      "en": "Our Mission",
+      "ar": "مهمتنا"
     },
     "spot3": {
       "tr": "İhtiyaç duyulan çözümleri hızlı ve şeffaf sunmak.",
-      "en": "Deliver needed solutions quickly and transparently."
+      "en": "Deliver needed solutions quickly and transparently.",
+      "ar": "تقديم الحلول المطلوبة بسرعة وشفافية."
     },
     "icon3": "flag",
     "img": "index.jpg",
@@ -35,11 +42,17 @@
     "marginbotton": "20",
     "title": {
       "tr": "Kurumsal",
-      "en": "Corporate"
+      "en": "Corporate",
+      "ar": "مؤسسي"
     }
   },
   "category": "module",
-  "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
-  "version": "1.1.0",
-  "icon": "business"
+  "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (beyaz çerçeveli yuvarlak görsel, bugünkü görünüm) · \"yuzen-gorsel\" (dik kart görsel bandın dışına taşar, gölgeli, hafif eğik) · \"cerceve-ofset\" (kare görsel, arkasında kaymış primary renk çerçeve) · \"ikon-liste\" (yatay görsel + vizyon/misyon ikonlu madde listesi; ikon icon2/icon3). Bant zemini/yazısı bgcolor/fontcolor çifti kalır; eklenen renkler yalnız var(--mx-site-*) token.",
+  "version": "1.2.0",
+  "icon": "business",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

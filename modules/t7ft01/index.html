@@ -1,41 +1,14 @@
-<footer class="footer">
+<footer class="footer" data-stil="--stil--">
     <div class="waves">
       <div class="wave" id="wave1"></div>
       <div class="wave" id="wave2"></div>
       <div class="wave" id="wave3"></div>
       <div class="wave" id="wave4"></div>
     </div>
-    <ul class="social-icon">
-  
-  
-  
+    <div class="footer-marka">
       {{moduleimg}}
-      
-  
-   
-  
-  
-      <li class="social-icon__item">
-        <a class="social-icon__link" href="#">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-      </li>
-      <li class="social-icon__item">
-        <a class="social-icon__link" href="#">
-          <ion-icon name="logo-x"></ion-icon>
-        </a>
-      </li>
-      <li class="social-icon__item">
-        <a class="social-icon__link" href="#">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-      <li class="social-icon__item">
-        <a class="social-icon__link" href="#">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-      </li>
-    </ul>
+      {{socialbar}}
+    </div>
     <ul class="menu">
       {{html}}
     </ul>
@@ -43,11 +16,17 @@
     <p>&copy; 2026 {{web-name}}. @all-rights@.</p>
   </footer>
   <style>
+    /* Logo + sosyal liste tek kolonda: sosyal liste yokken de cizgili stilin üç sütunu yerinde kalır, boş liste basılmaz */
+    .footer-marka {
+      position: relative;
+      width: 100%;
+    }
     .moduleimg {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 10px 0;
     }
     .moduleimg > img {
       width: 100%;
@@ -88,6 +67,13 @@
       transition: transform 0.5s;
     }
   
+    .social-icon__link svg {
+      display: block;
+      font-size: inherit; /* css.css * { font-size } svg'nin kendisine de işler, 1em bağlantının boyutu olsun */
+      width: 1em;
+      height: 1em;
+    }
+
     .social-icon__link:hover {
       transform: translateY(-10px);
     } 
@@ -182,6 +168,178 @@
     .menu__link {
       animation: none !important;
       transition: none !important;
+    }
+  }
+
+  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil. "" = klasik (dalgalı üst kenar, ortalı yığın).
+     Zemin/yazı --bgcolor--/--color-- çifti aynen; ayraç/çerçeve renkleri --color-- türevi (color-mix), sabit renk yok. ---- */
+
+  /* cizgili — üç sütun: sosyal | sayfalar | dil; sütunlar ince dikey ayraçla; telif alt şeritte */
+  [data-stil="cizgili"] {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 0;
+    row-gap: 8px;
+    padding: 48px 40px 20px;
+    text-align: center;
+  }
+
+  [data-stil="cizgili"] .waves {
+    grid-column: 1 / -1;
+  }
+
+  [data-stil="cizgili"] .social-icon,
+  [data-stil="cizgili"] .menu,
+  [data-stil="cizgili"] .wm-langbar {
+    margin: 0;
+    padding: 8px 24px;
+    min-height: 100%;
+    align-content: flex-start;
+  }
+
+  [data-stil="cizgili"] .menu {
+    flex-direction: column;
+    gap: 6px;
+    border-inline: 1px solid color-mix(in srgb, --color-- 22%, transparent);
+  }
+
+  [data-stil="cizgili"] .menu__link {
+    margin: 0;
+    padding: 6px 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.85;
+  }
+
+  [data-stil="cizgili"] .social-icon {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  [data-stil="cizgili"] .social-icon__link {
+    margin: 0 4px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  [data-stil="cizgili"] .wm-langbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* dil çubuğu: css.css'te renk kalıtımla gövdeden gelir (açık sitede koyu footer'da 1,2:1) → üç stilde de zemine bağlanır.
+     --langcolor-- = desing.langcolor, yoksa --color--; o da bgcolor üstünde okunmuyorsa back.js siyah/beyazdan okunanı yazar */
+  .footer .wm-langbar li a {
+    color: --langcolor--;
+    border-color: color-mix(in srgb, --langcolor-- 35%, transparent);
+    background-color: color-mix(in srgb, --langcolor-- 10%, transparent);
+  }
+
+  .footer .wm-langbar li.wm-lang-active a,
+  .footer .wm-langbar li a:hover {
+    color: --bgcolor--;
+    background-color: --langcolor--;
+    border-color: --langcolor--;
+  }
+
+  [data-stil="cizgili"] p {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 20px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid color-mix(in srgb, --color-- 18%, transparent);
+    text-align: center;
+  }
+
+  /* ortali-sade — dalga yok, tek sütun ortalı; sosyal ikonlar büyük daire çerçeveli; menü nokta ayraçlı tek satır */
+  [data-stil="ortali-sade"] {
+    margin-top: 48px;
+    padding: 56px 24px 28px;
+    border-top: 4px solid color-mix(in srgb, --color-- 22%, transparent);
+  }
+
+  [data-stil="ortali-sade"] .waves {
+    display: none;
+  }
+
+  [data-stil="ortali-sade"] .social-icon {
+    gap: 10px;
+    margin: 0 0 18px;
+  }
+
+  [data-stil="ortali-sade"] .social-icon__link {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, --color-- 35%, transparent);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  [data-stil="ortali-sade"] .social-icon__link:hover {
+    transform: translateY(-4px);
+    background-color: color-mix(in srgb, --color-- 12%, transparent);
+    border-color: color-mix(in srgb, --color-- 60%, transparent);
+  }
+
+  [data-stil="ortali-sade"] .menu {
+    gap: 4px 0;
+  }
+
+  [data-stil="ortali-sade"] .menu__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  [data-stil="ortali-sade"] .menu__item + .menu__item::before {
+    content: "\00B7";
+    color: --color--;
+    opacity: 0.45;
+    font-size: 1.2rem;
+  }
+
+  [data-stil="ortali-sade"] .menu__link {
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  [data-stil="ortali-sade"] p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-top: 22px;
+  }
+
+  @media (max-width: 768px) {
+    [data-stil="cizgili"] {
+      grid-template-columns: 1fr;
+      padding: 40px 20px 20px;
+    }
+
+    [data-stil="cizgili"] .menu {
+      border-inline: 0;
+      border-block: 1px solid color-mix(in srgb, --color-- 18%, transparent);
+      padding: 16px 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-stil="ortali-sade"] .social-icon__link:hover {
+      transform: none;
     }
   }
 </style>

@@ -44,7 +44,7 @@
   }
   
   .modulexmenumobil:focus {
-    outline: 2px solid #fff;
+    outline: 2px solid currentColor;
     outline-offset: 2px;
   }
 
@@ -68,13 +68,13 @@
   .modulextitle {
     width: 100%;
     background-color: #333;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .modulextitlebody {
-    color: #fff;
     width: var(--max);
     display: flex;
     justify-content: flex-end;
@@ -160,9 +160,12 @@
     margin: 5px 0px 5px 0px;
   }
 
+  /* 31 Eki 2026: zemin --menubg-- (eski: --color-- yazı rengi anahtarı zemin olarak kullanılıyordu; koyu modda kontrast 1.05).
+     back.js menubg boşsa color değerini atar → eski siteler aynen. */
   .modulexmenulist {
     display: block;
-    background-color: --color--;
+    background-color: --menubg--;
+    color: --menutext--;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -170,7 +173,7 @@
 
   .modulexmenubody {
     width: 100%;
-    background-color: --color--;
+    background-color: --menubg--;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +192,7 @@
   .modulexmenulist ul a {
     padding: 8px;
     font-size: 16px;
-    color: #fff;
+    color: --menutext--;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -199,22 +202,22 @@
   }
   
   .modulexmenulist ul a:focus {
-    outline: 2px solid #fff;
+    outline: 2px solid currentColor;
     outline-offset: 2px;
     border-radius: 5px;
   }
 
   .modulexmenulist ul a:hover {
-    background-color: #e0e0e0;
+    background-color: --menuhoverbg--;
     border-radius: 5px;
-    color: #000;
+    color: --menutext--;
     cursor: pointer;
   }
 
   .modulexmenuitem {
     padding: 8px;
     font-size: 16px;
-    color: #fff;
+    color: --menutext--;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -223,20 +226,21 @@
   }
 
   .modulexmenuactive {
-    background-color: #e0e0e0 !important;
+    background-color: --menuhoverbg-- !important;
     border-radius: 5px;
-    color: #000 !important;
+    color: --menutext-- !important;
     font-weight: bold;
   }
 
   .modulexbodylogo {
     display: block;
     width: auto;
-    height: --height--;
+    height: auto;
     max-width: 100%;
     max-height: --height--;
     object-fit: contain;
     object-position: left center;
+    flex-shrink: 0;
   }
 
   /* SVG logo korumasi (2026-09-12): intrinsic boyutu OLMAYAN bir SVG
@@ -311,13 +315,14 @@
       display: flex;
       align-items: center;
       justify-content: end;
-      background-color: --color--;
+      background-color: --menubg--;
+      color: --menutext--;
       width: 100%;
     }
 
     .modulexmenumobil span {
       font-size: 32px;
-      color: #fff;
+      color: --menutext--;
       padding: 5px;
     }
 
@@ -349,7 +354,7 @@
       width: 80%;
       max-width: 320px;
       height: 100%;
-      background-color: --color--;
+      background-color: --menubg--;
       padding: 0;
       border-radius: 0;
       box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
@@ -373,17 +378,17 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
-      color: #fff;
+      color: --menutext--;
       font-size: 28px;
     }
 
     .modulexmenuclose span {
       font-size: 28px;
-      color: #fff;
+      color: --menutext--;
     }
 
     .modulexmenuclose:focus {
-      outline: 2px solid #fff;
+      outline: 2px solid currentColor;
       outline-offset: -2px;
     }
 
@@ -398,15 +403,15 @@
     .modulexmenulist ul a {
       padding: 15px 20px;
       text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
     }
 
     /* Menü içindeki dil seçici - en alta */
     .modulexmenulang {
       margin-top: auto;
       padding: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      background-color: rgba(0, 0, 0, 0.1);
+      border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+      background-color: color-mix(in srgb, currentColor 6%, transparent);
     }
 
     .modulexmenulang ul {
@@ -430,13 +435,13 @@
       justify-content: center;
       width: 35px;
       height: 35px;
-      color: #fff;
+      color: --menutext--;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
       border-radius: 5px;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: color-mix(in srgb, currentColor 10%, transparent);
       transition: background-color 0.3s ease, border-color 0.3s ease;
       text-transform: uppercase;
       padding: 0;
@@ -445,18 +450,18 @@
     }
 
     .modulexmenulang ul a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.5);
+      background-color: --menuhoverbg--;
+      border-color: color-mix(in srgb, currentColor 50%, transparent);
     }
 
     .modulexmenulang ul a:focus {
-      outline: 2px solid #fff;
+      outline: 2px solid currentColor;
       outline-offset: 2px;
     }
 
     .modulexmenulang ul a[aria-current="true"] {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-color: #fff;
+      background-color: --menuhoverbg--;
+      border-color: currentColor;
       font-weight: bold;
     }
 
@@ -483,7 +488,7 @@
 
     .modulexbodylogo {
       max-width: min(50vw, 220px);
-      height: 80px;
+      height: auto;
       max-height: 80px;
     }
   }
@@ -499,7 +504,7 @@
 
     .modulexbodylogo {
       max-width: min(40vw, 180px);
-      height: 70px;
+      height: auto;
       max-height: 70px;
     }
   }
@@ -518,6 +523,17 @@
     [class*="modulex"] * {
       animation: none !important;
       transition: none !important;
+    }
+  }
+
+  /* 8 Kas 2026: logo gorseli acik zemin icin cizilmis (koyu yazi, saydam); koyu modda koyu header uzerinde 1:1 kayboluyordu (saas 'Akispano').
+     Koyu modda logoya acik plaka. */
+  @media (prefers-color-scheme: dark) {
+    .modulexbodylogo {
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      box-sizing: content-box;
     }
   }
 </style>

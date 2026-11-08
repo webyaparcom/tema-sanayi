@@ -1025,3 +1025,15 @@ body.mx-drawer-open { overflow: hidden; }
   .mx-cluster--stack-mobile { flex-direction: column; align-items: stretch; }
   .mx-table th, .mx-table td { padding: var(--mx-space-2) var(--mx-space-3); }
 }
+
+/* Swiper kontrolleri (2 Kas 2026): varsayılan #000 %20 nokta + #007aff ok koyu banner fotoğrafında kayboluyordu; zemin görselden gelir, tek renk her zeminde 3:1 tutmaz.
+   Çift kodlama: etkin nokta token, pasif beyaz, ikisinin de halkası var (koyu zeminde beyaz, açıkta koyu halka okunur); ok beyaz + koyu hale.
+   swiper-bundle bu dosyadan SONRA yüklenir ve pasif nokta sabittir (değişkeni yok): `html` öneki onu geçer, üst sınıflı modül kuralı (.x .swiper-pagination-bullet) korunur; çıplak seçicili modül `html` öneki ister (menu-slider-3). */
+html:root {
+  --swiper-theme-color: var(--mx-color-primary);
+  --swiper-pagination-color: var(--mx-color-primary);
+  --swiper-navigation-color: #ffffff;
+}
+html .swiper-pagination-bullet { background: #ffffff; opacity: 1; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6); }
+html .swiper-pagination-bullet-active { background: var(--swiper-pagination-color); box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px rgba(0, 0, 0, 0.6); }
+.swiper-button-next, .swiper-button-prev { filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.9)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7)); }

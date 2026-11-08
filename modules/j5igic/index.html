@@ -32,12 +32,17 @@
   .modulex-values-badge {
     display: inline-block;
     padding: 6px 18px;
-    background: --badge--;
-    color: #fff;
+    background: --badgebg--;
+    color: --badgecolor--;
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 16px;
+  }
+
+  /* Rozet bos birakilirsa (metin yok) bos pil cizilmesin */
+  .modulex-values-badge:empty {
+    display: none;
   }
 
   .modulex-values-title {

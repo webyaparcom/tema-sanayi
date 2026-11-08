@@ -1,7 +1,7 @@
 {
   "name": "Demo Bandı",
-  "description": "Demo sitelerin her sayfasının üstünde duran, kapatılamaz bilgi şeridi: «Bu bir demo sitedir» uyarısı ve «Bu temayı iste» bağlantısı. Sayfanın en üstüne yapışır (position:sticky), sabit menüleri bant yüksekliği kadar aşağı iter (--mx-demo-bandi-h). Üç dil (TR/EN/AR), Arapçada RTL, mobilde iki satıra sarar.",
-  "version": "1.0.0",
+  "description": "Demo sitelerin her sayfasının üstünde duran, kapatılamaz bilgi şeridi: «Bu bir demo sitedir» uyarısı ve «Bu temayı iste» bağlantısı. Sayfanın en üstüne yapışır (position:sticky), sabit menüleri bant yüksekliği kadar aşağı iter (--mx-demo-bandi-h). Üç dil (TR/EN/AR), Arapçada RTL, mobilde iki satıra sarar. İsteğe bağlı üye girişi bağlantısı (v1.1): girisHref (dil sözlüğü ya da tek adres) + girisText dolu ise bandın sonunda çerçeveli hap olarak çizilir; boşsa hiç çizilmez.",
+  "version": "1.1.0",
   "icon": "info",
   "category": "demo",
   "tags": ["demo", "bant", "uyarı", "banner", "rtl"],
@@ -30,5 +30,17 @@
       "en": "(opens in a new tab)",
       "ar": "(يفتح في علامة تبويب جديدة)"
     }
+,
+    "girisHref": "",
+    "girisText": {
+      "tr": "Üye Girişi",
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    }
+  },
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
   }
 }

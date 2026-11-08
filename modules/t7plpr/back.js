@@ -63,7 +63,18 @@ function plCardCtaHtml() {
   );
 }
 
-function plMediaHtml(name, imgName, rowId) {
+/* Satırda img yoksa page/<id>/index.webp varsayılırdı: dosya yoksa kırık görsel + denetimde eksik varlık (antepinici hub, 12 kart).
+   Dosya okunamıyorsa (dinamik render) eski davranış. */
+function plIndexGorselVar(rowId) {
+  if (typeof fsSync === "undefined" || typeof path === "undefined" || typeof webDir === "undefined" || !webDir) return true;
+  try {
+    return fsSync.existsSync(path.join(webDir, "page", String(rowId), "index.webp"));
+  } catch (e) {
+    return true;
+  }
+}
+
+function plMediaHtml(name, imgName, rowId, icon) {
   if (imgName !== "") {
     return (
       '<img src="/page/' +
@@ -77,7 +88,7 @@ function plMediaHtml(name, imgName, rowId) {
   }
   return (
     '<div class="modulex-card-placeholder" aria-hidden="true">' +
-    '<span class="material-symbols-outlined">image</span>' +
+    '<span class="material-symbols-outlined">' + (/^[a-z0-9_]+$/.test(String(icon || "")) ? icon : "image") + "</span>" +
     "</div>"
   );
 }
@@ -134,7 +145,7 @@ for (var plI = 0; plI < plSrc.length; plI++) {
       var plImgName = "";
       if (!plRowImgOff(iterator) && iterator["img"]) {
         plImgName = String(iterator["img"]);
-      } else if (!plRowImgOff(iterator)) {
+      } else if (!plRowImgOff(iterator) && plIndexGorselVar(iterator["id"])) {
         plImgName = "index.webp";
       }
       var plHref =
@@ -146,7 +157,7 @@ for (var plI = 0; plI < plSrc.length; plI++) {
         plEsc(plHref) +
         '">' +
         '<div class="modulex-card-media">' +
-        plMediaHtml(plName, plImgName, iterator["id"]) +
+        plMediaHtml(plName, plImgName, iterator["id"], iterator["icon"]) +
         "</div>" +
         '<div class="modulex-card-body">' +
         '<div class="modulex-card-title">' +

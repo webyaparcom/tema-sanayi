@@ -5,6 +5,7 @@
     <span>{{ctaText}}</span>{{dbYeniSekme}}
     <span class="material-symbols-outlined mx-flip modulex-db-arrow" aria-hidden="true">arrow_forward</span>
   </a>
+  {{dbGiris}}
 </div>
 <style>
   /* demo-bandi — kapatilamaz demo seridi.
@@ -82,6 +83,35 @@
     font-size: 18px;
     line-height: 1;
   }
+  /* Üye girişi (v1.1, isteğe bağlı): bant renginde çerçeveli hap; mobilde yalnız simge (yazı ekran okuyucuda kalır) */
+  .modulex-db .modulex-db-giris {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 32px;
+    padding: 4px 12px;
+    margin-inline-start: 6px;
+    border: 1px solid color-mix(in srgb, var(--db-fg) 60%, transparent);
+    border-radius: 999px;
+    color: var(--db-fg) !important;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .modulex-db .modulex-db-giris:hover {
+    background-color: color-mix(in srgb, var(--db-fg) 15%, transparent);
+  }
+  .modulex-db .modulex-db-giris:focus-visible {
+    outline: 2px solid var(--db-fg);
+    outline-offset: 2px;
+  }
+  .modulex-db-giris-ikon {
+    font-size: 18px;
+    line-height: 1;
+  }
   @keyframes mxDbGiris {
     from { opacity: 0; transform: translateY(-100%); }
     to { opacity: 1; transform: translateY(0); }
@@ -103,12 +133,28 @@
     .modulex-db .modulex-db-cta {
       max-width: 38%;
     }
+    .modulex-db .modulex-db-giris {
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0;
+      margin-inline-start: 0;
+    }
+    .modulex-db-giris-yazi {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .modulex-db {
       animation: none;
     }
-    .modulex-db .modulex-db-cta {
+    .modulex-db .modulex-db-cta,
+    .modulex-db .modulex-db-giris {
       transition: none;
     }
   }

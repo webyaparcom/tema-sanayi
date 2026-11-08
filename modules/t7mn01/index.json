@@ -4,10 +4,18 @@
     "logo": "logo.png",
     "color": "#1e3046",
     "height": "100px",
-    "background-color": "#e9e9e9"
+    "background-color": "#e9e9e9",
+    "menubg": "",
+    "menutext": "#fff",
+    "menuhoverbg": "rgba(255,255,255,.18)"
   },
   "category": "menu",
-  "description": "Light gri background navigasyon menüsü. Logo, sayfa linkleri ve 100px yükseklikte modern header tasarımı sunar. 6 farklı projede kullanılır: mobil ajans, üretim, sağlık, medya, inşaat ve profesyonel hizmet firmalarında. Sticky header, hover efektleri ve responsive mobil menü geçişi içerir.",
+  "description": "Light gri background navigasyon menüsü. Logo, sayfa linkleri ve 100px yükseklikte modern header tasarımı sunar. 6 farklı projede kullanılır: mobil ajans, üretim, sağlık, medya, inşaat ve profesyonel hizmet firmalarında. Sticky header, hover efektleri ve responsive mobil menü geçişi içerir. menubg: menü şeridi / mobil panel zemini (boşsa color değeri — eski görünüm); menutext: menü yazı rengi; menuhoverbg: hover/aktif örtüsü.",
   "version": "1.0.0",
-  "icon": "menu"
+  "icon": "menu",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

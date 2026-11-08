@@ -6,9 +6,22 @@
     "color": "#fff",
     "bordercolor": "#000",
     "minimal_design": true,
-    "social_media": false
+    "social_media": false,
+    "logo_maxh": "60px",
+    "logo_plate": false,
+    "contact_line": "auto",
+    "logoDark": "",
+    "duzen": "",
+    "slogan": "",
+    "ikinciSutun": "",
+    "iletisimNot": ""
   },
   "category": "footer",
   "data": [],
-  "description": "Web sitesi alt bilgi (footer) bölümü. Logo, telif hakları, iletişim bilgileri ve sosyal medya linklerini içerir. Tüm sayfa türlerinde kullanılabilir evrensel modüldür."
+  "description": "Web sitesi alt bilgi (footer) bölümü. Logo, telif hakları, iletişim bilgileri ve sosyal medya linklerini içerir. Tüm sayfa türlerinde kullanılabilir evrensel modüldür. logo_maxh: logo tavan yüksekliği (oran korunur); logo_plate: true → logonun arkasında beyaz plaka (koyu zeminde koyu logo); contact_line: auto → setting.phone/email varsa tek satır «tel · e-posta», false → yok.",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

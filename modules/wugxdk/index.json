@@ -8,6 +8,7 @@
     "titlecolor": "#1e293b",
     "textcolor": "#475569",
     "accent": "#DE6D26",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
     "badge": {
       "tr": "SSS",
       "en": "FAQ"
@@ -56,5 +57,10 @@
   "category": "faq",
   "description": "SSS akordeon modülü. Soru-cevap listesini tek seferde bir açık olacak şekilde akordeon düzende gösterir. Çok dilli veri, animasyonlu açılış, mobil uyum ve erişilebilirlik (aria-expanded) desteği içerir.",
   "version": "1.0.0",
-  "icon": "quiz"
+  "icon": "quiz",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

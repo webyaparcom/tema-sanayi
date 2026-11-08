@@ -268,5 +268,10 @@
         "ar": "تفصيل اللمسات الأخيرة"
       }
     }
-  ]
+  ],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

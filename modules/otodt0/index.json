@@ -28,5 +28,10 @@
       "en": "Demo credit",
       "ar": "معلومات العرض التجريبي"
     }
+  },
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
   }
 }

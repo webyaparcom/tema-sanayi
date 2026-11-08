@@ -1,7 +1,11 @@
 {
   "name": "Footer 1",
   "desing": {
+    "stil": "",
     "showlang": true,
+    "showsocial": true,
+    "social": [],
+    "langcolor": "",
     "bgcolor": "#1e3046",
     "color": "#fff",
     "img": "",
@@ -9,7 +13,12 @@
   },
   "category": "footer",
   "data": [],
-  "description": "Evrensel alt bilgi (footer) bölüm modülü. Firma logosu, telif hakları metni, iletişim bilgileri ve sosyal medya ikonlarını responsive tasarımda sunar. 41 farklı projede kullanılır: tüm sektörlerden kurumsal, e-ticaret, restoran, sağlık, ajans, hizmet firmalarında. Tüm sayfa türlerinde standart footer yapısı sağlar.",
-  "version": "1.0.0",
-  "icon": "web_asset"
+  "description": "Evrensel alt bilgi (footer) bölüm modülü. Firma logosu, telif hakları metni, iletişim bilgileri ve sosyal medya hesaplarını responsive tasarımda sunar. Sosyal liste desing.social [{ad,url}] ya da setting.social'dan üretilir; hesap yoksa basılmaz. 41 farklı projede kullanılır: tüm sektörlerden kurumsal, e-ticaret, restoran, sağlık, ajans, hizmet firmalarında. Tüm sayfa türlerinde standart footer yapısı sağlar. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (dalgalı üst kenar, ortalı yığın, bugünkü görünüm) · \"cizgili\" (üç sütun: sosyal | sayfalar | dil, ince dikey ayraçlar, telif alt şeritte) · \"ortali-sade\" (dalga yok, tek sütun ortalı, büyük daire çerçeveli sosyal ikonlar, nokta ayraçlı menü). Ayraç/çerçeve renkleri color anahtarının color-mix türevi.",
+  "version": "1.2.0",
+  "icon": "web_asset",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

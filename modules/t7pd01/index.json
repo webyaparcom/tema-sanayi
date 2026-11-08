@@ -1,15 +1,22 @@
 {
- "name": "Page Desing 3",
- "desing": {
-  "height": "200",
-  "opacity": "0.5",
-  "font-size": "50",
-  "backgroundcolor": "#000",
+  "name": "Page Desing 3",
+  "desing": {
+    "height": "200",
+    "opacity": "0.5",
+    "font-size": "50",
+    "backgroundcolor": "#000",
+    "category": "page",
+    "menu-active": "#1e3046",
+    "textcolor": "#ffffff",
+    "activetext": "#ffffff"
+  },
   "category": "page",
-  "menu-active": "#1e3046"
- },
- "category": "page",
- "description": "En çok kullanılan sayfa başlık ve hero tasarım modülü. Tüm sayfa türleri için kategori başlığı, arka plan overlay ve navigasyon gösterir. 14 farklı projede kullanılır: üretim, kurumsal, e-ticaret, restoran, muhasebe ve hizmet sektörlerinde. Standart sayfa açılış bölümü olarak yaygın tercih edilir. Responsive tasarım ve dinamik kategori sistemi içerir.",
- "version": "1.0.0",
- "icon": "web"
+  "description": "En çok kullanılan sayfa başlık ve hero tasarım modülü. Tüm sayfa türleri için kategori başlığı, arka plan overlay ve navigasyon gösterir. 14 farklı projede kullanılır: üretim, kurumsal, e-ticaret, restoran, muhasebe ve hizmet sektörlerinde. Standart sayfa açılış bölümü olarak yaygın tercih edilir. Responsive tasarım ve dinamik kategori sistemi içerir.",
+  "version": "1.0.0",
+  "icon": "web",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

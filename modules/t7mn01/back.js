@@ -1,3 +1,14 @@
+// 31 Eki 2026: menü zemini/yazısı ayrı anahtar (menubg · menutext · menuhoverbg). menubg boşsa eski davranış: color değeri zemin
+// (eski siteler aynen görünür); menutext boşsa #fff. Placeholder'lar burada çözülür, moduleRender döngüsü kalanı dokunmaz.
+var m4Menubg = json.desing.menubg || json.desing.color || '';
+var m4Menutext = json.desing.menutext || '#fff';
+var m4Menuhoverbg = json.desing.menuhoverbg || 'rgba(255,255,255,.18)';
+// 8 Kas 2026 (koyu mod kontrast): zemin site yazi renginden turetiliyorsa (var(--mx-site-text...)) koyu modda ACIK renge doner;
+// sabit #fff yazi/hover o zaman 1.18:1 kalir (saas). Boyle zeminde yazi ve hover site ZEMIN rengine baglanir (cift her semada zit).
+var m4Oto = /var\(\s*--mx-site-text/.test(m4Menubg);
+if (m4Oto && /^#(?:f{3}|f{6})$/i.test(String(m4Menutext).trim())) { m4Menutext = 'var(--mx-site-bg, #ffffff)'; }
+if (m4Oto && /^rgba\(\s*255\s*,\s*255\s*,\s*255/i.test(String(m4Menuhoverbg).trim())) { m4Menuhoverbg = 'color-mix(in srgb, var(--mx-site-bg, #ffffff) 22%, transparent)'; }
+html = html.replace(/--menubg--/g, m4Menubg).replace(/--menutext--/g, m4Menutext).replace(/--menuhoverbg--/g, m4Menuhoverbg);
 // Find the page with `modulestatus.page` set to true
 var pagesettingjson = webmakerdata.pagesetting.data.find(
     function(item) { return item.modulestatus && item.modulestatus.page; },
@@ -41,7 +52,7 @@ for (var key in webmakerdata.setting.langs) {
         // SEO için hreflang ve aria-current ekle
         var hreflangAttr = `hreflang="${key}"`;
         var ariaCurrentAttr = isCurrentLang ? ' aria-current="true"' : '';
-        var titleAttr = `title="${webmakerdata.setting.langs[key] || key}"`;
+        var titleAttr = `title="${String(key).toUpperCase()}"`; // langs[key] boolean (true) -> eski kod title="true" basiyordu (8 Kas 2026)
         
         langhtml += `<li role="none"><a href="${langUrl}" ${hreflangAttr}${ariaCurrentAttr} ${titleAttr} aria-label="@language-selector@: ${key}" lang="${key}">${key}</a></li>`;
     }

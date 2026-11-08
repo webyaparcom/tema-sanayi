@@ -123,5 +123,10 @@
         { "k": { "tr": "Konum", "en": "Location", "ar": "الموقع" }, "v": { "tr": "Organize Sanayi", "en": "Industrial Zone", "ar": "المنطقة الصناعية" } }
       ]
     }
-  ]
+  ],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
 }

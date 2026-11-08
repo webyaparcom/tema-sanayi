@@ -1,9 +1,12 @@
 {
  "name": "İletişim",
  "desing": {
+  "stil": "",
   "color": "#000",
   "name": {
-   "tr": "Bize Ulaşın"
+   "tr": "Bize Ulaşın",
+   "en": "Contact Us",
+   "ar": "اتصل بنا"
   },
   "margin": "30px 0px 30px 0px",
   "linkcolor": "#1B3A6B"
@@ -24,7 +27,12 @@
   }
  ],
  "category": "contact",
- "description": "İletişim bilgileri görüntüleme modülü. Telefon, email ve adres bilgilerini icon ile şık tasarımda sunar. 26 farklı projede kullanılır: kurumsal şirketler, restoranlar, e-ticaret siteleri, sağlık kuruluşları ve hizmet sektöründe. Responsive kart düzeni ve tıklanabilir telefon/email linkleri içerir.",
- "version": "1.0.0",
- "icon": "contact_mail"
+ "description": "İletişim bilgileri görüntüleme modülü. Telefon, email ve adres bilgilerini icon ile şık tasarımda sunar. 26 farklı projede kullanılır: kurumsal şirketler, restoranlar, e-ticaret siteleri, sağlık kuruluşları ve hizmet sektöründe. Responsive kart düzeni ve tıklanabilir telefon/email linkleri içerir. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (çerçeveli liste, bugünkü görünüm) · \"kartli\" (her bilgi ortalı bir kart, 3→2→1 sütun) · \"koyu-panel\" (sol koyu başlık paneli primary/primary-contrast + sağda ayraçlı liste). Varyant renkleri yalnız var(--mx-site-*) token.",
+ "version": "1.1.0",
+ "icon": "contact_mail",
+ "veri": {
+  "statik": true,
+  "dinamik": false,
+  "kaynak": "desing/data"
+ }
 }

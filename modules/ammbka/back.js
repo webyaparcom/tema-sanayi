@@ -49,3 +49,15 @@ dbSet("ariaLabel", dbEsc(wmPickLang(dbDes.ariaLabel, dbLang)));
 if (!dbHref || !wmPickLang(dbDes.ctaText, dbLang)) {
   html = html.replace(/<a class="modulex-db-cta"[\s\S]*?<\/a>/, "");
 }
+/* Uye girisi (v1.1, istege bagli): girisHref dil sozlugu ya da tek adres; bos/javascript: → hic cizilmez (eski siteler aynen).
+   Demo temalari statiktir — giris islevi adresin gosterdigi ana sitededir (ornek https://webyapar.com/tr/login). */
+var dbGirisHam = String(wmPickLang(dbDes.girisHref, dbLang) || "").trim();
+var dbGirisAd = String(wmPickLang(dbDes.girisText, dbLang) || "").trim();
+var dbGiris = "";
+if (dbGirisHam && dbGirisAd && !/^javascript:/i.test(dbGirisHam)) {
+  var dbGirisUrl = /^(https?:)?\/\//i.test(dbGirisHam) ? dbGirisHam : wxLangInternalHref(dbGirisHam);
+  dbGiris = '<a class="modulex-db-giris" href="' + dbEsc(dbGirisUrl) + '">' +
+    '<span class="material-symbols-outlined modulex-db-giris-ikon" aria-hidden="true">person</span>' +
+    '<span class="modulex-db-giris-yazi">' + dbEsc(dbGirisAd) + "</span></a>";
+}
+dbSet("dbGiris", dbGiris);

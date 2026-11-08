@@ -1,7 +1,7 @@
-<div class="modulex-title f36">
+<div class="modulex-title f36" data-stil="--stil--">
   <h1>{{name}}</h1>
 </div>
-<div class="modulex">
+<div class="modulex" data-stil="--stil--">
   <button
     type="button"
     class="modulex-menu-btn"
@@ -100,10 +100,11 @@
 
   .modulex-menu-link,
   .modulex-top {
-    background-color: #fff;
+    /* 31 Eki 2026 kontrast kuralı: zemin/kenar sabit #fff değil, --bgcolor--/--color-- türevi (koyu modda beyaz kutu + açık yazı = 1.15:1 idi) */
+    background-color: --bgcolor--;
     padding: 10px 12px;
     border-radius: --border_radius--;
-    border: 1px solid rgba(30, 48, 70, 0.08);
+    border: 1px solid color-mix(in srgb, --color-- 12%, transparent);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +121,7 @@
   .modulex-top.active,
   .modulex-top:hover {
     background-color: --menu-active--;
-    color: #fff;
+    color: --activetext--;
     transform: translateX(2px);
     box-shadow: 0 4px 12px rgba(222, 109, 38, 0.2);
   }
@@ -159,11 +160,11 @@
   }
 
   .modulex-sub-link {
-    background-color: #fff;
+    background-color: --bgcolor--;
     padding: 8px 10px;
     border-radius: --border_radius--;
     font-size: 14px;
-    border: 1px solid rgba(30, 48, 70, 0.06);
+    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
     transition: background-color 0.22s ease, color 0.22s ease;
     text-align: left;
     text-decoration: none;
@@ -260,9 +261,9 @@
     gap: 28px;
     width: 100%;
     padding: 20px;
-    background: #fff;
+    background: --bgcolor--;
     border-radius: --border_radius--;
-    border: 1px solid rgba(30, 48, 70, 0.08);
+    border: 1px solid color-mix(in srgb, --color-- 12%, transparent);
     box-shadow: --card_shadow--;
     animation: modulexPd5FadeUp 0.5s ease 0.08s both;
   }
@@ -431,12 +432,15 @@
 
   .modulex-pd5-cta-primary {
     background: --menu-active--;
-    color: #fff;
+    color: --activetext--;
     box-shadow: 0 6px 18px rgba(222, 109, 38, 0.32);
   }
 
   .modulex-pd5-cta-wa {
     background: #fff;
+    /* 8 Kas 2026: koyu modda (yalniz colorScheme auto sitede color-scheme:dark) zemin yuzey tokenini izler; sabit #fff ustunde
+       baslik rengi (var(--mx-site-text)) 1,17:1 idi. Acik modda #fff aynen. */
+    background: light-dark(#fff, var(--mx-site-surface, #fff));
     color: --colortitle--;
     border: 1px solid rgba(30, 48, 70, 0.12);
   }
@@ -465,6 +469,7 @@
     gap: 10px;
     padding: 12px 14px;
     background: #fff;
+    background: light-dark(#fff, var(--mx-site-surface, #fff)); /* 8 Kas 2026: koyu modda yuzey tokeni (cta-wa ile ayni) */
     border: 1px solid rgba(30, 48, 70, 0.08);
     border-radius: --border_radius--;
     text-decoration: none;
@@ -853,6 +858,295 @@
     [class*="modulex"],
     [class*="modulex"] * {
       transition: none !important;
+    }
+  }
+
+  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil (başlık bandı + ana sarmal). "" = klasik (yukarıdaki kurallar aynen).
+     Yan menü bağlantılarının görünümünü değiştirir; zemin/yazı --bgcolor--/--color-- çifti ya da var(--mx-site-*) token — sabit renk yok. ---- */
+
+  /* ikon-ustte-yuvarlak — her bağlantı ortalı bir karo: üstte daire ikon, altta metin */
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu {
+    gap: 12px;
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 18px 12px;
+    position: relative;
+    border-radius: var(--mx-radius-lg, 16px);
+    /* kart zemini --bgcolor-- (klasikten gelir) → yazı da çiftin diğer yarısı; koyu modda gövde rengi kalıtımı okunmazdı */
+    color: --color--;
+    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link.active,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top.active,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link.active,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover {
+    background-color: --menu-active--;
+    color: --activetext--;
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link::before {
+    content: "article";
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 14%, transparent);
+    color: var(--mx-site-primary, #2563eb);
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top::before {
+    content: "folder_open";
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top .modulex-icon {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 10px;
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link.active::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top.active::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link.active::before,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link:hover::before {
+    background-color: color-mix(in srgb, currentColor 18%, transparent);
+    color: inherit;
+    transform: scale(1.06);
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover {
+    transform: translateY(-2px);
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link-text,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-parent-label {
+    text-align: center;
+  }
+
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub {
+    padding-left: 0;
+    gap: 8px;
+  }
+
+  /* yatay-kart — ikon solda (RTL'de sağda), metin yanında; panel zemini kalkar, her bağlantı ayrı kart */
+  [data-stil="yatay-kart"] .modulex-menu {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 10px;
+  }
+
+  [data-stil="yatay-kart"] .modulex-menu-link,
+  [data-stil="yatay-kart"] .modulex-top,
+  [data-stil="yatay-kart"] .modulex-sub-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--mx-radius-md, 12px);
+    background-color: --bgcolor--;
+    color: --color--;
+    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* aktif/hover: klasik çift (menu-active/activetext) — yukarıdaki bgcolor kuralı aynı özgüllükte sonra geldiği için burada yinelenir */
+  [data-stil="yatay-kart"] .modulex-menu-link.active,
+  [data-stil="yatay-kart"] .modulex-top.active,
+  [data-stil="yatay-kart"] .modulex-menu-link:hover,
+  [data-stil="yatay-kart"] .modulex-top:hover {
+    background-color: --menu-active--;
+    color: --activetext--;
+  }
+
+  [data-stil="yatay-kart"] .modulex-sub-link.active,
+  [data-stil="yatay-kart"] .modulex-sub-link:hover {
+    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
+    color: --color--;
+  }
+
+  [data-stil="yatay-kart"] .modulex-menu-link::before,
+  [data-stil="yatay-kart"] .modulex-top::before,
+  [data-stil="yatay-kart"] .modulex-sub-link::before {
+    content: "chevron_right";
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--mx-radius-sm, 10px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
+    color: var(--mx-site-primary, #2563eb);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  [data-stil="yatay-kart"] .modulex-top::before {
+    content: "folder_open";
+  }
+
+  [data-stil="yatay-kart"] .modulex-sub-link::before {
+    content: "subdirectory_arrow_right";
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  [dir="rtl"] [data-stil="yatay-kart"] .modulex-menu-link::before,
+  [dir="rtl"] [data-stil="yatay-kart"] .modulex-sub-link::before {
+    transform: scaleX(-1);
+  }
+
+  [data-stil="yatay-kart"] .modulex-top .modulex-icon {
+    margin-inline-start: auto;
+  }
+
+  [data-stil="yatay-kart"] .modulex-menu-link.active::before,
+  [data-stil="yatay-kart"] .modulex-menu-link:hover::before,
+  [data-stil="yatay-kart"] .modulex-top.active::before,
+  [data-stil="yatay-kart"] .modulex-top:hover::before,
+  [data-stil="yatay-kart"] .modulex-sub-link.active::before,
+  [data-stil="yatay-kart"] .modulex-sub-link:hover::before {
+    background-color: color-mix(in srgb, currentColor 18%, transparent);
+    color: inherit;
+  }
+
+  [data-stil="yatay-kart"] .modulex-menu-link:hover,
+  [data-stil="yatay-kart"] .modulex-top:hover,
+  [data-stil="yatay-kart"] .modulex-sub-link:hover {
+    transform: translateX(4px);
+  }
+
+  [dir="rtl"] [data-stil="yatay-kart"] .modulex-menu-link:hover,
+  [dir="rtl"] [data-stil="yatay-kart"] .modulex-top:hover,
+  [dir="rtl"] [data-stil="yatay-kart"] .modulex-sub-link:hover {
+    transform: translateX(-4px);
+  }
+
+  [data-stil="yatay-kart"] .modulex-sub {
+    padding-left: 0;
+    padding-inline-start: 12px;
+  }
+
+  /* kenar-cizgili — kutu yok; her bağlantının başında ince çizgi, hover/aktifte çizgi vurgu rengine döner ve metin içe kayar */
+  [data-stil="kenar-cizgili"] .modulex-menu {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 2px;
+    border-radius: 0;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-menu-link,
+  [data-stil="kenar-cizgili"] .modulex-top,
+  [data-stil="kenar-cizgili"] .modulex-sub-link {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+    border-radius: 0;
+    border-inline-start: 3px solid color-mix(in srgb, currentColor 16%, transparent);
+    padding: 12px 14px;
+    padding-inline-start: 16px;
+    box-shadow: none;
+    transition: border-color 0.25s ease, padding 0.25s ease, background-color 0.25s ease;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-sub-link {
+    padding-inline-start: 28px;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-menu-link.active,
+  [data-stil="kenar-cizgili"] .modulex-menu-link:hover,
+  [data-stil="kenar-cizgili"] .modulex-top.active,
+  [data-stil="kenar-cizgili"] .modulex-top:hover,
+  [data-stil="kenar-cizgili"] .modulex-sub-link.active,
+  [data-stil="kenar-cizgili"] .modulex-sub-link:hover {
+    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 9%, transparent);
+    border-inline-start-color: var(--mx-site-primary, #2563eb);
+    color: inherit;
+    font-weight: 700;
+    padding-inline-start: 24px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-sub-link.active,
+  [data-stil="kenar-cizgili"] .modulex-sub-link:hover {
+    padding-inline-start: 36px;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-menu-parent {
+    background-color: transparent !important;
+    border-color: color-mix(in srgb, currentColor 16%, transparent) !important;
+  }
+
+  [data-stil="kenar-cizgili"] .modulex-sub {
+    padding-left: 0;
+  }
+
+  /* içerik alanı: klasikte --color-- (instance hex) sayfa zemininden bağımsızdı → koyu modda okunmuyordu; varyantlarda gövde rengini kalıtır */
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-body,
+  [data-stil="yatay-kart"] .modulex-body,
+  [data-stil="kenar-cizgili"] .modulex-body,
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-body > article p,
+  [data-stil="yatay-kart"] .modulex-body > article p,
+  [data-stil="kenar-cizgili"] .modulex-body > article p {
+    color: inherit;
+  }
+
+  /* grup düğmesi (<button>) zemini panelle aynı (bgcolor/bgcolor) → ayırt edici kenarlık ≥ 3:1 (modul-kontrast: zemin YA DA kenarlık) */
+  [data-stil="ikon-ustte-yuvarlak"] .modulex-top,
+  [data-stil="yatay-kart"] .modulex-top {
+    border: 1px solid color-mix(in srgb, --color-- 55%, transparent);
+  }
+
+  /* mobil çekmece: panel zemini şeffaf kalamaz (örtü üstünde okunmaz) → --bgcolor--/--color-- çifti geri gelir */
+  @media screen and (max-width: 1024px) {
+    [data-stil="yatay-kart"] .modulex-menu,
+    [data-stil="kenar-cizgili"] .modulex-menu {
+      background-color: --bgcolor--;
+      color: --color--;
+      padding: 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
+    [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover,
+    [data-stil="yatay-kart"] .modulex-menu-link:hover,
+    [data-stil="yatay-kart"] .modulex-top:hover,
+    [data-stil="yatay-kart"] .modulex-sub-link:hover {
+      transform: none !important;
     }
   }
 </style>
