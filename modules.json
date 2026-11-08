@@ -11,7 +11,10 @@
         "logo": "logo.png",
         "color": "#ffffff",
         "height": "100px",
-        "background-color": "#09579A"
+        "background-color": "#09579A",
+        "menubg": "",
+        "menutext": "#fff",
+        "menuhoverbg": "rgba(255,255,255,.18)"
       },
       "version": "1.0.0",
       "icon": "menu"
@@ -55,7 +58,8 @@
           "ar": "تواصل معنا"
         },
         "margin": "30px 0px 30px 0px",
-        "linkcolor": "var(--mx-site-primary, #2563eb)"
+        "linkcolor": "var(--mx-site-primary, #2563eb)",
+        "stil": ""
       },
       "data": [
         {
@@ -101,7 +105,26 @@
         "backgroundcolor": "#ffffff",
         "color": "var(--mx-site-text, #1b1b1b)",
         "img": "map.png",
-        "externalUrl": ""
+        "externalUrl": "",
+        "stil": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "badgeText": {
+          "tr": "Konumumuz",
+          "en": "Our Location",
+          "ar": "موقعنا"
+        },
+        "infoTitle": {
+          "tr": "Bize Ulaşın",
+          "en": "Contact Us",
+          "ar": "اتصل بنا"
+        },
+        "directions": {
+          "tr": "Yol tarifi al",
+          "en": "Get directions",
+          "ar": "احصل على الاتجاهات"
+        }
       },
       "version": "1.0.0",
       "icon": "map",
@@ -132,7 +155,9 @@
             "prev": "السابق",
             "next": "التالي"
           }
-        }
+        },
+        "textcolor": "#ffffff",
+        "activetext": "#ffffff"
       },
       "version": "1.0.0",
       "icon": "web"
@@ -148,7 +173,11 @@
         "color": "#fff",
         "img": "",
         "imgwidth": "250px",
-        "showlang": true
+        "showlang": true,
+        "stil": "",
+        "showsocial": true,
+        "social": [],
+        "langcolor": ""
       },
       "data": [],
       "version": "1.0.0",
@@ -246,7 +275,8 @@
           "tr": "Orvak Makina",
           "en": "Orvak Makina",
           "ar": "Orvak Makina"
-        }
+        },
+        "stil": ""
       },
       "index": 7
     },
@@ -277,7 +307,8 @@
         "description": {
           "tr": "Merak ettiğiniz soruların cevaplari.",
           "en": "Answers to common questions."
-        }
+        },
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)"
       },
       "data": [
         {
@@ -347,7 +378,8 @@
           "en": "Products",
           "ar": "المنتجات"
         },
-        "btn2Url": "urunlerimiz"
+        "btn2Url": "urunlerimiz",
+        "stil": ""
       },
       "index": 9
     },
@@ -443,7 +475,10 @@
         "logo": "logo.png",
         "color": "var(--mx-site-text, #1b1b1b)",
         "height": "84px",
-        "background-color": "var(--mx-site-bg, #ffffff)"
+        "background-color": "var(--mx-site-bg, #ffffff)",
+        "menubg": "",
+        "menutext": "#fff",
+        "menuhoverbg": "rgba(255,255,255,.18)"
       },
       "category": "menu",
       "description": "Light gri background navigasyon menüsü. Logo, sayfa linkleri ve 100px yükseklikte modern header tasarımı sunar. 6 farklı projede kullanılır: mobil ajans, üretim, sağlık, medya, inşaat ve profesyonel hizmet firmalarında. Sticky header, hover efektleri ve responsive mobil menü geçişi içerir.",
@@ -463,7 +498,10 @@
         "color": "var(--mx-site-text, #1b1b1b)",
         "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
         "minimal_design": true,
-        "social_media": false
+        "social_media": false,
+        "logo_maxh": "60px",
+        "logo_plate": false,
+        "contact_line": "auto"
       },
       "category": "footer",
       "data": [],
@@ -565,7 +603,8 @@
           "tr": "28|Yıllık deneyim|38|İhracat ülkesi|1.200+|Teslim edilen makine",
           "en": "28|Years of experience|38|Export countries|1,200+|Machines delivered",
           "ar": "28|سنة من الخبرة|38|بلدًا مصدَّرًا إليه|1.200|آلة مسلَّمة وأكثر"
-        }
+        },
+        "stil": ""
       },
       "category": "hero",
       "description": "Gradient hero: istatistikler, CTA, görsel alanı. Metinler cok dilli (tr/en); renkler --gradient--, --btn_primary_bg-- ile markaya uyumlanır. Buton URL pathnext (urunler, iletisim).",
@@ -596,7 +635,9 @@
           "tr": "İşleme, paketleme ve kaynak: ihtiyacınıza uygun seriyi seçin; teknik değerler ürünler sayfasında.",
           "en": "Machining, packaging and welding: choose the series that fits your needs; technical values are on the products page.",
           "ar": "التشغيل والتعبئة واللحام: اختر السلسلة المناسبة لاحتياجك، وتجد القيم الفنية في صفحة المنتجات."
-        }
+        },
+        "badgebg": "#2E6BFF",
+        "badgecolor": "#ffffff"
       },
       "data": [
         {
@@ -669,7 +710,8 @@
         "numbercolor": "#ffffff",
         "labelcolor": "rgba(255,255,255,.88)",
         "iconsize": "56px",
-        "iconbox": "88px"
+        "iconbox": "88px",
+        "stil": ""
       },
       "data": [
         {
@@ -747,7 +789,8 @@
           "ar": "عملية إنتاج شفافة في أربع خطوات."
         },
         "cardbg": "var(--mx-site-surface, #ffffff)",
-        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "accentText": "#ffffff"
       },
       "data": [
         {
@@ -840,7 +883,8 @@
           "en": "Products",
           "ar": "المنتجات"
         },
-        "btn2Url": "urunlerimiz"
+        "btn2Url": "urunlerimiz",
+        "stil": ""
       },
       "category": "cta",
       "description": "Harekete geçirici çağrı (CTA) şerit modülü. Gradient arka plan üzerinde başlık, açıklama ve iki buton gösterir. Buton URL'leri dil öneki olmadan pathnext (iletisim, urunler) — site routing ekler. Çok dilli metin ve animasyonlu giriş içerir.",
@@ -897,7 +941,8 @@
           "tr": "Ürünlerimiz",
           "en": "Our products",
           "ar": "منتجاتنا"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -1831,7 +1876,8 @@
           "tr": "Üretim tesisi",
           "en": "Production plant",
           "ar": "منشأة الإنتاج"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -1850,7 +1896,8 @@
         "numbercolor": "#ffffff",
         "labelcolor": "rgba(255,255,255,.88)",
         "iconsize": "56px",
-        "iconbox": "88px"
+        "iconbox": "88px",
+        "stil": ""
       },
       "data": [
         {
@@ -2424,7 +2471,8 @@
           "tr": "Kalite ve belgeler",
           "en": "Quality and certificates",
           "ar": "الجودة والشهادات"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -2454,7 +2502,9 @@
           "tr": "Tüm belgeler örnektir (DEMO); gerçek bir kuruluş tarafından verilmemiştir.",
           "en": "All documents are samples (DEMO) and were not issued by a real body.",
           "ar": "جميع الوثائق نموذجية (DEMO) ولم تصدرها جهة حقيقية."
-        }
+        },
+        "badgebg": "#2E6BFF",
+        "badgecolor": "#ffffff"
       },
       "data": [
         {
@@ -3660,7 +3710,8 @@
           "en": "Common questions about quotes, documents, shipping and service.",
           "ar": "أسئلة متكررة حول العروض والوثائق والشحن والخدمة."
         },
-        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+        "linecolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)"
       },
       "data": [
         {
@@ -3778,7 +3829,8 @@
           "tr": "Katalog",
           "en": "Catalogue",
           "ar": "الكتالوج"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -4473,7 +4525,8 @@
         "numbercolor": "#ffffff",
         "labelcolor": "rgba(255,255,255,.88)",
         "iconsize": "56px",
-        "iconbox": "88px"
+        "iconbox": "88px",
+        "stil": ""
       },
       "data": [
         {
@@ -4571,7 +4624,8 @@
           "tr": "Kariyer",
           "en": "Careers",
           "ar": "الوظائف"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -4601,7 +4655,9 @@
           "tr": "Örnek ilanlar — demo.",
           "en": "Sample listings — demo.",
           "ar": "إعلانات نموذجية — تجريبية."
-        }
+        },
+        "badgebg": "#2E6BFF",
+        "badgecolor": "#ffffff"
       },
       "data": [
         {
@@ -4685,7 +4741,9 @@
           "tr": "Güvenlik, gelişim ve günlük konfor.",
           "en": "Safety, development and everyday comfort.",
           "ar": "السلامة والتطوير والراحة اليومية."
-        }
+        },
+        "badgebg": "#2E6BFF",
+        "badgecolor": "#ffffff"
       },
       "data": [
         {
@@ -4765,7 +4823,8 @@
           "en": "Production plant",
           "ar": "منشأة الإنتاج"
         },
-        "btn2Url": "uretim-tesisi"
+        "btn2Url": "uretim-tesisi",
+        "stil": ""
       },
       "category": "cta",
       "description": "Harekete geçirici çağrı (CTA) şerit modülü. Gradient arka plan üzerinde başlık, açıklama ve iki buton gösterir. Buton URL'leri dil öneki olmadan pathnext (iletisim, urunler) — site routing ekler. Çok dilli metin ve animasyonlu giriş içerir.",
@@ -4802,7 +4861,8 @@
           "ar": "مستجدات المنتجات والمنشأة والشهادات. الأخبار افتراضية (تجريبية)."
         },
         "cardbg": "var(--mx-site-surface, #ffffff)",
-        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "accentText": "#ffffff"
       },
       "data": [
         {
@@ -4925,7 +4985,8 @@
           "tr": "Hakkımızda",
           "en": "About us",
           "ar": "من نحن"
-        }
+        },
+        "stil": ""
       },
       "category": "module",
       "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir.",
@@ -4961,7 +5022,8 @@
           "ar": "من ورشة صغيرة إلى منشأة تصدّر إلى ثلاث قارات."
         },
         "cardbg": "var(--mx-site-surface, #ffffff)",
-        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)"
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "accentText": "#ffffff"
       },
       "data": [
         {
@@ -5108,7 +5170,9 @@
           "tr": "Ürün navigasyonu",
           "en": "Product navigation",
           "ar": "تنقل المنتج"
-        }
+        },
+        "stil": "",
+        "activetext": "#fff"
       },
       "category": "page",
       "description": "Sayfa basligi, yan menu ve icerik alani. Urun detayinda breadcrumb, olcu kartlari, teklif/WhatsApp CTA, onceki/sonraki urun navigasyonu. Kategori menusu ve responsive slide-in menu.",

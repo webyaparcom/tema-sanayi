@@ -9,7 +9,7 @@
   "id": "xnzu5au0ag",
   "url": "",
   "path": "iletisim",
-  "index": 8,
+  "index": 6,
   "icon": "call",
   "desing": {
     "header": [],
@@ -39,6 +39,6 @@
     "en": "contact, address, phone",
     "ar": "اتصل بنا، عنوان، هاتف"
   },
-  "update": "2026-10-30T19:03:49.299Z",
+  "update": "2026-11-05T22:24:57.750Z",
   "date": "2026-05-19"
 }

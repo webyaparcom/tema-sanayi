@@ -1,9 +1,8 @@
-a:link,
-a:active,
-a:hover,
-a:visited {
+
+:where(a:link, a:active, a:hover, a:visited) {
+    
     text-decoration: none;
-    color: #000
+    color: inherit
 }
 
 *,
