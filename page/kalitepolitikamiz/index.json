@@ -9,7 +9,7 @@
   "path": "kalitepolitikamiz",
   "category": "",
   "text": {
-    "tr": "<h2>Kalite Politikamız</h2>\n<p>Her makine, kalite planı, boyutsal ölçüm raporu ve yük altı testinden geçmeden sevk edilmez; ISO 9001, ISO 14001 ve ISO 45001 sistemlerimiz düzenli iç tetkikle izlenir (belgeler örnektir — DEMO).</p>",
+    "tr": "<h2>Kalite Politikamız</h2>\n<p>Her makine, kalite planı, boyutsal ölçüm raporu ve yük altında testten geçmeden sevk edilmez; ISO 9001, ISO 14001 ve ISO 45001 sistemlerimiz düzenli iç tetkikle izlenir (belgeler örnektir — DEMO).</p>",
     "en": "<h2>Our quality policy</h2>\n<p>No machine ships without a quality plan, a dimensional report and a load test; our ISO 9001, ISO 14001 and ISO 45001 systems are monitored by regular internal audits (documents are samples — DEMO).</p>",
     "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>لا تُشحن أي آلة قبل أن تجتاز خطة الجودة وتقرير القياس البُعدي واختبار الحمل، وتُراقَب أنظمتنا ISO 9001 وISO 14001 وISO 45001 بتدقيق داخلي منتظم (الوثائق نموذجية — DEMO).</p>"
   },
@@ -39,6 +39,6 @@
     "en": "",
     "ar": ""
   },
-  "update": "2026-11-05T22:24:57.785Z",
+  "update": "2026-11-12T07:36:51.612Z",
   "date": "2026-05-19"
 }

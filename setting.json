@@ -50,5 +50,7 @@
     "--mx-radius-md": "6px",
     "--mx-radius-lg": "8px",
     "--mx-radius-xl": "12px"
-  }
+  },
+  "phone": "+90 342 000 00 00",
+  "email": "satis@orvakmakina.example"
 }
