@@ -314,7 +314,8 @@
     .modulexmenumobil {
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: start; /* mobil uygulama kuralı: hamburger solda (RTL'de ayna), çekmece de soldan açılır */
+      min-height: 48px;
       background-color: --menubg--;
       color: --menutext--;
       width: 100%;
@@ -345,19 +346,19 @@
       opacity: 1;
     }
 
-    /* Slide-in Menü */
+    /* Slide-in Menü: SOLDAN açılır (kural 11 Kas 2026; RTL'de aynası) */
     .modulexmenulist {
       position: fixed;
       top: 0;
-      right: 0;
-      transform: translateX(calc(100% + 16px));
+      inset-inline-start: 0;
+      transform: translateX(calc(-100% - 16px));
       width: 80%;
       max-width: 320px;
       height: 100%;
       background-color: --menubg--;
       padding: 0;
       border-radius: 0;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
       z-index: 10000000;
       display: flex;
       flex-direction: column;
@@ -365,7 +366,12 @@
       overflow-y: auto;
     }
 
-    .modulexmenulist.active {
+    [dir="rtl"] .modulexmenulist {
+      transform: translateX(calc(100% + 16px));
+    }
+
+    .modulexmenulist.active,
+    [dir="rtl"] .modulexmenulist.active {
       transform: none;
     }
 
@@ -374,6 +380,8 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      min-height: 48px;
+      min-width: 48px;
       padding: 15px;
       background-color: transparent;
       border: none;
@@ -402,6 +410,8 @@
 
     .modulexmenulist ul a {
       padding: 15px 20px;
+      min-height: 48px;
+      box-sizing: border-box;
       text-align: left;
       border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
     }
@@ -422,6 +432,14 @@
       margin: 0;
       justify-content: center;
       flex-wrap: wrap;
+    }
+
+    .modulexmenulang ul a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
     }
 
     .modulexmenulang ul li {

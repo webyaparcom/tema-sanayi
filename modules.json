@@ -240,7 +240,7 @@
           "ar": "من التصميم إلى التسليم تحت سقف واحد"
         },
         "description": {
-          "tr": "Orvak Makina; makineleri kendi tesisinde tasarlar, üretir, test eder ve devreye alır. Sipariş geldiğinde süreç açık ilerler: yazılı teklif, onaylı çizim, ölçüm raporu ve yük altı test sonucu müşteriyle paylaşılır.",
+          "tr": "Orvak Makina; makineleri kendi tesisinde tasarlar, üretir, test eder ve devreye alır. Sipariş geldiğinde süreç açık ilerler: yazılı teklif, onaylı çizim, ölçüm raporu ve yük altında test sonucu müşteriyle paylaşılır.",
           "en": "Orvak Makina designs, builds, tests and commissions its machines in its own plant. Once an order arrives the process stays open: a written quote, an approved drawing, a measurement report and the load-test result are shared with the customer.",
           "ar": "تصمّم Orvak Makina آلاتها وتصنّعها وتختبرها وتشغّلها تجريبيًا في منشأتها. وحين يصل الطلب تبقى العملية مفتوحة: يُشارَك مع العميل عرض سعر مكتوب ورسم معتمد وتقرير قياس ونتيجة اختبار الحمل."
         },
@@ -256,7 +256,7 @@
         },
         "icon2": "verified",
         "name3": {
-          "tr": "Yük altı test",
+          "tr": "Yük altında test",
           "en": "Load testing",
           "ar": "اختبار تحت الحمل"
         },
@@ -461,6 +461,12 @@
           "tr": "(yeni sekmede açılır)",
           "en": "(opens in a new tab)",
           "ar": "(يفتح في علامة تبويب جديدة)"
+        },
+        "girisHref": "",
+        "girisText": {
+          "tr": "Üye Girişi",
+          "en": "Login",
+          "ar": "تسجيل الدخول"
         }
       },
       "id": "ammbka",
@@ -501,7 +507,12 @@
         "social_media": false,
         "logo_maxh": "60px",
         "logo_plate": false,
-        "contact_line": "auto"
+        "contact_line": "auto",
+        "logoDark": "",
+        "duzen": "",
+        "slogan": "",
+        "ikinciSutun": "",
+        "iletisimNot": ""
       },
       "category": "footer",
       "data": [],
@@ -779,7 +790,7 @@
           "ar": "الإجراءات"
         },
         "title": {
-          "tr": "Teklifden sevkiyata",
+          "tr": "Tekliften sevkiyata",
           "en": "From quote to shipment",
           "ar": "من العرض إلى الشحن"
         },
@@ -827,7 +838,7 @@
             "ar": "الإنتاج والاختبار"
           },
           "text": {
-            "tr": "Makine üretilir; ölçüm raporu ve yük altı testi yapılır.",
+            "tr": "Makine üretilir; ölçüm raporu ve yük altında test yapılır.",
             "en": "The machine is built, then dimensional reports and a load test are completed.",
             "ar": "تُصنع الآلة ثم تُنجز تقارير القياس واختبار الحمل."
           }
@@ -1857,7 +1868,7 @@
         },
         "icon2": "solar_power",
         "name3": {
-          "tr": "Yük altı test",
+          "tr": "Yük altında test",
           "en": "Load testing",
           "ar": "اختبار تحت الحمل"
         },

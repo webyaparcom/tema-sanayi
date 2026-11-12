@@ -13,8 +13,8 @@
   },
   "category": "footer",
   "data": [],
-  "description": "Evrensel alt bilgi (footer) bölüm modülü. Firma logosu, telif hakları metni, iletişim bilgileri ve sosyal medya hesaplarını responsive tasarımda sunar. Sosyal liste desing.social [{ad,url}] ya da setting.social'dan üretilir; hesap yoksa basılmaz. 41 farklı projede kullanılır: tüm sektörlerden kurumsal, e-ticaret, restoran, sağlık, ajans, hizmet firmalarında. Tüm sayfa türlerinde standart footer yapısı sağlar. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (dalgalı üst kenar, ortalı yığın, bugünkü görünüm) · \"cizgili\" (üç sütun: sosyal | sayfalar | dil, ince dikey ayraçlar, telif alt şeritte) · \"ortali-sade\" (dalga yok, tek sütun ortalı, büyük daire çerçeveli sosyal ikonlar, nokta ayraçlı menü). Ayraç/çerçeve renkleri color anahtarının color-mix türevi.",
-  "version": "1.2.0",
+  "description": "Evrensel alt bilgi (footer) bölüm modülü. Firma logosu, telif hakları metni, iletişim bilgileri ve sosyal medya hesaplarını responsive tasarımda sunar. Sosyal liste desing.social [{ad,url}] ya da setting.social'dan üretilir; hesap yoksa basılmaz. 41 farklı projede kullanılır: tüm sektörlerden kurumsal, e-ticaret, restoran, sağlık, ajans, hizmet firmalarında. Tüm sayfa türlerinde standart footer yapısı sağlar. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (dalgalı üst kenar, ortalı yığın, bugünkü görünüm) · \"cizgili\" (üç sütun: sosyal | sayfalar | dil, ince dikey ayraçlar, telif alt şeritte) · \"ortali-sade\" (dalga yok, tek sütun ortalı, büyük daire çerçeveli sosyal ikonlar, nokta ayraçlı menü). Ayraç/çerçeve renkleri color anahtarının color-mix türevi. Mobil uygulama kuralı (12 Kas 2026): ≤768px'te sabit alt bar Ara · E-posta · Dil (veri varsa) + alttan açılan dil sayfası, dokunma hedefleri ≥48px.",
+  "version": "1.3.0",
   "icon": "web_asset",
   "veri": {
     "statik": true,

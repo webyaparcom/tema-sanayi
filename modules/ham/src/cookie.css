@@ -203,7 +203,10 @@ body:has(.cookie-banner) {
   }
   .cookie-reopen {
     inset-inline-start: 10px;
-    bottom: 10px;
+    /* mobil uygulama kuralı (12 Kas 2026): mobilde hedef 48px (masaüstü 44px aynen); sabit alt bar varsa (--mx-altbar-h) üstünde durur */
+    bottom: calc(10px + var(--mx-altbar-h, 0px) + env(safe-area-inset-bottom, 0px));
+    width: 48px;
+    height: 48px;
   }
   .cookie-modal {
     width: calc(100% - 24px);

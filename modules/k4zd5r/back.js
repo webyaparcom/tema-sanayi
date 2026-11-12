@@ -163,6 +163,7 @@ if (json.desing.duzen === "dort-sutun") {
     ".f3k-langs{display:flex;flex-wrap:wrap;gap:6px}",
     ".f3k-chip{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:36px;padding:0 10px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);border-radius:8px;font-size:13px;font-weight:600;letter-spacing:.04em}",
     '.f3k-chip[aria-current="true"]{background:--color--;color:--bgcolor--;border-color:--color--}',
+    "@media (max-width:768px){.f3k-links a,.f3k-legal a,.f3k-chip{min-height:48px}.f3k-chip{min-width:48px}.f3k-social a{width:48px;height:48px}}",
     "@media (max-width:600px){.f3k{padding:40px 20px 84px}.f3k-cols{grid-template-columns:1fr;gap:32px}.f3k-bottom{flex-direction:column;align-items:flex-start;margin-top:32px}}"
   ].join("");
 
@@ -171,4 +172,71 @@ if (json.desing.duzen === "dort-sutun") {
     (f3AltLink ? '<ul class="f3k-legal" aria-label="' + f3Esc(f3Tx(F3T.legal)) + '">' + f3AltLink + "</ul>" : "") +
     (f3Cip ? '<div class="f3k-langs" role="group" aria-label="' + f3Esc(f3Tx(F3T.lang)) + '">' + f3Cip + "</div>" : "") +
     "</div></div></footer><style>" + f3Stil + f3LogoCss + "</style>";
+}
+
+/* --- mobil uygulama kuralı (12 Kas 2026): mobilde sabit ALT BAR Ara · E-posta · Dil + dil için alttan açılan sayfa (footer-9 kalıbı).
+   Veri yoksa o düğme yok (uydurma kanal yok): telefon/e-posta desing.phone/email → setting.phone/email; dil düğmesi yalnız >1 dil + showlang açıkken.
+   Hiç düğme yoksa bar basılmaz, sayfa altına boşluk ayrılmaz. Masaüstünde (>768px) görünmez; CF Worker (strict) uyumlu, yalnız var/function. */
+var f3bDict = {
+  tr: { ara: "Ara", mail: "E-posta", dil: "Dil", hizli: "Hızlı erişim", kapat: "Kapat" },
+  en: { ara: "Call", mail: "Email", dil: "Language", hizli: "Quick access", kapat: "Close" },
+  de: { ara: "Anrufen", mail: "E-Mail", dil: "Sprache", hizli: "Schnellzugriff", kapat: "Schließen" },
+  es: { ara: "Llamar", mail: "Correo", dil: "Idioma", hizli: "Acceso rápido", kapat: "Cerrar" },
+  fr: { ara: "Appeler", mail: "E-mail", dil: "Langue", hizli: "Accès rapide", kapat: "Fermer" },
+  ru: { ara: "Звонок", mail: "Почта", dil: "Язык", hizli: "Быстрый доступ", kapat: "Закрыть" },
+  ar: { ara: "اتصال", mail: "بريد", dil: "اللغة", hizli: "وصول سريع", kapat: "إغلاق" }
+};
+var f3bT = f3bDict[json.lang] || f3bDict.en;
+function f3bEsc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function f3bTx(v) {
+  if (v == null) return "";
+  if (typeof v !== "object") return String(v);
+  return v[json.lang] != null ? String(v[json.lang]) : (v.tr != null ? String(v.tr) : (v.en != null ? String(v.en) : ""));
+}
+var f3bAyar = (webmakerdata && webmakerdata.setting) || {};
+var f3bTel = (f3bTx(json.desing && json.desing.phone).trim()) || (typeof f3bAyar.phone === "string" ? f3bAyar.phone.trim() : "");
+var f3bMail = (f3bTx(json.desing && json.desing.email).trim()) || (typeof f3bAyar.email === "string" ? f3bAyar.email.trim() : "");
+/* örnek/yer tutucu adres (example.*) gerçek kanal değildir: bara girmez */
+if (/@example\./i.test(f3bMail)) f3bMail = "";
+var f3bDilSayi = 0;
+if (f3bAyar.langs && typeof f3bAyar.langs === "object") { for (var f3bLk in f3bAyar.langs) { if (f3bAyar.langs[f3bLk]) f3bDilSayi++; } }
+var f3bLangLi = "";
+if (typeof wmLangHtml === "function") { try { f3bLangLi = wmLangHtml({ style: "text" }) || ""; f3bDilSayi = f3bLangLi ? 2 : 0; } catch (e) { /* sayım yedeği */ } }
+var f3bDilAcik = f3bDilSayi > 1 && !(json.desing && (json.desing.showlang === false || json.desing.showlang === "false"));
+var f3bDugme = "";
+if (f3bTel) f3bDugme += '<a href="tel:' + f3bTel.replace(/[^+\d]/g, "") + '" dir="ltr"><span class="material-symbols-outlined" aria-hidden="true">call</span>' + f3bEsc(f3bT.ara) + "</a>";
+if (f3bMail) f3bDugme += '<a href="mailto:' + f3bEsc(f3bMail) + '"><span class="material-symbols-outlined" aria-hidden="true">mail</span>' + f3bEsc(f3bT.mail) + "</a>";
+if (f3bDilAcik) f3bDugme += '<button type="button" class="modulex-f3__bar-dil" aria-haspopup="dialog" aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">language</span>' + f3bEsc(f3bT.dil) + " · " + f3bEsc(String(json.lang || "").toUpperCase()) + "</button>";
+if (f3bDugme) {
+  html += '<nav class="modulex-f3__bar" aria-label="' + f3bEsc(f3bT.hizli) + '">' + f3bDugme + "</nav>" +
+    (f3bDilAcik ? '<div class="modulex-f3__sheet" hidden><div class="modulex-f3__sheet-ic" role="dialog" aria-modal="true" aria-label="' + f3bEsc(f3bT.dil) + '"><div class="modulex-f3__sheet-ust"><strong>' + f3bEsc(f3bT.dil) + '</strong><button type="button" class="modulex-f3__sheet-kapat" aria-label="' + f3bEsc(f3bT.kapat) + '"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div><div class="modulex-f3__sheet-liste">' + (f3bLangLi ? "<ul>" + f3bLangLi + "</ul>" : "") + '</div></div></div>' : "") +
+    '<style>' +
+    '.modulex-f3__bar,.modulex-f3__sheet{display:none}' +
+    '@media (max-width:768px){' +
+    ':root{--mx-altbar-h:56px}' +
+    'body{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px))}' +
+    '.modulex-f3__bar{display:flex;position:fixed;inset-inline:0;bottom:0;z-index:9990;background:--bgcolor--;border-top:1px solid color-mix(in srgb,--color-- 35%,transparent);box-shadow:0 -6px 20px rgba(0,0,0,.22);padding-bottom:env(safe-area-inset-bottom,0)}' +
+    '.modulex-f3__bar a,.modulex-f3__bar-dil{flex:1 1 0;min-width:0;min-height:56px;display:inline-flex;align-items:center;justify-content:center;gap:8px;color:--color--;text-decoration:none;font:inherit;font-weight:600;font-size:15px;border:0;background:transparent;cursor:pointer;padding:0 8px}' +
+    '.modulex-f3__bar>*+*{border-inline-start:1px solid color-mix(in srgb,--color-- 25%,transparent)}' +
+    '.modulex-f3__bar .material-symbols-outlined,.modulex-f3__sheet .material-symbols-outlined{font-size:22px;line-height:1}' +
+    '.modulex-f3__bar a:focus-visible,.modulex-f3__bar-dil:focus-visible,.modulex-f3__sheet-kapat:focus-visible,.modulex-f3__sheet a:focus-visible{outline:2px solid currentColor;outline-offset:-4px}' +
+    '.modulex-f3__sheet:not([hidden]){display:flex;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.55);align-items:flex-end}' +
+    '.modulex-f3__sheet-ic{width:100%;max-height:70vh;overflow-y:auto;background:--bgcolor--;color:--color--;border-radius:18px 18px 0 0;padding:8px 16px calc(16px + env(safe-area-inset-bottom,0px))}' +
+    '.modulex-f3__sheet-ust{display:flex;align-items:center;justify-content:space-between;min-height:48px;margin-bottom:8px;font-size:16px}' +
+    '.modulex-f3__sheet-kapat{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;color:inherit;cursor:pointer;border-radius:50%}' +
+    '.modulex-f3__sheet-liste{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.modulex-f3__sheet-liste ul{display:contents}' +
+    '.modulex-f3__sheet-liste a{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:48px;min-height:48px;padding:0 10px;border:1px solid color-mix(in srgb,--color-- 40%,transparent);border-radius:12px;font-weight:600;color:--color--;text-decoration:none;background:transparent}' +
+    '.modulex-f3__sheet-liste li.wm-lang-active a,.modulex-f3__sheet-liste a[aria-current]{background:--color--;color:--bgcolor--;border-color:--color--}' +
+    '.modulex-f3__sheet-liste li{list-style:none;margin:0;padding:0;display:contents}' +
+    '}' +
+    '@media (prefers-reduced-motion:reduce){.modulex-f3__bar,.modulex-f3__sheet{transition:none!important;animation:none!important}}' +
+    '</style>' +
+    (f3bDilAcik ? '<script>(function(){var b=document.querySelector(".modulex-f3__bar-dil"),sh=document.querySelector(".modulex-f3__sheet");if(!b||!sh){return;}' +
+      'function kapa(){sh.hidden=true;b.setAttribute("aria-expanded","false");b.focus();}' +
+      'b.addEventListener("click",function(){var ic=sh.querySelector(".modulex-f3__sheet-liste");' +
+      'if(ic&&!ic.firstChild){var kaynak=document.querySelector(".wm-langbar ul")||document.querySelector("[class*=langs]");' +
+      'if(kaynak){var kopya=kaynak.cloneNode(true);ic.appendChild(kopya);}else{var linkler=document.querySelectorAll("a[hreflang]");var ul=document.createElement("ul");for(var i=0;i<linkler.length;i++){if(sh.contains(linkler[i])){continue;}var li=document.createElement("li");li.appendChild(linkler[i].cloneNode(true));ul.appendChild(li);}if(ul.firstChild){ic.appendChild(ul);}else{b.hidden=true;return;}}}' +
+      'var ac=sh.hidden;sh.hidden=!ac;b.setAttribute("aria-expanded",ac?"true":"false");if(ac){var k=sh.querySelector(".modulex-f3__sheet-kapat");if(k){k.focus();}}});' +
+      'sh.addEventListener("click",function(e){if(e.target===sh||(e.target.closest&&e.target.closest(".modulex-f3__sheet-kapat"))){kapa();}});' +
+      'document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!sh.hidden){kapa();}});})();<\/script>' : "");
 }

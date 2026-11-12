@@ -342,4 +342,42 @@
       transform: none;
     }
   }
+
+  /* Mobil uygulama kuralı (12 Kas 2026): dokunma hedefleri >= 48px (yalnız <=768px; masaüstü görünümü aynı) */
+  @media (max-width: 768px) {
+    .menu__link {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 8px;
+      margin: 0 4px;
+    }
+
+    .social-icon__link {
+      min-width: 48px;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 4px;
+    }
+
+    .footer .wm-langbar li a {
+      min-width: 48px;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    [data-stil="cizgili"] .menu__link,
+    [data-stil="ortali-sade"] .menu__link {
+      min-height: 48px;
+    }
+
+    [data-stil="cizgili"] .social-icon__link {
+      width: 48px;
+      height: 48px;
+    }
+  }
 </style>

@@ -167,4 +167,22 @@
       transition: none !important;
     }
   }
+
+  /* Mobil uygulama kuralı (12 Kas 2026): dokunma hedefleri >= 48px (yalnız <=768px) */
+  @media (max-width: 768px) {
+    .modulex-menu_link,
+    .footer-contact a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+    }
+
+    .footer .wm-langbar li a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+    }
+  }
 </style>
