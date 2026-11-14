@@ -1,7 +1,7 @@
 {
   "name": "Demo Bandı",
-  "description": "Demo sitelerin her sayfasının üstünde duran, kapatılamaz bilgi şeridi: «Bu bir demo sitedir» uyarısı ve «Bu temayı iste» bağlantısı. Sayfanın en üstüne yapışır (position:sticky), sabit menüleri bant yüksekliği kadar aşağı iter (--mx-demo-bandi-h). Üç dil (TR/EN/AR), Arapçada RTL, mobilde iki satıra sarar. İsteğe bağlı üye girişi bağlantısı (v1.1): girisHref (dil sözlüğü ya da tek adres) + girisText dolu ise bandın sonunda çerçeveli hap olarak çizilir; boşsa hiç çizilmez.",
-  "version": "1.1.0",
+  "description": "Demo sitelerin her sayfasının üstünde duran, kapatılamaz bilgi şeridi: «Bu bir demo sitedir» uyarısı ve «Bu temayı iste» bağlantısı. Sayfanın en üstüne yapışır (position:sticky), sabit menüleri bant yüksekliği kadar aşağı iter (--mx-demo-bandi-h). Üç dil (TR/EN/AR), Arapçada RTL, mobilde iki satıra sarar. İsteğe bağlı üye girişi bağlantısı (v1.1): girisHref (dil sözlüğü ya da tek adres) + girisText dolu ise bandın sonunda çerçeveli hap olarak çizilir; boşsa hiç çizilmez. Tema hatası bildir (v1.2): hataBildir (öntanımlı Worker ucu https://webyapar.com/api/portal/tema-hata.js) tek <script defer src> olarak basılır — düğmeyi yalnız süper admin görür; boş bırakılırsa betik çizilmez.",
+  "version": "1.2.0",
   "icon": "info",
   "category": "demo",
   "tags": ["demo", "bant", "uyarı", "banner", "rtl"],
@@ -36,7 +36,8 @@
       "tr": "Üye Girişi",
       "en": "Login",
       "ar": "تسجيل الدخول"
-    }
+    },
+    "hataBildir": "https://webyapar.com/api/portal/tema-hata.js"
   },
   "veri": {
     "statik": true,

@@ -61,3 +61,13 @@ if (dbGirisHam && dbGirisAd && !/^javascript:/i.test(dbGirisHam)) {
     '<span class="modulex-db-giris-yazi">' + dbEsc(dbGirisAd) + "</span></a>";
 }
 dbSet("dbGiris", dbGiris);
+/* Tema hatasi bildir (v1.2): desing.hataBildir = dugme betiginin adresi (ontanimli Worker ucu). Alan yoksa (v1.1 kaydi) ontanimli;
+   "" → betik hic cizilmez. Yalniz https:// mutlak adres kabul edilir (javascript:, goreli, http → cizilmez).
+   Betik yalniz super admin oturumunda gorunur, digerlerinde DOM izi birakmaz — kaynak projeler/webyapar/web/cf-worker/src/tema-hata*.js. */
+var DB_HATA_ONTANIM = "https://webyapar.com/api/portal/tema-hata.js";
+var dbHataHam = dbDes.hataBildir === undefined || dbDes.hataBildir === null ? DB_HATA_ONTANIM : String(dbDes.hataBildir).trim();
+var dbHataBetik = "";
+if (/^https:\/\/[^\s"'<>\\]+$/i.test(dbHataHam)) {
+  dbHataBetik = '<script defer src="' + dbEsc(dbHataHam) + '"></script>';
+}
+dbSet("dbHataBetik", dbHataBetik);

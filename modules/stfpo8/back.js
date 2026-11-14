@@ -388,6 +388,20 @@ if (descImgFile === "" && page["id"] && isProductDetail) {
 
 var hasDescImage = descImgFile !== "";
 
+/* 13 Kas 2026 (hanbroscargo /tr/teklif-al/): sayfa görseli page/<id>/ altında yoksa kırık <img> basılmaz — sitenin img/
+   klasöründe aynı ad varsa o kullanılır (logo.png, icon.png gibi site görselleri), yoksa görsel bloğu çizilmez.
+   Disk bilgisi yoksa (Worker/dinamik render: webDir boş, görseller R2'de) davranış değişmez. */
+let descImgSrc = hasDescImage ? `/page/${page["id"]}/${descImgFile}` : "";
+const pd5WebDir = typeof webDir === "string" ? webDir : "";
+const pd5Fs = typeof fsSync !== "undefined" ? fsSync : null;
+if (hasDescImage && pd5WebDir && typeof pd5Fs?.existsSync === "function" && typeof path !== "undefined" && !/^(https?:)?\/\//i.test(descImgFile) && !descImgFile.includes("..")) {
+  const sayfaKlasoru = path.join(pd5WebDir, "page", String(page["id"] ?? ""));
+  if (pd5Fs.existsSync(sayfaKlasoru) && !pd5Fs.existsSync(path.join(sayfaKlasoru, descImgFile))) {
+    descImgSrc = pd5Fs.existsSync(path.join(pd5WebDir, "img", descImgFile)) ? `/img/${descImgFile}` : "";
+    hasDescImage = descImgSrc !== "";
+  }
+}
+
 
 
 var bgFile = "";
@@ -747,13 +761,9 @@ if (isProductDetail && (hasDescImage || leadHtml || specsHtml || ctaHtml)) {
 
       '<div class="modulex-pd5-img-wrap">' +
 
-      '<img src="/page/' +
+      '<img src="' +
 
-      page["id"] +
-
-      "/" +
-
-      descImgFile +
+      descImgSrc +
 
       '?v={{random}}" alt="' +
 
@@ -793,13 +803,9 @@ if (isProductDetail && (hasDescImage || leadHtml || specsHtml || ctaHtml)) {
 
     '<div class="modulex-desc-body">' +
 
-    '<img src="/page/' +
+    '<img src="' +
 
-    page["id"] +
-
-    "/" +
-
-    descImgFile +
+    descImgSrc +
 
     '?v={{random}}" width="100%" alt="' +
 
