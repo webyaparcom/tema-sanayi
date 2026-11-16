@@ -1,188 +1,92 @@
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-logo">
-      <img src="/img/{{logo}}" height="60"   alt="{{web-name}} Logo" />
-    </div>
-    <ul class="menu">
-      {{html}}
-    </ul>
-  </div>
-  {{contactline}}
-  <div class="footer-bottom">
-    {{langbar}}
-    <p>&copy; {{web-name}} 2026. @all-rights@.</p>
+<footer class="modulex-alt-merkez{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-alt-merkez-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
 </footer>
+
 <style>
-  .footer {
-    background-color: --bgcolor--;
-    color: --color-- !important;
-    padding: 20px;
-    border-top: 5px solid --bordercolor--;
-  }
+  /* alt-merkez — Sütun yok — kısa siteler için dikey, simetrik ve hafif bir kapanış; bilgi satır satır akar. */
+  .modulex-alt-merkez { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-alt-merkez *, .modulex-alt-merkez *::before, .modulex-alt-merkez *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-alt-merkez :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-alt-merkez :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-alt-merkez :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-alt-merkez :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-alt-merkez img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-alt-merkez) img { height: auto; }
+  .modulex-alt-merkez [hidden] { display: none !important; }
+  .modulex-alt-merkez :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-alt-merkez :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-alt-merkez-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-alt-merkez-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-alt-merkez--bassiz .modulex-alt-merkez-bas { display: none; }
+  .modulex-alt-merkez-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-alt-merkez-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-alt-merkez-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-alt-merkez-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-alt-merkez-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-alt-merkez-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-merkez-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-alt-merkez-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-alt-merkez-dugme .material-symbols-outlined { font-size: 20px; }
 
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  .modulex-alt-merkez-bag { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+  .modulex-alt-merkez-bag:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-alt-merkez-bag[aria-current="page"] { color: --accentInk--; font-weight: 700; }
+  .modulex-alt-merkez-logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+  .modulex-alt-merkez-logo img { width: auto; max-height: --logoH--; }
+  .modulex-alt-merkez-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-alt-merkez-bbaslik { margin-block-end: 14px; color: --accentInk--; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-alt-merkez-sayfalar, .modulex-alt-merkez-baglantilar, .modulex-alt-merkez-iletisim, .modulex-alt-merkez-yasal { display: grid; gap: 9px; }
+  .modulex-alt-merkez-il { display: flex; align-items: flex-start; gap: 10px; }
+  .modulex-alt-merkez-il-ic { display: grid; gap: 2px; }
+  .modulex-alt-merkez-il-etiket { color: --muted--; font-size: 0.8rem; }
+  .modulex-alt-merkez-il-ikon { flex: none; color: --accentInk--; font-size: 20px; }
+  .modulex-alt-merkez-saatler { display: grid; gap: 6px; }
+  .modulex-alt-merkez-saat { display: flex; justify-content: space-between; gap: 16px; }
+  .modulex-alt-merkez-saat dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .modulex-alt-merkez-sosyal { display: flex; flex-wrap: wrap; gap: 10px; }
+  .modulex-alt-merkez-sosyal-a { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid --cizgi--; border-radius: 50%; color: inherit; font-size: 18px; transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+  .modulex-alt-merkez-sosyal-a:hover { border-color: --accent--; background: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-alt-merkez-hakkinda { max-width: 46ch; color: --muted--; }
+  .modulex-alt-merkez-telif { display: flex; flex-wrap: wrap; gap: 4px 14px; color: --muted--; font-size: 0.9rem; }
+  .modulex-alt-merkez-dil:empty { display: none; }
+  .modulex-alt-merkez-yukari { display: inline-grid; place-items: center; flex: none; width: 46px; height: 46px; border-radius: 50%; background: --accent--; color: --accentText--; text-decoration: none; transition: transform 0.25s ease; }
+  .modulex-alt-merkez-yukari:hover { transform: translateY(-3px); }
+  .modulex-alt-merkez-bulten { display: grid; gap: 8px; }
+  .modulex-alt-merkez-nl-etiket { font-size: 0.9rem; font-weight: 700; }
+  .modulex-alt-merkez-nl-satir { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-alt-merkez-nl-girdi { flex: 1 1 200px; min-width: 0; min-height: 48px; padding: 10px 18px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; color: --text--; font: inherit; }
+  .modulex-alt-merkez-nl-dugme { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 10px 22px; border: 0; border-radius: 999px; background: --accent--; color: --accentText--; font: inherit; font-weight: 700; transition: transform 0.2s ease; }
+  .modulex-alt-merkez-nl-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-merkez-nl-dugme .material-symbols-outlined { font-size: 18px; }
+  .modulex-alt-merkez-nl-durum:empty { display: none; }
+  .modulex-alt-merkez-nl-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  .modulex-alt-merkez-nl-metin { color: --muted--; }
 
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
+  .modulex-alt-merkez-yigin { display: grid; justify-items: center; gap: 20px; text-align: center; }
+  .modulex-alt-merkez-hakkinda { margin-inline: auto; }
+  .modulex-alt-merkez-satir, .modulex-alt-merkez-satir2, .modulex-alt-merkez-satir3 { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0; }
+  .modulex-alt-merkez-satir li, .modulex-alt-merkez-satir2 li { display: inline-flex; align-items: center; }
+  .modulex-alt-merkez-satir li + li::before, .modulex-alt-merkez-satir2 li + li::before { content: ""; width: 4px; height: 4px; margin-inline: 14px; border-radius: 50%; background: --accent--; }
+  .modulex-alt-merkez-satir { font-size: 1.05rem; font-weight: 700; }
+  .modulex-alt-merkez-satir2 { color: --muted--; font-size: 0.95rem; }
+  .modulex-alt-merkez-satir3 { gap: 8px 24px; }
+  .modulex-alt-merkez-satir3 .modulex-alt-merkez-il { align-items: center; }
+  .modulex-alt-merkez-cizgi { width: min(320px, 70%); height: 1px; background: --cizgi--; transition: width 0.4s ease; }
+  .modulex-alt-merkez-yigin:hover .modulex-alt-merkez-cizgi { width: min(420px, 90%); }
+  .modulex-alt-merkez-telif { justify-content: center; }
 
-  /* 31 Eki 2026: logo oranı — HTML height="60" yalnız oran ipucudur, CSS ezer.
-     Eski `max-width:150px` + sabit yükseklik geniş logoyu 150×60'a basıyordu (24 tema + webyapar + aaroots). */
-  .footer-logo img {
-    display: block;
-    height: auto;
-    width: auto;
-    max-height: --logo_maxh--;
-    max-width: 180px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-
-  /* logo_plate:true → koyu logo koyu zeminde okunur (beyaz plaka; sabit beyaz plaka bilinçli: logo rengi için) */
-  .footer-logo.footer-logo--plate {
-    background: #fff;
-    border-radius: 8px;
-    padding: 6px 12px;
-  }
-
-  .menu {
-    display: flex;
-    flex-wrap: wrap; /* G3: 7+ sayfalı menü 390 px'te taşıyordu (yatay kaydırma) */
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .modulex-menu__item {
-    margin: 0 15px;
-  }
-
-  .modulex-menu_link {
-    color: --color-- !important;
-  }
-
-  .modulex-menu_link:hover {
-    color: var(--mx-site-primary, #2980b9);
-    text-decoration: underline;
-  }
-
-  .modulex-menu__link {
-    color: var(--mx-site-text, #ecf0f1);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  /* contact_line: tel · e-posta (yalnız setting.phone / setting.email varsa back.js basar) */
-  .footer-contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px 10px;
-    max-width: 1200px;
-    margin: 16px auto 0;
-    font-size: 14px;
-    opacity: 0.9;
-  }
-
-  .footer-contact a {
-    color: --color--;
-    text-decoration: none;
-  }
-
-  .footer-contact a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-contact .footer-contact__sep {
-    opacity: 0.6;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #7f8c8d;
-    border-top-color: color-mix(in srgb, var(--mx-site-text, #7f8c8d) 35%, transparent);
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px; /* 31 Eki 2026: mobilde dil çubuğu ile telif üst üste biniyordu */
-  }
-
-  .footer-bottom [class*="lang"] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .footer-bottom p {
-    margin: 0;
-    opacity: 0.75;
-  }
-
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-merkez :is(.modulex-alt-merkez-baslik, .modulex-alt-merkez-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-merkez-baslik { line-height: 1.35; }
   @media (max-width: 768px) {
-    .footer-top {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .menu {
-      margin-top: 20px;
-    }
-
-    .modulex-menu__item {
-      margin: 6px 10px;
-    }
-
-    .footer-bottom {
-      gap: 14px;
-    }
+    .modulex-alt-merkez { padding-inline: 16px; }
   }
-
-  /* W2: mobil tasma kontrolu */
-  @media (max-width: 768px) {
-    [class*="modulex"] {
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-  }
-
-  /* W2: erisilebilirlik — animasyon kapatma */
   @media (prefers-reduced-motion: reduce) {
-    [class*="modulex"],
-    [class*="modulex"] * {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-
-  /* Mobil uygulama kuralı (12 Kas 2026): dokunma hedefleri >= 48px (yalnız <=768px) */
-  @media (max-width: 768px) {
-    .modulex-menu_link,
-    .footer-contact a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 48px;
-    }
-
-    .footer .wm-langbar li a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 48px;
-      min-height: 48px;
-    }
+    .modulex-alt-merkez *, .modulex-alt-merkez *::before, .modulex-alt-merkez *::after { animation: none !important; transition: none !important; }
   }
 </style>

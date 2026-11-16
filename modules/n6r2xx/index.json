@@ -1,58 +1,54 @@
 {
-  "name": "Tanıtım Modülü",
-  "local": "body",
-  "desing": {
-    "stil": "",
-    "name": {
-      "tr": "Bizi Tanıyın",
-      "en": "About Us",
-      "ar": "تعرف علينا"
-    },
-    "description": {
-      "tr": "Yılların deneyimi ve uzman kadromuzla kurumsal çözümler sunuyoruz. Kalite, güven ve sürdürülebilir büyüme odaklı çalışıyoruz.",
-      "en": "With years of experience and an expert team we deliver corporate solutions focused on quality, trust and sustainable growth.",
-      "ar": "نقدم حلولاً مؤسسية بخبرة سنوات وفريق متخصص. نعمل بتركيز على الجودة والثقة والنمو المستدام."
-    },
-    "name2": {
-      "tr": "Vizyonumuz",
-      "en": "Our Vision",
-      "ar": "رؤيتنا"
-    },
-    "spot2": {
-      "tr": "Sektörümüzde yenilikçi yaklaşımlarla öncü olmak.",
-      "en": "To lead our industry with innovative approaches.",
-      "ar": "أن نكون روّاداً في قطاعنا بمقاربات مبتكرة."
-    },
-    "icon2": "visibility",
-    "name3": {
-      "tr": "Misyonumuz",
-      "en": "Our Mission",
-      "ar": "مهمتنا"
-    },
-    "spot3": {
-      "tr": "İhtiyaç duyulan çözümleri hızlı ve şeffaf sunmak.",
-      "en": "Deliver needed solutions quickly and transparently.",
-      "ar": "تقديم الحلول المطلوبة بسرعة وشفافية."
-    },
-    "icon3": "flag",
-    "img": "index.jpg",
-    "bgcolor": "#1e3046",
-    "fontcolor": "#fff",
-    "margintop": "20",
-    "marginbotton": "20",
-    "title": {
-      "tr": "Kurumsal",
-      "en": "Corporate",
-      "ar": "مؤسسي"
-    }
-  },
+  "name": "Tanıtım Renk Blok — yarı vurgu bloğu, yarı metin",
+  "description": "Sol yarı tam yükseklikte vurgu renkli blok: üst etiket ve dev başlık; sağ yarı açık zeminde metin, maddeler, CTA. Görsel blokta silik doku olur. Renk bloğu kompozisyonu: başlık renkli bir panelin içine taşınır, metin karşı panelde (iki tonlu bölme). Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık ve metin yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "contrast",
   "category": "module",
-  "description": "Kurumsal tanıtım ve hakkımızda modülü. Firma tanıtımı, vizyon, misyon metinlerini görsel ile birlikte sunar. Ana sayfa şeridi ve temalar için varsayılan cok dilli metinler. İki kolonlu responsive tasarım, W2 animasyon ve icon desteği içerir. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (beyaz çerçeveli yuvarlak görsel, bugünkü görünüm) · \"yuzen-gorsel\" (dik kart görsel bandın dışına taşar, gölgeli, hafif eğik) · \"cerceve-ofset\" (kare görsel, arkasında kaymış primary renk çerçeve) · \"ikon-liste\" (yatay görsel + vizyon/misyon ikonlu madde listesi; ikon icon2/icon3). Bant zemini/yazısı bgcolor/fontcolor çifti kalır; eklenen renkler yalnız var(--mx-site-*) token.",
-  "version": "1.2.0",
-  "icon": "business",
+  "subCategory": "color-block",
+  "tags": [
+    "module",
+    "color-block",
+    "split",
+    "two-tone",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "img": "",
+    "img2": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "cta2_ad": "",
+    "cta2_url": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "desing/data",
+    "alanlar": {
+      "ikon": "madde ikonu (Material Symbols)",
+      "baslik": "madde başlığı (dil sözlüğü, zorunlu)",
+      "metin": "madde metni (dil sözlüğü)",
+      "url": "madde bağlantısı"
+    }
   }
 }

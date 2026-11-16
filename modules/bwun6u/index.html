@@ -1,393 +1,64 @@
-<div class="modulex-out" data-stil="--stil--">
-  <div class="modulex">
-    <div class="modulex-left">
-      <img
-        src="/img/{{id}}/{{img}}?v={{random}}"
-        class="modulex-left-img"
-        alt="{{title}}"
-      />
-    </div>
-    <div class="modulex-right">
-      <div class="modulex-right-body">
-        <div class="modulex-right-body-name">{{name}}</div>
-        <div class="modulex-right-body-spot">{{description}}</div>
-        <div class="modulex-right-body-chile">
-          <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{icon2html}}{{name2}}</div>
-            <div class="modulex-right-body-chile-row-spot">{{spot2}}</div>
-          </div>
-          <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{icon3html}}{{name3}}</div>
-            <div class="modulex-right-body-chile-row-spot">{{spot3}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section class="modulex-tanitim-renk-blok{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-tanitim-renk-blok-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
-</div>
+</section>
+
 <style>
-  .modulex-out {
-    background-color: --bgcolor--;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: --fontcolor--;
-    margin: --margintop--px 0px --marginbotton--px 0px;
-    float: left;
-  }
+  /* tanitim-renk-blok — Renk bloğu kompozisyonu: başlık renkli bir panelin içine taşınır, metin karşı panelde (iki tonlu bölme). */
+  .modulex-tanitim-renk-blok { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-tanitim-renk-blok *, .modulex-tanitim-renk-blok *::before, .modulex-tanitim-renk-blok *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-tanitim-renk-blok :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-tanitim-renk-blok :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-tanitim-renk-blok :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-tanitim-renk-blok :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-tanitim-renk-blok img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-tanitim-renk-blok) img { height: auto; }
+  .modulex-tanitim-renk-blok [hidden] { display: none !important; }
+  .modulex-tanitim-renk-blok :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-tanitim-renk-blok :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-tanitim-renk-blok-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-tanitim-renk-blok-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-tanitim-renk-blok--bassiz .modulex-tanitim-renk-blok-bas { display: none; }
+  .modulex-tanitim-renk-blok-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-tanitim-renk-blok-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-tanitim-renk-blok-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-tanitim-renk-blok-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-tanitim-renk-blok-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-tanitim-renk-blok-dugme:hover { transform: translateY(-2px); }
+  .modulex-tanitim-renk-blok-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-tanitim-renk-blok-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-tanitim-renk-blok-dugme .material-symbols-outlined { font-size: 20px; }
 
-  .modulex-right-body-chile {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .modulex-right-body-chile-row {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    border: solid;
-    border-style: dashed;
-    border-width: 0px 0px 0px 5px;
-    padding-left: 10px;
-  }
-
-  .modulex-right-body-chile-row-name {
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  .modulex-right-body-chile-row-spot {
-    font-size: 18px;
-  }
-
-  .modulex-right-body {
-    width: 100%;
-    margin-left: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .modulex-right-body-name {
-    font-size: 28px;
-    font-weight: 500;
-  }
-
-  .modulex-right-body-spot {
-    font-size: 18px;
-  }
-
-  .modulex {
-    width: var(--max);
-    display: flex;
-    flex-direction: row;
-    min-height: 400px;
-    float: left;
-  }
-
-  .modulex-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modulex-left {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-  }
-
-  .modulex-left-img {
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    width: 300px;
-    background-color: bisque;
-    margin-right: -150px;
-    border: solid 15px #fff;
-    box-shadow: 0 4px 40px rgba(29, 27, 76, 0.32);
-  }
-
-  @media screen and (max-width: 1024px) {
-    .modulex {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      min-height: 400px;
-      float: left;
-      padding: 15px 0px 15px 0px;
-    }
-
-    .modulex-left-img {
-      width: calc(var(--max) / 2);
-      max-width: 200px;
-      margin-right: 0px;
-      float: left;
-    }
-
-    .modulex-right-body {
-      margin-left: 0;
-      padding: 10px;
-    }
-
-    .modulex-left {
-      justify-content: center;
-      background-color: --bgcolor--;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .modulex {
-      width: var(--max);
-      display: flex;
-      flex-direction: row;
-      min-height: 400px;
-    }
-
-    .modulex-right-body-chile-row {
-      flex: 1;
-    }
-
-    .modulex-right {
-      flex: 5;
-    }
-
-    .modulex-left {
-      flex: 1;
-    }
-  }
-
-  /* W2 — animasyon, mobil, erisilebilirlik */
-  @keyframes modulexW2Enter {
-    from { opacity: 0.98; }
-    to { opacity: 1; }
-  }
-
-  [class*="modulex"] {
-    box-sizing: border-box;
-    animation: modulexW2Enter 0.3s ease;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-
-  a, button, [role="button"], input[type="submit"], input[type="button"] {
-    cursor: pointer;
-  }
-
+  .modulex-tanitim-renk-blok-duzen { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); overflow: hidden; border-radius: calc(--yuvarlak-- * 1.4); background: --kartBg--; }
+  .modulex-tanitim-renk-blok-blok { position: relative; display: grid; align-content: end; gap: 14px; min-height: 460px; padding: clamp(28px, 5vw, 64px); background: --vurguBg--; color: --vurguText--; isolation: isolate; }
+  .modulex-tanitim-renk-blok-blok .modulex-tanitim-renk-blok-ust { color: inherit; }
+  .modulex-tanitim-renk-blok-doku { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; opacity: 0.16; mix-blend-mode: luminosity; transition: opacity 0.5s ease; }
+  .modulex-tanitim-renk-blok-blok:hover .modulex-tanitim-renk-blok-doku { opacity: 0.26; }
+  .modulex-tanitim-renk-blok-baslik { font-size: clamp(2.2rem, 4.6vw, 3.8rem); }
+  .modulex-tanitim-renk-blok-yazi { display: grid; align-content: center; gap: 20px; padding: clamp(28px, 5vw, 64px); }
+  .modulex-tanitim-renk-blok-maddeler { display: grid; gap: 14px; }
+  .modulex-tanitim-renk-blok-madde { display: flex; gap: 12px; }
+  .modulex-tanitim-renk-blok-mikon { flex: none; color: --accentInk--; font-size: 24px; }
   @media (max-width: 768px) {
-    [class*="modulex"] {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+    .modulex-tanitim-renk-blok-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-tanitim-renk-blok-blok { min-height: 260px; }
   }
+  .modulex-tanitim-renk-blok-bag { color: inherit; text-decoration: none; }
+  .modulex-tanitim-renk-blok-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-tanitim-renk-blok-mbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-tanitim-renk-blok-mmetin { color: --muted--; font-size: 0.95rem; }
 
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-tanitim-renk-blok :is(.modulex-tanitim-renk-blok-baslik, .modulex-tanitim-renk-blok-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-tanitim-renk-blok-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-tanitim-renk-blok { padding-inline: 16px; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    [class*="modulex"] {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-
-  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil. "" = klasik (yuvarlak görsel, yukarıdaki kurallar aynen).
-     Bant zemini/yazısı --bgcolor--/--fontcolor-- çifti kalır; eklenen renkler yalnız var(--mx-site-*) token ya da currentColor türevi. ---- */
-
-  /* ortak: üç varyantta da beyaz daire çerçevesi yok, görsel bandın dışına/önüne çıkar */
-  [data-stil="yuzen-gorsel"] .modulex-left,
-  [data-stil="cerceve-ofset"] .modulex-left,
-  [data-stil="ikon-liste"] .modulex-left {
-    background-color: transparent;
-    justify-content: center;
-    flex: 2;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-right-body,
-  [data-stil="cerceve-ofset"] .modulex-right-body,
-  [data-stil="ikon-liste"] .modulex-right-body {
-    margin-left: 0;
-    margin-inline-start: 40px;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-left-img,
-  [data-stil="cerceve-ofset"] .modulex-left-img,
-  [data-stil="ikon-liste"] .modulex-left-img {
-    border: 0;
-    margin-right: 0;
-    object-fit: cover;
-    background-color: var(--mx-site-surface, #fff);
-  }
-
-  /* yuzen-gorsel — dikey kart, bandın üstüne/altına taşar, hafif eğik, hover'da düzelir */
-  [data-stil="yuzen-gorsel"] .modulex {
-    min-height: 360px;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-left-img {
-    width: min(340px, 100%);
-    aspect-ratio: 4 / 5;
-    border-radius: var(--mx-radius-xl, 28px);
-    margin: -56px 0;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
-    transform: rotate(-2.5deg);
-    transition: transform 0.3s ease;
-  }
-
-  [data-stil="yuzen-gorsel"]:hover .modulex-left-img {
-    transform: rotate(0deg);
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-right-body-chile-row {
-    border-style: solid;
-    border-color: var(--mx-site-accent, var(--mx-site-primary, #DE6D26));
-    border-width: 0 0 0 3px;
-    border-inline-start-width: 3px;
-    border-inline-end-width: 0;
-  }
-
-  /* cerceve-ofset — kare görsel, arkasında kaymış dolu renk çerçeve (offset gölge = çerçeve) */
-  [data-stil="cerceve-ofset"] .modulex-left {
-    padding: 24px 40px 44px 24px;
-    padding-inline: 24px 44px;
-  }
-
-  [data-stil="cerceve-ofset"] .modulex-left-img {
-    width: min(320px, 100%);
-    aspect-ratio: 1 / 1;
-    border-radius: var(--mx-radius-md, 14px);
-    /* çerçeve: primary + contrast karışımı — bant zemini primary'ye yakınsa da (lacivert/lacivert) ayrışır */
-    box-shadow: 20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-
-  [dir="rtl"] [data-stil="cerceve-ofset"] .modulex-left-img {
-    box-shadow: -20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-  }
-
-  [data-stil="cerceve-ofset"]:hover .modulex-left-img {
-    box-shadow: 12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transform: translate(4px, 4px);
-  }
-
-  [dir="rtl"] [data-stil="cerceve-ofset"]:hover .modulex-left-img {
-    box-shadow: -12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transform: translate(-4px, 4px);
-  }
-
-  [data-stil="cerceve-ofset"] .modulex-right-body-chile-row {
-    border-style: solid;
-    border-color: var(--mx-site-primary, #DE6D26);
-    border-width: 0 0 0 3px;
-    border-inline-start-width: 3px;
-    border-inline-end-width: 0;
-  }
-
-  /* ikon-liste — yatay görsel, vizyon/misyon satırları ikonlu madde listesi (ikon back.js'ten, yalnız bu stilde) */
-  [data-stil="ikon-liste"] .modulex-left-img {
-    width: min(400px, 100%);
-    aspect-ratio: 4 / 3;
-    border-radius: var(--mx-radius-lg, 20px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row {
-    border: 0;
-    padding: 16px 18px;
-    padding-left: 18px;
-    border-radius: var(--mx-radius-md, 12px);
-    background-color: color-mix(in srgb, currentColor 8%, transparent);
-    transition: background-color 0.25s ease, transform 0.25s ease;
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-    background-color: color-mix(in srgb, currentColor 14%, transparent);
-    transform: translateX(4px);
-  }
-
-  [dir="rtl"] [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-    transform: translateX(-4px);
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row-name {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  [data-stil="ikon-liste"] .modulex-chile-icon {
-    flex: 0 0 48px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background-color: var(--mx-site-primary, #DE6D26);
-    color: var(--mx-site-primary-contrast, #fff);
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
-    padding-inline-start: 62px;
-    opacity: 0.9;
-  }
-
-  @media screen and (max-width: 1024px) {
-    [data-stil="yuzen-gorsel"] .modulex-left-img,
-    [data-stil="cerceve-ofset"] .modulex-left-img,
-    [data-stil="ikon-liste"] .modulex-left-img {
-      width: min(320px, calc(100% - 48px));
-      max-width: none;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-left-img {
-      margin: -24px 0 12px;
-      transform: none;
-    }
-
-    [data-stil="cerceve-ofset"] .modulex-left {
-      padding: 12px 32px 32px 12px;
-      padding-inline: 12px 32px;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-left,
-    [data-stil="cerceve-ofset"] .modulex-left,
-    [data-stil="ikon-liste"] .modulex-left {
-      background-color: transparent;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-right-body,
-    [data-stil="cerceve-ofset"] .modulex-right-body,
-    [data-stil="ikon-liste"] .modulex-right-body {
-      margin-inline-start: 0;
-    }
-
-    [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
-      padding-inline-start: 0;
-    }
-  }
-
-  /* dar ekranda vizyon/misyon alt alta (klasikte yan yana sıkışıyor; varyantlarda düzeltildi) */
-  @media screen and (max-width: 768px) {
-    [data-stil="yuzen-gorsel"] .modulex-right-body-chile,
-    [data-stil="cerceve-ofset"] .modulex-right-body-chile,
-    [data-stil="ikon-liste"] .modulex-right-body-chile {
-      flex-direction: column;
-      gap: 14px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    [data-stil="yuzen-gorsel"] .modulex-left-img,
-    [data-stil="cerceve-ofset"]:hover .modulex-left-img,
-    [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-      transform: none !important;
-    }
+    .modulex-tanitim-renk-blok *, .modulex-tanitim-renk-blok *::before, .modulex-tanitim-renk-blok *::after { animation: none !important; transition: none !important; }
   }
 </style>

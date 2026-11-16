@@ -1,148 +1,61 @@
-<section class="modulex-values">
-  <div class="modulex-values-container">
-    <div class="modulex-values-header">
-      <div class="modulex-values-badge">{{badge}}</div>
-      <h2 class="modulex-values-title">{{title}}</h2>
-      <p class="modulex-values-desc">{{description}}</p>
-    </div>
-    <div class="modulex-values-grid">
-      {{html}}
-    </div>
+<section class="modulex-deger-tablo{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-deger-tablo-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
 </section>
 
 <style>
-  .modulex-values {
-    width: 100%;
-    padding: 72px 20px;
-    background: --bgcolor--;
-    box-sizing: border-box;
-  }
+  /* deger-tablo — Tablo dili: değerler bir politika/ilke dökümü gibi satır-sütun düzeninde (resmî, yoğun bilgi). */
+  .modulex-deger-tablo { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-deger-tablo *, .modulex-deger-tablo *::before, .modulex-deger-tablo *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-deger-tablo :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-deger-tablo :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-deger-tablo :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-deger-tablo :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-deger-tablo img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-deger-tablo) img { height: auto; }
+  .modulex-deger-tablo [hidden] { display: none !important; }
+  .modulex-deger-tablo :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-deger-tablo :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-deger-tablo-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-deger-tablo-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-deger-tablo--bassiz .modulex-deger-tablo-bas { display: none; }
+  .modulex-deger-tablo-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-deger-tablo-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-deger-tablo-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-deger-tablo-bas { max-width: 760px; }
+  .modulex-deger-tablo-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-deger-tablo-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-deger-tablo-dugme:hover { transform: translateY(-2px); }
+  .modulex-deger-tablo-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-deger-tablo-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-deger-tablo-dugme .material-symbols-outlined { font-size: 20px; }
 
-  .modulex-values-container {
-    max-width: --max--;
-    margin: 0 auto;
-  }
-
-  .modulex-values-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .modulex-values-badge {
-    display: inline-block;
-    padding: 6px 18px;
-    background: --badgebg--;
-    color: --badgecolor--;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-
-  /* Rozet bos birakilirsa (metin yok) bos pil cizilmesin */
-  .modulex-values-badge:empty {
-    display: none;
-  }
-
-  .modulex-values-title {
-    font-size: 34px;
-    font-weight: 800;
-    color: --titlecolor--;
-    margin: 0 0 12px;
-  }
-
-  .modulex-values-desc {
-    font-size: 16px;
-    color: --textcolor--;
-    max-width: 640px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  .modulex-values-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .modulex-values-card {
-    background: --cardbg--;
-    border-radius: 14px;
-    padding: 28px 22px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(27, 58, 107, 0.08);
-    border: 1px solid rgba(27, 58, 107, 0.06);
-    animation: modulexValuesIn 0.55s ease both;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
-  }
-
-  .modulex-values-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(46, 107, 255, 0.14);
-  }
-
-  @keyframes modulexValuesIn {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .modulex-values-icon {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
-    border-radius: 50%;
-    background: rgba(46, 107, 255, 0.12);
-    color: --accent--;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modulex-values-icon .material-symbols-outlined {
-    font-size: 28px;
-    line-height: 1;
-  }
-
-  .modulex-values-card-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: --titlecolor--;
-    margin: 0 0 10px;
-  }
-
-  .modulex-values-card-text {
-    font-size: 14px;
-    line-height: 1.65;
-    color: --textcolor--;
-    margin: 0;
-  }
-
-  @media (max-width: 1024px) {
-    .modulex-values-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
+  .modulex-deger-tablo-tablo { display: grid; overflow: hidden; border: 1px solid --cizgi--; border-radius: --yuvarlak--; }
+  .modulex-deger-tablo-satir { position: relative; display: grid; grid-template-columns: 72px minmax(0, 0.8fr) minmax(0, 1.6fr); align-items: center; gap: 20px; padding: 18px 24px; border-inline-start: 4px solid transparent; transition: border-color 0.25s ease, background 0.25s ease; }
+  .modulex-deger-tablo-satir:nth-child(odd) { background: --kartBg--; }
+  .modulex-deger-tablo-satir:hover { border-inline-start-color: --accent--; background: color-mix(in srgb, --accent-- 7%, transparent); }
+  .modulex-deger-tablo-ikon { color: --accentInk--; font-size: 30px; }
+  .modulex-deger-tablo-kbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-deger-tablo-kmetin { color: --muted--; font-size: 0.96rem; }
   @media (max-width: 768px) {
-    .modulex-values {
-      padding: 48px 14px;
-    }
-
-    .modulex-values-grid {
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .modulex-values-title {
-      font-size: 28px;
-    }
+    .modulex-deger-tablo-satir { grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 16px; }
+    .modulex-deger-tablo-kmetin { grid-column: 2; }
   }
+  .modulex-deger-tablo-bag { color: inherit; text-decoration: none; }
+  .modulex-deger-tablo-bag::after { content: ""; position: absolute; inset: 0; z-index: 3; }
+  .modulex-deger-tablo-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-tablo :is(.modulex-deger-tablo-baslik, .modulex-deger-tablo-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-tablo-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-deger-tablo { padding-inline: 16px; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    .modulex-values-card {
-      animation: none !important;
-      transition: none !important;
-    }
+    .modulex-deger-tablo *, .modulex-deger-tablo *::before, .modulex-deger-tablo *::after { animation: none !important; transition: none !important; }
   }
 </style>

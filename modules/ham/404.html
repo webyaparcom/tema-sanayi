@@ -829,7 +829,7 @@
   // RTL dil kontrolü - Arapça için sağdan sola yazım desteği
   setTimeout(function() {
     var currentPath = window.location.pathname;
-    var rtlLanguages = ['ar', 'he', 'fa']; // RTL diller: Arapça, İbranice, Farsça
+    var rtlLanguages = ['ar', 'fa', 'he', 'ur']; // RTL diller (services/webmaker/langKatalog.js yon:rtl aynası): Arapça, Farsça, İbranice, Urduca
     
     // URL'den dil kodunu çıkar (/ar/, /he/, /fa/ gibi)
     var langMatch = currentPath.match(/^\/([a-z]{2})\//);

@@ -1,80 +1,50 @@
 {
-  "name": "Kurumsal Değerler 1",
+  "name": "Değer Tablo — ikon · başlık · açıklama satır tablosu",
+  "description": "Kurumsal rapor tablosu: üç sütun (ikon, değer, açıklama), zebra satırlar, satır hover'da vurgu kenarı; mobilde kart satırlara döner. Tablo dili: değerler bir politika/ilke dökümü gibi satır-sütun düzeninde (resmî, yoğun bilgi). Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "table_rows",
+  "category": "values",
+  "subCategory": "table",
+  "tags": [
+    "values",
+    "table",
+    "rows",
+    "formal",
+    "rtl",
+    "fabrika"
+  ],
   "desing": {
     "max": "1200px",
-    "bgcolor": "#F5F8FC",
-    "accent": "#2E6BFF",
-    "titlecolor": "#1B3A6B",
-    "textcolor": "#475569",
-    "cardbg": "#ffffff",
-    "badgebg": "#2E6BFF",
-    "badgecolor": "#ffffff",
-    "badge": {
-      "tr": "Değerlerimiz",
-      "en": "Our Values"
-    },
-    "title": {
-      "tr": "Enerji altyapısında güvenilir duruş",
-      "en": "Trusted stance in energy infrastructure"
-    },
-    "description": {
-      "tr": "Projelerimizi ilkelerimiz, deneyimimiz ve kalite anlayışımızla yürütüyoruz.",
-      "en": "We deliver projects with principle, experience and quality."
-    }
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
   },
-  "data": [
-    {
-      "icon": "balance",
-      "name": {
-        "tr": "İlkeli",
-        "en": "Principled"
-      },
-      "description": {
-        "tr": "İş güvenliği, mevzuat ve sözleşme taahhütlerine bağlı çalışırız.",
-        "en": "We work bound to safety, regulations and commitments."
-      }
-    },
-    {
-      "icon": "engineering",
-      "name": {
-        "tr": "Deneyimli",
-        "en": "Experienced"
-      },
-      "description": {
-        "tr": "Saha ekiplerimiz iletim, dağıtım ve yenilenebilir projelerde tecrübelidir.",
-        "en": "Field teams experienced in transmission, distribution and renewables."
-      }
-    },
-    {
-      "icon": "verified",
-      "name": {
-        "tr": "Kaliteli",
-        "en": "Quality-driven"
-      },
-      "description": {
-        "tr": "Malzeme seçimi, test ve devreye alma süreçlerinde kaliteyi önceliklendiririz.",
-        "en": "We prioritize quality in materials, testing and commissioning."
-      }
-    },
-    {
-      "icon": "visibility",
-      "name": {
-        "tr": "Vizyonlu",
-        "en": "Visionary"
-      },
-      "description": {
-        "tr": "Sürdürülebilir enerji altyapısına uzun vadeli katkı hedefleriz.",
-        "en": "We aim for long-term contribution to sustainable energy infrastructure."
-      }
-    }
-  ],
-  "category": "values",
-  "description": "Kurumsal değer kartları (MLA tarzı dört sütun). Rakam yok; ikon, başlık ve kısa açıklama. Animasyon, mobil tek sütun ve prefers-reduced-motion destekler.",
-  "version": "1.0.0",
-  "icon": "diamond",
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "data",
+    "alanlar": {
+      "ikon": "Material Symbols adı",
+      "baslik": "dil sözlüğü (zorunlu)",
+      "metin": "dil sözlüğü",
+      "etiket": "dil sözlüğü (küçük üst etiket)",
+      "img": "görsel yolu (destekleyen yerleşimde)",
+      "url": "iç/dış bağlantı (kartın tamamı tıklanır)"
+    }
   }
 }

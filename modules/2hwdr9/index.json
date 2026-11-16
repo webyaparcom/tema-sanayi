@@ -1,63 +1,53 @@
 {
-  "name": "İstatistik Bandı 1",
-  "desing": {
-    "stil": "",
-    "max": "1200px",
-    "gradient": "linear-gradient(135deg, #1e3046 0%, #2a4560 100%)",
-    "numbercolor": "#DE6D26",
-    "labelcolor": "#e2e8f0",
-    "iconsize": "56px",
-    "iconbox": "88px"
-  },
-  "data": [
-    {
-      "number": 150,
-      "suffix": "+",
-      "label": {
-        "tr": "Tamamlanan Proje",
-        "en": "Completed Projects",
-        "ar": "مشروع منجز"
-      },
-      "icon": "task_alt"
-    },
-    {
-      "number": 50,
-      "suffix": "+",
-      "label": {
-        "tr": "Mutlu Müşteri",
-        "en": "Happy Customers",
-        "ar": "عميل راضٍ"
-      },
-      "icon": "sentiment_satisfied"
-    },
-    {
-      "number": 10,
-      "suffix": "+",
-      "label": {
-        "tr": "Yıllık Deneyim",
-        "en": "Years of Experience",
-        "ar": "سنوات خبرة"
-      },
-      "icon": "workspace_premium"
-    },
-    {
-      "number": 24,
-      "suffix": "/7",
-      "label": {
-        "tr": "Destek",
-        "en": "Support",
-        "ar": "دعم"
-      },
-      "icon": "support_agent"
-    }
-  ],
+  "name": "Sayaç Nokta Matris — 10×10 piktogram (waffle) grafik",
+  "description": "Her rakamın yanında 100 noktalık matris; oran kadar nokta vurgu rengiyle dolar (yüzde/pay anlatımı), görünür olunca sırayla yanar. Oranı sayılabilir noktalarla gösterir (waffle chart); bilgi grafiği dili, «100 kişiden 98'i» okuması. Sayılar sayfa diliyle biçimlenir (Intl), metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "apps",
   "category": "stats",
-  "description": "İstatistik / sayaç bandı modülü. Rakamlar görünür olduğunda 0'dan hedefe animasyonlu sayar (IntersectionObserver + easeOutCubic; prefers-reduced-motion'da animasyonsuz). İkon, sonek (+, /7) ve çok dilli etiket destekler. Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (gradient bant, numbercolor/labelcolor, bugünkü görünüm) · \"kartli\" (sayfa zemininde yüzey kartları, üstte primary çizgi, hover'da yükselir) · \"serit-renkli\" (tek renk primary/primary-contrast şeridi, ikon solda rakam+etiket yanında, dikey ayraçlar). Varyant renkleri yalnız var(--mx-site-*) token çiftleri.",
-  "version": "1.1.0",
-  "icon": "monitoring",
+  "subCategory": "waffle",
+  "tags": [
+    "stats",
+    "waffle",
+    "infographic",
+    "dots",
+    "percent",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "data",
+    "alanlar": {
+      "sayi": "sayı (zorunlu; 1200 · \"4.9\")",
+      "onek": "önek (dil sözlüğü; ör. «%»)",
+      "sonek": "sonek (dil sözlüğü; ör. «+», «/5»)",
+      "etiket": "etiket (dil sözlüğü, zorunlu)",
+      "metin": "kısa not (dil sözlüğü)",
+      "ikon": "Material Symbols adı",
+      "ondalik": "ondalık basamak (yoksa sayıdan)",
+      "max": "oran tavanı (halka/çubuk/dolgu; yoksa % → 100, değilse listedeki en büyük)"
+    }
   }
 }

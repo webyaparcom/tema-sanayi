@@ -1,70 +1,51 @@
 {
-  "name": "Page Desing 5",
-  "desing": {
-    "stil": "",
-    "height": "200",
-    "opacity": "0.5",
-    "font-size": "32",
-    "backgroundcolor": "#000",
-    "menu-active": "#000",
-    "activetext": "#fff",
-    "textcolor": "#fff",
-    "bgcolor": "#ffffff",
-    "border_radius": "8px",
-    "card_shadow": "0 10px 28px rgba(0, 0, 0, 0.08)",
-    "color": "#111111",
-    "colortitle": "#111111",
-    "coloractive": "#000000",
-    "ui": {
-      "tr": {
-        "home": "Anasayfa",
-        "products": "Ürünler",
-        "dimensions": "Ölçüler",
-        "dimNote": "Standart üretim referansıdır; proje bazında özelleştirilebilir.",
-        "quote": "Teklif Al",
-        "whatsapp": "WhatsApp",
-        "prev": "Önceki",
-        "next": "Sonraki"
-      },
-      "en": {
-        "home": "Home",
-        "products": "Products",
-        "dimensions": "Dimensions",
-        "dimNote": "Standard production reference; customizable per project.",
-        "quote": "Get Quote",
-        "whatsapp": "WhatsApp",
-        "prev": "Previous",
-        "next": "Next"
-      },
-      "ar": {
-        "home": "الرئيسية",
-        "products": "المنتجات",
-        "dimensions": "الأبعاد",
-        "dimNote": "مرجع إنتاج قياسي؛ قابل للتخصيص حسب المشروع.",
-        "quote": "عرض سعر",
-        "whatsapp": "واتساب",
-        "prev": "السابق",
-        "next": "التالي"
-      }
-    },
-    "noTitle": {
-      "tr": "Başlık Yok",
-      "en": "No title",
-      "ar": "بدون عنوان"
-    },
-    "productNavAria": {
-      "tr": "Ürün navigasyonu",
-      "en": "Product navigation",
-      "ar": "تنقل المنتج"
-    }
-  },
+  "name": "Sayfa Editoryal — ortalı başlık, çip menü, dar okuma sütunu",
+  "description": "Ortalanmış gezinti yolu ve iri başlık, altında kısa vurgu çizgisi; sayfa menüsü başlığın altında ortalı çip satırı; içerik dar, okunaklı tek sütun. Yan sütun yok: gezinme başlığın altında yatay çiplerdir (alt sayfalı grup çip tıklanınca satır altına açılır); dergi/blog okuma düzeni. Sayfa metni, menü, ürün detayı ve önceki/sonraki page-desing-5 ile aynı veriden; arayüz metinleri desing.ui ya da 24 dilli sözlük. Renkler desing + var(--mx-site-*); mantıksal CSS → RTL.",
+  "version": "1.0.0",
+  "icon": "auto_stories",
   "category": "page",
-  "description": "Sayfa basligi, yan menu ve icerik alani. Urun detayinda breadcrumb, olcu kartlari, teklif/WhatsApp CTA, onceki/sonraki urun navigasyonu. Kategori menusu ve responsive slide-in menu. Görsel varyant desing.stil (31 Eki 2026, yan menü bağlantıları): \"\" klasik (kutulu liste, bugünkü görünüm) · \"ikon-ustte-yuvarlak\" (ortalı karo, üstte daire ikon) · \"yatay-kart\" (ikon solda/RTL sağda, metin yanında, ayrı kartlar) · \"kenar-cizgili\" (kutu yok, başta ince çizgi; hover/aktifte primary çizgi ve içe kayma). Kart zemini bgcolor (31 Eki) korunur; eklenen renkler var(--mx-site-primary) türevi.",
-  "version": "1.4.0",
-  "icon": "web",
+  "subCategory": "editorial",
+  "tags": [
+    "page",
+    "editorial",
+    "centered",
+    "chips",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "page",
+    "alanlar": {
+      "page.text": "sayfa metni (dil sözlüğü; HTML ise olduğu gibi, düz metin satır başına paragraf)",
+      "page.img": "sayfa/ürün görseli (/page/<id>/)",
+      "page.bgimg": "bant/kapak görseli (/page/<id>/bg/)",
+      "page.desc": "ürün ölçüleri (genislik · derinlik · yukseklik · agirlik · malzeme)",
+      "desing.ui": "arayüz metinleri {dil: {home, products, dimensions, dimNote, quote, whatsapp, prev, next}} — yoksa lang.json",
+      "desing.contact_path": "Teklif düğmesinin sayfası (varsayılan iletisim)",
+      "desing.whatsapp": "WhatsApp numarası (yalnız rakamlar kullanılır)"
+    }
   }
 }

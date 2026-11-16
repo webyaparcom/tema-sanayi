@@ -1,68 +1,50 @@
 {
-  "name": "Zaman Çizelgesi 1",
+  "name": "Zaman Takvim Yaprağı — koparılan takvim sayfaları",
+  "description": "Her dönem bir takvim yaprağı: üstte halka delikli renkli şerit ve büyük yıl, altta başlık ve metin; hover'da yaprak hafifçe kalkar. Nesne metaforu (masa takvimi): tarih bilgisi somut bir kâğıt formunda; kartlar ızgarada sarmalanır. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "calendar_today",
+  "category": "timeline",
+  "subCategory": "calendar",
+  "tags": [
+    "timeline",
+    "calendar",
+    "cards",
+    "paper",
+    "rtl",
+    "fabrika"
+  ],
   "desing": {
     "max": "1200px",
-    "bgcolor": "#ffffff",
-    "titlecolor": "#1e293b",
-    "textcolor": "#475569",
-    "accent": "#DE6D26",
-    "linecolor": "#e2e8f0",
-    "badge": {
-      "tr": "Tarihçe",
-      "en": "Timeline"
-    },
-    "title": {
-      "tr": "Yolculuğumuz",
-      "en": "Our Journey"
-    },
-    "description": {
-      "tr": "Kuruluşumuzdan bugüne önemli dönüm noktalarımız.",
-      "en": "Key milestones from our founding to today."
-    },
-    "accentText": "#ffffff"
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
   },
-  "data": [
-    {
-      "year": "2015",
-      "title": {
-        "tr": "Kuruluş",
-        "en": "Founded"
-      },
-      "text": {
-        "tr": "Küçük bir ekiple ilk ofisimizde yola çıktık.",
-        "en": "We started in our first office with a small team."
-      }
-    },
-    {
-      "year": "2019",
-      "title": {
-        "tr": "Büyüme",
-        "en": "Growth"
-      },
-      "text": {
-        "tr": "Ekibimizi büyütüp yeni hizmet alanlarına açıldık.",
-        "en": "We grew the team and expanded into new service areas."
-      }
-    },
-    {
-      "year": "2024",
-      "title": {
-        "tr": "Bugün",
-        "en": "Today"
-      },
-      "text": {
-        "tr": "Yüzlerce tamamlanan projeyle sektörde güvenilir bir çözüm ortağıyız.",
-        "en": "With hundreds of completed projects, we are a trusted solution partner."
-      }
-    }
-  ],
-  "category": "timeline",
-  "description": "Zaman çizelgesi modülü. Kurumsal tarihçe, süreç adımları veya yol haritasını dikey çizgi + yıl rozetiyle listeler. Çok dilli başlık/metin ve animasyonlu giriş içerir.",
-  "version": "1.0.0",
-  "icon": "timeline",
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "data",
+    "alanlar": {
+      "etiket": "yıl / tarih / dönem (dil sözlüğü ya da düz metin)",
+      "baslik": "dil sözlüğü (zorunlu)",
+      "metin": "dil sözlüğü",
+      "ikon": "Material Symbols adı",
+      "img": "görsel yolu (destekleyen yerleşimde)",
+      "url": "iç/dış bağlantı"
+    }
   }
 }

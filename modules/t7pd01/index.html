@@ -1,49 +1,98 @@
 <div class="modulex-title f36">
-  <h1>{{name}}</h1>
+  <span>{{name}}</span>
 </div>
 <div class="modulex">
+  <div class="modulex-menu-btn">
+    <span>@menu@</span>
+    <i class="fas fa-bars"></i>
+  </div>
   <div class="modulex-menu">{{pagelist}}</div>
-  <div class="modulex-body">{{text}}</div>
+  <div class="modulex-desc">
+    {{descimg}}
+    <div class="modulex-body">{{text}}</div>
+  </div>
 </div>
 <style>
   #content {
     justify-content: start;
   }
+
   .modulex {
-    display: flex;
     width: var(--max);
     margin-top: 20px;
-    gap: 20px;
-  }
-  .modulex-menu {
-      width: 220px;
-      background-color: var(--menubgcolor, transparent);
-    border-radius: 5px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
     gap: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: left;
+    position: relative;
   }
-  .modulex-menu > a {
-    background-color: #ffffff;
-    padding: 10px 15px;
+
+  .modulex-menu-btn {
+    display: none;
+    background-color: --backgroundcolor--;
+    padding: 10px 20px;
     border-radius: 5px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    color: --textcolor--; /* 31 Eki: sabit beyaz → token */
+    justify-content: space-between;
+    align-items: center;
   }
-  .modulex-menu > a:hover,
-  .modulex-menu > .active {
-    background-color: --menu-active--;
-    color: --activetext--; /* 31 Eki: sabit beyaz → token */
+
+  .modulex-menu-btn i {
+    font-size: 20px;
   }
-  .modulex-body {
-    flex: 1;
+
+  .modulex-menu {
+    width: 200px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    float: left;
   }
+
+  .modulex-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    float: right;
+  }
+
+  .modulex-menu > a {
+    background-color: #fff;
+    padding: 10px;
+    float: left;
+    border-radius: 5px;
+  }
+
+  .modulex-menu > .active,
+  .modulex-menu > a:hover {
+    background-color: --menu-active--;
+    color: --activetext--; /* 31 Eki: sabit beyaz → token */
+    display: flex;
+  }
+
+  .modulex-desc-menu {
+    width: 200px;
+    background-color: --menu-active--;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  .modulex-desc-menu > div {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 5px;
+  }
+
+  .modulex-desc-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .modulex-title {
     width: 100%;
     height: --height--px;
@@ -56,6 +105,7 @@
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
+
   .modulex-title::before {
     content: "";
     position: absolute;
@@ -70,40 +120,125 @@
     opacity: --opacity--;
     z-index: 1;
   }
-  .modulex-title h1 {
+
+  .modulex-title span {
     position: relative;
     z-index: 2;
     font-size: --font-size--px;
-    margin: 0;
   }
-  @media screen and (max-width: 1024px) {
-    .modulex {
-      flex-direction: column;
-      width: calc(100% - 10px);
-      padding: 5px;
-    }
-    .modulex-menu {
-      display: none;
-    }
-    .modulex-body {
-      width: 100%;
+
+  .modulex-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .modulex-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--max) - 460px);
+  }
+
+  .modulex-img img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .modulex-desc {
+      width: calc(var(--max) - 240px);
     }
   }
 
-  /* W2: mobil tasma kontrolu */
+  @media screen and (max-width: 1024px) {
+    .modulex-menu-btn {
+      display: flex;
+      width: calc(100% - 55px);
+      margin-left: 5px;
+    }
+
+    .modulex {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 5px;
+      gap: 5px;
+      margin-top: 0px;
+    }
+
+    .modulex-img {
+      width: 100%;
+    }
+
+    .modulex-body {
+      width: 100%;
+      order: 3;
+      padding: 10px;
+    }
+
+    .modulex-menu {
+      width: 100%;
+      float: none;
+      flex-direction: column;
+      order: 1;
+      display: none;
+    }
+
+    .modulex-menu.active {
+      display: flex;
+    }
+
+    .modulex-desc {
+      width: 100% !important;
+      order: 2;
+    }
+  }
+
+  /* W2 — animasyon, mobil, erisilebilirlik */
+  @keyframes modulexW2Enter {
+    from { opacity: 0.98; }
+    to { opacity: 1; }
+  }
+
+  [class*="modulex"] {
+    box-sizing: border-box;
+    animation: modulexW2Enter 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"] {
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     [class*="modulex"] {
       max-width: 100%;
-      box-sizing: border-box;
+      overflow-x: hidden;
     }
   }
 
-  /* W2: erisilebilirlik — animasyon kapatma */
   @media (prefers-reduced-motion: reduce) {
-    [class*="modulex"],
-    [class*="modulex"] * {
+    [class*="modulex"] {
       animation: none !important;
       transition: none !important;
     }
   }
 </style>
+<script>
+  document
+    .querySelector(".modulex-menu-btn")
+    .addEventListener("click", function () {
+      document.querySelector(".modulex-menu").classList.toggle("active");
+      var icon = this.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    });
+</script>
+
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>

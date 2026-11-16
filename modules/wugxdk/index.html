@@ -1,202 +1,78 @@
-<section class="modulex-faq">
-  <div class="modulex-faq-container">
-    <div class="modulex-faq-header">
-      <div class="modulex-faq-badge">{{badge}}</div>
-      <h2 class="modulex-faq-title">{{title}}</h2>
-      <p class="modulex-faq-desc">{{description}}</p>
-    </div>
-    <div class="modulex-faq-list">
-      {{html}}
-    </div>
+<section class="modulex-sss-destek-yan{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-sss-destek-yan-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
 </section>
 
 <style>
-  .modulex-faq {
-    width: 100%;
-    padding: 80px 20px;
-    background: --bgcolor--;
-    box-sizing: border-box;
-  }
+  /* sss-destek-yan — Başlık bölümü bir «hâlâ sorunuz mu var?» destek kartına dönüşür ve listeyle yan yana durur; iletişime yönlendiren SSS. */
+  .modulex-sss-destek-yan { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-sss-destek-yan *, .modulex-sss-destek-yan *::before, .modulex-sss-destek-yan *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-sss-destek-yan :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-sss-destek-yan :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-sss-destek-yan :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-sss-destek-yan :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-sss-destek-yan img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-sss-destek-yan) img { height: auto; }
+  .modulex-sss-destek-yan [hidden] { display: none !important; }
+  .modulex-sss-destek-yan :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-sss-destek-yan :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-sss-destek-yan-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-sss-destek-yan-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-sss-destek-yan--bassiz .modulex-sss-destek-yan-bas { display: none; }
+  .modulex-sss-destek-yan-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-sss-destek-yan-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-sss-destek-yan-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-sss-destek-yan-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-sss-destek-yan-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-sss-destek-yan-dugme:hover { transform: translateY(-2px); }
+  .modulex-sss-destek-yan-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-sss-destek-yan-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-sss-destek-yan-dugme .material-symbols-outlined { font-size: 20px; }
 
-  .modulex-faq-container {
-    max-width: --max--;
-    margin: 0 auto;
+  .modulex-sss-destek-yan-ozet { display: flex; align-items: center; gap: 14px; list-style: none; }
+  .modulex-sss-destek-yan-ozet::-webkit-details-marker { display: none; }
+  .modulex-sss-destek-yan-soru { flex: 1 1 auto; min-width: 0; }
+  .modulex-sss-destek-yan-isaret { display: grid; place-items: center; flex: none; width: 26px; height: 26px; }
+  .modulex-sss-destek-yan-isaret::before, .modulex-sss-destek-yan-isaret::after { content: ""; grid-area: 1 / 1; width: 14px; height: 2px; border-radius: 2px; background: currentColor; transition: transform 0.3s ease; }
+  .modulex-sss-destek-yan-isaret::after { transform: rotate(90deg); }
+  .modulex-sss-destek-yan-oge[open] .modulex-sss-destek-yan-isaret::after { transform: rotate(0deg); }
+  .modulex-sss-destek-yan-oge[open] .modulex-sss-destek-yan-yanit { animation: modulex-sss-destek-yan-ac 0.35s ease both; }
+  @keyframes modulex-sss-destek-yan-ac { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  .modulex-sss-destek-yan-govde { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .modulex-sss-destek-yan-govde--tek { grid-template-columns: minmax(0, 1fr); }
+  .modulex-sss-destek-yan-liste { display: grid; border-block-start: 1px solid --cizgi--; }
+  .modulex-sss-destek-yan-oge { border-block-end: 1px solid --cizgi--; }
+  .modulex-sss-destek-yan-ozet { padding-block: 20px; font-size: 1.08rem; font-weight: 700; line-height: 1.4; transition: color 0.25s ease; }
+  .modulex-sss-destek-yan-ozet:hover { color: --accentInk--; }
+  .modulex-sss-destek-yan-isaret { color: --accentInk--; }
+  .modulex-sss-destek-yan-yanit { padding-block-end: 20px; }
+  .modulex-sss-destek-yan-cevap { color: --muted--; }
+  .modulex-sss-destek-yan-yan { position: sticky; inset-block-start: 96px; display: grid; gap: 12px; padding: clamp(24px, 3vw, 36px); border-radius: --yuvarlak--; background-color: --vurguBg--; color: --vurguText--; }
+  .modulex-sss-destek-yan-yikon { color: inherit; font-size: 40px; }
+  .modulex-sss-destek-yan-yan .modulex-sss-destek-yan-ust { color: inherit; }
+  .modulex-sss-destek-yan-yan .modulex-sss-destek-yan-baslik { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+  .modulex-sss-destek-yan-ymetin { color: inherit; line-height: 1.65; }
+  .modulex-sss-destek-yan-yan .modulex-sss-destek-yan-dugme { border-color: --vurguText--; background: --vurguText--; color: --vurguBg--; }
+  .modulex-sss-destek-yan-yan .modulex-sss-destek-yan-dugme--ikincil { background: transparent; color: --vurguText--; }
+  @media (max-width: 1024px) {
+    .modulex-sss-destek-yan-govde { grid-template-columns: minmax(0, 1fr); }
+    .modulex-sss-destek-yan-yan { position: static; order: -1; }
   }
+  .modulex-sss-destek-yan-bag { display: inline-flex; align-items: center; gap: 6px; margin-block-start: 10px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-sss-destek-yan-bag:hover { gap: 10px; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-sss-destek-yan-bag .material-symbols-outlined { font-size: 18px; }
 
-  .modulex-faq-header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
-  .modulex-faq-badge {
-    display: inline-block;
-    padding: 6px 18px;
-    background: --accent--;
-    color: --accentText--; /* 31 Eki: sabit #fff → token (açık kırmızı üstünde 3,07:1 idi) */
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-
-  .modulex-faq-title {
-    font-size: 36px;
-    font-weight: 800;
-    color: --titlecolor--;
-    margin: 0 0 12px;
-  }
-
-  .modulex-faq-desc {
-    font-size: 16px;
-    color: --textcolor--;
-    max-width: 640px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  .modulex-faq-list {
-    max-width: 820px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .modulex-faq-item {
-    background: --cardbg--;
-    border: 1px solid --bordercolor--;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .modulex-faq-item.modulex-faq-open {
-    border-color: --accent--;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  }
-
-  .modulex-faq-question {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    padding: 18px 22px;
-    min-height: 44px;
-    background: transparent;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: --titlecolor--;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-
-  .modulex-faq-question .material-symbols-outlined {
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-    color: --accent--;
-  }
-
-  .modulex-faq-open .modulex-faq-question .material-symbols-outlined {
-    transform: rotate(180deg);
-  }
-
-  .modulex-faq-answer {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.35s ease;
-  }
-
-  .modulex-faq-open .modulex-faq-answer {
-    grid-template-rows: 1fr;
-  }
-
-  .modulex-faq-answer-inner {
-    min-height: 0;
-    overflow: hidden;
-    padding: 0 22px;
-    font-size: 15px;
-    line-height: 1.75;
-    color: --textcolor--;
-  }
-
-  .modulex-faq-answer-inner::after {
-    content: "";
-    display: block;
-    height: 20px;
-  }
-
-  @keyframes modulexFaqIn {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .modulex-faq-item {
-    animation: modulexFaqIn 0.5s ease both;
-  }
-
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-destek-yan :is(.modulex-sss-destek-yan-baslik, .modulex-sss-destek-yan-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-destek-yan-baslik { line-height: 1.35; }
   @media (max-width: 768px) {
-    .modulex-faq {
-      padding: 48px 14px;
-    }
-
-    .modulex-faq-title {
-      font-size: 26px;
-    }
-
-    .modulex-faq-question {
-      font-size: 15px;
-      padding: 16px 16px;
-    }
-
-    .modulex-faq-answer-inner {
-      padding: 0 16px;
-    }
-
-    .modulex-faq-answer-inner::after {
-      height: 16px;
-    }
-
-    [class*="modulex"] {
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+    .modulex-sss-destek-yan { padding-inline: 16px; }
   }
-
   @media (prefers-reduced-motion: reduce) {
-    [class*="modulex"],
-    [class*="modulex"] * {
-      animation: none !important;
-      transition: none !important;
-    }
+    .modulex-sss-destek-yan *, .modulex-sss-destek-yan *::before, .modulex-sss-destek-yan *::after { animation: none !important; transition: none !important; }
   }
 </style>
-
-<script>
-  function modulexFaqToggle(btn) {
-    var item = btn.parentElement;
-    var isOpen = item.classList.contains("modulex-faq-open");
-    var list = item.parentElement.children;
-    var i;
-    for (i = 0; i < list.length; i++) {
-      list[i].classList.remove("modulex-faq-open");
-      var otherBtn = list[i].querySelector(".modulex-faq-question");
-      if (otherBtn) {
-        otherBtn.setAttribute("aria-expanded", "false");
-      }
-    }
-    if (!isOpen) {
-      item.classList.add("modulex-faq-open");
-      btn.setAttribute("aria-expanded", "true");
-    }
-  }
-</script>

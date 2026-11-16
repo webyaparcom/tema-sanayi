@@ -1,45 +1,25 @@
-/* page-desing-3 — metin + gorsel + kategori sayfa listesi.
-   Duzeltmeler: dil fallback (lang → tr → ilk anahtar), sayfa detay dosyasi
-   eksikse tum modulun patlamamasi (satir bazli try/catch + kategori satiri
-   fallback), debug kalintisi 'ccccc' kaldirildi. */
-
-function pd3Lang(val) {
-  if (val == null) {
-    return "";
-  }
-  if (typeof val === "object") {
-    if (val[json.lang] != null) {
-      return val[json.lang];
-    }
-    if (val.tr != null) {
-      return val.tr;
-    }
-    var pd3Keys = Object.keys(val);
-    return pd3Keys.length ? (val[pd3Keys[0]] || "") : "";
-  }
-  return String(val);
-}
-
-/* Metin: ilk satir baslik vurgulu, digerleri paragraf */
-var pd3Text = pd3Lang(page["text"]);
+// Metni satırlara ayırıyoruz
+var lines = (page["text"] && page["text"][json.lang]) ? page["text"][json.lang].split("\n") : [];
+// HTML içeriğini oluşturacağımız diziyi başlatıyoruz
 var htmlContent = [];
-if (pd3Text) {
-  String(pd3Text).split("\n").forEach(function (line, index) {
-    if (index === 0) {
-      htmlContent.push("<p>" + line + "</p><br>");
-    } else {
-      htmlContent.push("<p>" + line + "</p>");
-    }
-  });
-}
+// Her satırı işliyoruz
+lines.forEach(function(line, index) {
+  htmlContent.push(`<p>${line}</p>`);
+});
+// Hizmetler listesini kapatıyoruz
 var ulIndex = htmlContent.lastIndexOf("</li>");
 if (ulIndex !== -1) {
   htmlContent.splice(ulIndex + 1, 0, "</ul>");
 }
-html = html.replace(new RegExp("{{text}}", "g"), htmlContent.join("\n"));
-
-/* Gorsel */
-if (page["img"] == undefined || page["img"] === "") {
+// HTML içeriğini birleştiriyoruz
+var finalHtml = htmlContent.join("\n");
+// Sonucu konsola yazdırıyoruz (gerçek uygulamada bu HTML'i DOM'a ekleyebilirsiniz)
+if (page["text"] != undefined) {
+  html = html.replace(new RegExp("{{text}}", "g"), finalHtml);
+} else {
+  html = html.replace(new RegExp("{{text}}", "g"), "");
+}
+if (page["img"] == undefined) {
   html = html.replace(new RegExp("{{img}}", "g"), "");
 } else {
   html = html.replace(
@@ -48,40 +28,47 @@ if (page["img"] == undefined || page["img"] === "") {
   );
 }
 
-/* Aciklama etiketleri */
-var desc = "";
-if (page["desc"] && typeof page["desc"] === "object") {
-  for (var key in page["desc"]) {
-    var descVal = pd3Lang(page["desc"][key]);
-    if (descVal !== "") {
-      desc += "<div>" + descVal + "</div>";
-    }
-  }
-}
-if (desc !== "") {
-  desc = '<div class="modulex-desc-menu">' + desc + "</div>";
-}
-html = html.replace(new RegExp("{{desc}}", "g"), desc);
 
-/* Kategori sayfa listesi — detay dosyasi varsa isim oradan, yoksa kategori satirindan */
-var pagelist = "";
-if (json.desing && json.desing.category && webmakerdata[json.desing.category] && Array.isArray(webmakerdata[json.desing.category].data)) {
-  for (var iterator of webmakerdata[json.desing.category].data) {
-    var rowItem = iterator;
-    try {
-      var data = fsSync.readFileSync(
-        path.join("public/data/proje", projePath, "web", "page", iterator.id, "index.json"),
-        "utf8",
-      );
-      rowItem = JSON.parse(data);
-    } catch (readErr) {
-      /* detay yoksa kategori satiri kullanilir; tek satir icin liste kirilmaz */
-    }
-    var menuactive = "";
-    if (rowItem.path == page.path) {
-      menuactive = 'class="active"';
-    }
-    pagelist += "<a " + menuactive + ' href="' + wxLangInternalHref(rowItem.pathnext || rowItem.path) + '" >' + pd3Lang(rowItem.name) + "</a>";
+
+try {
+  
+  if ( page["img"] == "") {
+
   }
+  else if (page["img"] != undefined && page["img"] != "") {
+    var descimg = `
+    <div class="modulex-desc-body">
+            <img src="/page/${page["id"]}/{{img}}?v={{random}}" width="100%" alt="{{title}}" />
+    </div>`;
+  
+    html = html.replace(new RegExp("{{descimg}}", "g"), descimg);
+  
+  } else {
+    html = html.replace(new RegExp("{{descimg}}", "g"), "");
+  }
+} catch (error) {
+  html = html.replace(new RegExp("{{descimg}}", "g"), "");
 }
+
+html = html.replace(new RegExp("{{descimg}}", "g"), "");
+
+
+var pagelist = "";
+for (var iterator of webmakerdata[page.categorypage].data) {
+  menuactive = "";
+  if (iterator.path == page.path) {
+    menuactive = `class="active"`;
+  }
+  pagelist += `<a ${menuactive}  href="${wxLangInternalHref(
+    iterator.pathnext || iterator.path,
+  )}" >${
+    (iterator.name && iterator.name[json.lang]) ? iterator.name[json.lang] : iterator.name || ''
+  }</a>`;
+}
+
+
+
+html = html.replace(new RegExp("{{descimg}}", "g"), "");
+
+ 
 html = html.replace(new RegExp("{{pagelist}}", "g"), pagelist);

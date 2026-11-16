@@ -1,17 +1,17 @@
 {
-  "name": "Page Desing 3",
+  "name": "Page Desing Text",
   "desing": {
     "height": "200",
     "opacity": "0.5",
-    "font-size": "50",
+    "font-size": "32",
     "backgroundcolor": "#000",
-    "category": "page",
-    "menu-active": "#1e3046",
+    "menu-active": "#000",
+    "category": "kurumsal",
     "textcolor": "#ffffff",
     "activetext": "#ffffff"
   },
   "category": "page",
-  "description": "En çok kullanılan sayfa başlık ve hero tasarım modülü. Tüm sayfa türleri için kategori başlığı, arka plan overlay ve navigasyon gösterir. 14 farklı projede kullanılır: üretim, kurumsal, e-ticaret, restoran, muhasebe ve hizmet sektörlerinde. Standart sayfa açılış bölümü olarak yaygın tercih edilir. Responsive tasarım ve dinamik kategori sistemi içerir.",
+  "description": "Kompakt sayfa başlık ve hero banner modülü. Küçük font boyutu ile modern minimalist tasarım sunar. 7 farklı projede kullanılır: ajans, mobil uygulamalar, kargo, kurumsal, ambalaj, inşaat ve sağlık sektörlerinde. Kurumsal sayfalara özel kategori sistemi, aktif menü renklendirme ve responsive header yapısı içerir.",
   "version": "1.0.0",
   "icon": "web",
   "veri": {

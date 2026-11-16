@@ -1,63 +1,61 @@
 {
-  "name": "Hero 1",
-  "desing": {
-    "stil": "",
-    "max": "1200px",
-    "gradient": "linear-gradient(135deg, #1e3046 0%, #2a4560 50%, #152a3d 100%)",
-    "overlay": "linear-gradient(135deg, rgba(30, 48, 70, 0.88) 0%, rgba(21, 42, 61, 0.82) 100%)",
-    "title_accent": "linear-gradient(135deg, #DE6D26, #e88a4a)",
-    "btn_primary_bg": "#DE6D26",
-    "btn_primary_color": "#ffffff",
-    "stat_accent": "#DE6D26",
-    "shape1": "linear-gradient(135deg, rgba(222, 109, 38, 0.4), rgba(222, 109, 38, 0.12))",
-    "shape2": "linear-gradient(135deg, rgba(42, 69, 96, 0.55), rgba(30, 48, 70, 0.25))",
-    "shape3": "linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04))",
-    "title": {
-      "tr": "Kurumsal Çözümlerle Yanınızdayız",
-      "en": "We Stand With You Through Corporate Solutions",
-      "ar": "بجانبكم بحلول مؤسسية"
-    },
-    "description": {
-      "tr": "Profesyonel ekibimizle markanıza özel web, dijital ve kurumsal hizmetler sunuyoruz.",
-      "en": "Our professional team delivers web, digital and corporate services tailored to your brand.",
-      "ar": "نقدم مع فريقنا المحترف خدمات ويب ورقمية ومؤسسية مصممة لعلامتكم التجارية."
-    },
-    "badge": {
-      "tr": "Güvenilir Kurumsal Partner",
-      "en": "Trusted Corporate Partner",
-      "ar": "شريك مؤسسي موثوق"
-    },
-    "image": "",
-    "alt": {
-      "tr": "Kurumsal tanıtım",
-      "en": "Corporate intro",
-      "ar": "تعريف مؤسسي"
-    },
-    "btn1": {
-      "tr": "Keşfet",
-      "en": "Explore",
-      "ar": "اكتشف"
-    },
-    "btn1_url": "urunler",
-    "btn2": {
-      "tr": "İletişim",
-      "en": "Contact",
-      "ar": "اتصل بنا"
-    },
-    "btn2_url": "iletisim",
-    "stats": {
-      "tr": "150+|Proje|50+|Müşteri|10+|Yıl Deneyim",
-      "en": "150+|Projects|50+|Clients|10+|Years of Experience",
-      "ar": "150+|مشروع|50+|عميل|10+|سنوات خبرة"
-    }
-  },
+  "name": "Açılış Kart Yığını — eğik görsel kartı ve yüzen sayı çipleri",
+  "description": "Solda metin ve düğmeler; sağda hafif eğik duran görsel kartı, arkasında ters yöne eğik vurgu kartı, köşelerinde ilk iki maddenin yüzen çipleri. Hover'da yığın düzelir. Görsel düz bir kare değil, katmanlı bir kart destesidir; maddeler görselin üstünde yüzen çiplere dönüşür. Başlık h1, ilk görsel eager. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "stacks",
   "category": "hero",
-  "description": "Gradient hero: istatistikler, CTA, görsel alanı. Metinler cok dilli (tr/en/ar); renkler --gradient--, --btn_primary_bg-- ile markaya uyumlanır. Buton URL pathnext (urunler, iletisim). Görsel varyant desing.stil (31 Eki 2026): \"\" klasik (koyu gradient, görsel + şekiller, bugünkü görünüm) · \"bolunmus\" (sayfa zemini, metin sol/RTL sağ, görsel yuvarlak köşeli dik kart, arkasında kaymış primary plaka) · \"alt-kart\" (görsel tam genişlik geniş bant, metin alttan binen ortalı yüzey kartı). Varyantlarda yazı var(--mx-site-text), zemin bg/surface token; birincil düğme btn_primary_bg/btn_primary_color çifti kalır.",
-  "version": "1.2.0",
-  "icon": "hero",
+  "subCategory": "card-stack",
+  "tags": [
+    "hero",
+    "stack",
+    "rotate",
+    "floating",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "img": "",
+    "img2": "",
+    "video": "",
+    "poster": "",
+    "alt": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "cta2_ad": "",
+    "cta2_url": "",
+    "rozet_ikon": "",
+    "rozet_deger": "",
+    "rozet_metin": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
   "veri": {
     "statik": true,
     "dinamik": false,
-    "kaynak": "desing/data"
+    "kaynak": "desing/data",
+    "alanlar": {
+      "ikon": "madde ikonu (Material Symbols)",
+      "deger": "sayı/değer (ör. 1.200+, dil sözlüğü olabilir)",
+      "metin": "madde metni (dil sözlüğü)",
+      "img": "madde görseli (mozaik yerleşimlerde)",
+      "url": "madde bağlantısı"
+    }
   }
 }

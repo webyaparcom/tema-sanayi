@@ -1,1278 +1,144 @@
-<div class="modulex-title f36" data-stil="--stil--">
-  <h1>{{name}}</h1>
-</div>
-<div class="modulex" data-stil="--stil--">
-  <button
-    type="button"
-    class="modulex-menu-btn"
-    aria-expanded="false"
-    aria-controls="modulex-menu"
-  >
-    <span class="modulex-menu-btn-label">@menu@</span>
-    <span class="material-symbols-outlined modulex-icon" aria-hidden="true">menu</span>
-  </button>
-  <div class="modulex-menu-overlay" id="modulex-menu-overlay" aria-hidden="true"></div>
-  <nav class="modulex-menu" id="modulex-menu" aria-label="@menu@">
-    <button class="modulex-menu-close" type="button" aria-label="@menu-close@" aria-controls="modulex-menu">
-      <span class="material-symbols-outlined" aria-hidden="true">close</span>
-    </button>
-    {{pagelist}}
-  </nav>
-  <div class="modulex-main">
-    {{breadcrumb}}
-    {{productPanel}}
-    <div class="modulex-body">{{text}}</div>
-    {{productNav}}
+<section class="modulex-sayfa-editoryal{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-sayfa-editoryal-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
-</div>
+</section>
+
 <style>
-  #content {
-    justify-content: start;
+  /* sayfa-editoryal — Yan sütun yok: gezinme başlığın altında yatay çiplerdir (alt sayfalı grup çip tıklanınca satır altına açılır); dergi/blog okuma düzeni. */
+  .modulex-sayfa-editoryal { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-sayfa-editoryal *, .modulex-sayfa-editoryal *::before, .modulex-sayfa-editoryal *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-sayfa-editoryal :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-sayfa-editoryal :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-sayfa-editoryal :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-sayfa-editoryal :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-sayfa-editoryal img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-sayfa-editoryal) img { height: auto; }
+  .modulex-sayfa-editoryal [hidden] { display: none !important; }
+  .modulex-sayfa-editoryal :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-sayfa-editoryal :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-sayfa-editoryal-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-sayfa-editoryal-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-sayfa-editoryal--bassiz .modulex-sayfa-editoryal-bas { display: none; }
+  .modulex-sayfa-editoryal-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-sayfa-editoryal-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-sayfa-editoryal-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-sayfa-editoryal-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-sayfa-editoryal-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-sayfa-editoryal-dugme:hover { transform: translateY(-2px); }
+  .modulex-sayfa-editoryal-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-sayfa-editoryal-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-sayfa-editoryal-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-sayfa-editoryal-h1 { font-family: var(--mx-font-heading, inherit); font-size: clamp(2rem, 4.4vw, 3.4rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.08; overflow-wrap: anywhere; }
+  .modulex-sayfa-editoryal-kap { max-width: --max--; margin-inline: auto; }
+  .modulex-sayfa-editoryal-kirinti ol { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; font-size: 0.88rem; }
+  .modulex-sayfa-editoryal-kirinti li { display: inline-flex; align-items: center; }
+  .modulex-sayfa-editoryal-kirinti li + li::before { content: "/"; margin-inline: 8px; opacity: 0.6; }
+  .modulex-sayfa-editoryal-kirinti a { color: inherit; text-decoration: none; border-block-end: 1px solid transparent; transition: border-color 0.2s ease; }
+  .modulex-sayfa-editoryal-kirinti a:hover { border-block-end-color: currentColor; }
+  .modulex-sayfa-editoryal-kirinti [aria-current] { font-weight: 700; }
+  .modulex-sayfa-editoryal-mliste { display: grid; gap: 4px; }
+  .modulex-sayfa-editoryal-mo, .modulex-sayfa-editoryal-ms, .modulex-sayfa-editoryal-ma { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; border-radius: calc(--yuvarlak-- * 0.6); color: inherit; text-decoration: none; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-sayfa-editoryal-mo:hover, .modulex-sayfa-editoryal-ms:hover, .modulex-sayfa-editoryal-ma:hover { background: color-mix(in srgb, --accent-- 10%, transparent); }
+  .modulex-sayfa-editoryal-mo[aria-current="page"], .modulex-sayfa-editoryal-ma[aria-current="page"] { background: --vurguBg--; color: --vurguText--; font-weight: 700; }
+  /* grup başlığı: etkin sayfa grubun içindeyse yumuşak vurgu (etkin bağlantı ayrıca dolu) */
+  .modulex-sayfa-editoryal-ms--aktif { background: color-mix(in srgb, --accent-- 10%, transparent); color: --accentInk--; font-weight: 700; }
+  .modulex-sayfa-editoryal-mo[aria-current="page"] .modulex-sayfa-editoryal-mn, .modulex-sayfa-editoryal-ms--aktif .modulex-sayfa-editoryal-mn { color: inherit; }
+  .modulex-sayfa-editoryal-mo--ust { font-weight: 600; }
+  .modulex-sayfa-editoryal-ms { list-style: none; font-weight: 600; }
+  .modulex-sayfa-editoryal-ms::-webkit-details-marker { display: none; }
+  .modulex-sayfa-editoryal-mt { min-width: 0; overflow-wrap: anywhere; }
+  .modulex-sayfa-editoryal-mi { margin-inline-start: auto; font-size: 20px; transition: transform 0.25s ease; }
+  .modulex-sayfa-editoryal-mg[open] > .modulex-sayfa-editoryal-ms .modulex-sayfa-editoryal-mi { transform: rotate(180deg); }
+  .modulex-sayfa-editoryal-malt { display: grid; gap: 2px; margin-block-start: 4px; margin-inline-start: 12px; padding-inline-start: 12px; border-inline-start: 2px solid --cizgi--; }
+  .modulex-sayfa-editoryal-ma { min-height: 40px; font-size: 0.94rem; }
+  .modulex-sayfa-editoryal-mn { color: --accentInk--; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .modulex-sayfa-editoryal-mbas { margin-block-end: 10px; color: --muted--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-sayfa-editoryal-urun { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 36px); align-items: start; }
+  .modulex-sayfa-editoryal-urun--yalin { grid-template-columns: minmax(0, 1fr); }
+  .modulex-sayfa-editoryal-medya { overflow: hidden; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-sayfa-editoryal-gorsel { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.5s ease; }
+  .modulex-sayfa-editoryal-medya:hover .modulex-sayfa-editoryal-gorsel { transform: scale(1.03); }
+  .modulex-sayfa-editoryal-bilgi { display: grid; align-content: start; gap: 16px; }
+  .modulex-sayfa-editoryal-rozet { justify-self: start; padding: 4px 12px; border-radius: 999px; background: color-mix(in srgb, --accent-- 12%, --bg--); color: --accentInk--; font-size: 0.82rem; font-weight: 700; }
+  .modulex-sayfa-editoryal-giris { color: --muted--; font-size: 1.1rem; line-height: 1.7; }
+  .modulex-sayfa-editoryal-olcu { display: grid; gap: 14px; padding: 18px; border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-sayfa-editoryal-olcu-bas { display: flex; align-items: center; gap: 12px; }
+  .modulex-sayfa-editoryal-olcu-bas .material-symbols-outlined { display: inline-grid; flex: none; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: --vurguBg--; color: --vurguText--; font-size: 24px; }
+  .modulex-sayfa-editoryal-olcu-baslik { font-size: 1.05rem; font-weight: 750; }
+  .modulex-sayfa-editoryal-olcu-ozet { color: --muted--; font-variant-numeric: tabular-nums; }
+  .modulex-sayfa-editoryal-olcu-liste { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+  .modulex-sayfa-editoryal-olcu-oge { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; background: --bg--; }
+  .modulex-sayfa-editoryal-olcu-oge--genis { grid-column: 1 / -1; }
+  .modulex-sayfa-editoryal-olcu-oge dt { color: --muted--; font-size: 0.8rem; }
+  .modulex-sayfa-editoryal-olcu-oge dd { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .modulex-sayfa-editoryal-olcu-not { color: --muted--; font-size: 0.84rem; }
+  .modulex-sayfa-editoryal-eylem { display: flex; flex-wrap: wrap; gap: 10px; }
+  .modulex-sayfa-editoryal-teklif, .modulex-sayfa-editoryal-wa { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease; }
+  .modulex-sayfa-editoryal-wa { border-color: --cizgi--; background: transparent; color: --text--; }
+  .modulex-sayfa-editoryal-teklif:hover, .modulex-sayfa-editoryal-wa:hover { transform: translateY(-2px); }
+  .modulex-sayfa-editoryal-wa:hover { border-color: --accent--; }
+  .modulex-sayfa-editoryal-sgorsel img { width: 100%; border-radius: --yuvarlak--; }
+  .modulex-sayfa-editoryal-yazi { min-width: 0; font-size: 1.04rem; line-height: 1.8; }
+  .modulex-sayfa-editoryal-yazi > * + * { margin-block-start: 1em; }
+  .modulex-sayfa-editoryal-yazi :where(h2) { margin-block-start: 1.6em; font-size: 1.6rem; font-weight: 750; line-height: 1.25; }
+  .modulex-sayfa-editoryal-yazi :where(h3) { margin-block-start: 1.4em; font-size: 1.25rem; font-weight: 700; line-height: 1.3; }
+  .modulex-sayfa-editoryal-yazi :where(h4) { font-size: 1.1rem; font-weight: 700; }
+  .modulex-sayfa-editoryal-yazi > :first-child { margin-block-start: 0; }
+  /* ham css «li, ul { list-style: none !important }» — imler ::before ile */
+  .modulex-sayfa-editoryal-yazi :where(ul, ol) { padding-inline-start: 1.4em; }
+  .modulex-sayfa-editoryal-yazi :where(ul > li, ol > li) { position: relative; }
+  .modulex-sayfa-editoryal-yazi :where(ul > li)::before { content: ""; position: absolute; inset-block-start: 0.72em; inset-inline-start: -1em; width: 6px; height: 6px; border-radius: 50%; background: --accent--; }
+  .modulex-sayfa-editoryal-yazi :where(ol) { counter-reset: modulex-sayfa-editoryal-s; }
+  .modulex-sayfa-editoryal-yazi :where(ol > li) { counter-increment: modulex-sayfa-editoryal-s; }
+  .modulex-sayfa-editoryal-yazi :where(ol > li)::before { content: counter(modulex-sayfa-editoryal-s) "."; position: absolute; inset-inline-end: calc(100% + 0.4em); color: --accentInk--; font-weight: 700; }
+  .modulex-sayfa-editoryal-yazi :where(li + li) { margin-block-start: 0.35em; }
+  .modulex-sayfa-editoryal-yazi :where(a) { color: --accentInk--; text-underline-offset: 3px; }
+  .modulex-sayfa-editoryal-yazi :where(img) { height: auto; border-radius: calc(--yuvarlak-- * 0.7); }
+  .modulex-sayfa-editoryal-yazi :where(table) { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; }
+  .modulex-sayfa-editoryal-yazi :where(th, td) { padding: 8px 10px; border: 1px solid --cizgi--; text-align: start; }
+  .modulex-sayfa-editoryal-yazi :where(blockquote) { padding-inline-start: 18px; border-inline-start: 4px solid --accent--; color: --muted--; }
+  .modulex-sayfa-editoryal-gez { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+  .modulex-sayfa-editoryal-gez-a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 12px 16px; border: 1px solid --cizgi--; border-radius: --yuvarlak--; color: inherit; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-sayfa-editoryal-gez-a:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-sayfa-editoryal-gez-a--sonra { grid-column: 2; justify-content: flex-end; text-align: end; }
+  .modulex-sayfa-editoryal-gez-y { display: grid; min-width: 0; }
+  .modulex-sayfa-editoryal-gez-k { color: --muted--; font-size: 0.8rem; }
+  .modulex-sayfa-editoryal-gez-ad { font-weight: 700; overflow-wrap: anywhere; }
+  .modulex-sayfa-editoryal-mac, .modulex-sayfa-editoryal-mkapat { display: none; }
+  @media (max-width: 768px) {
+    .modulex-sayfa-editoryal-urun { grid-template-columns: minmax(0, 1fr); }
+    .modulex-sayfa-editoryal-gez { grid-template-columns: minmax(0, 1fr); }
+    .modulex-sayfa-editoryal-gez-a--sonra { grid-column: auto; }
+  }
+
+  .modulex-sayfa-editoryal-bas2 { display: grid; justify-items: center; gap: 18px; max-width: 900px; margin-inline: auto; margin-block-end: clamp(32px, 5vw, 60px); text-align: center; }
+  .modulex-sayfa-editoryal-kirinti ol { justify-content: center; color: --muted--; }
+  .modulex-sayfa-editoryal-h1 { font-size: clamp(2.2rem, 5.4vw, 4rem); }
+  .modulex-sayfa-editoryal-cizgi { width: 72px; height: 4px; border-radius: 4px; background: --accent--; transition: width 0.4s ease; }
+  .modulex-sayfa-editoryal-bas2:hover .modulex-sayfa-editoryal-cizgi { width: 120px; }
+  .modulex-sayfa-editoryal-menu .modulex-sayfa-editoryal-mliste { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .modulex-sayfa-editoryal-mu--grup:has(details[open]) { flex-basis: 100%; }
+  .modulex-sayfa-editoryal-mo, .modulex-sayfa-editoryal-ms { min-height: 40px; padding: 6px 16px; border: 1px solid --cizgi--; border-radius: 999px; font-size: 0.95rem; }
+  .modulex-sayfa-editoryal-mg { display: grid; justify-items: center; }
+  .modulex-sayfa-editoryal-malt { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-inline: 0; padding-inline: 0; border: 0; }
+  .modulex-sayfa-editoryal-ma { min-height: 36px; padding: 4px 12px; border-radius: 999px; }
+  .modulex-sayfa-editoryal-okuma { display: grid; gap: 32px; max-width: 760px; margin-inline: auto; }
+  .modulex-sayfa-editoryal-okuma .modulex-sayfa-editoryal-urun { grid-template-columns: minmax(0, 1fr); }
+  .modulex-sayfa-editoryal-yazi { font-size: 1.1rem; }
+  .modulex-sayfa-editoryal-yazi > p:first-child { font-size: 1.25rem; line-height: 1.7; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sayfa-editoryal :is(.modulex-sayfa-editoryal-baslik, .modulex-sayfa-editoryal-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sayfa-editoryal-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-sayfa-editoryal { padding-inline: 16px; }
   }
-
-  .modulex {
-    width: 100%;
-    max-width: var(--max);
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
-    position: relative;
-    box-sizing: border-box;
-  }
-
-  .modulex * {
-    box-sizing: border-box;
-  }
-
-  .modulex-main {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .modulex-menu-btn {
-    display: none;
-    width: 100%;
-    background-color: --backgroundcolor--;
-    padding: 12px 16px;
-    border-radius: --border_radius--;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    color: --textcolor--;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .modulex-menu-btn .modulex-icon {
-    font-size: 22px;
-  }
-
-  .modulex-menu {
-    width: 250px;
-    flex-shrink: 0;
-    background-color: --bgcolor--;
-    border-radius: --border_radius--;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    box-shadow: --card_shadow--;
-  }
-
-  .modulex-menu-parent {
-    font-weight: 600;
-    background-color: rgba(30, 48, 70, 0.06) !important;
-    border-color: rgba(30, 48, 70, 0.12) !important;
-  }
-
-  .modulex-menu-parent-label,
-  .modulex-menu-link-text {
-    display: block;
-    line-height: 1.35;
-    word-break: break-word;
-  }
-
-  .modulex-menu-link,
-  .modulex-top {
-    /* 31 Eki 2026 kontrast kuralı: zemin/kenar sabit #fff değil, --bgcolor--/--color-- türevi (koyu modda beyaz kutu + açık yazı = 1.15:1 idi) */
-    background-color: --bgcolor--;
-    padding: 10px 12px;
-    border-radius: --border_radius--;
-    border: 1px solid color-mix(in srgb, --color-- 12%, transparent);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    color: inherit;
-    cursor: pointer;
-    transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-    text-align: left;
-    text-decoration: none;
-  }
-
-  .modulex-menu-link.active,
-  .modulex-menu-link:hover,
-  .modulex-top.active,
-  .modulex-top:hover {
-    background-color: --menu-active--;
-    color: --activetext--;
-    transform: translateX(2px);
-    box-shadow: 0 4px 12px rgba(222, 109, 38, 0.2);
-  }
-
-  .modulex-menu-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .modulex-top {
-    width: 100%;
-    border: none;
-    font-weight: 600;
-    text-align: left;
-  }
-
-  .modulex-top .modulex-icon {
-    font-size: 14px;
-    transition: transform 0.22s ease;
-  }
-
-  .modulex-menu-group.open .modulex-top .modulex-icon {
-    transform: rotate(180deg);
-  }
-
-  .modulex-sub {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    padding-left: 8px;
-  }
-
-  .modulex-sub.show {
-    display: flex;
-  }
-
-  .modulex-sub-link {
-    background-color: --bgcolor--;
-    padding: 8px 10px;
-    border-radius: --border_radius--;
-    font-size: 14px;
-    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
-    transition: background-color 0.22s ease, color 0.22s ease;
-    text-align: left;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-
-  .modulex-sub-link.active,
-  .modulex-sub-link:hover {
-    background-color: rgba(222, 109, 38, 0.12);
-    color: --colortitle--;
-  }
-
-  .modulex-title {
-    width: 100%;
-    height: --height--px;
-    min-height: 120px;
-    background-color: --backgroundcolor--;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: --textcolor--;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-  }
-
-  .modulex-title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: none; /* modulex-title-bg-dyn */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: --opacity--;
-    z-index: 1;
-  }
-
-  .modulex-title h1 {
-    position: relative;
-    z-index: 2;
-    font-size: --font-size--px;
-    margin: 0;
-    padding: 0 20px;
-    text-align: center;
-    color: --textcolor-- !important;
-    animation: modulexPd5TitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  @keyframes modulexPd5TitleIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .modulex-pd5-breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: --color--;
-    animation: modulexPd5FadeUp 0.45s ease both;
-  }
-
-  .modulex-pd5-breadcrumb a {
-    color: --colortitle--;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.2s ease;
-  }
-
-  .modulex-pd5-breadcrumb a:hover {
-    color: --menu-active--;
-  }
-
-  .modulex-pd5-breadcrumb-sep {
-    opacity: 0.45;
-  }
-
-  .modulex-pd5-breadcrumb-current {
-    color: --menu-active--;
-    font-weight: 700;
-  }
-
-  .modulex-pd5-panel {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 28px;
-    width: 100%;
-    padding: 20px;
-    background: --bgcolor--;
-    border-radius: --border_radius--;
-    border: 1px solid color-mix(in srgb, --color-- 12%, transparent);
-    box-shadow: --card_shadow--;
-    animation: modulexPd5FadeUp 0.5s ease 0.08s both;
-  }
-
-  @keyframes modulexPd5FadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .modulex-pd5-media {
-    flex: 0 0 44%;
-    max-width: 480px;
-    min-width: 0;
-  }
-
-  .modulex-pd5-img-wrap {
-    border-radius: --border_radius--;
-    overflow: hidden;
-    background: --bgcolor--;
-    border: 1px solid rgba(30, 48, 70, 0.06);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-height: 420px;
-    box-sizing: border-box;
-  }
-
-  .modulex-pd5-img-wrap:hover {
-    transform: scale(1.015);
-    box-shadow: 0 14px 36px rgba(30, 48, 70, 0.12);
-  }
-
-  .modulex-pd5-img-wrap img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 420px;
-    display: block;
-    object-fit: contain;
-  }
-
-  .modulex-pd5-info {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .modulex-pd5-cat-badge {
-    display: inline-flex;
-    align-self: flex-start;
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    background: rgba(222, 109, 38, 0.12);
-    color: --menu-active--;
-  }
-
-  .modulex-pd5-lead {
-    margin: 0;
-    font-size: 1.02rem;
-    line-height: 1.65;
-    color: --color--;
-  }
-
-  .modulex-pd5-specs {
-    background: --bgcolor--;
-    border-radius: --border_radius--;
-    padding: 14px 16px;
-    border: 1px solid rgba(30, 48, 70, 0.06);
-  }
-
-  .modulex-pd5-specs-head {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-
-  .modulex-pd5-specs-icon {
-    color: --menu-active--;
-    font-size: 22px;
-  }
-
-  .modulex-pd5-specs-title {
-    margin: 0;
-    font-size: 16px;
-    color: --colortitle--;
-  }
-
-  .modulex-pd5-specs-summary {
-    margin: 4px 0 0;
-    font-size: 18px;
-    font-weight: 800;
-    color: --colortitle--;
-  }
-
-  .modulex-pd5-spec-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .modulex-pd5-spec-item {
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px 12px;
-    border: 1px solid rgba(30, 48, 70, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .modulex-pd5-spec-item:hover {
-    border-color: rgba(222, 109, 38, 0.35);
-    transform: translateY(-2px);
-  }
-
-  .modulex-pd5-spec-wide {
-    grid-column: 1 / -1;
-  }
-
-  .modulex-pd5-spec-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: rgba(30, 48, 70, 0.55);
-  }
-
-  .modulex-pd5-spec-value {
-    font-size: 14px;
-    font-weight: 700;
-    color: --colortitle--;
-  }
-
-  .modulex-pd5-spec-note {
-    margin: 10px 0 0;
-    font-size: 12px;
-    color: rgba(30, 48, 70, 0.55);
-  }
-
-  .modulex-pd5-cta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .modulex-pd5-cta-primary,
-  .modulex-pd5-cta-wa {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 18px;
-    border-radius: --border_radius--;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
-  }
-
-  .modulex-pd5-cta-primary {
-    background: --menu-active--;
-    color: --activetext--;
-    box-shadow: 0 6px 18px rgba(222, 109, 38, 0.32);
-  }
-
-  .modulex-pd5-cta-wa {
-    background: #fff;
-    /* 8 Kas 2026: koyu modda (yalniz colorScheme auto sitede color-scheme:dark) zemin yuzey tokenini izler; sabit #fff ustunde
-       baslik rengi (var(--mx-site-text)) 1,17:1 idi. Acik modda #fff aynen. */
-    background: light-dark(#fff, var(--mx-site-surface, #fff));
-    color: --colortitle--;
-    border: 1px solid rgba(30, 48, 70, 0.12);
-  }
-
-  .modulex-pd5-cta-primary:hover,
-  .modulex-pd5-cta-wa:hover {
-    transform: translateY(-2px);
-  }
-
-  .modulex-pd5-cta-primary:hover {
-    background: --coloractive--;
-  }
-
-  .modulex-pd5-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    animation: modulexPd5FadeUp 0.5s ease 0.15s both;
-  }
-
-  .modulex-pd5-nav-link {
-    flex: 1;
-    max-width: calc(50% - 6px);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 14px;
-    background: #fff;
-    background: light-dark(#fff, var(--mx-site-surface, #fff)); /* 8 Kas 2026: koyu modda yuzey tokeni (cta-wa ile ayni) */
-    border: 1px solid rgba(30, 48, 70, 0.08);
-    border-radius: --border_radius--;
-    text-decoration: none;
-    color: --colortitle--;
-    cursor: pointer;
-    transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-  }
-
-  .modulex-pd5-nav-link:hover {
-    border-color: --menu-active--;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(30, 48, 70, 0.08);
-  }
-
-  .modulex-pd5-nav-next {
-    justify-content: flex-end;
-    text-align: right;
-  }
-
-  .modulex-pd5-nav-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-  }
-
-  .modulex-pd5-nav-dir {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: rgba(30, 48, 70, 0.5);
-  }
-
-  .modulex-pd5-nav-name {
-    font-size: 13px;
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .modulex-pd5-nav-spacer {
-    flex: 1;
-  }
-
-  .modulex-body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    color: --color--;
-    animation: modulexPd5FadeUp 0.5s ease 0.12s both;
-  }
-
-  .modulex-body a {
-    color: --menu-active--;
-    font-weight: 600;
-    cursor: pointer;
-  }.modulex-pd5-article,
-  .modulex-body > article,
-  .modulex-body .corp-article {
-    width: 100%;
-    max-width: 100%;
-    line-height: 1.72;
-    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-  }.modulex-pd5-article > *:first-child,
-  .modulex-body > article > *:first-child,
-  .modulex-body .corp-article > *:first-child {
-    margin-top: 0;
-  }.modulex-pd5-article h2,
-  .modulex-body > article h2,
-  .modulex-body .corp-article h2 {
-    margin: 1.75rem 0 0.85rem;
-    font-size: clamp(1.25rem, 4.2vw, 1.65rem);
-    line-height: 1.35;
-    color: --colortitle--;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }.modulex-pd5-article h3,
-  .modulex-body > article h3,
-  .modulex-body .corp-article h3 {
-    margin: 1.25rem 0 0.55rem;
-    font-size: clamp(1.05rem, 3.2vw, 1.2rem);
-    line-height: 1.4;
-    color: --colortitle--;
-    font-weight: 700;
-  }.modulex-pd5-article p,
-  .modulex-body > article p,
-  .modulex-body .corp-article p {
-    margin: 0 0 1rem;
-    color: --color--;
-  }
-
-  .modulex-pd5-lead {
-    font-size: clamp(1rem, 2.8vw, 1.12rem);
-    line-height: 1.75;
-    color: --colortitle--;
-    font-weight: 500;
-    padding: 14px 16px;
-    background: rgba(222, 109, 38, 0.08);
-    border-left: 4px solid --menu-active--;
-    border-radius: 0 --border_radius-- --border_radius-- 0;
-  }
-
-  .modulex-pd5-features {
-    margin: 0 0 1.25rem;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .modulex-pd5-features li {
-    position: relative;
-    padding: 12px 14px 12px 40px;
-    background: #fff;
-    border: 1px solid rgba(30, 48, 70, 0.08);
-    border-radius: --border_radius--;
-    box-shadow: 0 2px 8px rgba(30, 48, 70, 0.04);
-    line-height: 1.55;
-  }
-
-  .modulex-pd5-features li::before {
-    content: "check_circle";
-    font-family: "Material Symbols Outlined";
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    font-size: 20px;
-    color: --menu-active--;
-    line-height: 1;
-  }
-
-  .modulex-pd5-faq {
-    margin: 1.5rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .modulex-pd5-faq > h2 {
-    margin-top: 0;
-  }
-
-  .modulex-pd5-faq-item {
-    border: 1px solid rgba(30, 48, 70, 0.1);
-    border-radius: --border_radius--;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(30, 48, 70, 0.05);
-  }
-
-  .modulex-pd5-faq-item summary {
-    padding: 14px 44px 14px 16px;
-    font-weight: 700;
-    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
-    color: --colortitle--;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    line-height: 1.45;
-  }
-
-  .modulex-pd5-faq-item summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .modulex-pd5-faq-item summary::after {
-    content: "expand_more";
-    font-family: "Material Symbols Outlined";
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 22px;
-    color: --menu-active--;
-    transition: transform 0.22s ease;
-  }
-
-  .modulex-pd5-faq-item[open] summary::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-
-  .modulex-pd5-faq-item p {
-    margin: 0;
-    padding: 0 16px 16px;
-    border-top: 1px solid rgba(30, 48, 70, 0.06);
-    padding-top: 12px;
-  }
-
-  .modulex-pd5-faq-item h3 {
-    display: none;
-  }.modulex-pd5-article ul:not(.modulex-pd5-features),
-  .modulex-body > article ul:not(.modulex-pd5-features),
-  .modulex-body .corp-article ul:not(.modulex-pd5-features) {
-    margin: 0 0 1rem;
-    padding-left: 1.25rem;
-  }.modulex-pd5-article ol,
-  .modulex-body > article ol,
-  .modulex-body .corp-article ol {
-    margin: 0 0 1rem;
-    padding-left: 1.35rem;
-  }.modulex-pd5-article img,
-  .modulex-body > article img,
-  .modulex-body .corp-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: --border_radius--;
-    display: block;
-    margin: 1rem 0;
-  }.modulex-pd5-article table,
-  .modulex-body > article table,
-  .modulex-body .corp-article table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    font-size: 0.92rem;
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }.modulex-pd5-article blockquote,
-  .modulex-body > article blockquote,
-  .modulex-body .corp-article blockquote {
-    margin: 1rem 0;
-    padding: 12px 16px;
-    border-left: 4px solid --menu-active--;
-    background: rgba(30, 48, 70, 0.04);
-    border-radius: 0 --border_radius-- --border_radius-- 0;
-  }
-
-  @media screen and (max-width: 600px) {
-    .modulex-pd5-lead {
-      padding: 12px 14px;
-    }
-
-    .modulex-pd5-features li {
-      padding: 11px 12px 11px 36px;
-    }
-
-    .modulex-pd5-faq-item summary {
-      padding: 12px 40px 12px 14px;
-    }
-  }
-
-  .modulex-desc-body {
-    width: 100%;
-    border-radius: --border_radius--;
-    overflow: hidden;
-    box-shadow: --card_shadow--;
-  }
-
-  .modulex-desc-body img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: min(42vh, 360px);
-    display: block;
-    object-fit: contain;
-    margin-inline: auto;
-  }
-
-  @media screen and (min-width: 1025px) {
-    .modulex-menu-overlay {
-      display: none !important;
-    }
-
-    .modulex-menu-close {
-      display: none !important;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .modulex-menu-btn {
-      display: flex;
-    }
-
-    .modulex-menu-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 9998;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .modulex-menu-overlay.active {
-      display: block;
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modulex {
-      flex-direction: column;
-      padding: 5px;
-      gap: 10px;
-      margin-top: 0;
-    }
-
-    .modulex-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      transform: translateX(-100%);
-      width: 82%;
-      max-width: 320px;
-      height: 100%;
-      z-index: 9999;
-      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
-      visibility: hidden;
-      border-radius: 0;
-    }
-
-    .modulex-menu.active {
-      transform: translateX(0);
-      visibility: visible;
-    }
-
-    .modulex-menu-close {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 15px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .modulex-pd5-panel {
-      flex-direction: column;
-      padding: 14px;
-    }
-
-    .modulex-pd5-media {
-      flex: none;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .modulex-pd5-img-wrap {
-      max-height: min(38vh, 280px);
-    }
-
-    .modulex-pd5-img-wrap img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: min(38vh, 280px);
-      object-fit: contain;
-    }
-
-    .modulex-desc-body img {
-      max-height: min(38vh, 280px);
-    }
-
-    .modulex-pd5-spec-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .modulex-pd5-nav {
-      flex-direction: column;
-    }
-
-    .modulex-pd5-nav-link {
-      max-width: 100%;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .modulex-title h1,
-    .modulex-pd5-breadcrumb,
-    .modulex-pd5-panel,
-    .modulex-body,
-    .modulex-pd5-nav {
-      animation: none !important;
-    }
-
-    /* gecisler de kapali: cekmece menu, hover kaymalari */
-    [class*="modulex"],
-    [class*="modulex"] * {
-      transition: none !important;
-    }
-  }
-
-  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil (başlık bandı + ana sarmal). "" = klasik (yukarıdaki kurallar aynen).
-     Yan menü bağlantılarının görünümünü değiştirir; zemin/yazı --bgcolor--/--color-- çifti ya da var(--mx-site-*) token — sabit renk yok. ---- */
-
-  /* ikon-ustte-yuvarlak — her bağlantı ortalı bir karo: üstte daire ikon, altta metin */
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu {
-    gap: 12px;
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    padding: 18px 12px;
-    position: relative;
-    border-radius: var(--mx-radius-lg, 16px);
-    /* kart zemini --bgcolor-- (klasikten gelir) → yazı da çiftin diğer yarısı; koyu modda gövde rengi kalıtımı okunmazdı */
-    color: --color--;
-    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link.active,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top.active,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link.active,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover {
-    background-color: --menu-active--;
-    color: --activetext--;
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link::before {
-    content: "article";
-    font-family: "Material Symbols Outlined";
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 1;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 14%, transparent);
-    color: var(--mx-site-primary, #2563eb);
-    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top::before {
-    content: "folder_open";
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top .modulex-icon {
-    position: absolute;
-    top: 10px;
-    inset-inline-end: 10px;
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link.active::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top.active::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link.active::before,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub-link:hover::before {
-    background-color: color-mix(in srgb, currentColor 18%, transparent);
-    color: inherit;
-    transform: scale(1.06);
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover {
-    transform: translateY(-2px);
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link-text,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-parent-label {
-    text-align: center;
-  }
-
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-sub {
-    padding-left: 0;
-    gap: 8px;
-  }
-
-  /* yatay-kart — ikon solda (RTL'de sağda), metin yanında; panel zemini kalkar, her bağlantı ayrı kart */
-  [data-stil="yatay-kart"] .modulex-menu {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    gap: 10px;
-  }
-
-  [data-stil="yatay-kart"] .modulex-menu-link,
-  [data-stil="yatay-kart"] .modulex-top,
-  [data-stil="yatay-kart"] .modulex-sub-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 12px 14px;
-    border-radius: var(--mx-radius-md, 12px);
-    background-color: --bgcolor--;
-    color: --color--;
-    border: 1px solid color-mix(in srgb, --color-- 10%, transparent);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  /* aktif/hover: klasik çift (menu-active/activetext) — yukarıdaki bgcolor kuralı aynı özgüllükte sonra geldiği için burada yinelenir */
-  [data-stil="yatay-kart"] .modulex-menu-link.active,
-  [data-stil="yatay-kart"] .modulex-top.active,
-  [data-stil="yatay-kart"] .modulex-menu-link:hover,
-  [data-stil="yatay-kart"] .modulex-top:hover {
-    background-color: --menu-active--;
-    color: --activetext--;
-  }
-
-  [data-stil="yatay-kart"] .modulex-sub-link.active,
-  [data-stil="yatay-kart"] .modulex-sub-link:hover {
-    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
-    color: --color--;
-  }
-
-  [data-stil="yatay-kart"] .modulex-menu-link::before,
-  [data-stil="yatay-kart"] .modulex-top::before,
-  [data-stil="yatay-kart"] .modulex-sub-link::before {
-    content: "chevron_right";
-    font-family: "Material Symbols Outlined";
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 1;
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
-    border-radius: var(--mx-radius-sm, 10px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 12%, transparent);
-    color: var(--mx-site-primary, #2563eb);
-    transition: background-color 0.25s ease, color 0.25s ease;
-  }
-
-  [data-stil="yatay-kart"] .modulex-top::before {
-    content: "folder_open";
-  }
-
-  [data-stil="yatay-kart"] .modulex-sub-link::before {
-    content: "subdirectory_arrow_right";
-    flex-basis: 30px;
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-
-  [dir="rtl"] [data-stil="yatay-kart"] .modulex-menu-link::before,
-  [dir="rtl"] [data-stil="yatay-kart"] .modulex-sub-link::before {
-    transform: scaleX(-1);
-  }
-
-  [data-stil="yatay-kart"] .modulex-top .modulex-icon {
-    margin-inline-start: auto;
-  }
-
-  [data-stil="yatay-kart"] .modulex-menu-link.active::before,
-  [data-stil="yatay-kart"] .modulex-menu-link:hover::before,
-  [data-stil="yatay-kart"] .modulex-top.active::before,
-  [data-stil="yatay-kart"] .modulex-top:hover::before,
-  [data-stil="yatay-kart"] .modulex-sub-link.active::before,
-  [data-stil="yatay-kart"] .modulex-sub-link:hover::before {
-    background-color: color-mix(in srgb, currentColor 18%, transparent);
-    color: inherit;
-  }
-
-  [data-stil="yatay-kart"] .modulex-menu-link:hover,
-  [data-stil="yatay-kart"] .modulex-top:hover,
-  [data-stil="yatay-kart"] .modulex-sub-link:hover {
-    transform: translateX(4px);
-  }
-
-  [dir="rtl"] [data-stil="yatay-kart"] .modulex-menu-link:hover,
-  [dir="rtl"] [data-stil="yatay-kart"] .modulex-top:hover,
-  [dir="rtl"] [data-stil="yatay-kart"] .modulex-sub-link:hover {
-    transform: translateX(-4px);
-  }
-
-  [data-stil="yatay-kart"] .modulex-sub {
-    padding-left: 0;
-    padding-inline-start: 12px;
-  }
-
-  /* kenar-cizgili — kutu yok; her bağlantının başında ince çizgi, hover/aktifte çizgi vurgu rengine döner ve metin içe kayar */
-  [data-stil="kenar-cizgili"] .modulex-menu {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    gap: 2px;
-    border-radius: 0;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-menu-link,
-  [data-stil="kenar-cizgili"] .modulex-top,
-  [data-stil="kenar-cizgili"] .modulex-sub-link {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    color: inherit;
-    border: 0;
-    border-radius: 0;
-    border-inline-start: 3px solid color-mix(in srgb, currentColor 16%, transparent);
-    padding: 12px 14px;
-    padding-inline-start: 16px;
-    box-shadow: none;
-    transition: border-color 0.25s ease, padding 0.25s ease, background-color 0.25s ease;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-sub-link {
-    padding-inline-start: 28px;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-menu-link.active,
-  [data-stil="kenar-cizgili"] .modulex-menu-link:hover,
-  [data-stil="kenar-cizgili"] .modulex-top.active,
-  [data-stil="kenar-cizgili"] .modulex-top:hover,
-  [data-stil="kenar-cizgili"] .modulex-sub-link.active,
-  [data-stil="kenar-cizgili"] .modulex-sub-link:hover {
-    background-color: color-mix(in srgb, var(--mx-site-primary, #2563eb) 9%, transparent);
-    border-inline-start-color: var(--mx-site-primary, #2563eb);
-    color: inherit;
-    font-weight: 700;
-    padding-inline-start: 24px;
-    transform: none;
-    box-shadow: none;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-sub-link.active,
-  [data-stil="kenar-cizgili"] .modulex-sub-link:hover {
-    padding-inline-start: 36px;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-menu-parent {
-    background-color: transparent !important;
-    border-color: color-mix(in srgb, currentColor 16%, transparent) !important;
-  }
-
-  [data-stil="kenar-cizgili"] .modulex-sub {
-    padding-left: 0;
-  }
-
-  /* içerik alanı: klasikte --color-- (instance hex) sayfa zemininden bağımsızdı → koyu modda okunmuyordu; varyantlarda gövde rengini kalıtır */
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-body,
-  [data-stil="yatay-kart"] .modulex-body,
-  [data-stil="kenar-cizgili"] .modulex-body,
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-body > article p,
-  [data-stil="yatay-kart"] .modulex-body > article p,
-  [data-stil="kenar-cizgili"] .modulex-body > article p {
-    color: inherit;
-  }
-
-  /* grup düğmesi (<button>) zemini panelle aynı (bgcolor/bgcolor) → ayırt edici kenarlık ≥ 3:1 (modul-kontrast: zemin YA DA kenarlık) */
-  [data-stil="ikon-ustte-yuvarlak"] .modulex-top,
-  [data-stil="yatay-kart"] .modulex-top {
-    border: 1px solid color-mix(in srgb, --color-- 55%, transparent);
-  }
-
-  /* mobil çekmece: panel zemini şeffaf kalamaz (örtü üstünde okunmaz) → --bgcolor--/--color-- çifti geri gelir */
-  @media screen and (max-width: 1024px) {
-    [data-stil="yatay-kart"] .modulex-menu,
-    [data-stil="kenar-cizgili"] .modulex-menu {
-      background-color: --bgcolor--;
-      color: --color--;
-      padding: 12px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    [data-stil="ikon-ustte-yuvarlak"] .modulex-menu-link:hover,
-    [data-stil="ikon-ustte-yuvarlak"] .modulex-top:hover,
-    [data-stil="yatay-kart"] .modulex-menu-link:hover,
-    [data-stil="yatay-kart"] .modulex-top:hover,
-    [data-stil="yatay-kart"] .modulex-sub-link:hover {
-      transform: none !important;
-    }
+    .modulex-sayfa-editoryal *, .modulex-sayfa-editoryal *::before, .modulex-sayfa-editoryal *::after { animation: none !important; transition: none !important; }
   }
 </style>
-<script>
-  setTimeout(function() {
-    var menuToggleBtn = document.querySelector(".modulex-menu-btn");
-    var menu = document.querySelector(".modulex-menu");
-    var overlay = document.querySelector(".modulex-menu-overlay");
-    var closeButton = document.querySelector(".modulex-menu-close");
-
-    if (!menuToggleBtn || !menu) {
-      return;
-    }
-
-    var mql = window.matchMedia("(max-width: 1024px)");
-
-    function openMenu() {
-      menu.classList.add("active");
-      if (overlay) {
-        overlay.classList.add("active");
-        overlay.setAttribute("aria-hidden", "false");
-      }
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMenu() {
-      menu.classList.remove("active");
-      if (overlay) {
-        overlay.classList.remove("active");
-        overlay.setAttribute("aria-hidden", "true");
-      }
-      document.body.style.overflow = "";
-      if (menuToggleBtn) {
-        menuToggleBtn.focus();
-      }
-    }
-
-    menuToggleBtn.addEventListener("click", function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if (menu.classList.contains("active")) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    if (closeButton) {
-      closeButton.addEventListener("click", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        closeMenu();
-      });
-    }
-
-    if (overlay) {
-      overlay.addEventListener("click", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        closeMenu();
-      });
-    }
-
-    menu.addEventListener("click", function(event) {
-      var link = event.target.closest("a");
-      var closeBtn = event.target.closest(".modulex-menu-close");
-      if (link && !closeBtn) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape" && menu.classList.contains("active")) {
-        closeMenu();
-      }
-    });
-
-    menuToggleBtn.addEventListener("keydown", function(e) {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        if (menu.classList.contains("active")) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-      }
-    });
-
-    function handleBreakpoint() {
-      if (!mql.matches) {
-        menu.classList.remove("active");
-        if (overlay) {
-          overlay.classList.remove("active");
-          overlay.setAttribute("aria-hidden", "true");
-        }
-        document.body.style.overflow = "";
-      }
-    }
-
-    if (typeof mql.addEventListener === "function") {
-      mql.addEventListener("change", handleBreakpoint);
-    } else if (typeof mql.addListener === "function") {
-      mql.addListener(handleBreakpoint);
-    }
-    handleBreakpoint();
-
-    var topButtons = document.querySelectorAll(".modulex-top");
-    var bi;
-    for (bi = 0; bi < topButtons.length; bi++) {
-      topButtons[bi].addEventListener("click", function(e) {
-        e.stopPropagation();
-        var group = this.closest(".modulex-menu-group");
-        if (!group) {
-          return;
-        }
-        var sub = group.querySelector(".modulex-sub");
-        var isOpen = group.classList.toggle("open");
-        this.classList.toggle("active", isOpen);
-        var icon = this.querySelector(".modulex-icon");
-        if (icon) {
-          icon.textContent = isOpen ? "expand_less" : "expand_more";
-        }
-        if (sub) {
-          sub.classList.toggle("show", isOpen);
-        }
-      });
-    }
-  }, 100);
-</script>
