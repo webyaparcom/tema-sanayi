@@ -7,11 +7,11 @@
 <title>404 — Orvak Makina</title>
 </head>
 <body>
-<link rel="stylesheet" href="/src/rubik.css?v=fg9tz" />
+<link rel="stylesheet" href="/src/rubik.css?v=j030s" />
 <nav>
   <div href="/" class="menu">
     <a href="/" class="website_name"
-      ><img src="/img/logo.png?v=fg9tz" width="300" alt="Orvak Makina Logo"
+      ><img src="/img/logo.png?v=j030s" width="300" alt="Orvak Makina Logo"
     /></a>
   </div>
 </nav>
@@ -828,7 +828,7 @@
 <script>
   setTimeout(function() {
     var currentPath = window.location.pathname;
-    var rtlLanguages = ['ar', 'he', 'fa']; // RTL diller: Arapça, İbranice, Farsça
+    var rtlLanguages = ['ar', 'fa', 'he', 'ur']; // RTL diller (services/webmaker/langKatalog.js yon:rtl aynası): Arapça, Farsça, İbranice, Urduca
     var langMatch = currentPath.match(/^\/([a-z]{2})\//);
     var currentLang = langMatch ? langMatch[1] : '';
     if (rtlLanguages.indexOf(currentLang) !== -1) {
